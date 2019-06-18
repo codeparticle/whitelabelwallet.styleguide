@@ -1,0 +1,25 @@
+@import 'mixins.scss';
+
+$width-breakpoint-xl: 1690px;
+$width-breakpoint-lg: 1280px;
+$width-breakpoint-md: 980px;
+$width-breakpoint-sm: 768px;
+$width-breakpoint-xs: 480px;
+$width-breakpoint-xxs: 320px;
+
+/* IMPORT_PT: update these as the project sees fit */
+$spacing-xxl: between(32px, 60px, $width-breakpoint-xxs, $width-breakpoint-xl);
+$spacing-xl: between(20px, 40px, $width-breakpoint-xxs, $width-breakpoint-xl);
+$spacing-lg: between(16px, 32px, $width-breakpoint-xxs, $width-breakpoint-xl);
+$spacing-m: between(12px, 20px, $width-breakpoint-xxs, $width-breakpoint-xl);
+$spacing-sm: between(8px, 16px, $width-breakpoint-xxs, $width-breakpoint-xl);
+$spacing-xs: between(4px, 8px, $width-breakpoint-xxs, $width-breakpoint-xl);
+$spacing-xxs: between(0, 4px, $width-breakpoint-xxs, $width-breakpoint-xl);
+
+$space-1: 4px;
+$space-2: 8px;
+$space-3: 12px;
+$space-4: 16px;
+$space-5: 20px;
+$space-6: 24px;
+$space-7: 28px;

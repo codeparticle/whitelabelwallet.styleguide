@@ -1,0 +1,46 @@
+/*
+  When adding a color, please add it to the :export section at the end of this file.
+  If you need to add a new section/type of color, you can add the section title to the :export by pre-prending it with an underscore.
+*/
+@import "mixins.scss";
+
+$white: #fff;
+$black: #000;
+$red: #d8403b;
+$primary: #1c6776;
+$primary-light: #ccdee1;
+
+$off-white: #f6f6f6;
+$charcoal: #444;
+$alto: #e0e0e0;
+$east-bay: #39437d;
+$silver: #ccc;
+$tundora: #4a4a4a;
+$light-black: #2d2e31;
+$light-grey: #d2d1d1;
+
+$gradient-one: linear-gradient(250deg, $light-black, $east-bay);
+$gradient-two: linear-gradient(250deg, $red, $light-grey);
+
+/* stylelint-disable */
+:export {
+  _primary-colors: 0;
+  white: $white;
+  black: $black;
+  red: $red;
+  primary: $primary;
+  primary-light: $primary-light;
+  _secondary-colors: 0;
+  off-white: $off-white;
+  charcoal: $charcoal;
+  alto: $alto;
+  east-bay: $east-bay;
+  silver: $silver;
+  tundora: $tundora;
+  light-black: $light-black;
+  light-grey: $light-grey;
+  _gradients: 0;
+  gradient-one: $gradient-one;
+  gradient-two: $gradient-two;
+}
+/* stylelint-enable */

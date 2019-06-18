@@ -1,0 +1,16 @@
+@import "../../styles/colors.scss";
+@import "../../styles/constants.scss";
+@import "../../styles/fonts.scss";
+
+.button {
+  font-size: $font-size-xs-3;
+  padding: $space-1 $space-3;
+
+  &:enabled {
+    cursor: pointer;
+  }
+
+  &.fullWidth {
+    width: 100%;
+  }
+}

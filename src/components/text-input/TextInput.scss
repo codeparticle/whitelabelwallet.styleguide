@@ -1,0 +1,25 @@
+@import "../../styles/colors.scss";
+@import "../../styles/constants.scss";
+@import "../../styles/fonts.scss";
+
+.text-input {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+
+  &__label {
+    color: $light-grey;
+    display: flex;
+    flex-direction: column;
+    font-size: $font-size-xs-3;
+  }
+
+  &__input {
+    padding: $spacing-xs;
+    width: 100%;
+  }
+
+  &__input.has-label {
+    margin-top: $space-1;
+  }
+}

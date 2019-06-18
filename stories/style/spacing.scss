@@ -1,0 +1,73 @@
+@import '../../src/styles/colors';
+@import '../../src/styles/constants';
+
+.spacing {
+  align-items: flex-start;
+  display: flex;
+
+  div {
+    background-color: silver;
+    border: 1px solid $black;
+    margin-right: $space-1;
+  }
+}
+
+.container div:first-child {
+  margin-bottom: $space-3;
+}
+
+.space1 {
+  padding: $space-1;
+}
+
+.space2 {
+  padding: $space-2;
+}
+
+.space3 {
+  padding: $space-3;
+}
+
+.space4 {
+  padding: $space-4;
+}
+
+.space5 {
+  padding: $space-5;
+}
+
+.space6 {
+  padding: $space-6;
+}
+
+.space7 {
+  padding: $space-7;
+}
+
+.spacingXXL {
+  padding: $spacing-xxl;
+}
+
+.spacingXL {
+  padding: $spacing-xl;
+}
+
+.spacingLG {
+  padding: $spacing-lg;
+}
+
+.spacingM {
+  padding: $spacing-m;
+}
+
+.spacingSM {
+  padding: $spacing-sm;
+}
+
+.spacingXS {
+  padding: $spacing-xs;
+}
+
+.spacingXXS {
+  padding: $spacing-xxs;
+}
