@@ -1,0 +1,164 @@
+{
+  "name": "@codeparticle/react-style-guide",
+  "version": "0.1.0",
+  "description": "React-style-guide from CodeParticle",
+  "main": "dist/index.js",
+  "files": [
+    "dist",
+    "styles"
+  ],
+  "keywords": [
+    "codeparticle",
+    "react-style-guide",
+    "react"
+  ],
+  "author": "Ericky Dos Santos <ericky@codeparticle.com>",
+  "license": "MIT",
+  "homepage": "https://bitbucket.org/CodeParticle/react-style-guide/src",
+  "repository": "bitbucket:CodeParticle/react-style-guide",
+  "scripts": {
+    "start": "start-storybook -p 3010 -c .storybook -s .",
+    "lint": "eslint --ignore-path .gitignore . && stylelint --ignore-path .gitignore \"**/*.scss\"",
+    "build": "npm run build:clean && npm run build:js && npm run build:css && npm run build:copy-styles",
+    "build:clean": "rimraf dist styles",
+    "build:js": "cross-env BABEL_ENV=es babel src --out-dir dist --delete-dir-on-start",
+    "build:css": "npm run build:css-components && npm run build:css-styles",
+    "build:css-components": "cross-env POSTCSS_ENV=dist postcss \"src/components/**/*.scss\" --base src --dir dist",
+    "build:css-styles": "cross-env POSTCSS_ENV=dist postcss \"src/styles/index.scss\" --output styles/index.scss",
+    "build:copy-styles": "cpr src/styles styles -f -o",
+    "prepublish": "npm t && npm run lint && npm run build",
+    "release:major": "standard-version --release-as major",
+    "release:minor": "standard-version --release-as minor",
+    "release:patch": "standard-version --release-as patch",
+    "test": "exit 0",
+    "preview": "preview"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/preset-react": "^7.0.0",
+    "@commitlint/config-conventional": "^7.5.0",
+    "@storybook/addon-options": "^5.1.8",
+    "@types/marked": "^0.6.5",
+    "@types/storybook__addon-actions": "^3.4.3",
+    "@types/storybook__addon-knobs": "^5.0.1",
+    "@types/storybook__react": "^4.0.2",
+    "babel-eslint": "^10.0.2",
+    "babel-loader": "^8.0.5",
+    "babel-plugin-dynamic-import-webpack": "^1.1.0",
+    "commitlint": "^7.5.2",
+    "cpr": "^3.0.1",
+    "cross-env": "^5.2.0",
+    "css-hot-loader": "^1.4.4",
+    "eslint": "^5.15.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-jest": "^22.6.4",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.13.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "husky": "^2.1.0",
+    "lint-staged": "^8.1.5",
+    "node-sass": "^4.12.0",
+    "package-preview": "^2.0.0",
+    "postcss-cli": "^6.1.2",
+    "rimraf": "^2.6.3",
+    "sass-loader": "^6.0.7",
+    "standard-version": "^6.0.1",
+    "stylelint": "^10.0.1",
+    "stylelint-config-standard": "^18.3.0",
+    "svg-css-modules-loader": "^1.6.1"
+  },
+  "peerDependencies": {
+    "@babel/core": "^7.0.0",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "standard-version": {
+    "scripts": {
+      "posttag": "git push --follow-tags origin master"
+    },
+    "types": [
+      {
+        "type": "feature",
+        "section": "Features"
+      },
+      {
+        "type": "bugfix",
+        "section": "Bug Fixes"
+      },
+      {
+        "type": "test",
+        "hidden": "Tests"
+      },
+      {
+        "type": "misc",
+        "hidden": true
+      }
+    ],
+    "commitUrlFormat": "{{host}}/{{owner}}/{{repository}}/commits/{{hash}}"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.scss": [
+      "stylelint --fix",
+      "git add"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
+    "rules": {
+      "type-enum": [
+        2,
+        "always",
+        [
+          "feature",
+          "bugfix",
+          "test",
+          "misc"
+        ]
+      ]
+    }
+  },
+  "dependencies": {
+    "@sambego/storybook-state": "^1.3.4",
+    "@storybook/addon-actions": "^5.1.3",
+    "@storybook/addon-backgrounds": "^5.1.3",
+    "@storybook/addon-knobs": "^5.1.3",
+    "@storybook/react": "^5.1.3",
+    "cancel.it": "^0.1.1",
+    "case": "^1.6.1",
+    "classnames": "^2.2.6",
+    "colorcolor": "^1.1.1",
+    "keyboard-only-outlines": "^1.0.3",
+    "lodash": "^4.17.11",
+    "marked": "^0.6.2",
+    "memoize-one": "^5.0.4",
+    "normalize.css": "^8.0.1",
+    "postcss-import": "^12.0.1",
+    "postcss-scss": "^2.0.0",
+    "postcss-url": "^8.0.0",
+    "prop-types": "^15.7.2",
+    "proper-on-transition-end": "^0.3.0",
+    "rc-slider": "^8.6.6",
+    "react-image": "^2.1.1",
+    "react-modal": "^3.8.1",
+    "react-popper": "^1.0.0",
+    "react-select": "^2.4.4",
+    "react-transition-group": "^4.0.0",
+    "scrollbar-compensate": "^0.2.2",
+    "storybook-readme": "^5.0.2",
+    "uuid": "^3.3.2"
+  }
+}

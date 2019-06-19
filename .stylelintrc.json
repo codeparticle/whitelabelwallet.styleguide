@@ -1,0 +1,17 @@
+{
+    "extends": "stylelint-config-standard",
+    "rules": {
+        "at-rule-no-unknown": [true, {
+            "ignoreAtRules": ["function", "if", "return", "mixin", "each", "else", "include", "warn"]
+        }],
+        "declaration-colon-newline-after": null,
+        "indentation": [2],
+        "media-feature-name-no-unknown": [true, {
+            "ignoreMediaFeatureNames": [
+                "min--moz-device-pixel-ratio",
+                "min-device-pixel-ratio"
+            ]
+        }]
+    }
+}
+ 

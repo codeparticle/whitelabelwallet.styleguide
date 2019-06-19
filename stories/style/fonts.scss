@@ -1,0 +1,98 @@
+@import '../../src/styles/colors';
+@import '../../src/styles/constants';
+@import '../../src/styles/fonts';
+
+.fonts {
+  .container {
+    background-color: $silver;
+    border: 1px solid $black;
+    margin-bottom: $space-3;
+    padding: $space-2 0;
+
+    div {
+      border-bottom: 1px solid $black;
+      padding: $space-2;
+
+      &:first-child {
+        padding-top: 0;
+      }
+
+      &:last-child {
+        border: none;
+        padding-bottom: 0;
+      }
+    }
+
+    .fontXL4 {
+      font-size: $font-size-xl-4;
+    }
+
+    .fontXL3 {
+      font-size: $font-size-xl-3;
+    }
+
+    .fontXL2 {
+      font-size: $font-size-xl-2;
+    }
+
+    .fontXL1 {
+      font-size: $font-size-xl-1;
+    }
+
+    .fontLG4 {
+      font-size: $font-size-lg-4;
+    }
+
+    .fontLG3 {
+      font-size: $font-size-lg-3;
+    }
+
+    .fontLG2 {
+      font-size: $font-size-lg-2;
+    }
+
+    .fontLG1 {
+      font-size: $font-size-lg-1;
+    }
+
+    .fontMD4 {
+      font-size: $font-size-md-4;
+    }
+
+    .fontMD3 {
+      font-size: $font-size-md-3;
+    }
+
+    .fontMD2 {
+      font-size: $font-size-md-2;
+    }
+
+    .fontMD1 {
+      font-size: $font-size-md-1;
+    }
+
+    .fontSM3 {
+      font-size: $font-size-sm-3;
+    }
+
+    .fontSM2 {
+      font-size: $font-size-sm-2;
+    }
+
+    .fontSM1 {
+      font-size: $font-size-sm-1;
+    }
+
+    .fontXS3 {
+      font-size: $font-size-xs-3;
+    }
+
+    .fontXS2 {
+      font-size: $font-size-xs-2;
+    }
+
+    .fontXS1 {
+      font-size: $font-size-xs-1;
+    }
+  }
+}

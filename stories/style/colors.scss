@@ -1,0 +1,31 @@
+@import '../../src/styles/constants';
+
+.container {
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: $space-2 0 $space-3 0;
+
+    .list-item {
+      list-style: none;
+      margin-bottom: $space-3;
+      margin-right: $space-3;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      .color {
+        border-radius: 4px;
+        height: 100px;
+        margin-bottom: $space-2;
+        width: 100px;
+      }
+
+      h3 {
+        margin-bottom: $space-1;
+      }
+    }
+  }
+}
