@@ -41,13 +41,10 @@ module.exports = ({ config }) => {
     config.module.rules.unshift({
         test: /\.svg$/,
         use: [
-            require.resolve('raw-loader'),
-            // Uniquify classnames and ids so that they are unique and
-            // don't conflict with each other
             {
-                loader: require.resolve('svg-css-modules-loader'),
+                loader: 'file-loader',
                 options: {
-                    transformId: true,
+                    publicPath: '/',
                 },
             },
         ],

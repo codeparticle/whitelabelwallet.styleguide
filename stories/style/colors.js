@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { storiesOf } from '@storybook/react';
 import { withReadme } from 'storybook-readme';
 import marked from 'marked';
@@ -16,30 +16,25 @@ const parsedColors = Object.entries(colors).reduce((acc, [key, value]) => {
       values: [],
     });
   } else {
-    let hex = colorcolor(value, 'hex').toUpperCase();
-    let rgb = colorcolor(value, 'rgb');
+    const hasTransparency = (value.includes('#') && value.length > 7) || value.includes('rgba');
+    const hex = colorcolor(value, hasTransparency ? 'hexa' : 'hex').toUpperCase();
+    const rgb = colorcolor(value, hasTransparency ? 'rgba' : 'rgb').replace(/,/g, ', ');
+    let gradient = null;
 
     if (value.indexOf('gradient') !== -1) {
-      hex = value.split('(')[1];
-      hex = hex.substr(0, hex.length - 1).toUpperCase();
+      gradient = value.replace(/#.*,/g, (test) => {
+        const split = test.split(' ');
 
-      rgb = '';
-      hex.split(',').forEach((segment, index) => {
-        if (index) {
-          rgb += ', ';
-        }
+        split[0] = colorcolor(split[0], 'rgba').replace(/,/g, ', ');
 
-        if (segment.includes('#')) {
-          rgb += colorcolor(segment.trim(), 'rgb');
-        } else {
-          rgb += segment;
-        }
+        return split.join(' ');
       });
     }
 
     acc[acc.length - 1].values.push({
       name: Case.capital(key),
       key,
+      gradient,
       hex,
       rgb,
       value,
@@ -48,7 +43,6 @@ const parsedColors = Object.entries(colors).reduce((acc, [key, value]) => {
 
   return acc;
 }, []);
-console.log(parsedColors);
 
 storiesOf('Style', module)
   .addDecorator(withReadme(marked(`
@@ -78,6 +72,7 @@ You may use these colors in SCSS files like so:
           </h2>
           <ul>
             {values.map(({
+              gradient,
               hex,
               key,
               name,
@@ -93,9 +88,17 @@ You may use these colors in SCSS files like so:
                   style={{ background: value }}
                 />
                 <h3>{name}</h3>
-                <div>Key: {key}</div>
-                <div>HEX: {hex}</div>
-                <div>RGB: {rgb}</div>
+                <div>{key}</div>
+                {gradient
+                  ? (
+                    <div>{gradient}</div>
+                  ) : (
+                    <Fragment>
+                      <div>{hex}</div>
+                      <div>{rgb}</div>
+                    </Fragment>
+                  )
+                }
               </li>
             ))}
           </ul>

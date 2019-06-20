@@ -1,5 +1,10 @@
+/**
+  If you make changes to this file, please also make necessary updates on the Typography story example.
+ */
+
 @import "colors.scss";
 @import "fonts.scss";
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap");
 
 /* ==========================================================================
 	Typography Defaults
@@ -7,17 +12,84 @@
 
 body {
   font-family: $font-default;
+  font-size: $font-size-xs-3;
+  line-height: $line-height-s;
   overflow-wrap: break-word;  /* Break long words by default */
 }
 
 /* ==========================================================================
-	Headings
+	Headings and Others
 	========================================================================== */
 
 h1,
 h2,
 h3,
 h4,
+h5 {
+  font-weight: $font-weight-bold;
+  margin: 0;
+}
+
+h1 {
+  font-size: $font-size-lg-1;
+  line-height: $line-height-xxl;
+}
+
+h2 {
+  font-size: $font-size-md-2;
+  line-height: $line-height-xl;
+}
+
+h3 {
+  font-size: $font-size-sm-3;
+  line-height: $line-height-l;
+}
+
+h4 {
+  font-size: $font-size-sm-2;
+  line-height: $line-height-m;
+}
+
+h5 {
+  font-size: $font-size-xs-3;
+  line-height: $line-height-s;
+}
+
 p {
   margin: 0;
+}
+
+li,
+label {
+  font-weight: $font-weight-semibold;
+}
+
+input {
+  font-size: $font-size-sm-2;
+  font-weight: $font-weight-medium;
+  line-height: $line-height-m;
+}
+
+option {
+  font-weight: $font-weight-medium;
+}
+
+/* ==========================================================================
+	Base Typography Classes
+	========================================================================== */
+
+.gigantic {
+  font-size: $font-size-xl-2;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-xxxl;
+}
+
+.subtext {
+  font-size: $font-size-xs-2;
+  line-height: $line-height-xs;
+}
+
+.fineprint {
+  font-size: $font-size-xs-2;
+  line-height: $line-height-xxs;
 }

@@ -4,6 +4,8 @@
         "at-rule-no-unknown": [true, {
             "ignoreAtRules": ["function", "if", "return", "mixin", "each", "else", "include", "warn"]
         }],
+        "color-hex-case": "upper",
+        "color-hex-length": "long",
         "declaration-colon-newline-after": null,
         "indentation": [2],
         "media-feature-name-no-unknown": [true, {
