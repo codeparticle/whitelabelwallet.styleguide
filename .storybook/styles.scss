@@ -1,6 +1,6 @@
 @import '../src/styles/index.scss';
-@import '../src/styles/constants.scss';
+@import '../src/styles/layout.scss';
 
 body {
-  margin: $spacing-sm;
+  margin: $spacing-s;
 }

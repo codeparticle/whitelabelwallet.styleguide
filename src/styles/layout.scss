@@ -1,9 +1,48 @@
-/* ==========================================================================
-   Proper box-sizing model
-   ========================================================================== */
+/**
+  If making changes to this file, please make sure the changes are reflected on the :export section at the end of the file.
+ */
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+@import 'mixins.scss';
+
+$width-breakpoint-xl: 1690px;
+$width-breakpoint-lg: 1200px;
+$width-breakpoint-md: 992px;
+$width-breakpoint-sm: 768px;
+$width-breakpoint-xs: 576px;
+$width-breakpoint-xxs: 320px;
+
+/* IMPORT_PT: update these as the project sees fit */
+$spacing-xxl: between(32px, 60px, $width-breakpoint-xxs, $width-breakpoint-xl);
+$spacing-xl: between(20px, 40px, $width-breakpoint-xxs, $width-breakpoint-xl);
+$spacing-l: between(16px, 32px, $width-breakpoint-xxs, $width-breakpoint-xl);
+$spacing-m: between(12px, 20px, $width-breakpoint-xxs, $width-breakpoint-xl);
+$spacing-s: between(8px, 16px, $width-breakpoint-xxs, $width-breakpoint-xl);
+$spacing-xs: between(4px, 8px, $width-breakpoint-xxs, $width-breakpoint-xl);
+$spacing-xxs: between(0, 4px, $width-breakpoint-xxs, $width-breakpoint-xl);
+
+$space-1: 4px;
+$space-2: 8px;
+$space-3: 12px;
+$space-4: 16px;
+$space-5: 20px;
+$space-6: 24px;
+$space-7: 28px;
+
+/* stylelint-disable */
+:export {
+  spacing-xxs: '32px-60px';
+  spacing-xs: '20px-40px';
+  spacing-s: '16px-32px';
+  spacing-m: '12px-20px';
+  spacing-l: '8px-16px';
+  spacing-xl: '4px-8px';
+  spacing-xxl: '0px-4px';
+  space-1: $space-1;
+  space-2: $space-2;
+  space-3: $space-3;
+  space-4: $space-4;
+  space-5: $space-5;
+  space-6: $space-6;
+  space-7: $space-7;
 }
+/* stylelint-enable */

@@ -1,0 +1,41 @@
+@import '../../src/styles/colors';
+@import '../../src/styles/fonts';
+@import '../../src/styles/layout';
+
+.container {
+  h3:not(:first-child) {
+    margin-top: $spacing-l;
+  }
+
+  pre {
+    border-radius: 4px;
+  }
+
+  li {
+    font-weight: $font-weight-normal;
+  }
+
+  table,
+  th,
+  td {
+    border: 1px solid $light-grey;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+
+    th,
+    td {
+      padding: $spacing-xs;
+    }
+
+    th {
+      text-align: left;
+    }
+
+    pre {
+      padding: $space-1 !important;
+    }
+  }
+}

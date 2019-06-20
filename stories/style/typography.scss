@@ -1,0 +1,77 @@
+@import '../../src/styles/colors';
+@import '../../src/styles/layout';
+@import '../../src/styles/fonts';
+@import '../../src/styles/typography';
+
+.container {
+  padding: 0 $spacing-s;
+
+  h3:not(:first-child) {
+    margin-top: $spacing-xl;
+  }
+
+  .fonts {
+    padding: 0;
+
+    li {
+      border-bottom: 1px solid $grey;
+      font-weight: $font-weight-normal;
+      list-style: none;
+      margin-bottom: $spacing-xs;
+      margin-top: $spacing-s;
+      padding-bottom: $spacing-m;
+
+      & > h4 {
+        text-transform: capitalize;
+      }
+
+      input {
+        border: none;
+        padding: 0;
+      }
+
+      .table {
+        display: flex;
+        flex-direction: row;
+
+        .column {
+          display: flex;
+          flex-direction: column;
+
+          .label {
+            color: $cool-grey-dark;
+            font-weight: $font-weight-medium;
+          }
+
+          &:not(:last-child) {
+            font-size: $font-size-xs-3;
+            line-height: 18px;
+          }
+
+          &:nth-child(1) {
+            min-width: 90px;
+            width: 20%;
+          }
+
+          &:nth-child(2) {
+            min-width: 55px;
+            width: 20%;
+          }
+
+          &:nth-child(3) {
+            min-width: 100px;
+            width: 20%;
+          }
+
+          &:nth-child(4) {
+            width: 84%;
+          }
+        }
+      }
+    }
+
+    &:last-child li:last-child {
+      border-bottom: none;
+    }
+  }
+}

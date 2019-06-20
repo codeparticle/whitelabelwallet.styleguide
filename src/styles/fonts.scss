@@ -1,7 +1,8 @@
 @import './mixins.scss';
 
-$font-default: 'Rubik', sans-serif;
+$font-default: 'Lato', sans-serif;
 $font-weight-bold: 700;
+$font-weight-semibold: 600;
 $font-weight-medium: 500;
 $font-weight-normal: 400;
 $font-weight-light: 300;
@@ -9,13 +10,13 @@ $font-weight-light: 300;
 /* IMPORT_PT: update these as the project sees fit */
 $font-size-xl-4: fluid-size(120px, 300px);
 $font-size-xl-3: fluid-size(72px, 96px);
-$font-size-xl-2: fluid-size(24px, 64px);
+$font-size-xl-2: fluid-size(54px, 74px);
 $font-size-xl-1: fluid-size(46px, 56px);
 
 $font-size-lg-4: fluid-size(28px, 64px);
-$font-size-lg-3: fluid-size(32px, 48px);
-$font-size-lg-2: fluid-size(16px, 42px);
-$font-size-lg-1: fluid-size(30px, 36px);
+$font-size-lg-3: fluid-size(28px, 48px);
+$font-size-lg-2: fluid-size(28px, 42px);
+$font-size-lg-1: fluid-size(28px, 36px);
 
 $font-size-md-4: fluid-size(18px, 36px);
 $font-size-md-3: fluid-size(22px, 36px);
@@ -29,3 +30,13 @@ $font-size-sm-1: fluid-size(14px, 18px);
 $font-size-xs-3: fluid-size(12px, 14px);
 $font-size-xs-2: fluid-size(10px, 12px);
 $font-size-xs-1: fluid-size(8px, 10px);
+
+/* Line Heights */
+$line-height-xxxl: fluid-size(58px, 104px);
+$line-height-xxl: fluid-size(47px, 58px);
+$line-height-xl: fluid-size(38px, 47px);
+$line-height-l: fluid-size(31px, 38px);
+$line-height-m: fluid-size(25px, 31px);
+$line-height-s: fluid-size(21px, 25px);
+$line-height-xs: fluid-size(15px, 21px);
+$line-height-xxs: fluid-size(8px, 15px);

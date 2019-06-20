@@ -1,5 +1,5 @@
 import './style/colors';
-import './style/fonts';
-import './style/spacing';
+import './style/layout';
+import './style/typography';
 import './button';
 import './text-input';
