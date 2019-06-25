@@ -1,0 +1,38 @@
+@import '../../src/styles/colors';
+@import '../../src/styles/layout';
+
+.container {
+  h3 {
+    margin-bottom: $spacing-s;
+
+    &:not(:first-child) {
+      margin-top: $spacing-m;
+    }
+  }
+
+  .images-container {
+    display: flex;
+    flex-wrap: wrap;
+
+    .images-inner-container {
+      margin-bottom: $spacing-s;
+      margin-right: $spacing-s;
+
+      .image {
+        align-items: center;
+        background-color: $heavy-grey;
+        display: flex;
+        justify-content: center;
+
+        &.light {
+          background-color: $whitish;
+        }
+
+        img {
+          max-height: 130px;
+          max-width: 130px;
+        }
+      }
+    }
+  }
+}
