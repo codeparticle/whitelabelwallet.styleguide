@@ -94,16 +94,16 @@ const DUMMY_TEXT = 'The wizard quickly jinxed the gnomes before they vaporized';
 storiesOf('Style', module)
   .addDecorator(withReadme(marked(`
 # Typography
-React-style-guide's Typography.
+whitelabelwallet.styleguide's Typography.
 
 By importing the index file in your main app.js file you have access to all these base styles.
 \`\`\`css
-@import '~@codeparticle/react-style-guide/styles/index';
+@import '~@codeparticle/whitelabelwallet.styleguide/styles/index';
 \`\`\`
 
 There are also SCSS font variables available.
 \`\`\`scss
-@import '@codeparticle/react-style-guide/fonts';
+@import '@codeparticle/whitelabelwallet.styleguide/fonts';
 
 .my-heading {\n
   $font-size: $font-size-md-3;\n

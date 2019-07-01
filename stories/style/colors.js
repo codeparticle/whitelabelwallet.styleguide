@@ -52,7 +52,7 @@ Color pallete.
 You may use these colors in SCSS files like so:
 
 \`\`\`css
-@import '@codeparticle/react-style-guide/styles/colors';
+@import '@codeparticle/whitelabelwallet.styleguide/styles/colors';
 
 .my-div {
   color: $east-bay;

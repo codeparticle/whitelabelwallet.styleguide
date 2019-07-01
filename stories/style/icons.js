@@ -38,7 +38,7 @@ storiesOf('Style', module)
 You may use these icons like so:
 
 \`\`\`javascript
-import { images } from '@codeparticle/react-style-guide';
+import { images } from '@codeparticle/whitelabelwallet.styleguide';
 
 const Component2 = () => {
   return <img src={images.icons.close} />;
