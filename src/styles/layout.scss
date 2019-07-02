@@ -30,13 +30,13 @@ $space-7: 28px;
 
 /* stylelint-disable */
 :export {
-  spacing-xxs: '32px-60px';
-  spacing-xs: '20px-40px';
-  spacing-s: '16px-32px';
+  spacing-xxs: '0px-4px';
+  spacing-xs: '4px-8px';
+  spacing-s: '8px-16px';
   spacing-m: '12px-20px';
-  spacing-l: '8px-16px';
-  spacing-xl: '4px-8px';
-  spacing-xxl: '0px-4px';
+  spacing-l: '16px-32px';
+  spacing-xl: '20px-40px';
+  spacing-xxl: '32px-60px';
   space-1: $space-1;
   space-2: $space-2;
   space-3: $space-3;
