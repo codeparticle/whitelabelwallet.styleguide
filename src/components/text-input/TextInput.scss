@@ -8,15 +8,24 @@
   flex-direction: column;
 
   &__label {
-    color: $light-grey;
+    color: $slate;
     display: flex;
     flex-direction: column;
     font-size: $font-size-xs-3;
+    line-height: $line-height-s;
   }
 
   &__input {
     padding: $spacing-xs;
     width: 100%;
+    background: $tint-blue;
+    color: $dark;
+    border-radius: 6px;
+    border: 0;
+
+    &__dark {
+      color: $white;
+    }
   }
 
   &__input.has-label {

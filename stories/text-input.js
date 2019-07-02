@@ -11,6 +11,8 @@ const TextInputWithValue = (props) => {
   const [value, setValue] = useState('');
   const onChange = e => setValue(e.target.value);
 
+  console.log('========\n', 'props', props, '\n========');
+
   return (
     <TextInput
       {...props}
@@ -27,17 +29,28 @@ storiesOf('TextInput', module)
     <TextInputWithValue
       onBlur={action('blur')}
       onFocus={action('focus')}
-      placeholder="Input Text Here..."
+      placeholder="Input Text"
     />
   ), {
-    backgrounds: [{ ...darkBackground, default: true }],
+    backgrounds: [{ ...darkBackground, default: false }],
   })
   .add('With Label', () => (
     <TextInputWithValue
-      label="Label"
+      label="Input Label"
       onBlur={action('blur')}
       onFocus={action('focus')}
-      placeholder="Input Text Here..."
+      placeholder="Input Text"
+    />
+  ), {
+    backgrounds: [{ ...darkBackground, default: false }],
+  })
+  .add('Dark Theme', () => (
+    <TextInputWithValue
+      label="Input Label"
+      onBlur={action('blur')}
+      onFocus={action('focus')}
+      placeholder="Input Text"
+      isDarkMode
     />
   ), {
     backgrounds: [{ ...darkBackground, default: true }],
@@ -45,7 +58,7 @@ storiesOf('TextInput', module)
   .add('Playground', () => {
     const disabled = boolean('disabled', false);
     const label = text('label', 'Label');
-    const placeholder = text('placeholder', 'Input Text Here...');
+    const placeholder = text('placeholder', 'Input Text');
 
     return (
       <TextInputWithValue
@@ -57,5 +70,5 @@ storiesOf('TextInput', module)
       />
     );
   }, {
-    backgrounds: [{ ...darkBackground, default: true }],
+    backgrounds: [{ ...darkBackground, default: false }],
   });
