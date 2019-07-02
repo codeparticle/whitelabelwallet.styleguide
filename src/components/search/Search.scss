@@ -1,0 +1,52 @@
+@import "../../styles/colors.scss";
+@import "../../styles/layout.scss";
+@import "../../styles/fonts.scss";
+
+.search {
+  background: $white;
+  border-radius: 29px;
+  border: 1px solid $grey;
+  color: $grey;
+  display: flex;
+  flex-wrap: nowrap;
+  height: 40px;
+  padding: $space-1 $space-6 $space-1 $space-3;
+  width: 100%;
+
+  &-active {
+    border: 1px solid $slate;
+  }
+
+  &__icon {
+    align-items: center;
+    display: flex;
+    margin-right: $space-2;
+    pointer-events: none;
+  }
+
+  &__input {
+    background: transparent;
+    border: none;
+    font-size: $font-size-sm-2;
+    outline: none;
+    width: 100%;
+
+    &-dark {
+      color: $white;
+    }
+  }
+}
+
+.search-dark {
+  background: $dark-bg;
+  border: 1px solid $slate;
+}
+
+.search__input-dark::placeholder {
+  color: $slate;
+}
+
+.search-active.search-dark {
+  background: $dark;
+  border: 1px solid $dark;
+}
