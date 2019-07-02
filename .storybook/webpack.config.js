@@ -1,4 +1,6 @@
 const path = require('path');
+const ExtraWatchWebpackPlugin = require('extra-watch-webpack-plugin');
+const ProcessSvgsPlugin = require('../process-svgs-plugin.js');
 
 module.exports = ({ config }) => {
     // Make dynamic import chunk names nicer
@@ -52,6 +54,13 @@ module.exports = ({ config }) => {
 
     // Wrap all rules into a `oneOf` so that only 1 matches
     config.module.rules = [{ oneOf: config.module.rules }];
+
+    config.plugins.unshift(
+        new ExtraWatchWebpackPlugin({
+            dirs: ['src/images'],
+        }),
+        ProcessSvgsPlugin,
+    );
 
     return config;
 }
