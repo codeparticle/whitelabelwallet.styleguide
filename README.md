@@ -10,7 +10,6 @@ Codeparticle's White Label Wallet Styleguide.
 - [PostCSS](https://github.com/postcss/postcss)
 - Automatically enables keyboard-online-outlines so that outlines are only shown when necessary
 
-
 ## Setup
 
 It's assumed that you will consume this package in an application bundled with Webpack. Follow the steps below:
@@ -76,6 +75,9 @@ It's assumed that you will consume this package in an application bundled with W
 ## Commands
 
 ### start
+It is best to run the project on a node 10.x.x version. To prevent an issue
+between your node_modules and storybook, it is also recommended you install
+from the existing lockfile with `npm ci`.
 
 ```sh
 $ npm start
