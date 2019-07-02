@@ -11,6 +11,8 @@ const TextInputWithValue = (props) => {
   const [value, setValue] = useState('');
   const onChange = e => setValue(e.target.value);
 
+  console.log('========\n', 'props', props, '\n========');
+
   return (
     <TextInput
       {...props}
@@ -55,7 +57,7 @@ storiesOf('TextInput', module)
   })
   .add('Playground', () => {
     const disabled = boolean('disabled', false);
-    const label = text('label', 'Input Label');
+    const label = text('label', 'Label');
     const placeholder = text('placeholder', 'Input Text');
 
     return (

@@ -13,10 +13,8 @@
     color: $slate;
     display: flex;
     flex-direction: column;
-
-    span {
-      padding: 0 $space-1;
-    }
+    font-size: $font-size-xs-3;
+    line-height: $line-height-s;
   }
 
   &__input {
@@ -26,13 +24,8 @@
     color: $dark;
     border-radius: 6px;
     border: 0;
-  }
 
-  &__dark {
-    color: $cool-light-grey;
-
-    input {
-      background: $dark;
+    &__dark {
       color: $white;
     }
   }
