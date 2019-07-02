@@ -126,4 +126,4 @@ Search.defaultProps = {
   theme: 'Light',
 };
 
-export { Search };
+export default Search;
