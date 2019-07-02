@@ -12,6 +12,8 @@ const TextInputWithValue = (props) => {
   const [value, setValue] = useState('');
   const onChange = e => setValue(e.target.value);
 
+  console.log('========\n', 'props', props, '\n========');
+
   return (
     <ThemeWrapper
       defaultToDark={props.defaultToDark}
