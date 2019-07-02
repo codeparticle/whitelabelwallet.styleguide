@@ -1,7 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withReadme } from 'storybook-readme';
-<<<<<<< HEAD
 import { text, withKnobs } from '@storybook/addon-knobs';
 import { ThemeWrapper } from './utils';
 import { Search } from '../src';
@@ -28,23 +27,6 @@ const SearchDemo = ({ defaultToDark = false }) => {
             placeholder={placeholder}
           />
         }
-=======
-import { Search } from '../src';
-import readme from '../src/components/search/README.md';
-
-const darkBackground = { name: 'dark', value: '#686C71' };
-const lightBackground = { name: 'light', value: '#F7F7F7' };
-
-const SearchDemo = ({ theme = 'light' }) => {
-  function onSubmit(value) {
-    console.log(value);
-  }
-  return (
-    <div style={{ padding: '25px 10%' }}>
-      <Search
-        onSubmit={onSubmit}
-        theme={theme}
->>>>>>> feature(wlw-6): adding search component
       />
     </div>
   );
