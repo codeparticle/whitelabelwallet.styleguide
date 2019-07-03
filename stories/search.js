@@ -4,9 +4,10 @@ import { withReadme } from 'storybook-readme';
 import { text, withKnobs } from '@storybook/addon-knobs';
 import { Search } from '../src';
 import readme from '../src/components/search/README.md';
-
-const darkBackground = { name: 'dark', value: '#686C71' };
-const lightBackground = { name: 'light', value: '#F7F7F7' };
+import {
+  darkBackground,
+  lightBackground,
+} from './constants';
 
 const SearchDemo = ({ theme = 'light' }) => {
   const placeholder = text('Placeholder', 'Search...');

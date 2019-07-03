@@ -6,8 +6,7 @@ import Case from 'case';
 import colorcolor from 'colorcolor';
 import colors from '../../src/styles/colors.scss';
 import style from './colors.scss';
-
-const darkBackground = { name: 'dark', value: '#686C71' };
+import { darkBackground } from '../constants';
 
 const parsedColors = Object.entries(colors).reduce((acc, [key, value]) => {
   if (key[0] === '_') {

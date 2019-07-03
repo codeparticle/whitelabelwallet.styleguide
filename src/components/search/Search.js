@@ -2,10 +2,10 @@
  * @fileoverview Search Component with Search Icon
  * @author Gabriel Womble
  */
-import React, { Fragment, useState } from 'react';
+import React, { useState } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import styles from './Search.scss';
+import styles from './search.scss';
 import colors from '../../styles/colors.scss';
 import { MagnifyingGlassIcon } from '../../images';
 
@@ -78,40 +78,38 @@ const Search = ({
   }
 
   return (
-    <Fragment>
-      <form
+    <form
+      className={classNames(
+        styles.search,
+        isDarkMode && styles['search-dark'],
+        isActive && styles['search-active']
+      )}
+      onSubmit={handleSubmit}
+    >
+      <div
         className={classNames(
-          styles.search,
-          isDarkMode && styles['search-dark'],
-          isActive && styles['search-active']
+          styles['search__icon'],
+          isDarkMode && styles['search__icon-dark'],
+          isActive && styles['search__icon-active']
         )}
-        onSubmit={handleSubmit}
       >
-        <div
-          className={classNames(
-            styles['search__icon'],
-            isDarkMode && styles['search__icon-dark'],
-            isActive && styles['search__icon-active']
-          )}
-        >
-          <MagnifyingGlassIcon
-            fill={fillColor}
-          />
-        </div>
-        <input
-          className={classNames(
-            styles['search__input'],
-            isDarkMode && styles['search__input-dark'],
-            isActive && styles['search__input-active']
-          )}
-          onBlur={handleBlur}
-          onChange={handleChange}
-          onFocus={handleFocus}
-          placeholder={placeholder}
-          value={searchValue}
+        <MagnifyingGlassIcon
+          fill={fillColor}
         />
-      </form>
-    </Fragment>
+      </div>
+      <input
+        className={classNames(
+          styles['search__input'],
+          isDarkMode && styles['search__input-dark'],
+          isActive && styles['search__input-active']
+        )}
+        onBlur={handleBlur}
+        onChange={handleChange}
+        onFocus={handleFocus}
+        placeholder={placeholder}
+        value={searchValue}
+      />
+    </form>
   );
 };
 
@@ -123,7 +121,7 @@ Search.propTypes = {
 
 Search.defaultProps = {
   placeholder: 'Search...',
-  theme: 'Light',
+  theme: 'light',
 };
 
 export default Search;
