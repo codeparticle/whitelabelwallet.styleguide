@@ -1,3 +1,7 @@
+/**
++ * @fileoverview Text Input Component
++ * @author Marc Mathieu
++ */
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -50,6 +54,7 @@ TextInput.propTypes = {
   label: PropTypes.string,
   labelClassName: PropTypes.string,
   inputClassName: PropTypes.string,
+  isDarkMode: PropTypes.bool,
   maxLength: PropTypes.number,
   onBlur: PropTypes.func,
   onChange: PropTypes.func,
@@ -67,6 +72,7 @@ TextInput.defaultProps = {
   label: '',
   labelClassName: '',
   inputClassName: '',
+  isDarkMode: false,
   maxLength: null,
   onBlur: null,
   onChange: null,
