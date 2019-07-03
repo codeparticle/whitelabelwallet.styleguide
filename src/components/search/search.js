@@ -5,9 +5,9 @@
 import React, { Fragment, useState } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import styles from './Search.scss';
+import styles from './search.scss';
 import colors from '../../styles/colors.scss';
-import { MagnifyingGlassIcon } from '../../images';
+import { MagnifyingGlassIcon } from '../../svgs';
 
 const {
   blue,

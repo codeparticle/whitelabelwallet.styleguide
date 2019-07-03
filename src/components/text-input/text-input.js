@@ -1,3 +1,7 @@
+/**
++ * @fileoverview Text Input Component
++ * @author Marc Mathieu
++ */
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -10,16 +14,10 @@ const TextInput = ({
   label,
   labelClassName,
   inputClassName,
-  isDarkMode,
   ...rest
 }) => {
   const theme = useTheme('input');
   const [inputId] = useState(`text-input-${uuidv1()}`);
-
-  console.log('========\n', 'styles', styles, '\n========');
-  console.log('========\n', 'inputClassName', inputClassName, '\n========');
-  console.log('========\n', 'labelClassName', labelClassName, '\n========');
-  console.log('========\n', 'isDarkMode', isDarkMode, '\n========');
 
   return (
     <>
