@@ -21,6 +21,7 @@ const TextInput = ({
   return (
     <div
       className={classNames(
+        className,
         styles['text-input']
       )}
     >
