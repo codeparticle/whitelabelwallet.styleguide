@@ -6,13 +6,17 @@
   display: flex;
   flex: 1;
   flex-direction: column;
+  font-size: $font-size-xs-3;
+  line-height: $line-height-s;
 
   &__label {
     color: $slate;
     display: flex;
     flex-direction: column;
-    font-size: $font-size-xs-3;
-    line-height: $line-height-s;
+
+    span {
+      padding: 0 $space-1;
+    }
   }
 
   &__input {
@@ -22,8 +26,13 @@
     color: $dark;
     border-radius: 6px;
     border: 0;
+  }
 
-    &__dark {
+  &__dark {
+    color: $cool-light-grey;
+
+    input {
+      background: $dark;
       color: $white;
     }
   }
