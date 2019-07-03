@@ -5,7 +5,7 @@ The standard Search Input
 ## Usage
 
 ```jsx
-import { Search } from '@codeparticle/react-style-guide';
+import { Search } from '@codeparticle/whitelabelwallet.styleguide';
 
 <Search onSubmit={onSubmit} />
 ```
