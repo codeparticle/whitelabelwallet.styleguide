@@ -18,11 +18,6 @@ const TextInput = ({
 }) => {
   const [inputId] = useState(`text-input-${uuidv1()}`);
 
-  console.log('========\n', 'styles', styles, '\n========');
-  console.log('========\n', 'inputClassName', inputClassName, '\n========');
-  console.log('========\n', 'labelClassName', labelClassName, '\n========');
-  console.log('========\n', 'isDarkMode', isDarkMode, '\n========');
-
   return (
     <div
       className={classNames(
@@ -33,7 +28,7 @@ const TextInput = ({
         htmlFor={inputId}
         className={classNames(
           styles['text-input__label'],
-          isDarkMode && styles['text-input__label__dark'],
+          isDarkMode && styles['text-input__dark'],
         )}
       >
         <span>
