@@ -5,7 +5,7 @@ import { action } from '@storybook/addon-actions';
 import { withReadme } from 'storybook-readme';
 import { TextInput } from '../src';
 import readme from '../src/components/text-input/README.md';
-import { darkBackground } from './constants';
+import { darkBackground, lightBackground } from './constants';
 
 const TextInputWithValue = (props) => {
   const [value, setValue] = useState('');
@@ -30,7 +30,7 @@ storiesOf('TextInput', module)
       placeholder="Input Text"
     />
   ), {
-    backgrounds: [{ ...darkBackground, default: false }],
+    backgrounds: [{ ...lightBackground, default: true }],
   })
   .add('With Label', () => (
     <TextInputWithValue
@@ -40,7 +40,7 @@ storiesOf('TextInput', module)
       placeholder="Input Text"
     />
   ), {
-    backgrounds: [{ ...darkBackground, default: false }],
+    backgrounds: [{ ...lightBackground, default: true }],
   })
   .add('Dark Theme', () => (
     <TextInputWithValue
@@ -55,7 +55,7 @@ storiesOf('TextInput', module)
   })
   .add('Playground', () => {
     const disabled = boolean('disabled', false);
-    const label = text('label', 'Label');
+    const label = text('label', 'Input Label');
     const placeholder = text('placeholder', 'Input Text');
 
     return (
