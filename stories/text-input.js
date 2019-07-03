@@ -76,9 +76,5 @@ storiesOf('TextInput', module)
       />
     );
   }, {
-<<<<<<< HEAD
-    backgrounds: [{ ...darkBackground, default: true }],
-=======
     backgrounds: [{ ...darkBackground, default: false }, { ...lightBackground }],
->>>>>>> feature(wlw-23): updating components to use theming system
   });
