@@ -4,5 +4,6 @@ import './style/svgs';
 import './style/typography';
 import './button';
 import './search';
+import './text-area';
 import './text-input';
 import './theme-provider';
