@@ -4,3 +4,4 @@ import './style/svgs';
 import './style/typography';
 import './button';
 import './text-input';
+import './theme-provider';

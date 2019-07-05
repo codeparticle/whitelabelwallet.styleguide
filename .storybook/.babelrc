@@ -4,6 +4,15 @@
     ],
     "plugins": [
         "@babel/plugin-syntax-dynamic-import",
-        "@babel/plugin-proposal-export-namespace-from"
+        "@babel/plugin-proposal-export-namespace-from",
+        ["styled-jsx/babel", {
+            "plugins": [
+                ["styled-jsx-plugin-sass", {
+                    "sassOptions": {
+                        "includePaths": ["../src/styles"]
+                    }
+                }]
+            ]
+        }]
     ]
 }
