@@ -1,5 +1,5 @@
 /**
-+ * @fileoverview Text Input Component
++ * @fileoverview Text Area Component
 + * @author Marc Mathieu
 + */
 import React, { useState } from 'react';
