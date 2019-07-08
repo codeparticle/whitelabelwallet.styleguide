@@ -107,4 +107,4 @@ TextArea.defaultProps = {
   value: '',
 };
 
-export default TextArea;
+export { TextArea };

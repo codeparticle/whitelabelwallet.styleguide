@@ -2,11 +2,6 @@ import colors from 'styles/colors.scss';
 
 const {
   blue,
-  white,
-} = colors;
-
-const {
-  blue,
   cloud,
   dark,
   grey,

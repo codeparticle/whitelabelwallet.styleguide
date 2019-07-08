@@ -101,4 +101,4 @@ TextInput.defaultProps = {
   value: '',
 };
 
-export default TextInput;
+export { TextInput };

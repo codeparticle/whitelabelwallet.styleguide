@@ -3,8 +3,55 @@
 @import "../../styles/fonts.scss";
 
 .toggle-switch {
-  display: flex;
-  flex: 1;
+  display: inline-block;
   flex-direction: column;
   font-size: $font-size-xs-3;
+  height: 36px;
+  position: relative;
+  width: 80px;
+
+  input {
+    display: none;
+  }
+
+  // TODO: order by asc
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 2px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $slate;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    border-radius: 34px;
+  }
+
+  .slider::before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    border-radius: 50%;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+
+  input:checked + .slider {
+    background-color: $green;
+  }
+
+  input:focus + .slider {
+    box-shadow: 0 0 1px $green;
+  }
+
+  input:checked + .slider::before {
+    -webkit-transform: translateX(46px);
+    -ms-transform: translateX(46px);
+    transform: translateX(46px);
+  }
 }
