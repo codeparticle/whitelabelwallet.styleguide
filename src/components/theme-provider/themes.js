@@ -7,6 +7,7 @@ const {
   grey,
   slate,
   white,
+  'off-white': offWhite,
   'cool-grey-dark': coolGreyDark,
   'dark-bg': darkBg,
   'tint-blue': tintBlue,
@@ -33,6 +34,10 @@ const lightTheme = {
     bg: tintBlue,
     textValue: dark,
   },
+  select: {
+    bg: offWhite,
+    textValue: slate,
+  },
 };
 
 const darkTheme = {
@@ -55,6 +60,10 @@ const darkTheme = {
     bg: dark,
     label: grey,
     textValue: white,
+  },
+  select: {
+    bg: dark,
+    textValue: offWhite,
   },
 };
 

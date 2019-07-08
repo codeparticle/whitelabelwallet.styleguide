@@ -4,6 +4,7 @@ import './style/svgs';
 import './style/typography';
 import './button';
 import './text-input';
+import './select';
 import './theme-provider';
 import './tooltip';
 import './toggle-switch';
