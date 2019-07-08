@@ -1,0 +1,10 @@
+@import "../../styles/colors.scss";
+@import "../../styles/layout.scss";
+@import "../../styles/fonts.scss";
+
+.toggle-switch {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  font-size: $font-size-xs-3;
+}
