@@ -11,7 +11,7 @@ This module includes:
 
 ```jsx
 
-import { ThemeContext } from  '@codeparticle/react-style-guide';
+import { ThemeContext } from  '@codeparticle/whitelabelwallet.styleguide';
 
 // Use at top of component tree
 export const App = () => {
@@ -38,7 +38,7 @@ export const App = () => {
 A react hook pattern to consume the theme
 
 ### Usage
-The React Style Guide uses `styled-jsx` to facilitate theming. This example will demonstrate how this library uses it, however you are not required to use `styled-jsx`.
+The WhiteLabelWallet uses `styled-jsx` to facilitate theming. This example will demonstrate how this library uses it, however you are not required to use `styled-jsx`.
 
 ```jsx
 // Theme.js
@@ -52,7 +52,7 @@ export const theme = {
 
 
 // Component.js
-import { useTheme } from '@codeparticle/react-style-guide';
+import { useTheme } from '@codeparticle/whitelabelwallet.styleguide';
 
 export const MyTitle = () => {
   // option A
@@ -111,7 +111,7 @@ export const theme = {
 
 
 // Component.js
-import { useTheme } from '@codeparticle/react-style-guide';
+import { useTheme } from '@codeparticle/whitelabelwallet.styleguide';
 
 const MyTitleView = (props) => {
   const { theme } = props;

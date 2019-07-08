@@ -5,51 +5,27 @@
 import React, { useState } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
+import { useTheme } from '../theme-provider';
 import styles from './search.scss';
-import colors from '../../styles/colors.scss';
 import { icons } from '../../svgs';
 
 const { SvgMagnifyingGlass } = icons;
 
-const {
-  blue,
-  grey,
-  'cool-grey-dark': coolGrey,
-  'dark-bg': darkBg,
-} = colors;
+const getIconFill = (theme, isActive) => {
+  const { colorBlur, iconFocus } = theme;
+  const iconFill = isActive ? iconFocus : colorBlur;
 
-/**
- * @returns {string} The color hex for the search icon svg fill
- * @param {bool} isActive - condition for if form is active
- * @param {bool} isDarkMode - condition for if dark theme is active
- */
-const getFillColor = (isActive, isDarkMode) => {
-  let fill = grey;
-
-  if (isActive && !isDarkMode) {
-    fill = blue;
-  }
-
-  if (isDarkMode) {
-    fill = coolGrey;
-
-    if (isActive) {
-      fill = darkBg;
-    }
-  }
-
-  return fill;
+  return iconFill;
 };
 
 const Search = ({
   onSubmit,
   placeholder,
-  theme,
 }) => {
   const [searchValue, setSearchValue] = useState('');
   const [isActive, setIsActive] = useState(false);
-  const isDarkMode = theme === 'dark';
-  const fillColor = getFillColor(isActive, isDarkMode);
+  const theme = useTheme('search');
+  const iconFill = getIconFill(theme, isActive);
 
   function handleChange(e) {
     if (e) {
@@ -80,50 +56,65 @@ const Search = ({
   }
 
   return (
-    <form
-      className={classNames(
-        styles.search,
-        isDarkMode && styles['search-dark'],
-        isActive && styles['search-active']
-      )}
-      onSubmit={handleSubmit}
-    >
-      <div
+    <>
+      <form
+        isActive={isActive}
         className={classNames(
-          styles['search__icon'],
-          isDarkMode && styles['search__icon-dark'],
-          isActive && styles['search__icon-active']
+          styles.search,
+          'search'
         )}
+        onSubmit={handleSubmit}
       >
-        <SvgMagnifyingGlass
-          fill={fillColor}
+        <div
+          className={classNames(
+            styles['search__icon'],
+            'search__icon'
+          )}
+        >
+          <SvgMagnifyingGlass
+            fill={iconFill}
+          />
+        </div>
+        <input
+          className={classNames(
+            styles['search__input'],
+            'search__input'
+          )}
+          onBlur={handleBlur}
+          onChange={handleChange}
+          onFocus={handleFocus}
+          placeholder={placeholder}
+          value={searchValue}
         />
-      </div>
-      <input
-        className={classNames(
-          styles['search__input'],
-          isDarkMode && styles['search__input-dark'],
-          isActive && styles['search__input-active']
-        )}
-        onBlur={handleBlur}
-        onChange={handleChange}
-        onFocus={handleFocus}
-        placeholder={placeholder}
-        value={searchValue}
-      />
-    </form>
+      </form>
+      <style jsx>
+        {`
+          .search {
+            background: ${isActive ? theme.bgFocus : theme.bgBlur};
+            border: 1px solid ${isActive ? theme.borderFocus : theme.colorBlur};
+            color: ${theme.colorBlur};
+          }
+
+          .search__input {
+            color: ${theme.textValue};
+          }
+
+          .search__input::placeholder {
+            color: ${theme.textPlaceholder};
+          }
+        `}
+      </style>
+    </>
   );
 };
 
 Search.propTypes = {
   onSubmit: PropTypes.func.isRequired,
   placeholder: PropTypes.string,
-  theme: PropTypes.string,
 };
 
 Search.defaultProps = {
   placeholder: 'Search...',
-  theme: 'light',
 };
 
 export default Search;

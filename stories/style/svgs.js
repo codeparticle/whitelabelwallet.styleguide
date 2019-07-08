@@ -45,7 +45,7 @@ storiesOf('Style', module)
 You may use these svgs like so:
 
 \`\`\`javascript
-import { svgs } from '@codeparticle/react-style-guide';
+import { svgs } from '@codeparticle/whitelabelwallet.styleguide';
 
 const { SvgClose } = svgs.icons;
 

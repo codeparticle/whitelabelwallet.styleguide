@@ -8,7 +8,6 @@
   flex-direction: column;
 
   &__label {
-    color: $light-grey;
     display: flex;
     flex-direction: column;
     font-size: $font-size-xs-3;
@@ -17,6 +16,8 @@
   &__input {
     padding: $spacing-xs;
     width: 100%;
+    border-radius: 6px;
+    border: 0;
   }
 
   &__input.has-label {
