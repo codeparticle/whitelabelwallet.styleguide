@@ -5,7 +5,7 @@ A standard textarea.
 ## Usage
 
 ```jsx
-import React, { useCallback, useState } from 'react';
+import React, { useState } from 'react';
 import { TextArea } from '@codeparticle/whitelabelwallet.styleguide';
 
 const [value, setValue] = useState('');
@@ -32,6 +32,7 @@ const handleChange = (e) => setValue(e.target.value);
 | onKeyDown | function | '' | Callback for the keyDown event |
 | onKeyUp | function | '' | Callback for the keyUp event |
 | placeholder | string | '' | Placeholder displayed in the input element |
+| rows | number | 5 | Number of rows to apply |
 | type | string | '' | Type of the input element |
 | value | string | '' | Value of the input element |
 
