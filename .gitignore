@@ -3,4 +3,4 @@ npm-debug.log*
 /dist
 /styles
 package-lock.json
-src/images/generated
+src/svgs/generated

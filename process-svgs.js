@@ -1,8 +1,8 @@
 const Case = require('case');
 const fs = require('fs');
 
-const imagesDir = './src/images';
-const outDir = `${imagesDir}/generated`;
+const svgsDir = './src/svgs';
+const outDir = `${svgsDir}/generated`;
 
 // Extract a prop from the svg text such as convert `fill='#123123'` to `fill={fill}`
 const parsePropFromSvg = (svg, propName) => {
@@ -87,7 +87,7 @@ export { ${name} };
 `;
 };
 
-// Deletes generated files from not existing images
+// Deletes generated files from not existing svgs
 const deleteExtraComponents = (existingFiles) => {
   const filesInGenerated = fs.readdirSync(outDir);
 
@@ -99,24 +99,24 @@ const deleteExtraComponents = (existingFiles) => {
 };
 
 module.exports = {
-  processImages: () => {
+  processSvgs: () => {
     if (!fs.existsSync(outDir)) {
       fs.mkdirSync(outDir);
     }
 
-    fs.readdir(imagesDir, (err, items) => {
+    fs.readdir(svgsDir, (err, items) => {
       const allCompiledFileNames = [];
       const listOfItems = [];
       let indexJs = '';
 
       items.forEach((item) => {
-        const dirPath = `${imagesDir}/${item}`;
+        const dirPath = `${svgsDir}/${item}`;
 
         if (item !== 'generated' && fs.statSync(dirPath).isDirectory() && item !== outDir.replace(/(\.|\/)/g, '')) {
-          const images = fs.readdirSync(dirPath);
+          const svgs = fs.readdirSync(dirPath);
           let itemExports = `const ${item} = {`;
 
-          images.forEach((image) => {
+          svgs.forEach((image) => {
             if (image.includes('.svg')) {
               const svg = fs.readFileSync(`${dirPath}/${image}`, { encoding: 'utf8' });
               const fileName = image.substr(0, image.indexOf('.svg'));

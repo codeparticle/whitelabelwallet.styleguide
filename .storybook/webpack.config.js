@@ -57,7 +57,7 @@ module.exports = ({ config }) => {
 
     config.plugins.unshift(
         new ExtraWatchWebpackPlugin({
-            dirs: ['src/images'],
+            dirs: ['src/svgs'],
         }),
         ProcessSvgsPlugin,
     );

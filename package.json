@@ -19,7 +19,7 @@
   "scripts": {
     "start": "start-storybook -p 3010 -c .storybook -s .",
     "lint": "eslint --ignore-path .gitignore . && stylelint --ignore-path .gitignore \"**/*.scss\"",
-    "build": "node ./process-images.js && npm run build:clean && npm run build:js && npm run build:css && npm run build:copy-styles",
+    "build": "node ./process-svgs.js && npm run build:clean && npm run build:js && npm run build:css && npm run build:copy-styles",
     "build:clean": "rimraf dist styles",
     "build:js": "cross-env BABEL_ENV=es babel src --out-dir dist --delete-dir-on-start",
     "build:css": "npm run build:css-components && npm run build:css-styles",

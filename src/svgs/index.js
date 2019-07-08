@@ -6,6 +6,6 @@ try {
     module.exports[item] = generated[item];
   });
 } catch (err) {
-  console.error(`Please run the command to process the images (err: ${err})`);
+  console.error(`Please run the command to process the svgs (err: ${err})`);
   module.exports = {};
 }

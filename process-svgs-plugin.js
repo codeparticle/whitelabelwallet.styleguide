@@ -1,9 +1,9 @@
-const { processImages } = require('./process-images');
+const { processSvgs } = require('./process-svgs');
 
 module.exports = {
   apply: (compiler) => {
     compiler.hooks.beforeCompile.tap('ProcessSvgsPlugin', () => {
-      processImages();
+      processSvgs();
     });
   },
 };
