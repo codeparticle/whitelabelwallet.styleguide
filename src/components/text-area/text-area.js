@@ -14,6 +14,8 @@ const TextArea = ({
   labelClassName,
   textAreaClassName,
   isDarkMode,
+  rows,
+  cols,
   ...rest
 }) => {
   const [inputId] = useState(`text-area-${uuidv1()}`);
@@ -42,8 +44,8 @@ const TextArea = ({
             textAreaClassName
           )}
           id={inputId}
-          rows="5"
-          cols="33"
+          rows={rows}
+          cols={cols}
           {...rest}
         />
       </label>
@@ -53,6 +55,7 @@ const TextArea = ({
 
 TextArea.propTypes = {
   className: PropTypes.string,
+  cols: PropTypes.number,
   disabled: PropTypes.bool,
   label: PropTypes.string,
   labelClassName: PropTypes.string,
@@ -65,24 +68,27 @@ TextArea.propTypes = {
   onKeyDown: PropTypes.func,
   onKeyUp: PropTypes.func,
   placeholder: PropTypes.string,
+  rows: PropTypes.number,
   type: PropTypes.string,
   value: PropTypes.string,
 };
 
 TextArea.defaultProps = {
   className: '',
+  cols: 33,
   disabled: false,
-  label: '',
-  labelClassName: '',
-  textAreaClassName: '',
   isDarkMode: false,
   maxLength: null,
+  label: '',
+  labelClassName: '',
   onBlur: null,
   onChange: null,
   onFocus: null,
   onKeyDown: null,
   onKeyUp: null,
   placeholder: '',
+  rows: 5,
+  textAreaClassName: '',
   type: 'text',
   value: '',
 };

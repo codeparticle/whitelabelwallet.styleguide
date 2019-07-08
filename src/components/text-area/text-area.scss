@@ -20,16 +20,16 @@
   }
 
   &__input {
+    background: $tint-blue;
+    border: 0;
+    border-radius: 6px;
+    color: $dark;
     padding: $spacing-s;
     width: 100%;
-    background: $tint-blue;
-    color: $dark;
-    border-radius: 6px;
-    border: 0;
   }
 
   &__dark {
-    color: $cool-light-grey;
+    color: $grey;
 
     textarea {
       background: $dark;
