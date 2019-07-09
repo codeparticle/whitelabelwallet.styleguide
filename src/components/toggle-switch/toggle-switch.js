@@ -22,7 +22,8 @@ const ToggleSwitch = ({
     <div className={classNames(styles['toggle-switch'])}>
       <label
         className={classNames(
-          styles['toggle-switch-label']
+          styles['toggle-switch-label'],
+          'toggle-switch-label'
         )}
         htmlFor={inputId}
       >
