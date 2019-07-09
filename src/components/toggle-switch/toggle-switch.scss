@@ -4,54 +4,81 @@
 
 .toggle-switch {
   display: inline-block;
-  flex-direction: column;
-  font-size: $font-size-xs-3;
-  height: 36px;
   position: relative;
   width: 80px;
+  font-size: $font-size-xs-3;
 
-  input {
+  .toggle-switch-checkbox {
     display: none;
   }
 
-  // TODO: order by asc
-  .slider {
-    position: absolute;
+  .toggle-switch-label {
+    display: block;
+    overflow: hidden;
     cursor: pointer;
-    top: 2px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: $slate;
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
-    border-radius: 34px;
+    border-radius: 18px;
   }
 
-  .slider::before {
+  .toggle-switch-slider {
+    display: block;
+    width: 200%;
+    margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+    color: $white;
+
+    &::before {
+      display: block;
+      float: left;
+      width: 50%;
+      height: 36px;
+      padding: 0;
+      line-height: 36px;
+      font-size: 14px;
+      font-family: $font-default;
+      font-weight: bold;
+      box-sizing: border-box;
+      content: "Yes";
+      padding-left: 14px;
+      background-color: $green;
+      color: $white;
+    }
+
+    &::after {
+      display: block;
+      float: left;
+      width: 50%;
+      height: 36px;
+      padding: 0;
+      line-height: 36px;
+      font-size: 14px;
+      font-family: $font-default;
+      font-weight: bold;
+      box-sizing: border-box;
+      content: "No";
+      padding-right: 14px;
+      background-color: $slate;
+      text-align: right;
+    }
+  }
+
+  .toggle-switch-btn {
+    display: block;
+    width: 28px;
+    height: 28px;
+    background: $white;
     position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    border-radius: 50%;
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
+    top: 4px;
+    bottom: 0;
+    right: 47px;
+    border-radius: 20px;
+    transition: all 0.3s ease-in 0s;
   }
 
-  input:checked + .slider {
-    background-color: $green;
+  .toggle-switch-label .toggle-switch-checkbox:checked + .toggle-switch-slider {
+    margin-left: 0;
   }
 
-  input:focus + .slider {
-    box-shadow: 0 0 1px $green;
-  }
-
-  input:checked + .slider::before {
-    -webkit-transform: translateX(46px);
-    -ms-transform: translateX(46px);
-    transform: translateX(46px);
+  .toggle-switch-label .toggle-switch-checkbox:checked ~ .toggle-switch-btn {
+    right: 5px;
   }
 }

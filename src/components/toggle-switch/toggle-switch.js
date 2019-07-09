@@ -21,20 +21,23 @@ const ToggleSwitch = ({
   const [inputId] = useState(`toggle-switch-${uuidv1()}`);
 
   return (
-    <label
-      htmlFor={inputId}
-      {...rest}
+    <div
       className={classNames(
-        className,
-        styles['toggle-switch']
-      )}
+        styles['toggle-switch'])
+      }
     >
-      <input id={inputId} type="checkbox" />
-      <span className={classNames(
-        styles['slider']
-      )}
-      />
-    </label>
+      <label
+        {...rest}
+        className={classNames(
+          styles['toggle-switch-label']
+        )}
+        htmlFor={inputId}
+      >
+        <input type="checkbox" className={classNames(styles['toggle-switch-checkbox'])} id={inputId} />
+        <span className={classNames(styles['toggle-switch-slider'])} />
+        <span className={classNames(styles['toggle-switch-btn'])} />
+      </label>
+    </div>
   );
 };
 
