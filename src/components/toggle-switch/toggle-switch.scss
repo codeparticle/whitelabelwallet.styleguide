@@ -4,9 +4,9 @@
 
 .toggle-switch {
   display: inline-block;
+  font-size: $font-size-xs-3;
   position: relative;
   width: 80px;
-  font-size: $font-size-xs-3;
 
   .toggle-switch-checkbox {
     display: none;
@@ -14,64 +14,54 @@
 
   .toggle-switch-label {
     display: block;
-    overflow: hidden;
     cursor: pointer;
     border-radius: 18px;
+    overflow: hidden;
   }
 
   .toggle-switch-slider {
-    display: block;
-    width: 200%;
-    margin-left: -100%;
-    transition: margin 0.3s ease-in 0s;
     color: $white;
+    display: block;
+    font-family: $font-default;
+    font-weight: bold;
+    height: 36px;
+    line-height: 36px;
+    margin-left: -100%;
+    width: 200%;
+    transition: margin 0.3s ease-in 0s;
+    font-size: $font-size-xs-3;
 
     &::before {
-      display: block;
-      float: left;
-      width: 50%;
-      height: 36px;
-      padding: 0;
-      line-height: 36px;
-      font-size: 14px;
-      font-family: $font-default;
-      font-weight: bold;
       box-sizing: border-box;
       content: "Yes";
+      float: left;
+      padding: 0;
       padding-left: 14px;
-      background-color: $green;
-      color: $white;
+      width: 50%;
     }
 
     &::after {
-      display: block;
-      float: left;
-      width: 50%;
-      height: 36px;
-      padding: 0;
-      line-height: 36px;
-      font-size: 14px;
-      font-family: $font-default;
-      font-weight: bold;
       box-sizing: border-box;
       content: "No";
+      float: left;
+      padding: 0;
       padding-right: 14px;
-      background-color: $slate;
       text-align: right;
+      width: 50%;
     }
   }
 
   .toggle-switch-btn {
-    display: block;
-    width: 28px;
-    height: 28px;
     background: $white;
-    position: absolute;
-    top: 4px;
     bottom: 0;
-    right: 47px;
     border-radius: 20px;
+    display: block;
+    height: 28px;
+    position: absolute;
+    right: 47px;
+    top: 4px;
     transition: all 0.3s ease-in 0s;
+    width: 28px;
   }
 
   .toggle-switch-label .toggle-switch-checkbox:checked + .toggle-switch-slider {

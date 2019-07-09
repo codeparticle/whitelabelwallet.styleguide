@@ -8,6 +8,7 @@ const {
   slate,
   white,
   'off-white': offWhite,
+  green,
   'cool-grey-dark': coolGreyDark,
   'dark-bg': darkBg,
   'tint-blue': tintBlue,
@@ -36,7 +37,16 @@ const lightTheme = {
   },
   select: {
     bg: offWhite,
-    textValue: slate,
+    bgFocused: white,
+    selectText: slate,
+    selectFocus: blue,
+    selectedOption: blue,
+    optionText: coolGreyDark,
+    shadow: '0px 3px 8px rgba(0, 0, 0, 0.15)',
+  },
+  toggle: {
+    offBackground: slate,
+    onBackground: green,
   },
 };
 
@@ -63,7 +73,16 @@ const darkTheme = {
   },
   select: {
     bg: dark,
-    textValue: offWhite,
+    bgFocused: darkBg,
+    selectText: offWhite,
+    selectFocus: slate,
+    selectedOption: offWhite,
+    optionText: grey,
+    shadow: '0px 3px 8px rgba(0, 0, 0, 0.6)',
+  },
+  toggle: {
+    offBackground: dark,
+    onBackground: slate,
   },
 };
 

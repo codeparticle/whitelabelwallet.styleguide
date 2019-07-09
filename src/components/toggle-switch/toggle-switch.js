@@ -6,19 +6,17 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import uuidv1 from 'uuid/v1';
+import { useTheme } from '../theme-provider';
 import styles from './toggle-switch.scss';
 
 const ToggleSwitch = ({
   className,
-  offLabel,
-  onLabel,
-  isDarkMode,
-  children,
-  disabled,
-  fullWidth,
+  onClick,
   ...rest
 }) => {
   const [inputId] = useState(`toggle-switch-${uuidv1()}`);
+  const theme = useTheme('toggle');
+
 
   return (
     <div
@@ -27,15 +25,34 @@ const ToggleSwitch = ({
       }
     >
       <label
-        {...rest}
         className={classNames(
           styles['toggle-switch-label']
         )}
         htmlFor={inputId}
       >
-        <input type="checkbox" className={classNames(styles['toggle-switch-checkbox'])} id={inputId} />
-        <span className={classNames(styles['toggle-switch-slider'])} />
-        <span className={classNames(styles['toggle-switch-btn'])} />
+        <input {...rest} onClick={onClick} type="checkbox" className={classNames(styles['toggle-switch-checkbox'])} id={inputId} />
+        <span className={classNames(
+          styles['toggle-switch-slider'],
+          'toggle-switch-slider')}
+        />
+        <span className={classNames(
+          styles['toggle-switch-btn'],
+          'toggle-switch-btn'
+        )}
+        />
+        <style jsx>
+          {`
+              .toggle-switch-slider {
+                &:before {
+                  background-color: ${theme.onBackground};
+                }
+                &.toggle-switch-slider:after {
+                  background-color: ${theme.offBackground};
+                }
+              }
+            `}
+        </style>
+
       </label>
     </div>
   );
@@ -43,16 +60,12 @@ const ToggleSwitch = ({
 
 ToggleSwitch.propTypes = {
   className: PropTypes.string,
-  isDarkMode: PropTypes.bool,
-  offLabel: PropTypes.string,
-  onLabel: PropTypes.string,
+  onClick: PropTypes.func,
 };
 
 ToggleSwitch.defaultProps = {
   className: '',
-  isDarkMode: false,
-  offLabel: 'Off',
-  onLabel: 'On',
+  onClick: null,
 };
 
 export { ToggleSwitch };
