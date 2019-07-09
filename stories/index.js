@@ -13,3 +13,4 @@ import './select';
 import './theme-provider';
 import './toggle-switch';
 import './tooltip';
+import './transfer-amount';

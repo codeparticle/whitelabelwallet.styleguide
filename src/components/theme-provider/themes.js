@@ -5,13 +5,13 @@ const {
   blue,
   cloud,
   dark,
+  green,
   grey,
   slate,
   white,
-  'off-white': offWhite,
-  green,
   'cool-grey-dark': coolGreyDark,
   'dark-bg': darkBg,
+  'off-white': offWhite,
   'tint-blue': tintBlue,
 } = colors;
 
@@ -64,6 +64,14 @@ const lightTheme = {
     background: tintBlue,
     button: PRIMARY,
   },
+  transferAmount: {
+    bg: cloud,
+    conversionAmount: blue,
+    currencyAmount: slate,
+    icons: grey,
+    textAreaBg: tintBlue,
+    textTitle: coolGreyDark,
+  },
 };
 
 const darkTheme = {
@@ -109,6 +117,14 @@ const darkTheme = {
   address: {
     background: dark,
     button: SLATE,
+  },
+  transferAmount: {
+    bg: dark,
+    conversionAmount: slate,
+    currencyAmount: offWhite,
+    icons: coolGreyDark,
+    textAreaBg: darkBg,
+    textTitle: grey,
   },
 };
 

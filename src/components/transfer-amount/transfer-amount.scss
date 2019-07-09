@@ -1,0 +1,48 @@
+@import "../../styles/layout.scss";
+@import "../../styles/fonts.scss";
+
+.transfer-amount {
+  align-items: stretch;
+  display: flex;
+  height: 380px;
+  width: 100%;
+
+  &__currency {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+  }
+
+  &__memo {
+    padding: $spacing-xl $spacing-xl $spacing-xl 0;
+    width: 50%;
+  }
+
+  &__text-area {
+    font-size: $font-size-sm-2;
+    line-height: calc(2 * $font-size-sm-2);
+    width: 100%;
+  }
+}
+
+.currency__input,
+.currency__conversion {
+  align-items: center;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  width: 100%;
+
+  &-input {
+    background: transparent;
+    border: none;
+    margin-left: $space-2;
+    max-width: 50%;
+  }
+
+  h4 {
+    margin-left: $space-1;
+  }
+}

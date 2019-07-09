@@ -11,11 +11,10 @@ import styles from './text-area.scss';
 
 const TextArea = ({
   className,
+  customColor,
   label,
   labelClassName,
   textAreaClassName,
-  isDarkMode,
-  rows,
   ...rest
 }) => {
   const theme = useTheme('input');
@@ -48,7 +47,6 @@ const TextArea = ({
               textAreaClassName
             )}
             id={inputId}
-            rows={rows}
             {...rest}
           />
         </label>
@@ -60,7 +58,7 @@ const TextArea = ({
           }
 
           .text-area__input {
-            background: ${theme.bg};
+            background: ${customColor || theme.bg};
             color: ${theme.textValue};
           }
         `}
@@ -75,7 +73,6 @@ TextArea.propTypes = {
   label: PropTypes.string,
   labelClassName: PropTypes.string,
   textAreaClassName: PropTypes.string,
-  isDarkMode: PropTypes.bool,
   maxLength: PropTypes.number,
   onBlur: PropTypes.func,
   onChange: PropTypes.func,
@@ -83,7 +80,6 @@ TextArea.propTypes = {
   onKeyDown: PropTypes.func,
   onKeyUp: PropTypes.func,
   placeholder: PropTypes.string,
-  rows: PropTypes.number,
   type: PropTypes.string,
   value: PropTypes.string,
 };
@@ -91,7 +87,6 @@ TextArea.propTypes = {
 TextArea.defaultProps = {
   className: '',
   disabled: false,
-  isDarkMode: false,
   maxLength: null,
   label: '',
   labelClassName: '',
@@ -101,7 +96,6 @@ TextArea.defaultProps = {
   onKeyDown: null,
   onKeyUp: null,
   placeholder: '',
-  rows: 5,
   textAreaClassName: '',
   type: 'text',
   value: '',
