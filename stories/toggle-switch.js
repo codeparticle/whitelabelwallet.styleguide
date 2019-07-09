@@ -30,13 +30,11 @@ storiesOf('ToggleSwitch', module)
   .addDecorator(withKnobs)
   .add('Default', () => (
     <ToggleSwitchWithValue />
-
   ), {
     backgrounds: [{ ...darkBackground, default: false }],
   })
   .add('Dark Theme', () => (
     <ToggleSwitchWithValue defaultToDark />
-
   ), {
     backgrounds: [{ ...darkBackground, default: true }],
   });
