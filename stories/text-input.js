@@ -5,7 +5,8 @@ import { action } from '@storybook/addon-actions';
 import { withReadme } from 'storybook-readme';
 import { TextInput } from '../src';
 import readme from '../src/components/text-input/README.md';
-import { darkBackground, lightBackground } from './constants';
+
+const darkBackground = { name: 'dark', value: '#686C71' };
 
 const TextInputWithValue = (props) => {
   const [value, setValue] = useState('');
@@ -27,28 +28,17 @@ storiesOf('TextInput', module)
     <TextInputWithValue
       onBlur={action('blur')}
       onFocus={action('focus')}
-      placeholder="Input Text"
+      placeholder="Input Text Here..."
     />
   ), {
-    backgrounds: [{ ...lightBackground, default: true }],
+    backgrounds: [{ ...darkBackground, default: true }],
   })
   .add('With Label', () => (
     <TextInputWithValue
-      label="Input Label"
+      label="Label"
       onBlur={action('blur')}
       onFocus={action('focus')}
-      placeholder="Input Text"
-    />
-  ), {
-    backgrounds: [{ ...lightBackground, default: true }],
-  })
-  .add('Dark Theme', () => (
-    <TextInputWithValue
-      label="Input Label"
-      onBlur={action('blur')}
-      onFocus={action('focus')}
-      placeholder="Input Text"
-      isDarkMode
+      placeholder="Input Text Here..."
     />
   ), {
     backgrounds: [{ ...darkBackground, default: true }],
@@ -56,7 +46,7 @@ storiesOf('TextInput', module)
   .add('Playground', () => {
     const disabled = boolean('disabled', false);
     const label = text('label', 'Label');
-    const placeholder = text('placeholder', 'Input Text');
+    const placeholder = text('placeholder', 'Input Text Here...');
 
     return (
       <TextInputWithValue
@@ -68,5 +58,5 @@ storiesOf('TextInput', module)
       />
     );
   }, {
-    backgrounds: [{ ...darkBackground, default: false }],
+    backgrounds: [{ ...darkBackground, default: true }],
   });

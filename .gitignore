@@ -4,4 +4,3 @@ npm-debug.log*
 /styles
 package-lock.json
 src/svgs/generated
-.DS_Store

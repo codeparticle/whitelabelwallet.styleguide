@@ -5,7 +5,8 @@ import { action } from '@storybook/addon-actions';
 import { withReadme } from 'storybook-readme';
 import { Button } from '../src';
 import readme from '../src/components/button/README.md';
-import { darkBackground } from './constants';
+
+const darkBackground = { name: 'dark', value: '#686C71' };
 
 storiesOf('Button', module)
   .addDecorator(withReadme(readme))

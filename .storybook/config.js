@@ -7,7 +7,7 @@ addDecorator(addReadme);
 
 addParameters({
   options: {
-    name: 'White Label Wallet Styleguide',
+    name: 'Styleguide',
     theme,
   },
 });

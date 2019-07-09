@@ -40,7 +40,7 @@ const CodeHighlight = props => (
 );
 
 const BREAKPOINT_CODE = `\
-@import '@codeparticle/whitelabelwallet.styleguide/layout';
+@import '@codeparticle/react-style-guide/layout';
  
 // Mobile (portrait phones, 320px and up)
 @media (min-width: 320px) { ... }
@@ -64,11 +64,11 @@ const BREAKPOINT_CODE = `\
 storiesOf('Style', module)
   .addDecorator(withReadme(marked(`
 # Layout
-whitelabelwallet.styleguide's layout.
+React-style-guide's layout.
 
 SCSS variables that are available to be used for spacing purposes.
 \`\`\`css
-@import '@codeparticle/whitelabelwallet.styleguide/layout';
+@import '@codeparticle/react-style-guide/layout';
 
 .my-heading {\n
   padding: $space-1 $space-2;\n
