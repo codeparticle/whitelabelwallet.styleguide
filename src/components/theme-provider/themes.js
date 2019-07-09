@@ -64,6 +64,10 @@ const lightTheme = {
     background: tintBlue,
     button: PRIMARY,
   },
+  toggle: {
+    offBackground: slate,
+    onBackground: green,
+  },
 };
 
 const darkTheme = {
@@ -109,6 +113,10 @@ const darkTheme = {
   address: {
     background: dark,
     button: SLATE,
+  },
+  toggle: {
+    offBackground: dark,
+    onBackground: slate,
   },
 };
 

@@ -20,6 +20,7 @@
   }
 
   .toggle-switch-slider {
+    color: $white;
     display: block;
     font-family: $font-default;
     font-size: $font-size-xs-3;
@@ -40,13 +41,18 @@
 
     &::before {
       content: "Yes";
+      float: left;
+      padding: 0;
       padding-left: 14px;
     }
 
     &::after {
       content: "No";
+      float: left;
+      padding: 0;
       padding-right: 14px;
       text-align: right;
+      width: 50%;
     }
   }
 
