@@ -6,6 +6,19 @@ import SelectInput, { components } from 'react-select';
 import { useTheme } from '../theme-provider';
 import styles from './select.scss';
 
+const Option = ({
+  className,
+  ...props
+}) => (
+  <components.Option
+    {...props}
+    className={classNames(
+      styles['select-input__option'],
+      className
+    )}
+  />
+);
+
 const Control = ({
   children,
   className,
@@ -28,32 +41,65 @@ const Select = (props) => {
 
   const selectComponents = {
     Control,
+    Option,
     IndicatorSeparator: () => null,
   };
 
   const customStyles = {
-    control: (base, state) => ({
+    control: (base, { menuIsOpen }) => ({
       ...base,
-      borderStyle: 'none',
-      borderRadius: 6,
-      minHeight: 36,
-      backgroundColor: theme.bg,
-      boxShadow: state.isFocused ? 0 : 0,
+      'borderStyle': 'none',
+      'borderRadius': 6,
+      'border-bottom-left-radius': menuIsOpen ? 0 : null,
+      'border-bottom-right-radius': menuIsOpen ? 0 : null,
+      'minHeight': 36,
+      'backgroundColor': menuIsOpen ? theme.bgFocused : theme.bg,
+      'boxShadow': menuIsOpen ? theme.shadow : 0,
     }),
     singleValue: base => ({
       ...base,
-      color: theme.textValue,
+      color: theme.selectText,
     }),
     input: base => ({
       ...base,
-      color: theme.textValue,
+      color: theme.selectText,
       margin: 0,
       paddingBottom: 0,
       paddingTop: 0,
     }),
-    dropdownIndicator: base => ({
+    dropdownIndicator: (base, { isFocused }) => ({
       ...base,
-      color: theme.textValue,
+      color: isFocused ? theme.selectFocus : theme.selectText,
+    }),
+    menu: base => ({
+      ...base,
+      'borderRadius': 0,
+      'border-bottom-left-radius': 6,
+      'border-bottom-right-radius': 6,
+      'marginTop': 0,
+      'boxShadow': theme.shadow,
+      'background': theme.bgFocused,
+      '&:before': {
+        'background': theme.bgFocused,
+        'display': 'block',
+        'content': '"."',
+        'fontSize': 0,
+        'position': 'relative',
+        'top': -4,
+        'height': 5,
+        'left': 0,
+        'zIndex': 10,
+        'border-bottom': `1px solid ${theme.bg}`,
+      },
+    }),
+    option: (base, state) => ({
+      ...base,
+      'backgroundColor': state.isSelected ? theme.bg : theme.bgFocused,
+      '&:active': {
+        backgroundColor: theme.bg,
+      },
+      'color': state.isSelected ? theme.selectedOption : theme.optionText,
+      'padding': '0px 10px',
     }),
   };
 
