@@ -9,4 +9,5 @@ export {
   useTheme,
   withTheme,
 } from './components/theme-provider';
+export { Tooltip } from './components/tooltip';
 export * as svgs from './svgs';

@@ -35,7 +35,8 @@ const Tooltip = ({
           .__react_component_tooltip.type-dark {
             background: ${theme.bg} !important;
             border-color: ${theme.bg} !important;
-            box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+            border-radius: 6px !important;
+            box-shadow: 0px 2px 6px -2px #888;
             color: ${theme.message} !important;
 
             &.place-top::after,
@@ -95,4 +96,4 @@ Tooltip.defaultProps = {
   place: 'top',
 };
 
-export default Tooltip;
+export { Tooltip };

@@ -50,6 +50,10 @@ const lightTheme = {
     button: white,
     fontColor: white,
   },
+  tooltip: {
+    bg: white,
+    message: blue,
+  },
 };
 
 const darkTheme = {
@@ -87,6 +91,10 @@ const darkTheme = {
     onBackground: slate,
     button: white,
     fontColor: white,
+  },
+  tooltip: {
+    bg: darkBg,
+    message: white,
   },
 };
 

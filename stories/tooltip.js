@@ -1,12 +1,16 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withReadme } from 'storybook-readme';
-import { select, withKnobs } from '@storybook/addon-knobs';
+import { select, text, withKnobs } from '@storybook/addon-knobs';
+import { ThemeWrapper } from './utils';
 import { Tooltip, useTheme } from '../src';
 import readme from '../src/components/tooltip/README.md';
-import { offWhiteBackground } from './constants';
+import {
+  darkBackground,
+  offWhiteBackground,
+} from './constants';
 
-const TooltipDemo = ({ content = 'Tooltip' }) => {
+const TooltipDemo = () => {
   const theme = useTheme('demo');
   const options = {
     Top: 'top',
@@ -14,6 +18,7 @@ const TooltipDemo = ({ content = 'Tooltip' }) => {
     Left: 'left',
     Right: 'right',
   };
+  const content = text('Content', 'Tooltip');
   const place = select('Place', options);
 
   return (
@@ -48,11 +53,25 @@ const TooltipDemo = ({ content = 'Tooltip' }) => {
   );
 };
 
+const ThemedTooltip = props => (
+  <ThemeWrapper
+    defaultToDark={props.defaultToDark}
+    content={
+      <TooltipDemo />
+    }
+  />
+);
+
 storiesOf('Tooltip', module)
   .addDecorator(withReadme(readme))
   .addDecorator(withKnobs)
-  .add('Basic', () => (
-    <TooltipDemo />
+  .add('Light Theme', () => (
+    <ThemedTooltip />
   ), {
     backgrounds: [{ ...offWhiteBackground, default: true }],
+  })
+  .add('Dark Theme', () => (
+    <ThemedTooltip defaultToDark />
+  ), {
+    backgrounds: [{ ...darkBackground, default: true }],
   });
