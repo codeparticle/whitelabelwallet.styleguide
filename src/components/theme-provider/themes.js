@@ -8,7 +8,10 @@ const {
   grey,
   slate,
   white,
+<<<<<<< HEAD
   'off-white': offWhite,
+=======
+>>>>>>> feature(wlw-13): set up themeing for toggle-switch
   green,
   'cool-grey-dark': coolGreyDark,
   'dark-bg': darkBg,
