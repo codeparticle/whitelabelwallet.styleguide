@@ -4,7 +4,7 @@ import { withKnobs } from '@storybook/addon-knobs';
 import { withReadme } from 'storybook-readme';
 import { ThemeWrapper } from './utils';
 import { ToggleSwitch } from '../src';
-import readme from '../src/components/button/README.md';
+import readme from '../src/components/toggle-switch/README.md';
 import { darkBackground } from './constants';
 
 const ToggleSwitchWithValue = (props) => {
