@@ -21,12 +21,14 @@ const ToggleSwitch = ({
   return (
     <div
       className={classNames(
-        styles['toggle-switch'])
-      }
+        styles['toggle-switch'],
+        'toggle-switch'
+      )}
     >
       <label
         className={classNames(
-          styles['toggle-switch-label']
+          styles['toggle-switch-label'],
+          'toggle-switch-label'
         )}
         htmlFor={inputId}
       >
@@ -52,7 +54,6 @@ const ToggleSwitch = ({
               }
             `}
         </style>
-
       </label>
     </div>
   );
