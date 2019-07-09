@@ -6,7 +6,7 @@ A standard text input.
 
 ```jsx
 import React, { useCallback, useState } from 'react';
-import { TextInput } from '@codeparticle/whitelabelwallet.styleguide';
+import { TextInput } from '@codeparticle/react-style-guide';
 
 const [value, setValue] = useState('');
 const handleChange = (e) => setValue(e.target.value);

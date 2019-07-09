@@ -7,4 +7,4 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Features
 
-* **wlw-5:** first commit ([4077d21](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/4077d21))
+* **cpnet-423:** first commit ([4077d21](https://bitbucket.org/CodeParticle/react-style-guide/commits/4077d21))

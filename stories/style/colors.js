@@ -6,7 +6,8 @@ import Case from 'case';
 import colorcolor from 'colorcolor';
 import colors from '../../src/styles/colors.scss';
 import style from './colors.scss';
-import { darkBackground } from '../constants';
+
+const darkBackground = { name: 'dark', value: '#686C71' };
 
 const parsedColors = Object.entries(colors).reduce((acc, [key, value]) => {
   if (key[0] === '_') {
@@ -52,7 +53,7 @@ Color pallete.
 You may use these colors in SCSS files like so:
 
 \`\`\`css
-@import '@codeparticle/whitelabelwallet.styleguide/styles/colors';
+@import '@codeparticle/react-style-guide/styles/colors';
 
 .my-div {
   color: $east-bay;

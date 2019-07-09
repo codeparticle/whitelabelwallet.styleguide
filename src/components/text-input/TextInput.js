@@ -1,19 +1,14 @@
-/**
-+ * @fileoverview Text Input Component
-+ * @author Marc Mathieu
-+ */
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import uuidv1 from 'uuid/v1';
-import styles from './text-input.scss';
+import styles from './TextInput.scss';
 
 const TextInput = ({
   className,
   label,
   labelClassName,
   inputClassName,
-  isDarkMode,
   ...rest
 }) => {
   const [inputId] = useState(`text-input-${uuidv1()}`);
@@ -21,20 +16,18 @@ const TextInput = ({
   return (
     <div
       className={classNames(
+        styles['text-input'],
         className,
-        styles['text-input']
       )}
     >
       <label
         htmlFor={inputId}
         className={classNames(
           styles['text-input__label'],
-          isDarkMode && styles['text-input__dark'],
+          labelClassName,
         )}
       >
-        <span>
-          {label}
-        </span>
+        {label}
         <input
           {...rest}
           className={classNames(
@@ -55,7 +48,6 @@ TextInput.propTypes = {
   label: PropTypes.string,
   labelClassName: PropTypes.string,
   inputClassName: PropTypes.string,
-  isDarkMode: PropTypes.bool,
   maxLength: PropTypes.number,
   onBlur: PropTypes.func,
   onChange: PropTypes.func,
@@ -73,7 +65,6 @@ TextInput.defaultProps = {
   label: '',
   labelClassName: '',
   inputClassName: '',
-  isDarkMode: false,
   maxLength: null,
   onBlur: null,
   onChange: null,
