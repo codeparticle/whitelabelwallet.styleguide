@@ -8,10 +8,7 @@ const {
   grey,
   slate,
   white,
-<<<<<<< HEAD
   'off-white': offWhite,
-=======
->>>>>>> feature(wlw-13): set up themeing for toggle-switch
   green,
   'cool-grey-dark': coolGreyDark,
   'dark-bg': darkBg,
@@ -67,12 +64,6 @@ const lightTheme = {
     background: tintBlue,
     button: PRIMARY,
   },
-  toggle: {
-    offBackground: slate,
-    onBackground: green,
-    button: white,
-    fontColor: white,
-  },
 };
 
 const darkTheme = {
@@ -118,12 +109,6 @@ const darkTheme = {
   address: {
     background: dark,
     button: SLATE,
-  },
-  toggle: {
-    offBackground: dark,
-    onBackground: slate,
-    button: white,
-    fontColor: white,
   },
 };
 
