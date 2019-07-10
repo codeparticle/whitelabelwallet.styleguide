@@ -6,23 +6,23 @@ import styles from './button.scss';
 const Button = ({
   className,
   children,
-  disabled,
-  fullWidth,
+  variant,
+  size,
   ...rest
 }) => {
-  const finalClassName = classNames(
+  const buttonClass = classNames(
     styles.button,
-    fullWidth && styles.fullWidth,
+    styles[variant],
+    styles[`btn-${size}`],
     className
   );
 
   return (
     <button
       {...rest}
-      className={finalClassName}
-      disabled={disabled}
+      className={buttonClass}
     >
-      {children}
+      <span>{children}</span>
     </button>
   );
 };
@@ -30,15 +30,15 @@ const Button = ({
 Button.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
-  disabled: PropTypes.bool,
-  fullWidth: PropTypes.bool,
+  variant: PropTypes.string,
+  size: PropTypes.string,
 };
 
 Button.defaultProps = {
   children: null,
   className: '',
-  disabled: false,
-  fullWidth: false,
+  variant: '',
+  size: '',
 };
 
-export default Button;
+export { Button };
