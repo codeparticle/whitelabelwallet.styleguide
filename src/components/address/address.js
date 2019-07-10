@@ -44,16 +44,18 @@ const Address = ({
           styles['address-btn'],
           'address-btn'
         )}
+        inlineStyle={
+          <style jsx>
+            {`
+              button {
+                background-color: ${theme.button};
+              }
+            `}
+          </style>
+        }
         onClick={onClick}
       >
         {buttonText}
-        <style jsx>
-          {`
-          .address-btn {
-            background-color: ${theme.button};
-          }
-        `}
-        </style>
       </Button>
 
     </div>

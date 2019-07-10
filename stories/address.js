@@ -6,7 +6,7 @@ import { withReadme } from 'storybook-readme';
 import { ThemeWrapper } from './utils';
 import { Address } from '../src';
 import readme from '../src/components/text-input/README.md';
-import { lightBackground } from './constants';
+import { darkBackground, lightBackground } from './constants';
 
 const AddressWithValue = (props) => {
   const [value, setValue] = useState('');
@@ -39,4 +39,16 @@ storiesOf('Address', module)
     />
   ), {
     backgrounds: [{ ...lightBackground, default: true }],
+  })
+  .add('Dark Theme', () => (
+    <AddressWithValue
+      onBlur={action('blur')}
+      onFocus={action('focus')}
+      placeholder="Default Text..."
+      buttonText="Add Address"
+      onClick={action('clicked')}
+      defaultToDark
+    />
+  ), {
+    backgrounds: [{ ...darkBackground, default: true }],
   });

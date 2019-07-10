@@ -5,8 +5,10 @@
 .address {
   display: flex;
   font-family: $font-default;
+  border: none;
 
   &-btn {
     border-radius: 6px;
+    color: $white;
   }
 }
