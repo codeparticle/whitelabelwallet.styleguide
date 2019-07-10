@@ -45,6 +45,11 @@ const Select = (props) => {
     IndicatorSeparator: () => null,
   };
 
+  /**
+  * The select component is using react-select’s styling methods. This was done as the component was not working nicely alongside jsx styles.
+  * React select has several classNames that would need to be updated and requires multiple classes to be overridden to get the expected results.
+  * Using react-select's own styling system prevents these issues.
+  */
   const customStyles = {
     control: (base, { menuIsOpen }) => ({
       ...base,
