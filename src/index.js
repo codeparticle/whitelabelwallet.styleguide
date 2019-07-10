@@ -2,6 +2,7 @@
 export { ButtonVariants } from './components/button/constants';
 
 // Components
+export { Address } from './components/address';
 export { Button } from './components/button';
 export { Search } from './components/search';
 export { TextArea } from './components/text-area';

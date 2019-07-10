@@ -54,6 +54,9 @@ const lightTheme = {
     bg: white,
     message: blue,
   },
+  address: {
+    button: blue,
+  },
 };
 
 const darkTheme = {
@@ -95,6 +98,9 @@ const darkTheme = {
   tooltip: {
     bg: darkBg,
     message: white,
+  },
+  address: {
+    button: slate,
   },
 };
 

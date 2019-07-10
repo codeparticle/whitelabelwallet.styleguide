@@ -2,6 +2,7 @@ import './style/colors';
 import './style/layout';
 import './style/svgs';
 import './style/typography';
+import './address';
 import './button';
 import './text-input';
 import './select';

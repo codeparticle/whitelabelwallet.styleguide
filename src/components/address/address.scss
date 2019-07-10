@@ -1,0 +1,12 @@
+@import "../../styles/colors.scss";
+@import "../../styles/layout.scss";
+@import "../../styles/fonts.scss";
+
+.address {
+  display: flex;
+  font-family: $font-default;
+
+  &-btn {
+    border-radius: 6px;
+  }
+}
