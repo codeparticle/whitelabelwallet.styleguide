@@ -17,7 +17,6 @@ const ToggleSwitch = ({
 }) => {
   const inputId = `toggle-switch-${uuidv1()}`;
   const theme = useTheme('toggle');
-  console.log('========\n', 'value', value, '\n========');
 
   return (
     <div className={classNames(styles['toggle-switch'])}>
