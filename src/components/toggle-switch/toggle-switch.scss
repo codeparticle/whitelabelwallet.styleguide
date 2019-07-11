@@ -46,13 +46,15 @@
       padding-left: 14px;
     }
 
+    &::before {
+      content: "Yes";
+      padding-left: 14px;
+    }
+
     &::after {
       content: "No";
-      float: left;
-      padding: 0;
       padding-right: 14px;
       text-align: right;
-      width: 50%;
     }
   }
 
