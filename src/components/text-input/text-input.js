@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import uuidv1 from 'uuid/v1';
-import styles from './TextInput.scss';
+import styles from './text-input.scss';
 
 const TextInput = ({
   className,

@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import styles from './Button.scss';
+import styles from './button.scss';
 
 const Button = ({
   className,
