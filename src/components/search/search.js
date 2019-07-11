@@ -5,15 +5,9 @@
 import React, { useState } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-<<<<<<< HEAD
-import styles from './search.scss';
-import colors from '../../styles/colors.scss';
-import { MagnifyingGlassIcon } from '../../svgs';
-=======
 import { useTheme } from '../theme-provider';
 import styles from './search.scss';
 import { icons } from '../../svgs';
->>>>>>> feature(wlw-13): refactor toggle swtich
 
 const { SvgMagnifyingGlass } = icons;
 
