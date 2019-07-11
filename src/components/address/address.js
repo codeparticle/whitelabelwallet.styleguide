@@ -24,14 +24,8 @@ const Address = ({
   const theme = useTheme('address');
   const [inputId] = useState(`address-${uuidv1()}`);
 
-  console.log('========\n', 'theme', theme, '\n========');
-
   return (
-    <div className={classNames(
-      styles['address'],
-      'address'
-    )}
-    >
+    <div className={classNames(styles['address'])}>
       <TextInput
         {...rest}
         id={inputId}
