@@ -47,6 +47,8 @@ const lightTheme = {
   toggle: {
     offBackground: slate,
     onBackground: green,
+    button: white,
+    fontColor: white,
   },
 };
 
@@ -83,6 +85,8 @@ const darkTheme = {
   toggle: {
     offBackground: dark,
     onBackground: slate,
+    button: white,
+    fontColor: white,
   },
 };
 
