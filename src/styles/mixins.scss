@@ -866,3 +866,16 @@ $base-font-size: 16px !default;
 
   @return calc(#{$base} + #{100vw * $slope});
 }
+
+/**
+ * Lightens or darkens a color based on its brightness
+ */
+@function set-border-color($color) {
+  @if (lightness($color) > 50) {
+    @return darken($color, 15%); // Lighter background, return dark color
+  }
+
+  @else {
+    @return lighten($color, 15%); // Darker background, return light color
+  }
+}
