@@ -55,8 +55,8 @@ const lightTheme = {
     message: blue,
   },
   address: {
-    button: blue,
     background: tintBlue,
+    button: blue,
   },
 };
 
@@ -101,8 +101,8 @@ const darkTheme = {
     message: white,
   },
   address: {
-    button: slate,
     background: dark,
+    button: slate,
   },
 };
 
