@@ -38,31 +38,34 @@ const Address = ({
           styles['address-btn'],
           'address-btn'
         )}
-        inlineStyle={
-          <style jsx>
-            {`
-              button {
-                background-color: ${theme.button};
-              }
-            `}
-          </style>
-        }
         onClick={onClick}
       >
         {buttonText}
       </Button>
+      <style jsx>
+        {`
+          .${styles['address']} {
+            background-color: ${theme.background};
+          }
 
+          :global(button) {
+            background-color: ${theme.button};
+          }
+        `}
+      </style>
     </div>
   );
 };
 
 Address.propTypes = {
+  buttonText: PropTypes.string,
   className: PropTypes.string,
   disabled: PropTypes.bool,
   inputClassName: PropTypes.string,
   maxLength: PropTypes.number,
   onBlur: PropTypes.func,
   onChange: PropTypes.func,
+  onClick: PropTypes.func,
   onFocus: PropTypes.func,
   onKeyDown: PropTypes.func,
   onKeyUp: PropTypes.func,
@@ -71,11 +74,13 @@ Address.propTypes = {
 };
 
 Address.defaultProps = {
+  buttonText: 'Add Address',
   className: '',
   disabled: false,
   inputClassName: '',
   maxLength: null,
   onBlur: null,
+  onClick: null,
   onChange: null,
   onFocus: null,
   onKeyDown: null,

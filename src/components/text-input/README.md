@@ -25,7 +25,7 @@ const handleChange = (e) => setValue(e.target.value);
 | label | string | '' | Sets the label text next to the text input |
 | labelClassName | string | '' | Sets the class name of the label element |
 | inputClassName | string | '' | Sets the class name of the input element|
-| maxLength | number | '' | Sets the maximum lengt of the text input |
+| maxLength | number | '' | Sets the maximum length of the text input |
 | onBlur | function | '' | Callback for the blur event |
 | onChange | function | '' | Callback for the change event |
 | onFocus | function | '' | Callback for the focus event |

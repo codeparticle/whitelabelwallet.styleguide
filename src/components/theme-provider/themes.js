@@ -103,7 +103,6 @@ const darkTheme = {
   address: {
     button: slate,
     background: dark,
-
   },
 };
 

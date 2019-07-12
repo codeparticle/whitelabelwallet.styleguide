@@ -5,7 +5,7 @@ import { action } from '@storybook/addon-actions';
 import { withReadme } from 'storybook-readme';
 import { ThemeWrapper } from './utils';
 import { Address } from '../src';
-import readme from '../src/components/text-input/README.md';
+import readme from '../src/components/address/README.md';
 import { darkBackground, lightBackground } from './constants';
 
 const AddressWithValue = (props) => {
