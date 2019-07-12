@@ -3,12 +3,12 @@ import { storiesOf } from '@storybook/react';
 import { radios, text, withKnobs } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 import { withReadme } from 'storybook-readme';
-import { Button } from '../src';
+import { Button, ButtonVariants } from '../src';
 import readme from '../src/components/button/README.md';
 import { lightBackground } from './constants';
 
 const ButtonDemo = () => {
-  const btnTypes = ['', 'primary', 'green', 'slate', 'secondary', 'alert', 'teal', 'tertiary', 'slate-clear'];
+  const btnTypes = ['', ...Object.values(ButtonVariants)];
 
   const rowStyle = {
     flex: 1,

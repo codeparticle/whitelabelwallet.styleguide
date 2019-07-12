@@ -20,6 +20,8 @@ import { Button } from '@codeparticle/react-style-guide';
 
 | name | type | default | description |
 | ---- | ---- | ------- | ----------- |
+| className | string | '' | Sets the className for the button element |
+| onClick | func | '' | Handles when the button is clicked |
 | variant | string | '' | Sets the button type to render |
 | size | string | '' | Sets the button size |
 
