@@ -2,7 +2,7 @@
 + * @fileoverview Text Input Component
 + * @author Marc Mathieu
 + */
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import uuidv1 from 'uuid/v1';
@@ -22,7 +22,7 @@ const Address = ({
   ...rest
 }) => {
   const theme = useTheme('address');
-  const [inputId] = useState(`address-${uuidv1()}`);
+  const inputId = `address-${uuidv1()}`;
 
   return (
     <div className={classNames(styles['address'])}>
