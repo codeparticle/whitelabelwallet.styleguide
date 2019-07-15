@@ -41,7 +41,7 @@ h2 {
 }
 
 h3 {
-  font-size: $font-size-sm-3;
+  font-size: $font-size-md-1;
   line-height: $line-height-l;
 }
 
@@ -86,6 +86,7 @@ option {
 
 .subtext {
   font-size: $font-size-xs-2;
+  font-style: italic;
   line-height: $line-height-xs;
 }
 
