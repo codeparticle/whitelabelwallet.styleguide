@@ -1325,8 +1325,8 @@
 
 "@storybook/addon-actions@5.1.3":
   version "5.1.3"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-5.1.3.tgz#2df95e91f6c2992ed0bec048fb5353b490d08218"
-  integrity sha512-ajOJ+hWvFFfj7GiLgV1auw9rmA9edUm1PP0fJxz2H1O8abqqOr+zVLFR15lxs2pFp1TCgRXTvQYiMj9ZxTZAwQ==
+  resolved "https://codeparticle.jfrog.io/codeparticle/api/npm/npm/@storybook/addon-actions/-/addon-actions-5.1.3.tgz#2df95e91f6c2992ed0bec048fb5353b490d08218"
+  integrity sha1-LflekfbCmS7QvsBI+1NTtJDQghg=
   dependencies:
     "@storybook/addons" "5.1.3"
     "@storybook/api" "5.1.3"
@@ -1345,8 +1345,8 @@
 
 "@storybook/addon-backgrounds@5.1.3":
   version "5.1.3"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-backgrounds/-/addon-backgrounds-5.1.3.tgz#caa0536ce6efb8b122e9551463c18862adf1b3e4"
-  integrity sha512-vgjTxokeQfD5GIk+Ao3q66zcIFnWNYvCIWFA5vgyZvwi7+zoa7arl8CpVXEIEEarqlfvcg2e8QRkNF7WlZGKCw==
+  resolved "https://codeparticle.jfrog.io/codeparticle/api/npm/npm/@storybook/addon-backgrounds/-/addon-backgrounds-5.1.3.tgz#caa0536ce6efb8b122e9551463c18862adf1b3e4"
+  integrity sha1-yqBTbObvuLEi6VUUY8GIYq3xs+Q=
   dependencies:
     "@storybook/addons" "5.1.3"
     "@storybook/api" "5.1.3"
@@ -1361,8 +1361,8 @@
 
 "@storybook/addon-knobs@5.1.3":
   version "5.1.3"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-knobs/-/addon-knobs-5.1.3.tgz#238fdd72193c1936453a6824570c0a9d240051cf"
-  integrity sha512-ug64vIxA/Ly2lc3LYIrOvy6Cq3qocQu4N2lZzvy+BY4aG5aYmgNJupVjQnQ6qLLiYJsGaPyjG5+74cudgE5Nrg==
+  resolved "https://codeparticle.jfrog.io/codeparticle/api/npm/npm/@storybook/addon-knobs/-/addon-knobs-5.1.3.tgz#238fdd72193c1936453a6824570c0a9d240051cf"
+  integrity sha1-I4/dchk8GTZFOmgkVwwKnSQAUc8=
   dependencies:
     "@storybook/addons" "5.1.3"
     "@storybook/client-api" "5.1.3"
@@ -1383,8 +1383,8 @@
 
 "@storybook/addon-options@5.1.3":
   version "5.1.3"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-options/-/addon-options-5.1.3.tgz#77ccd4dac7147afd539d8d825322734154429a3c"
-  integrity sha512-T3ityA3VuV77mA4F/3lA6y8tDA+wxGFRgIfXdeDXSmogtuiKpvBx2rXopx7di0tOIdTub69gkZN+Y74OdXY7dA==
+  resolved "https://codeparticle.jfrog.io/codeparticle/api/npm/npm/@storybook/addon-options/-/addon-options-5.1.3.tgz#77ccd4dac7147afd539d8d825322734154429a3c"
+  integrity sha1-d8zU2scUev1TnY2CUyJzQVRCmjw=
   dependencies:
     "@storybook/addons" "5.1.3"
     core-js "^3.0.1"
@@ -1392,8 +1392,8 @@
 
 "@storybook/addons@5.1.3":
   version "5.1.3"
-  resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-5.1.3.tgz#43181aa927e81d9f1747ae5dcbe7dbabf113f978"
-  integrity sha512-/xfpU9hIl2JRks3mrWGF/PuP91sflVY+w46KLJuLKXRVGn0slO8ijGs+x+HHBuZZ5MjOW7BCSrQgFjPE8B5Vjg==
+  resolved "https://codeparticle.jfrog.io/codeparticle/api/npm/npm/@storybook/addons/-/addons-5.1.3.tgz#43181aa927e81d9f1747ae5dcbe7dbabf113f978"
+  integrity sha1-QxgaqSfoHZ8XR65dy+fbq/ET+Xg=
   dependencies:
     "@storybook/api" "5.1.3"
     "@storybook/channels" "5.1.3"
@@ -1404,8 +1404,8 @@
 
 "@storybook/api@5.1.3":
   version "5.1.3"
-  resolved "https://registry.yarnpkg.com/@storybook/api/-/api-5.1.3.tgz#db809a1a153d7bb86a494b18866c81093dfa0084"
-  integrity sha512-jL7aFaVodzzJ9GJnxW6vgm5PVoF859pjIukg9gsyp1aEvO5HpE+YelmAR6GdEH0JGxpk3UH8L+3V/W2zUOG9lA==
+  resolved "https://codeparticle.jfrog.io/codeparticle/api/npm/npm/@storybook/api/-/api-5.1.3.tgz#db809a1a153d7bb86a494b18866c81093dfa0084"
+  integrity sha1-24CaGhU9e7hqSUsYhmyBCT36AIQ=
   dependencies:
     "@storybook/channels" "5.1.3"
     "@storybook/client-logger" "5.1.3"
@@ -1427,8 +1427,8 @@
 
 "@storybook/channel-postmessage@5.1.3":
   version "5.1.3"
-  resolved "https://registry.yarnpkg.com/@storybook/channel-postmessage/-/channel-postmessage-5.1.3.tgz#bd44302b1de729c2eeb84334935b8d2827d82de2"
-  integrity sha512-dmvZxzig2yP1qXT7btUHR5KncEEiC2HZMLyEOAZ2GPUSYUGGHGQQXD6OE4pRGj4IzCxrE7BUNQ/VDKqGGwO6rQ==
+  resolved "https://codeparticle.jfrog.io/codeparticle/api/npm/npm/@storybook/channel-postmessage/-/channel-postmessage-5.1.3.tgz#bd44302b1de729c2eeb84334935b8d2827d82de2"
+  integrity sha1-vUQwKx3nKcLuuEM0k1uNKCfYLeI=
   dependencies:
     "@storybook/channels" "5.1.3"
     "@storybook/client-logger" "5.1.3"
@@ -1438,15 +1438,15 @@
 
 "@storybook/channels@5.1.3":
   version "5.1.3"
-  resolved "https://registry.yarnpkg.com/@storybook/channels/-/channels-5.1.3.tgz#25f2ff489a71fc58ee75d6d3e6b964790ba6193a"
-  integrity sha512-wZCLiR13edXyN0zw9fGNFAQIAppOAs/GmMLDPPBwujuTimmjLVK0OcTSR3TJzYeOeaUag5q5Rkt67Lq2rU0qcg==
+  resolved "https://codeparticle.jfrog.io/codeparticle/api/npm/npm/@storybook/channels/-/channels-5.1.3.tgz#25f2ff489a71fc58ee75d6d3e6b964790ba6193a"
+  integrity sha1-JfL/SJpx/FjuddbT5rlkeQumGTo=
   dependencies:
     core-js "^3.0.1"
 
 "@storybook/client-api@5.1.3":
   version "5.1.3"
-  resolved "https://registry.yarnpkg.com/@storybook/client-api/-/client-api-5.1.3.tgz#28724bbedcbe51a2c10e1fa8a76484797334e9af"
-  integrity sha512-KXuzzDl8w0C+n5qfs+xunaVzp0SaSfGboHYy17VLryRAmFRFw8E9om0mHpRWihXqHWfF0zlC7L6onH8V74d8Kw==
+  resolved "https://codeparticle.jfrog.io/codeparticle/api/npm/npm/@storybook/client-api/-/client-api-5.1.3.tgz#28724bbedcbe51a2c10e1fa8a76484797334e9af"
+  integrity sha1-KHJLvty+UaLBDh+op2SEeXM06a8=
   dependencies:
     "@storybook/addons" "5.1.3"
     "@storybook/client-logger" "5.1.3"
@@ -1463,8 +1463,8 @@
 
 "@storybook/client-logger@5.1.3":
   version "5.1.3"
-  resolved "https://registry.yarnpkg.com/@storybook/client-logger/-/client-logger-5.1.3.tgz#6d9f45fdac7d3f2f65d1238c35df11170c2f8b68"
-  integrity sha512-/86NGA7NPsAktpA0lSnw0NhgdqS7Grz08wE7Paz+qLDj1AxnttTvMZctWJ8bLAa3EeJ9wHXGak854CmGiVFnWA==
+  resolved "https://codeparticle.jfrog.io/codeparticle/api/npm/npm/@storybook/client-logger/-/client-logger-5.1.3.tgz#6d9f45fdac7d3f2f65d1238c35df11170c2f8b68"
+  integrity sha1-bZ9F/ax9Py9l0SOMNd8RFwwvi2g=
   dependencies:
     core-js "^3.0.1"
 
@@ -1477,8 +1477,8 @@
 
 "@storybook/components@5.1.3":
   version "5.1.3"
-  resolved "https://registry.yarnpkg.com/@storybook/components/-/components-5.1.3.tgz#9c6898f8f66bf6b9dfdb3ecca73370f2d799e546"
-  integrity sha512-lM+iSdIl/UlmPlgH3vqo8NhMAdPUrWkgp40CVADfXsM6Yxai/23gpg8/HEoHiU5hFjNxowJUt76gTvwt9ak+gg==
+  resolved "https://codeparticle.jfrog.io/codeparticle/api/npm/npm/@storybook/components/-/components-5.1.3.tgz#9c6898f8f66bf6b9dfdb3ecca73370f2d799e546"
+  integrity sha1-nGiY+PZr9rnf2z7MpzNw8teZ5UY=
   dependencies:
     "@storybook/client-logger" "5.1.3"
     "@storybook/theming" "5.1.3"
@@ -1501,8 +1501,8 @@
 
 "@storybook/components@^5.0.6":
   version "5.1.9"
-  resolved "https://registry.yarnpkg.com/@storybook/components/-/components-5.1.9.tgz#2a5258780fff07172d103287759946dbb4b13e2d"
-  integrity sha512-F4xcRlifSAfqkuFWtCKRvQDahXyfWBWV2Wa+kYy4YGwEfm3kKtIHVlgdgARL22g9BdYpRFEOJ+42juOu5YvIeQ==
+  resolved "https://codeparticle.jfrog.io/codeparticle/api/npm/npm/@storybook/components/-/components-5.1.9.tgz#2a5258780fff07172d103287759946dbb4b13e2d"
+  integrity sha1-KlJYeA//BxctEDKHdZlG27SxPi0=
   dependencies:
     "@storybook/client-logger" "5.1.9"
     "@storybook/theming" "5.1.9"
@@ -1525,22 +1525,22 @@
 
 "@storybook/core-events@5.1.3":
   version "5.1.3"
-  resolved "https://registry.yarnpkg.com/@storybook/core-events/-/core-events-5.1.3.tgz#febed0fb83201a107fd1c25b5487e2daec911fa0"
-  integrity sha512-oO9b05G/+9rYdNIx1BoOpFW+jwJeIR60PuJbvNMr1lSo9LH0JsG0+TNADjNXrLCChHfk1KMp1+DcpsSdNNNUqg==
+  resolved "https://codeparticle.jfrog.io/codeparticle/api/npm/npm/@storybook/core-events/-/core-events-5.1.3.tgz#febed0fb83201a107fd1c25b5487e2daec911fa0"
+  integrity sha1-/r7Q+4MgGhB/0cJbVIfi2uyRH6A=
   dependencies:
     core-js "^3.0.1"
 
 "@storybook/core-events@^5.0.6":
   version "5.1.9"
-  resolved "https://registry.yarnpkg.com/@storybook/core-events/-/core-events-5.1.9.tgz#441a6297e2ccfa743e15d1db1f4ac445b91f40d8"
-  integrity sha512-jHe2uyoLj9i6fntHtOj5azfGdLOb75LF0e1xXE8U2SX7Zp3uwbLAcfJ+dPStdc/q+f/wBiip3tH1dIjaNuUiMw==
+  resolved "https://codeparticle.jfrog.io/codeparticle/api/npm/npm/@storybook/core-events/-/core-events-5.1.9.tgz#441a6297e2ccfa743e15d1db1f4ac445b91f40d8"
+  integrity sha1-RBpil+LM+nQ+FdHbH0rERbkfQNg=
   dependencies:
     core-js "^3.0.1"
 
 "@storybook/core@5.1.3":
   version "5.1.3"
-  resolved "https://registry.yarnpkg.com/@storybook/core/-/core-5.1.3.tgz#4c0ec2082432eed97884d8cde99acc905d3f257f"
-  integrity sha512-D3R4EIypMjeSMQw5s9cJeABdX8ymPUJPZ9RclBoALlhdJRZgzrFOU7fytKVXIfnSbRAH58d1/siZhxINBqs3GA==
+  resolved "https://codeparticle.jfrog.io/codeparticle/api/npm/npm/@storybook/core/-/core-5.1.3.tgz#4c0ec2082432eed97884d8cde99acc905d3f257f"
+  integrity sha1-TA7CCCQy7tl4hNjN6ZrMkF0/JX8=
   dependencies:
     "@babel/plugin-proposal-class-properties" "^7.3.3"
     "@babel/plugin-proposal-object-rest-spread" "^7.3.2"
@@ -1609,8 +1609,8 @@
 
 "@storybook/node-logger@5.1.3":
   version "5.1.3"
-  resolved "https://registry.yarnpkg.com/@storybook/node-logger/-/node-logger-5.1.3.tgz#c93e17d497ae83732fae5e06dbe1f2cf8fb074e2"
-  integrity sha512-Whdm/aPe04SZzgaxLUGsiyeN3z9IYtvJbxQs+3p3XXaiUWG1P5HJL2uUiCv+nzvJfovpN81mAPaGFEiXUR+42g==
+  resolved "https://codeparticle.jfrog.io/codeparticle/api/npm/npm/@storybook/node-logger/-/node-logger-5.1.3.tgz#c93e17d497ae83732fae5e06dbe1f2cf8fb074e2"
+  integrity sha1-yT4X1Jeug3Mvrl4G2+Hyz4+wdOI=
   dependencies:
     chalk "^2.4.2"
     core-js "^3.0.1"
@@ -1620,8 +1620,8 @@
 
 "@storybook/react@5.1.3":
   version "5.1.3"
-  resolved "https://registry.yarnpkg.com/@storybook/react/-/react-5.1.3.tgz#117fad300f6d128d635c98d4fa8971b051b21e74"
-  integrity sha512-udQrADQTbI7e6moqu6FXytqYl0h9JKyQ3gowvgauiZIMzCplWgFwAAFr6t6Dl26Opg0nTC8x9q4yztFuXbGTwA==
+  resolved "https://codeparticle.jfrog.io/codeparticle/api/npm/npm/@storybook/react/-/react-5.1.3.tgz#117fad300f6d128d635c98d4fa8971b051b21e74"
+  integrity sha1-EX+tMA9tEo1jXJjU+olxsFGyHnQ=
   dependencies:
     "@babel/plugin-transform-react-constant-elements" "^7.2.0"
     "@babel/preset-flow" "^7.0.0"
@@ -1645,8 +1645,8 @@
 
 "@storybook/router@5.1.3":
   version "5.1.3"
-  resolved "https://registry.yarnpkg.com/@storybook/router/-/router-5.1.3.tgz#e87f7f368816f7a6b248d3aac39c57642c4f5083"
-  integrity sha512-ZTFVyJvmVzpMY7KKpqns9bPD61A0nhfEVspxe6auPzIszZ/NSqCazEINUNf6nwKc+pR61S29FdzpMFPys6E42Q==
+  resolved "https://codeparticle.jfrog.io/codeparticle/api/npm/npm/@storybook/router/-/router-5.1.3.tgz#e87f7f368816f7a6b248d3aac39c57642c4f5083"
+  integrity sha1-6H9/NogW96aySNOqw5xXZCxPUIM=
   dependencies:
     "@reach/router" "^1.2.1"
     core-js "^3.0.1"
@@ -1656,8 +1656,8 @@
 
 "@storybook/theming@5.1.3":
   version "5.1.3"
-  resolved "https://registry.yarnpkg.com/@storybook/theming/-/theming-5.1.3.tgz#705654392b020ef5654c6c500f4398cc7f067653"
-  integrity sha512-ScBAEMkpwY6pHPuD7SYqAwbQ3M4cOEYY2340HtLNR53M6EJ2mcd87rH2kwpTEgTzeA0VuUln6WXEoBz3WRBLYA==
+  resolved "https://codeparticle.jfrog.io/codeparticle/api/npm/npm/@storybook/theming/-/theming-5.1.3.tgz#705654392b020ef5654c6c500f4398cc7f067653"
+  integrity sha1-cFZUOSsCDvVlTGxQD0OYzH8GdlM=
   dependencies:
     "@emotion/core" "^10.0.9"
     "@emotion/styled" "^10.0.7"
@@ -1692,8 +1692,8 @@
 
 "@storybook/ui@5.1.3":
   version "5.1.3"
-  resolved "https://registry.yarnpkg.com/@storybook/ui/-/ui-5.1.3.tgz#6bb07ada02196163a3df52cd3e7062e305eb869a"
-  integrity sha512-6DL0pHUXnJv4nsXld5vTerHGFAeDZ4ec38+/3oAcjztmnVzRm49P4v0aUGdCKxxra2h6Ytk6KHPmoqsFEX69CQ==
+  resolved "https://codeparticle.jfrog.io/codeparticle/api/npm/npm/@storybook/ui/-/ui-5.1.3.tgz#6bb07ada02196163a3df52cd3e7062e305eb869a"
+  integrity sha1-a7B62gIZYWOj31LNPnBi4wXrhpo=
   dependencies:
     "@storybook/addons" "5.1.3"
     "@storybook/api" "5.1.3"
@@ -2145,11 +2145,6 @@ accepts@~1.3.7:
     mime-types "~2.1.24"
     negotiator "0.6.2"
 
-acorn-dynamic-import@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/acorn-dynamic-import/-/acorn-dynamic-import-4.0.0.tgz#482210140582a36b83c3e342e1cfebcaa9240948"
-  integrity sha512-d3OEjQV4ROpoflsnUA8HozoIR504TFxNivYEUi6uwz0IYhBkTDXGuWlNdMtybRt3nqVx/L6XqMt0FxkXuWKZhw==
-
 acorn-globals@^1.0.4:
   version "1.0.9"
   resolved "https://registry.yarnpkg.com/acorn-globals/-/acorn-globals-1.0.9.tgz#55bb5e98691507b74579d0513413217c380c54cf"
@@ -2167,10 +2162,15 @@ acorn@^2.1.0, acorn@^2.4.0:
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-2.7.0.tgz#ab6e7d9d886aaca8b085bc3312b79a198433f0e7"
   integrity sha1-q259nYhqrKiwhbwzEreaGYQz8Oc=
 
-acorn@^6.0.5, acorn@^6.0.7:
+acorn@^6.0.7:
   version "6.1.1"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-6.1.1.tgz#7d25ae05bb8ad1f9b699108e1094ecd7884adc1f"
   integrity sha512-jPTiwtOxaHNaAPg/dmrJ/beuzLRnXtB0kQPQ8JpotKJgTB6rX6c8mlf315941pyjBSaPg8NHXS9fhP4u17DpGA==
+
+acorn@^6.2.0:
+  version "6.2.0"
+  resolved "https://codeparticle.jfrog.io/codeparticle/api/npm/npm/acorn/-/acorn-6.2.0.tgz#67f0da2fc339d6cfb5d6fb244fd449f33cd8bbe3"
+  integrity sha1-Z/DaL8M51s+11vskT9RJ8zzYu+M=
 
 add-dom-event-listener@^1.1.0:
   version "1.1.0"
@@ -2769,6 +2769,17 @@ babel-plugin-minify-type-constructors@^0.4.3:
   integrity sha1-G8bxW4f3qxCF1CszC3F2V6IVZQA=
   dependencies:
     babel-helper-is-void-0 "^0.4.3"
+
+babel-plugin-module-resolver@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/babel-plugin-module-resolver/-/babel-plugin-module-resolver-3.2.0.tgz#ddfa5e301e3b9aa12d852a9979f18b37881ff5a7"
+  integrity sha512-tjR0GvSndzPew/Iayf4uICWZqjBwnlMWjSx6brryfQ81F9rxBVqwDJtFCV8oOs0+vJeefK9TmdZtkIFdFe1UnA==
+  dependencies:
+    find-babel-config "^1.1.0"
+    glob "^7.1.2"
+    pkg-up "^2.0.0"
+    reselect "^3.0.1"
+    resolve "^1.4.0"
 
 babel-plugin-named-asset-import@^0.3.1:
   version "0.3.2"
@@ -4690,7 +4701,7 @@ dotenv-defaults@^1.0.2:
 
 dotenv-expand@^4.2.0:
   version "4.2.0"
-  resolved "https://registry.yarnpkg.com/dotenv-expand/-/dotenv-expand-4.2.0.tgz#def1f1ca5d6059d24a766e587942c21106ce1275"
+  resolved "https://codeparticle.jfrog.io/codeparticle/api/npm/npm/dotenv-expand/-/dotenv-expand-4.2.0.tgz#def1f1ca5d6059d24a766e587942c21106ce1275"
   integrity sha1-3vHxyl1gWdJKdm5YeULCEQbOEnU=
 
 dotenv-webpack@^1.7.0:
@@ -5450,6 +5461,14 @@ finalhandler@~1.1.2:
     parseurl "~1.3.3"
     statuses "~1.5.0"
     unpipe "~1.0.0"
+
+find-babel-config@^1.1.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/find-babel-config/-/find-babel-config-1.2.0.tgz#a9b7b317eb5b9860cda9d54740a8c8337a2283a2"
+  integrity sha512-jB2CHJeqy6a820ssiqwrKMeyC6nNdmrcgkKWJWmpoxpE8RKciYJXCcXRq1h2AzCo5I5BJeN2tkGEO3hLTuePRA==
+  dependencies:
+    json5 "^0.5.1"
+    path-exists "^3.0.0"
 
 find-cache-dir@^2.0.0:
   version "2.1.0"
@@ -7058,7 +7077,7 @@ json3@^3.3.2:
   resolved "https://registry.yarnpkg.com/json3/-/json3-3.3.3.tgz#7fc10e375fc5ae42c4705a5cc0aa6f62be305b81"
   integrity sha512-c7/8mbUsKigAbLkD5B010BK4D9LZm7A1pNItkEwiUZRpIN66exu/e7YQWysGun+TRKaJp8MhemM+VkfWv42aCA==
 
-json5@^0.5.0:
+json5@^0.5.0, json5@^0.5.1:
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/json5/-/json5-0.5.1.tgz#1eade7acc012034ad84e2396767ead9fa5495821"
   integrity sha1-Hq3nrMASA0rYTiOWdn6tn6VJWCE=
@@ -7119,11 +7138,6 @@ jsx-ast-utils@^2.1.0, jsx-ast-utils@^2.2.1:
     array-includes "^3.0.3"
     object.assign "^4.1.0"
 
-keyboard-only-outlines@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/keyboard-only-outlines/-/keyboard-only-outlines-1.0.3.tgz#4433e668574918a2f63fc68f7dc8636e773cf1a7"
-  integrity sha512-aagDYsDkhu7mjOyP54ND8E6uqPk+OK7giAwAMsC6FTbQ6s++Rq5PS/VljsGjMR+PltcnKmTc/RGCp6pDdoj9+w==
-
 kind-of@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-2.0.1.tgz#018ec7a4ce7e3a86cb9141be519d24c8faa981b5"
@@ -7179,8 +7193,8 @@ lazy-cache@^1.0.3:
 
 lazy-universal-dotenv@^2.0.0:
   version "2.0.0"
-  resolved "https://registry.yarnpkg.com/lazy-universal-dotenv/-/lazy-universal-dotenv-2.0.0.tgz#e015ad9f77be9ef811956d53ea9519b1c0ab0214"
-  integrity sha512-1Wi0zgZMfRLaRAK21g3odYuU+HE1d85Loe2tb44YhcNwIzhmD49mTPR9aKckpB9Q9Q9mA+hUMLI2xlkcCAe3yw==
+  resolved "https://codeparticle.jfrog.io/codeparticle/api/npm/npm/lazy-universal-dotenv/-/lazy-universal-dotenv-2.0.0.tgz#e015ad9f77be9ef811956d53ea9519b1c0ab0214"
+  integrity sha1-4BWtn3e+nvgRlW1T6pUZscCrAhQ=
   dependencies:
     "@babel/runtime" "^7.0.0"
     app-root-dir "^1.0.2"
@@ -8887,7 +8901,7 @@ pkg-dir@^4.1.0:
   dependencies:
     find-up "^4.0.0"
 
-pkg-up@2.0.0:
+pkg-up@2.0.0, pkg-up@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/pkg-up/-/pkg-up-2.0.0.tgz#c819ac728059a461cab1c3889a2be3c49a004d7f"
   integrity sha1-yBmscoBZpGHKscOImivjxJoATX8=
@@ -9623,8 +9637,8 @@ react-docgen@^4.1.0:
 
 react-dom@^16.8.3, react-dom@^16.8.4:
   version "16.8.6"
-  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.8.6.tgz#71d6303f631e8b0097f56165ef608f051ff6e10f"
-  integrity sha512-1nL7PIq9LTL3fthPqwkvr2zY7phIPjYrT0jp4HjyEQrEROnw4dG41VVwi/wfoCneoleqrNX7iAD+pXebJZwrwA==
+  resolved "https://codeparticle.jfrog.io/codeparticle/api/npm/npm/react-dom/-/react-dom-16.8.6.tgz#71d6303f631e8b0097f56165ef608f051ff6e10f"
+  integrity sha1-cdYwP2MeiwCX9WFl72CPBR/24Q8=
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
@@ -9805,8 +9819,8 @@ react-transition-group@^4.2.0:
 
 react@^16.7.0, react@^16.8.3, react@^16.8.4:
   version "16.8.6"
-  resolved "https://registry.yarnpkg.com/react/-/react-16.8.6.tgz#ad6c3a9614fd3a4e9ef51117f54d888da01f2bbe"
-  integrity sha512-pC0uMkhLaHm11ZSJULfOBqV4tIZkx87ZLvbbQYunNixAAvjnC+snJCg0XQXn9VIsttVsbZP/H/ewzgsd5fxKXw==
+  resolved "https://codeparticle.jfrog.io/codeparticle/api/npm/npm/react/-/react-16.8.6.tgz#ad6c3a9614fd3a4e9ef51117f54d888da01f2bbe"
+  integrity sha1-rWw6lhT9Ok6e9REX9U2IjaAfK74=
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
@@ -10267,6 +10281,11 @@ requires-port@^1.0.0:
   resolved "https://registry.yarnpkg.com/requires-port/-/requires-port-1.0.0.tgz#925d2601d39ac485e091cf0da5c6e694dc3dcaff"
   integrity sha1-kl0mAdOaxIXgkc8NpcbmlNw9yv8=
 
+reselect@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/reselect/-/reselect-3.0.1.tgz#efdaa98ea7451324d092b2b2163a6a1d7a9a2147"
+  integrity sha1-79qpjqdFEyTQkrKyFjpqHXqaIUc=
+
 resize-observer-polyfill@^1.5.1:
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/resize-observer-polyfill/-/resize-observer-polyfill-1.5.1.tgz#0e9020dd3d21024458d4ebd27e23e40269810464"
@@ -10306,7 +10325,7 @@ resolve-url@^0.2.1:
   resolved "https://registry.yarnpkg.com/resolve-url/-/resolve-url-0.2.1.tgz#2c637fe77c893afd2a663fe21aa9080068e2052a"
   integrity sha1-LGN/53yJOv0qZj/iGqkIAGjiBSo=
 
-resolve@^1.1.6, resolve@^1.1.7, resolve@^1.10.0, resolve@^1.10.1, resolve@^1.11.0, resolve@^1.3.2, resolve@^1.5.0, resolve@^1.8.1:
+resolve@^1.1.6, resolve@^1.1.7, resolve@^1.10.0, resolve@^1.10.1, resolve@^1.11.0, resolve@^1.3.2, resolve@^1.4.0, resolve@^1.5.0, resolve@^1.8.1:
   version "1.11.1"
   resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.11.1.tgz#ea10d8110376982fef578df8fc30b9ac30a07a3e"
   integrity sha512-vIpgF6wfuJOZI7KKKSP+HmiKggadPQAdsp5HiC1mvqnfp0gF1vdwgBWZIdrVft9pgqoMFQN+R7BSWZiBxx+BBw==
@@ -12183,16 +12202,15 @@ webpack-sources@^1.0.1, webpack-sources@^1.1.0, webpack-sources@^1.3.0:
     source-map "~0.6.1"
 
 webpack@^4.28.0, webpack@^4.32.0:
-  version "4.35.2"
-  resolved "https://registry.yarnpkg.com/webpack/-/webpack-4.35.2.tgz#5c8b8a66602cbbd6ec65c6e6747914a61c1449b1"
-  integrity sha512-TZAmorNymV4q66gAM/h90cEjG+N3627Q2MnkSgKlX/z3DlNVKUtqy57lz1WmZU2+FUZwzM+qm7cGaO95PyrX5A==
+  version "4.35.3"
+  resolved "https://codeparticle.jfrog.io/codeparticle/api/npm/npm/webpack/-/webpack-4.35.3.tgz#66bc35ef215a7b75e8790f84d560013ffecf0ca3"
+  integrity sha1-Zrw17yFae3XoeQ+E1WABP/7PDKM=
   dependencies:
     "@webassemblyjs/ast" "1.8.5"
     "@webassemblyjs/helper-module-context" "1.8.5"
     "@webassemblyjs/wasm-edit" "1.8.5"
     "@webassemblyjs/wasm-parser" "1.8.5"
-    acorn "^6.0.5"
-    acorn-dynamic-import "^4.0.0"
+    acorn "^6.2.0"
     ajv "^6.1.0"
     ajv-keywords "^3.1.0"
     chrome-trace-event "^1.0.0"

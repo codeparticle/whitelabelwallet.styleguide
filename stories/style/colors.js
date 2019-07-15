@@ -4,7 +4,7 @@ import { withReadme } from 'storybook-readme';
 import marked from 'marked';
 import Case from 'case';
 import colorcolor from 'colorcolor';
-import colors from '../../src/styles/colors.scss';
+import colors from 'styles/colors.scss';
 import style from './colors.scss';
 
 const darkBackground = { name: 'dark', value: '#686C71' };

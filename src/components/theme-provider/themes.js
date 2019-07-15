@@ -1,4 +1,4 @@
-import colors from '../../styles/colors.scss';
+import colors from 'styles/colors.scss';
 
 export const themes = {
   light: {
