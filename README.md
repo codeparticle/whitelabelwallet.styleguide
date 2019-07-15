@@ -8,7 +8,6 @@ Codeparticle's react-style-guide.
 - React
 - CSS modules
 - [PostCSS](https://github.com/postcss/postcss)
-- Automatically enables keyboard-online-outlines so that outlines are only shown when necessary
 
 
 ## Setup

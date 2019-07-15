@@ -1,7 +1,7 @@
 import React from 'react';
 import { boolean } from '@storybook/addon-knobs';
-import { themes } from '../../src/components/theme-provider/themes';
-import { ThemeContext } from '../../src/components/theme-provider';
+import { themes } from 'components/theme-provider/themes';
+import { ThemeContext } from 'components/theme-provider';
 
 export function toggleTheme(defaultToDark = false) {
   const themeToggle = boolean('Toggle Dark Theme', defaultToDark);

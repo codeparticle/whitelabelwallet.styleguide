@@ -3,8 +3,8 @@ import { storiesOf } from '@storybook/react';
 import { boolean, text, withKnobs } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 import { withReadme } from 'storybook-readme';
-import { Button } from '../src';
-import readme from '../src/components/button/README.md';
+import { Button } from 'components/button';
+import readme from 'components/button/README.md';
 
 const darkBackground = { name: 'dark', value: '#686C71' };
 

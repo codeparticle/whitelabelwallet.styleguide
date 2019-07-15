@@ -4,7 +4,7 @@ import { withReadme } from 'storybook-readme';
 import { text, withKnobs } from '@storybook/addon-knobs';
 import Case from 'case';
 import marked from 'marked';
-import { icons } from '../../src/svgs';
+import { icons } from 'svgs';
 import style from './svgs.scss';
 
 const darkBackground = { name: 'dark', value: '#686C71' };

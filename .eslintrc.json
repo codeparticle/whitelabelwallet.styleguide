@@ -85,6 +85,7 @@
       "import/resolver": {
         "node": {
           "paths": [
+            "./",
             "src/"
           ]
         }

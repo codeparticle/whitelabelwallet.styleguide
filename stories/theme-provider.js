@@ -2,13 +2,13 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { withReadme } from 'storybook-readme';
-import { toggleTheme } from './utils';
 import {
   ThemeContext,
   useTheme,
   withTheme,
-} from '../src';
-import readme from '../src/components/theme-provider/README.md';
+} from 'src';
+import readme from 'components/theme-provider/README.md';
+import { toggleTheme } from './utils';
 
 const DemoComponent = ({ type, theme }) => (
   <div className="demo-container">

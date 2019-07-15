@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { withReadme } from 'storybook-readme';
 import marked from 'marked';
 import Highlight, { defaultProps } from 'prism-react-renderer';
-import layout from '../../src/styles/layout.scss';
+import layout from 'styles/layout.scss';
 import styles from './layout.scss';
 import breakpointImage from './breakpoint-image.svg';
 
