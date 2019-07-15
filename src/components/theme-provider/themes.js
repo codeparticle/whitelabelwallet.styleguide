@@ -1,4 +1,5 @@
-import colors from 'styles/colors.scss';
+import colors from '../../styles/colors.scss';
+import { ButtonVariants } from '../button';
 
 const {
   blue,
@@ -13,6 +14,11 @@ const {
   'dark-bg': darkBg,
   'tint-blue': tintBlue,
 } = colors;
+
+const {
+  PRIMARY,
+  SLATE,
+} = ButtonVariants;
 
 const lightTheme = {
   name: 'light',
@@ -56,7 +62,7 @@ const lightTheme = {
   },
   address: {
     background: tintBlue,
-    button: blue,
+    button: PRIMARY,
   },
 };
 
@@ -102,7 +108,7 @@ const darkTheme = {
   },
   address: {
     background: dark,
-    button: slate,
+    button: SLATE,
   },
 };
 

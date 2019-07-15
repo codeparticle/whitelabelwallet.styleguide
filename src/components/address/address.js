@@ -39,6 +39,7 @@ const Address = ({
           'address-btn'
         )}
         onClick={onClick}
+        variant={theme.button}
       >
         {buttonText}
       </Button>
@@ -46,10 +47,6 @@ const Address = ({
         {`
           .${styles['address']} {
             background-color: ${theme.background};
-          }
-
-          :global(button) {
-            background-color: ${theme.button};
           }
         `}
       </style>
