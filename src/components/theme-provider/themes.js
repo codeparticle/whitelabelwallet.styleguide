@@ -1,5 +1,10 @@
 import colors from 'styles/colors.scss';
 
+const {
+  blue,
+  white,
+} = colors;
+
 export const themes = {
   light: {
     name: 'light',
@@ -7,6 +12,10 @@ export const themes = {
       background: colors['tint-blue'],
       border: colors.blue,
       color: colors.slate,
+    },
+    tooltip: {
+      bg: white,
+      message: blue,
     },
   },
   dark: {

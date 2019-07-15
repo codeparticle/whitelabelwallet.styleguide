@@ -1,5 +1,6 @@
 export { Button } from './components/button';
 export { TextInput } from './components/text-input';
+export { Tooltip } from './components/tooltip';
 export {
   ThemeContext,
   useTheme,
