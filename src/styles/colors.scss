@@ -8,7 +8,7 @@
 $blue: #0E99FF;
 $dark: #444444;
 $green: #7ED221;
-$red: #C12E3B;
+$red: #C12F3C;
 $slate: #607997;
 $white: #FFFFFF;
 
@@ -28,13 +28,13 @@ $tint-blue: #F4F9FB;
 
 /* Gradients */
 $gradient-teal: linear-gradient(45deg, #4392D7 0%, #00E3C6 100%);
-$gradient-alert: linear-gradient(90deg, rgba(229, 55, 143, 1) 0%, rgba(247, 107, 28, 1) 100%);
-$gradient-success: linear-gradient(rgba(180, 236, 81, 1) 0%, rgba(66, 147, 33, 1) 100%);
-$gradient-blue: linear-gradient(rgba(83, 141, 192, 1) 0%, rgba(148, 204, 228, 1) 100%);
+$gradient-alert: linear-gradient(90deg, #E5378F 0%, #F76B1C 100%);
+$gradient-success: linear-gradient(45deg, #B4EC51 0%, #429321 100%);
+$gradient-blue: linear-gradient(45deg, #538DC0 0%, #94CCE4 100%);
 
 /* Transparencies */
-$shade: #6079983F;
-$tint: #FFFFFF3F;
+$shade: #60799840;
+$tint: #FFFFFF40;
 
 /* stylelint-disable */
 :export {
