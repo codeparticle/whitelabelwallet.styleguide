@@ -35,8 +35,7 @@ const Address = ({
       />
       <Button
         className={classNames(
-          styles['address-btn'],
-          'address-btn'
+          styles['address-btn']
         )}
         onClick={onClick}
         variant={theme.button}
