@@ -27,6 +27,8 @@ $rose: #FFC7CC;
 $tint-blue: #F4F9FB;
 
 /* Gradients */
+$gradient-blue-start: #538DC0;
+$gradient-blue-end: #94CCE4;
 $gradient-teal: linear-gradient(45deg, #4392D7 0%, #00E3C6 100%);
 $gradient-alert: linear-gradient(90deg, #E5378F 0%, #F76B1C 100%);
 $gradient-success: linear-gradient(45deg, #B4EC51 0%, #429321 100%);
@@ -58,6 +60,8 @@ $tint: #FFFFFF40;
   rose: $rose;
   tint-blue: $tint-blue;
   _gradients: 0;
+  gradient-blue-start: $gradient-blue-start;
+  gradient-blue-end: $gradient-blue-end;
   gradient-teal: $gradient-teal;
   gradient-alert: $gradient-alert;
   gradient-success: $gradient-success;

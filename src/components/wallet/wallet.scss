@@ -1,0 +1,62 @@
+@import "styles/colors.scss";
+@import "styles/layout.scss";
+
+.wallet {
+  display: flex;
+  border-radius: 9px;
+  padding: $spacing-l;
+  position: relative;
+  min-height: 280px;
+  width: 100%;
+  max-width: 510px;
+
+  &__wallet-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__wallet-graph {
+    height: 100%;
+    width: 100%;
+    border-radius: 9px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  &__wallet-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 100;
+  }
+}
+
+.wallet-funds {
+  display: flex;
+
+  &__coin-balance {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex: 1;
+
+    & > button {
+      margin-top: $spacing-xs;
+      margin-bottom: $spacing-xs;
+    }
+  }
+}
