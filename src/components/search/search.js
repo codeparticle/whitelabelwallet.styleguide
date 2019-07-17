@@ -58,7 +58,7 @@ const Search = ({
   return (
     <>
       <form
-        isActive={isActive}
+        isactive={isActive.toString()}
         className={classNames(
           styles.search,
           'search'

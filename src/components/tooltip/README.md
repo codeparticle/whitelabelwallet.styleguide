@@ -10,7 +10,7 @@ The tooltip theme/color changes based on the nearest provider's theme.
 
 ```jsx
 import React from 'react';
-import { Tooltip } from '@codeparticle/verto.exchange.styleguide';
+import { Tooltip } from '@codeparticle/whitelabelwallet.styleguide';
 
 <>
   <div

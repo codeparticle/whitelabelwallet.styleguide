@@ -11,13 +11,15 @@ import { darkBackground, lightBackground } from './constants';
 const TextInputWithValue = (props) => {
   const [value, setValue] = useState('');
   const onChange = e => setValue(e.target.value);
+  const clonedProps = { ...props };
+  delete clonedProps.defaultToDark;
 
   return (
     <ThemeWrapper
       defaultToDark={props.defaultToDark}
       content={
         <TextInput
-          {...props}
+          {...clonedProps}
           onChange={onChange}
           value={value}
         />
@@ -33,14 +35,14 @@ storiesOf('TextInput', module)
     <TextInputWithValue
       onBlur={action('blur')}
       onFocus={action('focus')}
-      placeholder="Input Text Here..."
+      placeholder="Input Text"
     />
   ), {
-    backgrounds: [{ ...darkBackground, default: true }],
+    backgrounds: [{ ...lightBackground, default: true }],
   })
   .add('With Label', () => (
     <TextInputWithValue
-      label="Label"
+      label="Input Label"
       onBlur={action('blur')}
       onFocus={action('focus')}
       placeholder="Input Text"
@@ -62,7 +64,7 @@ storiesOf('TextInput', module)
   .add('Playground', () => {
     const disabled = boolean('disabled', false);
     const label = text('label', 'Label');
-    const placeholder = text('placeholder', 'Input Text Here...');
+    const placeholder = text('placeholder', 'Input Text');
 
     return (
       <TextInputWithValue

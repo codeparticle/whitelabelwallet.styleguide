@@ -151,14 +151,77 @@ $btn-lg-width: 174px;
 }
 
 .button {
+  @include size($btn-width, $btn-height);
+
   font-size: $font-size-xs-3;
   padding: $space-1 $space-3;
+  background: $light-grey;
+  display: inline-block;
+  border-radius: 6px;
+  border: 0;
+  color: $dark;
+  box-sizing: border-box;
 
   &:enabled {
     cursor: pointer;
   }
 
-  &.fullWidth {
-    width: 100%;
+  &:hover {
+    background: $cloud;
   }
+
+  &:active {
+    position: relative;
+    top: 1px;
+    border: 2px solid $dark;
+  }
+
+  &.btn-lg {
+    @include size($btn-lg-width, $btn-lg-height);
+
+    font-size: $font-size-sm-1;
+    border-radius: $btn-lg-height / 2;
+
+    &:active {
+      border: 3px solid $dark;
+    }
+  }
+
+  &.btn-sm {
+    @include size($btn-sm-width, $btn-sm-height);
+
+    border-radius: 4px;
+  }
+}
+
+.primary {
+  @include btn-theme($blue, $cloud);
+}
+
+.secondary {
+  @include btn-secondary-theme($off-white, $blue);
+}
+
+.tertiary {
+  @include btn-tertiary-theme($white, $blue);
+}
+
+.slate-clear {
+  @include btn-tertiary-theme($slate, $white);
+}
+
+.green {
+  @include btn-theme($green, $mint-chip);
+}
+
+.slate {
+  @include btn-theme($slate, $light-grey);
+}
+
+.alert {
+  @include btn-gradient-theme($gradient-alert, $rose);
+}
+
+.teal {
+  @include btn-gradient-theme($gradient-teal, $cloud);
 }

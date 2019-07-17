@@ -11,13 +11,15 @@ import { darkBackground, lightBackground } from './constants';
 const AddressWithValue = (props) => {
   const [value, setValue] = useState('');
   const onChange = e => setValue(e.target.value);
+  const clonedProps = { ...props };
+  delete clonedProps.defaultToDark;
 
   return (
     <ThemeWrapper
       defaultToDark={props.defaultToDark}
       content={
         <Address
-          {...props}
+          {...clonedProps}
           onChange={onChange}
           value={value}
         />

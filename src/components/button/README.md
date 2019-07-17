@@ -5,7 +5,7 @@ A standard button.
 ## Usage
 
 ```jsx
-import { Button } from '@codeparticle/react-style-guide';
+import { Button } from '@codeparticle/whitelabelwallet.styleguide';
 
 <Button
   onClick={handleClick}

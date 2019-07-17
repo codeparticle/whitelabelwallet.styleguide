@@ -1,3 +1,7 @@
+import keyboardOnlyOutlines from 'keyboard-only-outlines';
+
+keyboardOnlyOutlines();
+
 // Constants
 export { ButtonVariants } from './components/button/constants';
 

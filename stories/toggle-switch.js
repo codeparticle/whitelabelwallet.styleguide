@@ -18,7 +18,6 @@ const ToggleSwitchWithValue = (props) => {
       defaultToDark={props.defaultToDark}
       content={
         <ToggleSwitch
-          {...props}
           onClick={onClick}
           value={value}
         />

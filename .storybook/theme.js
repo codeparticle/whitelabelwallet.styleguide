@@ -3,6 +3,6 @@ import { create } from '@storybook/theming';
 export default create({
   base: 'light',
 
-  brandTitle: 'Styleguide',
+  brandTitle: 'White Label Wallet Styleguide',
   brandImage: 'favicon.ico',
 });

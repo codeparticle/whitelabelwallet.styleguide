@@ -7138,6 +7138,11 @@ jsx-ast-utils@^2.1.0, jsx-ast-utils@^2.2.1:
     array-includes "^3.0.3"
     object.assign "^4.1.0"
 
+keyboard-only-outlines@^1.0.3:
+  version "1.0.3"
+  resolved "https://codeparticle.jfrog.io/codeparticle/api/npm/npm/keyboard-only-outlines/-/keyboard-only-outlines-1.0.3.tgz#4433e668574918a2f63fc68f7dc8636e773cf1a7"
+  integrity sha1-RDPmaFdJGKL2P8aPfchjbnc88ac=
+
 kind-of@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-2.0.1.tgz#018ec7a4ce7e3a86cb9141be519d24c8faa981b5"

@@ -7,8 +7,8 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import uuidv1 from 'uuid/v1';
 import { useTheme } from '../theme-provider';
-import TextInput from '../text-input';
-import Button from '../button';
+import { TextInput } from '../text-input';
+import { Button } from '../button';
 import styles from './address.scss';
 
 const Address = ({
@@ -85,4 +85,4 @@ Address.defaultProps = {
   value: '',
 };
 
-export default Address;
+export { Address };

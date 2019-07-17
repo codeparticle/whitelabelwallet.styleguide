@@ -1,7 +1,7 @@
 {
-  "name": "@codeparticle/react-style-guide",
+  "name": "@codeparticle/whitelabelwallet.styleguide",
   "version": "0.2.0",
-  "description": "React-style-guide from CodeParticle",
+  "description": "Styleguide for the CodeParticle White Label Wallet",
   "main": "dist/index.js",
   "files": [
     "dist",
@@ -9,13 +9,13 @@
   ],
   "keywords": [
     "codeparticle",
-    "react-style-guide",
+    "whitelabelwallet.styleguide",
     "react"
   ],
   "author": "Ericky Dos Santos <ericky@codeparticle.com>",
   "license": "MIT",
-  "homepage": "https://bitbucket.org/CodeParticle/react-style-guide/src",
-  "repository": "bitbucket:CodeParticle/react-style-guide",
+  "homepage": "https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/src",
+  "repository": "bitbucket:CodeParticle/whitelabelwallet.styleguide",
   "scripts": {
     "start": "start-storybook -p 3010 -c .storybook -s .",
     "lint": "eslint --ignore-path .gitignore . && stylelint --ignore-path .gitignore \"**/*.scss\"",
@@ -146,6 +146,7 @@
     "case": "^1.6.1",
     "classnames": "^2.2.6",
     "colorcolor": "^1.1.1",
+    "keyboard-only-outlines": "^1.0.3",
     "lodash": "^4.17.11",
     "marked": "^0.6.3",
     "memoize-one": "^5.0.4",
