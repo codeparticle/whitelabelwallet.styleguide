@@ -6,6 +6,7 @@ import './address';
 import './chart';
 import './area-chart';
 import './button';
+import './contact';
 import './search';
 import './header';
 import './text-area';
