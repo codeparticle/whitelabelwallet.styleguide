@@ -2,16 +2,28 @@ import colors from 'styles/colors.scss';
 
 const {
   blue,
+  green,
+  slate,
   white,
+  cloud,
+  'dark-bg': darkBg,
+  'tint-blue': tintBlue,
+  dark,
 } = colors;
 
 export const themes = {
   light: {
     name: 'light',
     demo: {
-      background: colors['tint-blue'],
-      border: colors.blue,
-      color: colors.slate,
+      background: tintBlue,
+      border: blue,
+      color: slate,
+    },
+    toggle: {
+      button: white,
+      fontColor: white,
+      offBackground: slate,
+      onBackground: green,
     },
     tooltip: {
       bg: white,
@@ -21,9 +33,15 @@ export const themes = {
   dark: {
     name: 'dark',
     demo: {
-      background: colors['dark-bg'],
-      border: colors.slate,
-      color: colors.cloud,
+      background: darkBg,
+      border: slate,
+      color: cloud,
+    },
+    toggle: {
+      button: white,
+      fontColor: white,
+      offBackground: dark,
+      onBackground: green,
     },
   },
 };

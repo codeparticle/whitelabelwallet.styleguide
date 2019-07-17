@@ -6,3 +6,4 @@ import './button';
 import './text-input';
 import './theme-provider';
 import './tooltip';
+import './toggle-switch';
