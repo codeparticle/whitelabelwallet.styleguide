@@ -7,6 +7,7 @@ import './chart';
 import './area-chart';
 import './button';
 import './search';
+import './header';
 import './text-area';
 import './text-input';
 import './select';

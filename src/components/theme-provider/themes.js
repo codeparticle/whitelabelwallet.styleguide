@@ -6,6 +6,8 @@ const {
   cloud,
   dark,
   grey,
+  'gradient-blue': gradientBlue,
+  'gradient-dark': gradientDark,
   slate,
   white,
   'off-white': offWhite,
@@ -40,6 +42,11 @@ const lightTheme = {
     label: slate,
     bg: tintBlue,
     textValue: dark,
+  },
+  header: {
+    bg: gradientBlue,
+    svgFill: offWhite,
+    closeBtn: cloud,
   },
   select: {
     bg: offWhite,
@@ -86,6 +93,11 @@ const darkTheme = {
     bg: dark,
     label: grey,
     textValue: white,
+  },
+  header: {
+    bg: gradientDark,
+    svgFill: offWhite,
+    closeBtn: coolGreyDark,
   },
   select: {
     bg: dark,
