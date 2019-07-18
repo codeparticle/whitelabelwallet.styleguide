@@ -15,6 +15,9 @@ const {
   'dark-bg': darkBg,
   'off-white': offWhite,
   'tint-blue': tintBlue,
+  'mint-chip': mintChip,
+  'gradient-blue-start': gradientBlueStart,
+  'gradient-blue-end': gradientBlueEnd,
 } = colors;
 
 const {
@@ -87,6 +90,15 @@ const lightTheme = {
     copyBtnType: ButtonVariants.PRIMARY,
     sendBtnType: ButtonVariants.GREEN,
   },
+  wallet: {
+    bg: tintBlue,
+    textTitle: slate,
+    textValue: grey,
+    receiveBtnType: ButtonVariants.PRIMARY,
+    withdrawBtnType: ButtonVariants.GREEN,
+    gradientStart: mintChip,
+    gradientEnd: mintChip,
+  },
 };
 
 const darkTheme = {
@@ -153,6 +165,15 @@ const darkTheme = {
     address: grey,
     copyBtnType: ButtonVariants.SLATE,
     sendBtnType: ButtonVariants.GREEN,
+  },
+  wallet: {
+    bg: dark,
+    textTitle: white,
+    textValue: white,
+    receiveBtnType: ButtonVariants.SLATE,
+    withdrawBtnType: ButtonVariants.GREEN,
+    gradientStart: gradientBlueStart,
+    gradientEnd: gradientBlueEnd,
   },
 };
 
