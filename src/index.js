@@ -13,6 +13,7 @@ export {
   Chart,
   useComponentSize,
 } from './components/chart';
+export { Header } from './components/header';
 export { Search } from './components/search';
 export { TextArea } from './components/text-area';
 export { ToggleSwitch } from './components/toggle-switch';

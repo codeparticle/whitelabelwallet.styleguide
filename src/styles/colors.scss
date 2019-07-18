@@ -31,6 +31,7 @@ $gradient-teal: linear-gradient(45deg, #4392D7 0%, #00E3C6 100%);
 $gradient-alert: linear-gradient(90deg, #E5378F 0%, #F76B1C 100%);
 $gradient-success: linear-gradient(45deg, #B4EC51 0%, #429321 100%);
 $gradient-blue: linear-gradient(45deg, #538DC0 0%, #94CCE4 100%);
+$gradient-dark: linear-gradient(31.89deg, #222222 0%, #444444 100%);
 
 /* Transparencies */
 $shade: #60799840;
@@ -61,6 +62,7 @@ $tint: #FFFFFF40;
   gradient-alert: $gradient-alert;
   gradient-success: $gradient-success;
   gradient-blue: $gradient-blue;
+  gradient-dark: $gradient-dark;
   _transparencies: 0;
   shade: $shade;
   tint: $tint;
