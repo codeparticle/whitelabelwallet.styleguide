@@ -3,6 +3,8 @@ import './style/layout';
 import './style/svgs';
 import './style/typography';
 import './address';
+import './chart';
+import './area-chart';
 import './button';
 import './search';
 import './text-area';

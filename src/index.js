@@ -7,7 +7,12 @@ export { ButtonVariants } from './components/button/constants';
 
 // Components
 export { Address } from './components/address';
+export { AreaChart } from './components/area-chart';
 export { Button } from './components/button';
+export {
+  Chart,
+  useComponentSize,
+} from './components/chart';
 export { Search } from './components/search';
 export { TextArea } from './components/text-area';
 export { ToggleSwitch } from './components/toggle-switch';
