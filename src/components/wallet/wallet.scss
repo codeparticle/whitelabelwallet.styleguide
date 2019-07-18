@@ -45,6 +45,10 @@
     flex: 1;
     flex-direction: column;
     justify-content: center;
+
+    & svg > path {
+      fill: currentColor;
+    }
   }
 
   &__actions {

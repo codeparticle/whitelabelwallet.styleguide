@@ -22,14 +22,7 @@ const WalletDemo = ({ defaultToDark = false }) => {
     withdraw: text('messages withdraw', 'Withdraw Funds'),
   };
 
-  const defaultData = [
-    { x: 1, y: 2 },
-    { x: 2, y: 3 },
-    { x: 3, y: 5 },
-    { x: 4, y: 4 },
-    { x: 5, y: 7 },
-  ];
-
+  const defaultData = [];
   const coinData = object('coinData', defaultData);
   const title = text('title', 'Wallet Title');
   const coinBalance = number('coinBalance', 1023.45);
@@ -43,7 +36,7 @@ const WalletDemo = ({ defaultToDark = false }) => {
           coinData={coinData}
           currencyBalance={currencyBalance}
           coinBalance={coinBalance}
-          coinSymbol={SvgCog}
+          coinSymbol={<SvgCog />}
           currencySymbol="&#36;"
           title={title}
           messages={messages}

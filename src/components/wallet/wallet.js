@@ -16,7 +16,7 @@ const { SvgCog } = icons;
 
 const WalletFundsContainer = ({
   coinBalance,
-  coinSymbol: CoinSymbol,
+  coinSymbol,
   currencySymbol,
   currencyBalance,
   onDeposit,
@@ -37,7 +37,7 @@ const WalletFundsContainer = ({
         )}
       >
         <h1>
-          {typeof CoinSymbol === 'function' ? <CoinSymbol fill={theme.textTitle} /> : CoinSymbol} {coinBalance}
+          {coinSymbol} {coinBalance}
         </h1>
         <h4
           className="currency-balance"
@@ -176,9 +176,10 @@ Wallet.propTypes = {
   className: PropTypes.string,
   title: PropTypes.string,
   coinBalance: PropTypes.number,
+  coinData: PropTypes.arrayOf(PropTypes.object),
   currencyBalance: PropTypes.number,
   currencySymbol: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
-  coinSymbol: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+  coinSymbol: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   onDeposit: PropTypes.func,
   onWithdraw: PropTypes.func,
   messages: PropTypes.shape({
@@ -191,6 +192,7 @@ Wallet.defaultProps = {
   className: '',
   title: '',
   coinBalance: 0,
+  coinData: [],
   currencyBalance: 0,
   coinSymbol: null,
   currencySymbol: null,
