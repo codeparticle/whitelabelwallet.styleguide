@@ -79,6 +79,14 @@ const lightTheme = {
     textAreaBg: tintBlue,
     textTitle: coolGreyDark,
   },
+  contact: {
+    bg: tintBlue,
+    icon: cloud,
+    details: slate,
+    address: grey,
+    copyBtnType: ButtonVariants.PRIMARY,
+    sendBtnType: ButtonVariants.GREEN,
+  },
 };
 
 const darkTheme = {
@@ -137,6 +145,14 @@ const darkTheme = {
     icons: coolGreyDark,
     textAreaBg: darkBg,
     textTitle: grey,
+  },
+  contact: {
+    bg: dark,
+    icon: coolGreyDark,
+    details: white,
+    address: grey,
+    copyBtnType: ButtonVariants.SLATE,
+    sendBtnType: ButtonVariants.GREEN,
   },
 };
 

@@ -18,6 +18,7 @@ export {
   useComponentSize,
 } from './components/chart';
 export { Header } from './components/header';
+export { Contact } from './components/contact';
 export { Search } from './components/search';
 export { Select } from './components/select';
 export { TextArea } from './components/text-area';
