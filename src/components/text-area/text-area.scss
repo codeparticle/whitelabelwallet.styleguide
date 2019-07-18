@@ -7,11 +7,13 @@
   flex: 1;
   flex-direction: column;
   font-size: $font-size-xs-3;
+  height: 100%;
   line-height: $line-height-s;
 
   &__label {
     display: flex;
     flex-direction: column;
+    height: 100%;
 
     span {
       padding: 0 $space-1;
@@ -21,7 +23,9 @@
   &__input {
     border: 0;
     border-radius: 6px;
+    height: 100%;
     padding: $spacing-s;
+    resize: none;
     width: 100%;
   }
 

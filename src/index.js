@@ -1,6 +1,10 @@
 import keyboardOnlyOutlines from 'keyboard-only-outlines';
+import * as utils from 'utils';
 
 keyboardOnlyOutlines();
+
+// Utils
+export { utils };
 
 // Constants
 export { ButtonVariants } from './components/button/constants';
@@ -15,10 +19,11 @@ export {
 } from './components/chart';
 export { Header } from './components/header';
 export { Search } from './components/search';
-export { TextArea } from './components/text-area';
-export { ToggleSwitch } from './components/toggle-switch';
-export { TextInput } from './components/text-input';
 export { Select } from './components/select';
+export { TextArea } from './components/text-area';
+export { TextInput } from './components/text-input';
+export { ToggleSwitch } from './components/toggle-switch';
+export { TransferAmount } from './components/transfer-amount';
 export {
   ThemeContext,
   useTheme,
