@@ -1,6 +1,8 @@
 export { Button } from './components/button';
 export { TextInput } from './components/text-input';
 export { Tooltip } from './components/tooltip';
+export { ToggleSwitch } from './components/toggle-switch';
+
 export {
   ThemeContext,
   useTheme,

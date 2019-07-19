@@ -1,0 +1,77 @@
+@import "styles/colors.scss";
+@import "styles/layout.scss";
+@import "styles/fonts.scss";
+
+.toggle-switch {
+  display: inline-block;
+  font-size: $font-size-xs-3;
+  position: relative;
+  width: 80px;
+
+  .toggle-switch-checkbox {
+    display: none;
+  }
+
+  .toggle-switch-label {
+    border-radius: $font-size-sm-2;
+    cursor: pointer;
+    display: block;
+    overflow: hidden;
+  }
+
+  .toggle-switch-slider {
+    display: block;
+    font-family: $font-default;
+    font-weight: bold;
+    height: 36px;
+    line-height: $font-size-md-3;
+    margin-left: -100%;
+    width: 200%;
+    font-size: $font-size-xs-3;
+    transition: all 0.3s ease-in 0s;
+
+    &::before,
+    &::after {
+      align-items: center;
+      box-sizing: border-box;
+      display: flex;
+      height: 100%;
+      float: left;
+      padding: 0;
+      padding-right: $space-3;
+      width: 50%;
+    }
+
+    &::before {
+      content: "On";
+      padding-left: $space-3;
+    }
+
+    &::after {
+      content: "Off";
+      justify-content: flex-end;
+      text-align: right;
+    }
+  }
+
+  .toggle-switch-btn {
+    background: $white;
+    bottom: 0;
+    border-radius: $font-size-md-1;
+    display: block;
+    height: 28px;
+    position: absolute;
+    right: 47px;
+    top: 4px;
+    transition: right 0.3s ease-in 0s;
+    width: 28px;
+  }
+
+  .toggle-switch-label .toggle-switch-checkbox:checked + .toggle-switch-slider {
+    margin-left: 0;
+  }
+
+  .toggle-switch-label .toggle-switch-checkbox:checked ~ .toggle-switch-btn {
+    right: 5px;
+  }
+}

@@ -5,8 +5,7 @@ import { action } from '@storybook/addon-actions';
 import { withReadme } from 'storybook-readme';
 import { TextInput } from 'components/text-input';
 import readme from 'components/text-input/README.md';
-
-const darkBackground = { name: 'dark', value: '#686C71' };
+import { darkBackground } from './constants';
 
 const TextInputWithValue = (props) => {
   const [value, setValue] = useState('');
