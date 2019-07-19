@@ -17,6 +17,7 @@ export {
   Chart,
   useComponentSize,
 } from './components/chart';
+export { DeterministicPassPhrase } from './components/deterministic-pass-phrase';
 export { Header } from './components/header';
 export { Contact } from './components/contact';
 export { Search } from './components/search';

@@ -7,6 +7,7 @@ import './chart';
 import './area-chart';
 import './button';
 import './contact';
+import './deterministic-pass-phrase';
 import './search';
 import './header';
 import './text-area';
