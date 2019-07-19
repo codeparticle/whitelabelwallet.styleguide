@@ -31,7 +31,23 @@ const getImageComponent = (name, svg) => {
   const hasWidth = svg.includes('width=');
 
   // Add className, remove new lines, and add white space before closing bracket
-  let parsedSvg = svg.replace('<svg', '<svg className={className}').replace(/\n/g, '').replace(/\/>/g, ' />');
+  const idsFound = [];
+  let parsedSvg = svg
+    .replace('<svg', '<svg className={className}')
+    .replace(/\n/g, '').replace(/\/>/g, ' />')
+    .replace(/xmlns[^"]*"[^"]*"/gi, '')
+    .replace(/xlink:href/gi, 'xlinkHref')
+    .replace(/id="[^"]*"/gi, (match) => {
+      const id = match.split('"')[1];
+
+      idsFound.push(id);
+
+      return `id="${name}-${id}"`;
+    });
+
+  idsFound.forEach((id) => {
+    parsedSvg = parsedSvg.replace(new RegExp(`#${id}`, 'gi'), `#${name}-${id}`);
+  });
 
   // camelCase unknown props
   parsedSvg = parsedSvg.replace(/[^\s]+-[^\s]+=('|")[^('|")]+('|")/g, (prop) => {
