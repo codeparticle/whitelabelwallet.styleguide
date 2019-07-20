@@ -1,0 +1,95 @@
+@import "styles/colors.scss";
+@import "styles/layout.scss";
+@import "styles/fonts";
+
+.qr-code {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 6px;
+  max-width: 498px;
+
+  &__container {
+    width: 100%;
+    padding: $spacing-m 15%;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    text-align: center;
+  }
+
+  &__image {
+    margin: $spacing-s 0;
+    position: relative;
+
+    &::before {
+      display: block;
+      content: "";
+      width: 24px;
+      height: 24px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-top: 5px solid $blue;
+      border-left: 5px solid $blue;
+    }
+
+    &::after {
+      display: block;
+      content: "";
+      width: 24px;
+      height: 24px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      border-top: 5px solid $blue;
+      border-right: 5px solid $blue;
+    }
+  }
+
+  &__image-bottom {
+    &::before {
+      display: block;
+      content: "";
+      width: 24px;
+      height: 24px;
+      position: absolute;
+      bottom: 6px;
+      left: 0;
+      border-bottom: 5px solid $blue;
+      border-left: 5px solid $blue;
+    }
+
+    &::after {
+      display: block;
+      content: "";
+      width: 24px;
+      height: 24px;
+      position: absolute;
+      bottom: 6px;
+      right: 0;
+      border-bottom: 5px solid $blue;
+      border-right: 5px solid $blue;
+    }
+  }
+
+  &__message {
+    text-align: center;
+    padding: $spacing-m $spacing-xxl;
+    font-size: $font-size-sm-2;
+    line-height: $line-height-m;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    width: 100%;
+  }
+
+  &__request {
+    padding: 0 $spacing-m;
+    line-height: $line-height-s;
+    font-size: $font-size-sm-1;
+  }
+
+  &__amount {
+    font-size: $font-size-xs-3;
+  }
+}

@@ -6,6 +6,7 @@ import './address';
 import './chart';
 import './area-chart';
 import './button';
+import './qr-code';
 import './contact';
 import './deterministic-pass-phrase';
 import './search';
