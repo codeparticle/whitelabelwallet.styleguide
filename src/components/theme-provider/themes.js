@@ -15,7 +15,6 @@ const {
   'dark-bg': darkBg,
   'gradient-blue': gradientBlue,
   'gradient-dark': gradientDark,
-  'mint-chip': mintChip,
   'off-white': offWhite,
   'tint-blue': tintBlue,
   'mint-chip': mintChip,
@@ -160,7 +159,7 @@ const darkTheme = {
     fontColor: white,
   },
   tooltip: {
-    bg: darkBg,
+    bg: dark,
     message: white,
   },
   address: {
