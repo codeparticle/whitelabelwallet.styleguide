@@ -14,20 +14,22 @@ const QRCodeDemo = ({ defaultToDark = false }) => {
     scan: text('Scan', 'Have the sender scan this code for easy transaction setup.'),
   };
 
-  const address = text('Address', 'gc07160a870d809ef8097ac8za5539ayzw9fs0d809e');
+  const qrString = text('QR String', 'gc07160a870d809ef8097ac8za5539ayzw9fs0d809e');
   const title = text('Title', 'QR Code Generator');
 
   return (
-    <ThemeWrapper
-      defaultToDark={defaultToDark}
-      content={
-        <QRCode
-          title={title}
-          messages={messages}
-          address={address}
-        />
-      }
-    />
+    <div style={{ padding: '10px 25%' }}>
+      <ThemeWrapper
+        defaultToDark={defaultToDark}
+        content={
+          <QRCode
+            title={title}
+            messages={messages}
+            qrString={qrString}
+          />
+        }
+      />
+    </div>
   );
 };
 

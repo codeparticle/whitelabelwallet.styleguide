@@ -24,17 +24,17 @@ const QRCodeImage = ({ qrcode }) => {
 const QRCode = ({
   className,
   title,
-  address,
+  qrString,
   messages,
   ...rest
 }) => {
   const [qrcode, setCode] = useState('');
 
   useEffect(() => {
-    QRCodeGenerator.toString(address, (err, svgString) => {
+    QRCodeGenerator.toString(qrString, (err, svgString) => {
       setCode(svgString);
     });
-  }, [address]);
+  }, [qrString]);
 
   const theme = useTheme('qrcode');
 
@@ -84,7 +84,7 @@ const QRCode = ({
 };
 
 QRCode.propTypes = {
-  address: PropTypes.string,
+  qrString: PropTypes.string,
   className: PropTypes.string,
   messages: PropTypes.shape({
     amount: PropTypes.string,
@@ -95,7 +95,7 @@ QRCode.propTypes = {
 };
 
 QRCode.defaultProps = {
-  address: '',
+  qrString: '',
   className: '',
   messages: {
     amount: '',

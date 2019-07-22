@@ -28,6 +28,8 @@ $space-5: 20px;
 $space-6: 24px;
 $space-7: 28px;
 
+$border-radius-1: 6px;
+
 /* stylelint-disable */
 :export {
   spacing-xxs: '0px-4px';
@@ -44,5 +46,6 @@ $space-7: 28px;
   space-5: $space-5;
   space-6: $space-6;
   space-7: $space-7;
+  border-radius-1: $border-radius-1;
 }
 /* stylelint-enable */

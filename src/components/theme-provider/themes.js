@@ -17,6 +17,7 @@ const {
   'gradient-dark': gradientDark,
   'off-white': offWhite,
   'tint-blue': tintBlue,
+  'mint-chip': mintChip,
   'gradient-blue-start': gradientBlueStart,
   'gradient-blue-end': gradientBlueEnd,
 } = colors;
