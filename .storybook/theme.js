@@ -4,5 +4,5 @@ export default create({
   base: 'light',
 
   brandTitle: 'Styleguide',
-  brandImage: 'favicon.ico',
+  brandImage: '.storybook/logo.svg',
 });
