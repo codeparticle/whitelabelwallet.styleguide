@@ -32,12 +32,15 @@ const Tooltip = ({
       </ReactTooltip>
       <style jsx global>
         {`
+          @import 'styles/layout.scss';
+
           .__react_component_tooltip.type-dark {
             background: ${theme.bg} !important;
             border-color: ${theme.bg} !important;
             border-radius: 6px !important;
             box-shadow: 0px 2px 6px -2px #888;
             color: ${theme.message} !important;
+            padding: $space-1 $space-4 !important;
 
             &.place-top::after,
             &.place-bottom::after,
@@ -76,7 +79,7 @@ const Tooltip = ({
           @import 'styles/fonts.scss';
 
           .tooltip-content {
-            font-size: $font-size-sm-1;
+            font-size: $font-size-xs-3;
           }
         `}
       </style>
