@@ -99,6 +99,12 @@ const lightTheme = {
     copyBtnType: ButtonVariants.PRIMARY,
     sendBtnType: ButtonVariants.GREEN,
   },
+  qrcode: {
+    bg: tintBlue,
+    textTitle: slate,
+    messageBg: cloud,
+    request: dark,
+  },
   wallet: {
     bg: tintBlue,
     textTitle: slate,
@@ -181,6 +187,12 @@ const darkTheme = {
     address: grey,
     copyBtnType: ButtonVariants.SLATE,
     sendBtnType: ButtonVariants.GREEN,
+  },
+  qrcode: {
+    bg: dark,
+    textTitle: white,
+    messageBg: slate,
+    request: white,
   },
   wallet: {
     bg: dark,

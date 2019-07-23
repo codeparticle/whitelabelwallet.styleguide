@@ -20,6 +20,7 @@ export {
 export { DeterministicPassPhrase } from './components/deterministic-pass-phrase';
 export { Header } from './components/header';
 export { Contact } from './components/contact';
+export { QRCode } from './components/qr-code';
 export { Search } from './components/search';
 export { Select } from './components/select';
 export { TextArea } from './components/text-area';
