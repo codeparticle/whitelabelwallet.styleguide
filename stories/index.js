@@ -9,6 +9,7 @@ import './button';
 import './qr-code';
 import './contact';
 import './deterministic-pass-phrase';
+import './icon';
 import './search';
 import './header';
 import './text-area';

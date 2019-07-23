@@ -1,0 +1,54 @@
+@import "styles/colors.scss";
+@import "styles/fonts.scss";
+
+@mixin icon-theme ($fill) {
+  color: $fill;
+}
+
+.icon {
+  border: 0;
+  background: rgba(0, 0, 0, 0);
+  color: $dark;
+  padding: 0;
+  width: $font-size-md-1;
+
+  svg {
+    display: block;
+    height: 100%;
+    width: 100%;
+
+    & > path {
+      fill: currentColor;
+    }
+  }
+
+  &:enabled {
+    cursor: pointer;
+  }
+
+  &:active {
+    position: relative;
+    top: 1px;
+    opacity: 0.5;
+  }
+
+  &:hover {
+    background: none;
+  }
+}
+
+.primary {
+  @include icon-theme($blue);
+}
+
+.tertiary {
+  @include icon-theme($white);
+}
+
+.green {
+  @include icon-theme($green);
+}
+
+.slate {
+  @include icon-theme($slate);
+}
