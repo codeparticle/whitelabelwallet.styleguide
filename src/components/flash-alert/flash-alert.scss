@@ -1,0 +1,51 @@
+@import "styles/colors.scss";
+@import "styles/layout.scss";
+@import "styles/fonts.scss";
+
+@mixin alert-theme($background) {
+  background: $background;
+}
+
+.alert {
+  color: $white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: $font-size-sm-2;
+  padding: $spacing-l;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.success {
+  @include alert-theme($gradient-success);
+}
+
+.fail {
+  @include alert-theme($gradient-alert);
+}
+
+.enter {
+  visibility: hidden;
+  transform: translateY(-100%);
+}
+
+.enter-active {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+  transition: transform 400ms;
+}
+
+.exit {
+  opacity: 1;
+}
+
+.exit-active {
+  transform: translateY(-100%);
+  transition: transform 300ms;
+}
