@@ -1,0 +1,50 @@
+@import "styles/colors.scss";
+@import "styles/fonts.scss";
+
+.icon {
+  border: 0;
+  background: rgba(0, 0, 0, 0);
+  color: $dark;
+  padding: 0;
+  width: $font-size-md-1;
+
+  svg {
+    display: block;
+    height: 100%;
+    width: 100%;
+
+    & > path {
+      fill: currentColor;
+    }
+  }
+
+  &:enabled {
+    cursor: pointer;
+  }
+
+  &:active {
+    opacity: 0.5;
+    position: relative;
+    top: 1px;
+  }
+
+  &:hover {
+    background: none;
+  }
+}
+
+.primary {
+  color: $blue;
+}
+
+.tertiary {
+  color: $white;
+}
+
+.green {
+  color: $green;
+}
+
+.slate {
+  color: $slate;
+}
