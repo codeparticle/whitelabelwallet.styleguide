@@ -1,10 +1,6 @@
 @import "styles/colors.scss";
 @import "styles/fonts.scss";
 
-@mixin icon-theme ($fill) {
-  color: $fill;
-}
-
 .icon {
   border: 0;
   background: rgba(0, 0, 0, 0);
@@ -27,9 +23,9 @@
   }
 
   &:active {
+    opacity: 0.5;
     position: relative;
     top: 1px;
-    opacity: 0.5;
   }
 
   &:hover {
@@ -38,17 +34,17 @@
 }
 
 .primary {
-  @include icon-theme($blue);
+  color: $blue;
 }
 
 .tertiary {
-  @include icon-theme($white);
+  color: $white;
 }
 
 .green {
-  @include icon-theme($green);
+  color: $green;
 }
 
 .slate {
-  @include icon-theme($slate);
+  color: $slate;
 }
