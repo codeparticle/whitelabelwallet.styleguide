@@ -6,6 +6,8 @@ const {
   slate,
   white,
   cloud,
+  grey,
+  'cool-grey-dark': coolGreyDark,
   'dark-bg': darkBg,
   'tint-blue': tintBlue,
   dark,
@@ -29,6 +31,14 @@ export const themes = {
       bg: white,
       message: blue,
     },
+    search: {
+      bgBlur: tintBlue,
+      bgFocus: tintBlue,
+      colorBlur: grey,
+      iconFocus: blue,
+      textPlaceholder: grey,
+      textValue: dark,
+    },
   },
   dark: {
     name: 'dark',
@@ -42,6 +52,14 @@ export const themes = {
       fontColor: white,
       offBackground: dark,
       onBackground: green,
+    },
+    search: {
+      bgBlur: darkBg,
+      bgFocus: dark,
+      colorBlur: coolGreyDark,
+      iconFocus: blue,
+      textPlaceholder: grey,
+      textValue: white,
     },
   },
 };
