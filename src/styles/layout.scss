@@ -28,7 +28,12 @@ $space-5: 20px;
 $space-6: 24px;
 $space-7: 28px;
 
-$border-radius-1: 6px;
+$border-radius-1: 2px;
+$border-radius-2: 4px;
+$border-radius-3: 6px;
+$border-radius-4: 8px;
+$border-radius-5: 10px;
+$border-radius-round: 50%;
 
 /* stylelint-disable */
 :export {
@@ -47,5 +52,10 @@ $border-radius-1: 6px;
   space-6: $space-6;
   space-7: $space-7;
   border-radius-1: $border-radius-1;
+  border-radius-2: $border-radius-2;
+  border-radius-3: $border-radius-3;
+  border-radius-4: $border-radius-4;
+  border-radius-5: $border-radius-5;
+  border-radius-round: $border-radius-round;
 }
 /* stylelint-enable */

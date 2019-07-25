@@ -2,6 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withReadme } from 'storybook-readme';
 import { text, withKnobs } from '@storybook/addon-knobs';
+import { action } from '@storybook/addon-actions';
 import { Search } from 'components/search';
 import readme from 'components/search/README.md';
 import { ThemeWrapper } from './utils';
@@ -13,17 +14,13 @@ import {
 const SearchDemo = ({ defaultToDark = false }) => {
   const placeholder = text('Placeholder', 'Search...');
 
-  function onSubmit(value) {
-    console.log(value);
-  }
-
   return (
     <div style={{ padding: '25px 10%' }}>
       <ThemeWrapper
         defaultToDark={defaultToDark}
         content={
           <Search
-            onSubmit={onSubmit}
+            onSubmit={action('submitted')}
             placeholder={placeholder}
           />
         }
