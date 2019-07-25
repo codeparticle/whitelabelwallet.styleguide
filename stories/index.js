@@ -10,6 +10,7 @@ import './qr-code';
 import './contact';
 import './deterministic-pass-phrase';
 import './icon';
+import './flash-alert';
 import './search';
 import './header';
 import './text-area';

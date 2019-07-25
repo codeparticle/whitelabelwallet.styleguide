@@ -18,6 +18,7 @@ export {
   useComponentSize,
 } from './components/chart';
 export { DeterministicPassPhrase } from './components/deterministic-pass-phrase';
+export { FlashAlert } from './components/flash-alert';
 export { Header } from './components/header';
 export { Contact } from './components/contact';
 export { QRCode } from './components/qr-code';
