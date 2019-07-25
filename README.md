@@ -10,6 +10,21 @@ Codeparticle's react-style-guide.
 - [PostCSS](https://github.com/postcss/postcss)
 
 
+## Publishing
+
+Publishing should already be setup. Just follow these steps to publish the project:
+
+- commit code
+- run `yarn run release:major`, `yarn run release:minor`, or `yarn run release:patch` to bump the version and update changelog
+- run `yarn publish` or `npm publish`
+
+The publishing will be automatically done to CP's jfrog repo based on the config found in the `.npmrc` file.
+
+### Important
+
+* Make sure you are signed in before publishing or it won't work. Run `npm adduser` to sign in. Credentials can be found [here](https://codeparticle.atlassian.net/wiki/spaces/CP/pages/740032513/NPM+JFrog+Credentials).
+* Copy the `.npmrc` file to a new project in which you will install this package. That way you fetch the package from the correct repo when doing `npm install` or `yarn install`.
+
 ## Setup
 
 It's assumed that you will consume this package in an application bundled with Webpack. Follow the steps below:
