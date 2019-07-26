@@ -13,6 +13,7 @@ import './icon';
 import './flash-alert';
 import './search';
 import './header';
+import './list/list';
 import './text-area';
 import './text-input';
 import './select';

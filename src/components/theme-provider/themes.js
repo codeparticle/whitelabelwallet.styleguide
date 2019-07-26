@@ -99,6 +99,48 @@ const lightTheme = {
     copyBtnType: ButtonVariants.PRIMARY,
     sendBtnType: ButtonVariants.GREEN,
   },
+  list: {
+    header: slate,
+    primary: {
+      background: tintBlue,
+      border: tintBlue,
+      color: slate,
+      count: {
+        background: white,
+        color: slate,
+      },
+    },
+    selected: {
+      background: cloud,
+      border: cloud,
+      color: dark,
+      count: {
+        background: white,
+        color: blue,
+      },
+    },
+    secondary: {
+      background: white,
+      border: cloud,
+      color: slate,
+      count: {
+        background: slate,
+        color: white,
+      },
+    },
+    subItem: {
+      background: white,
+      border: cloud,
+      color: slate,
+      icon: grey,
+    },
+    subItemSelected: {
+      background: cloud,
+      border: blue,
+      color: blue,
+      icon: blue,
+    },
+  },
   qrcode: {
     bg: tintBlue,
     textTitle: slate,
@@ -171,6 +213,48 @@ const darkTheme = {
   address: {
     background: dark,
     button: SLATE,
+  },
+  list: {
+    header: coolGreyDark,
+    primary: {
+      background: dark,
+      border: dark,
+      color: grey,
+      count: {
+        background: darkBg,
+        color: white,
+      },
+    },
+    selected: {
+      background: coolGreyDark,
+      border: coolGreyDark,
+      color: white,
+      count: {
+        background: dark,
+        color: white,
+      },
+    },
+    secondary: {
+      background: darkBg,
+      border: coolGreyDark,
+      color: grey,
+      count: {
+        background: dark,
+        color: white,
+      },
+    },
+    subItem: {
+      background: darkBg,
+      border: coolGreyDark,
+      color: grey,
+      icon: coolGreyDark,
+    },
+    subItemSelected: {
+      background: coolGreyDark,
+      border: white,
+      color: white,
+      icon: white,
+    },
   },
   transferAmount: {
     bg: dark,

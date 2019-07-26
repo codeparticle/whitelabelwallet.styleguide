@@ -29,12 +29,11 @@
 ///   }
 @mixin linear-background($start-color, $end-color: $start-color, $orientation:'to bottom') {
   background: $start-color;
+  background: linear-gradient(unquote($orientation), $start-color, $end-color);
 
   @if type-of($orientation) == number {
     $orientation: $orientation + 'deg';
   }
-
-  background: linear-gradient(unquote($orientation), $start-color, $end-color);
 }
 
 /// Removes the unit of a given number
@@ -270,9 +269,9 @@ $base-font-size: 16px !default;
 ///     transform: translate(-50%, -50%);
 ///   }
 @mixin center-both {
+  left: 50%;
   position: absolute;
   top: 50%;
-  left: 50%;
 
   @include prefix(transform, translate(-50%, -50%), 'webkit' 'ms');
 }
@@ -292,10 +291,10 @@ $base-font-size: 16px !default;
 ///     margin-top: -21px;
 ///   }
 @mixin center-h($height) {
-  position: absolute;
-  top: 50%;
   height: $height;
   margin-top: -($height / 2);
+  position: absolute;
+  top: 50%;
 }
 
 /// Vertically centers block elements with unknown height.
@@ -364,13 +363,13 @@ $base-font-size: 16px !default;
 @mixin font-face($font-name, $file-name, $weight: normal, $style: normal) {
   @font-face {
     font-family: quote($font-name);
+    font-style: $style;
+    font-weight: $weight;
     src: url($file-name + '.eot');
     src: url($file-name + '.eot?#iefix') format('embedded-opentype'),
       url($file-name + '.woff') format('woff'),
       url($file-name + '.ttf') format('truetype'),
       url($file-name + '.svg##{$font-name}')  format('svg');
-    font-weight: $weight;
-    font-style: $style;
   }
 }
 
@@ -506,8 +505,8 @@ $base-font-size: 16px !default;
 ///     filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#50)";
 ///   }
 @mixin opacity($opacity) {
-  opacity: $opacity;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$opacity * 100})";
+  opacity: $opacity;
 }
 
 /// Generates the color black, with, optionally, a set opacity.
@@ -558,11 +557,11 @@ $base-font-size: 16px !default;
 ///     top: 10px;
 ///   }
 @mixin position($type, $top: null, $right: null, $bottom: null, $left: null) {
-  position: $type;
-  top: $top;
-  right: $right;
   bottom: $bottom;
   left: $left;
+  position: $type;
+  right: $right;
+  top: $top;
 }
 
 /// Sizing helper
@@ -579,8 +578,8 @@ $base-font-size: 16px !default;
 ///     height: 350px;
 ///   }
 @mixin size($width, $height: $width) {
-  width: $width;
   height: $height;
+  width: $width;
 }
 
 /// Embossing text shadow
@@ -809,8 +808,8 @@ $base-font-size: 16px !default;
     }
 
     &::before {
-      content: '';
       background-color: $color;
+      content: '';
       height: 1px;
       left: 0;
       position: absolute;

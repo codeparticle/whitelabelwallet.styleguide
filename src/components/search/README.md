@@ -16,6 +16,5 @@ import { Search } from '@codeparticle/whitelabelwallet.styleguide';
 | ---- | ---- | ------- | ----------- |
 | onSubmit* | func |  | Callback for submitting a search |
 | placeholder | string | 'Search...' | Placeholder text. |
-| theme | string | `light` | Toggles the theme. Options are: `light` and `dark` |
 
 **Note:** An asterisk(*) next to a prop's name indicates it is required.

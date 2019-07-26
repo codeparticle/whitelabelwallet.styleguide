@@ -23,6 +23,7 @@ export { Header } from './components/header';
 export { Contact } from './components/contact';
 export { QRCode } from './components/qr-code';
 export { Icon } from './components/icon';
+export { cellFormatters, List } from './components/list';
 export { Search } from './components/search';
 export { Select } from './components/select';
 export { TextArea } from './components/text-area';

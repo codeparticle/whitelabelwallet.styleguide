@@ -10,6 +10,21 @@ Codeparticle's White Label Wallet Styleguide.
 - [PostCSS](https://github.com/postcss/postcss)
 - Automatically enables keyboard-online-outlines so that outlines are only shown when necessary
 
+## Publishing
+
+Publishing should already be setup. Just follow these steps to publish the project:
+
+- commit code
+- run `yarn run release:major`, `yarn run release:minor`, or `yarn run release:patch` to bump the version and update changelog
+- run `yarn publish` or `npm publish`
+
+The publishing will be automatically done to CP's jfrog repo based on the config found in the `.npmrc` file.
+
+### Important
+
+* Make sure you are signed in before publishing or it won't work. Run `npm adduser` to sign in. Credentials can be found [here](https://codeparticle.atlassian.net/wiki/spaces/CP/pages/740032513/NPM+JFrog+Credentials).
+* Copy the `.npmrc` file to a new project in which you will install this package. That way you fetch the package from the correct repo when doing `npm install` or `yarn install`.
+
 ## Setup
 
 It's assumed that you will consume this package in an application bundled with Webpack. Follow the steps below:
@@ -151,6 +166,28 @@ module.exports = {
 
 Delete the folder at `node_modules/@codeparticle/whitelabelwallet.styleguide` and link the projects by running `npm link ../pathToReactStyleGuide` inside the root directory of your project project. NOTE: this step has to be retaken every time you run an `npm i` or `yarn` commands in your main project, because `npm i` will replace your linked version with an installed version.
 
+### Style Guide Usage
+#### Clone to new project
+
+Follow the instruction below to clone the starter to a new project repo.
+
+Note: we should keep the commit history in the new repo for future rebase.
+
+- Create a new project repo in bitbucket
+- Clone `react-web-starter` repo locally, and `cd path/react-web-starter`
+- Run `git remote remove origin`
+- Run `git remote add origin [new repo url]`
+- Run `git push origin master -u`
+- Verify: should see all the commits history and master branch in new project repo
+- Re-clone `react-web-starter` repo or reset it's origin if you need to develop against it locally
+
+#### Rebase your project style guide to include latest changes
+
+- Create a new branch in your project style guide
+- Run `git remote add starter git@bitbucket.org:CodeParticle/react-style-guide.git` (The url can be https)
+- Run `git fetch starter`
+- Run `git rebase starter/master`
+- Push the branch and open the PR for team review/test before merging
 
 ## License
 

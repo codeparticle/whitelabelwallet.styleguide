@@ -5,8 +5,8 @@
   ul {
     display: flex;
     flex-wrap: wrap;
-    padding: 0;
     margin: $spacing-s 0 $spacing-l 0;
+    padding: 0;
 
     .list-item {
       font-size: $font-size-xs-3;
