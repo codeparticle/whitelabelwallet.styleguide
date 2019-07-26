@@ -8,7 +8,7 @@ import { ThemeWrapper } from './utils';
 import { darkBackground, lightBackground } from './constants';
 
 const ToggleSwitchWithValue = (props) => {
-  const [value, setValue] = useState('');
+  const [value, setValue] = useState(false);
   const onClick = () => {
     setValue(!value);
   };

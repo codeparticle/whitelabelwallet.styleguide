@@ -55,7 +55,7 @@ const List = ({
   onRowClicked,
   rowData,
   showHeader,
-  showSubList,
+  showSubItems,
 }) => (
   <>
     <div className="list">
@@ -74,7 +74,7 @@ const List = ({
         isStriped={isStriped}
         onRowClicked={onRowClicked}
         rowData={rowData}
-        showSubList={showSubList}
+        showSubItems={showSubItems}
       />
     </div>
     <style jsx>
@@ -124,7 +124,7 @@ List.propTypes = {
     PropTypes.object.isRequired,
   ).isRequired,
   showHeader: PropTypes.bool,
-  showSubList: PropTypes.bool,
+  showSubItems: PropTypes.bool,
 };
 
 List.defaultProps = {
@@ -134,7 +134,7 @@ List.defaultProps = {
   customSort: null,
   isStriped: false,
   showHeader: true,
-  showSubList: true,
+  showSubItems: true,
 };
 
 export {

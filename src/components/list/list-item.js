@@ -52,10 +52,10 @@ function renderChild({
   childToRender: ChildComponent,
   data,
   isSelected,
-  showSubList,
+  showSubItems,
 }) {
   if (data && ChildComponent && isSelected) {
-    if (showSubList) {
+    if (showSubItems) {
       return <ChildComponent data={data} />;
     }
   }
@@ -76,7 +76,7 @@ export function ListItem({
   onRowClicked,
   selected,
   setSelected,
-  showSubList,
+  showSubItems,
   theme,
 }) {
   const [isSelected, setIsSelected] = useState(false);
@@ -169,7 +169,7 @@ export function ListItem({
         childToRender,
         data,
         isSelected,
-        showSubList,
+        showSubItems,
       })}
     </>
   );
@@ -206,7 +206,7 @@ ListItem.propTypes = {
     data: PropTypes.object,
   }).isRequired,
   setSelected: PropTypes.func.isRequired,
-  showSubList: PropTypes.bool,
+  showSubItems: PropTypes.bool,
   index: PropTypes.number.isRequired,
   theme: PropTypes.object.isRequired, // eslint-disable-line
 };
@@ -216,5 +216,5 @@ ListItem.defaultProps = {
   childToRender: null,
   customRowStyles: null,
   isStriped: false,
-  showSubList: true,
+  showSubItems: true,
 };

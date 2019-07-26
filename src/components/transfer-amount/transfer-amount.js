@@ -73,6 +73,7 @@ function renderIconOrTicker({ fill, tickerSymbol }) {
 const CurrencyContainer = ({
   coinDecimalLimit,
   conversionRate,
+  currencyValue,
   fiatDecimalLimit,
   fiatSymbolKey,
   handleCurrencyChange,
@@ -80,7 +81,7 @@ const CurrencyContainer = ({
   theme,
   tickerSymbol,
 }) => {
-  const [value, setValue] = useState('');
+  const [value, setValue] = useState(currencyValue);
   const convertedValue = convertCurrency(value, conversionRate, fiatDecimalLimit);
   const floatRegex = getFloatRegex(coinDecimalLimit);
   const fiatSymbol = fiatSymbols[fiatSymbolKey];
@@ -173,6 +174,7 @@ const MemoContainer = ({
 export const TransferAmount = ({
   coinDecimalLimit,
   conversionRate,
+  currencyValue,
   fiatDecimalLimit,
   fiatSymbolKey,
   handleCurrencyChange,
@@ -188,6 +190,7 @@ export const TransferAmount = ({
       <CurrencyContainer
         coinDecimalLimit={coinDecimalLimit}
         conversionRate={conversionRate}
+        currencyValue={currencyValue}
         fiatDecimalLimit={fiatDecimalLimit}
         fiatSymbolKey={fiatSymbolKey}
         handleCurrencyChange={handleCurrencyChange}
@@ -215,6 +218,7 @@ export const TransferAmount = ({
 TransferAmount.propTypes = {
   coinDecimalLimit: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   conversionRate: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+  currencyValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   fiatDecimalLimit: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   fiatSymbolKey: PropTypes.string,
   handleCurrencyChange: PropTypes.func.isRequired,
@@ -229,6 +233,7 @@ TransferAmount.propTypes = {
 
 TransferAmount.defaultProps = {
   coinDecimalLimit: null,
+  currencyValue: '',
   fiatDecimalLimit: 2,
   fiatSymbolKey: 'dollarSign',
   messages: {

@@ -2,30 +2,30 @@
 @import "styles/layout.scss";
 
 .wallet {
-  display: flex;
   border-radius: 9px;
+  display: flex;
+  max-width: 510px;
+  min-height: 280px;
   padding: $spacing-l;
   position: relative;
-  min-height: 280px;
   width: 100%;
-  max-width: 510px;
 
   &__wallet-title {
-    display: flex;
     align-items: center;
+    display: flex;
     justify-content: space-between;
   }
 
   &__wallet-graph {
-    height: 100%;
-    width: 100%;
     border-radius: 9px;
+    bottom: 0;
+    height: 100%;
+    left: 0;
     overflow: hidden;
     position: absolute;
-    top: 0;
-    left: 0;
     right: 0;
-    bottom: 0;
+    top: 0;
+    width: 100%;
   }
 
   &__wallet-content {
@@ -52,15 +52,15 @@
   }
 
   &__actions {
+    align-items: flex-end;
     display: flex;
+    flex: 1;
     flex-direction: column;
     justify-content: space-between;
-    align-items: flex-end;
-    flex: 1;
 
     & > button {
-      margin-top: $spacing-xs;
       margin-bottom: $spacing-xs;
+      margin-top: $spacing-xs;
     }
   }
 }

@@ -1,12 +1,12 @@
 # List
 
-A fully customizable list component. This component also exposes a few generic cellFormatters such as `Text` and `ChildCount`.
+A fully customizable list component. This component also exposes a few generic cellFormatters such as `Text`, `ChildCount`, and `ChildIcon`.
 
 ## Usage
 
 ```jsx
 import React from 'react';
-import { cellFormatters, List } from '@codeparticle/react-style-guide';
+import { cellFormatters, List } from '@codeparticle/whitelabelwallet.styleguide';
 
 const {
   Text, // Default renderer
@@ -352,6 +352,6 @@ function customRowStyles({
 > When false, does not render list headers. Always false for sub-lists
 
 ----
-### showSubList (bool) default: true
+### showSubItems (bool) default: true
 
-> When true, shows subList. Can be used to control when the subList of a selected row will be displayed.
+> When true, shows subitems. Can be used to control when the subitems of a selected row will be displayed.

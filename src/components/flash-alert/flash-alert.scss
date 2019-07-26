@@ -7,16 +7,16 @@
 }
 
 .alert {
+  align-items: center;
   color: $white;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   font-size: $font-size-sm-2;
+  justify-content: space-between;
+  left: 0;
   padding: $spacing-l;
   position: fixed;
-  top: 0;
   right: 0;
-  left: 0;
+  top: 0;
   width: 100%;
   z-index: 1000;
 }
@@ -30,15 +30,15 @@
 }
 
 .enter {
-  visibility: hidden;
   transform: translateY(-100%);
+  visibility: hidden;
 }
 
 .enter-active {
-  visibility: visible;
   opacity: 1;
   transform: translateY(0);
   transition: transform 400ms;
+  visibility: visible;
 }
 
 .exit {
