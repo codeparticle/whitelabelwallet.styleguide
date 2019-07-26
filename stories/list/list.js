@@ -161,7 +161,7 @@ storiesOf('List', module)
         allowDeselect={allowDeselectValue}
         childToRender={CustomChildComponent}
         columnDefs={columnDefs}
-        customRowStyles={isSubList && customRowStyles}
+        customRowStyles={isSubList ? customRowStyles : null}
         id="list-demo"
         isStriped={isStripedValue}
         onRowClicked={onRowClicked}

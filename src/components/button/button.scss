@@ -1,7 +1,6 @@
 @import "styles/colors.scss";
 @import "styles/layout.scss";
 @import "styles/fonts.scss";
-@import "styles/mixins.scss";
 
 $btn-sm-height: 25px;
 $btn-height: 40px;
@@ -13,6 +12,11 @@ $btn-lg-gradient-height: 49px;
 $btn-sm-width: 104px;
 $btn-width: 124px;
 $btn-lg-width: 174px;
+
+@mixin min-size($min-width, $min-height) {
+  min-height: $min-height;
+  min-width: $min-width;
+}
 
 @mixin btn-theme($btn-color, $active-color) {
   $border: 2px solid $btn-color;
@@ -87,7 +91,7 @@ $btn-lg-width: 174px;
 }
 
 @mixin btn-gradient-theme($btn-color, $active-color) {
-  @include size($btn-width, $btn-gradient-height);
+  @include min-size($btn-width, $btn-gradient-height);
 
   $radius: $btn-gradient-height / 2;
 
@@ -113,10 +117,12 @@ $btn-lg-width: 174px;
     background: $white;
 
     & > span {
+      background: $btn-color;
+      /* stylelint-disable */
       -webkit-background-clip: text;
       background-clip: text;
-      background-color: $btn-color;
       -webkit-text-fill-color: transparent;
+      /* stylelint-enable */
     }
   }
 
@@ -126,7 +132,7 @@ $btn-lg-width: 174px;
   }
 
   &.btn-lg {
-    @include size($btn-lg-width, $btn-lg-gradient-height);
+    @include min-size($btn-lg-width, $btn-lg-gradient-height);
     $radius: $btn-lg-gradient-height / 2;
 
     border-radius: $radius;
@@ -151,7 +157,7 @@ $btn-lg-width: 174px;
 }
 
 .button {
-  @include size($btn-width, $btn-height);
+  @include min-size($btn-width, $btn-height);
 
   background: $light-grey;
   border: 0;
@@ -177,7 +183,7 @@ $btn-lg-width: 174px;
   }
 
   &.btn-lg {
-    @include size($btn-lg-width, $btn-lg-height);
+    @include min-size($btn-lg-width, $btn-lg-height);
 
     border-radius: $btn-lg-height / 2;
     font-size: $font-size-sm-1;
@@ -188,7 +194,7 @@ $btn-lg-width: 174px;
   }
 
   &.btn-sm {
-    @include size($btn-sm-width, $btn-sm-height);
+    @include min-size($btn-sm-width, $btn-sm-height);
 
     border-radius: 4px;
   }

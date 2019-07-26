@@ -167,26 +167,13 @@ module.exports = {
 Delete the folder at `node_modules/@codeparticle/whitelabelwallet.styleguide` and link the projects by running `npm link ../pathToReactStyleGuide` inside the root directory of your project project. NOTE: this step has to be retaken every time you run an `npm i` or `yarn` commands in your main project, because `npm i` will replace your linked version with an installed version.
 
 ### Style Guide Usage
-#### Clone to new project
-
-Follow the instruction below to clone the starter to a new project repo.
-
-Note: we should keep the commit history in the new repo for future rebase.
-
-- Create a new project repo in bitbucket
-- Clone `react-web-starter` repo locally, and `cd path/react-web-starter`
-- Run `git remote remove origin`
-- Run `git remote add origin [new repo url]`
-- Run `git push origin master -u`
-- Verify: should see all the commits history and master branch in new project repo
-- Re-clone `react-web-starter` repo or reset it's origin if you need to develop against it locally
 
 #### Rebase your project style guide to include latest changes
 
 - Create a new branch in your project style guide
 - Run `git remote add starter git@bitbucket.org:CodeParticle/react-style-guide.git` (The url can be https)
 - Run `git fetch starter`
-- Run `git rebase starter/master`
+- Run `git merge starter/master`
 - Push the branch and open the PR for team review/test before merging
 
 ## License
