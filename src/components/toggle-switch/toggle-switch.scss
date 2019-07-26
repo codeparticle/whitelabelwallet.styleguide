@@ -22,21 +22,21 @@
   .toggle-switch-slider {
     display: block;
     font-family: $font-default;
+    font-size: $font-size-xs-3;
     font-weight: bold;
     height: 36px;
     line-height: $font-size-md-3;
     margin-left: -100%;
-    width: 200%;
-    font-size: $font-size-xs-3;
     transition: all 0.3s ease-in 0s;
+    width: 200%;
 
     &::before,
     &::after {
       align-items: center;
       box-sizing: border-box;
       display: flex;
-      height: 100%;
       float: left;
+      height: 100%;
       padding: 0;
       padding-right: $space-3;
       width: 50%;
@@ -56,8 +56,8 @@
 
   .toggle-switch-btn {
     background: $white;
-    bottom: 0;
     border-radius: $font-size-md-1;
+    bottom: 0;
     display: block;
     height: 28px;
     position: absolute;

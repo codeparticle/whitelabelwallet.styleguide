@@ -1,5 +1,6 @@
 {
     "extends": "stylelint-config-standard",
+    "plugins": ["stylelint-order"],
     "rules": {
         "at-rule-no-unknown": [true, {
             "ignoreAtRules": ["function", "if", "return", "mixin", "each", "else", "include", "warn"]
@@ -8,6 +9,7 @@
         "color-hex-length": "long",
         "declaration-colon-newline-after": null,
         "indentation": [2],
+        "order/properties-alphabetical-order": true,
         "media-feature-name-no-unknown": [true, {
             "ignoreMediaFeatureNames": [
                 "min--moz-device-pixel-ratio",
