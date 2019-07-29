@@ -19,11 +19,9 @@
   "scripts": {
     "start": "start-storybook -p 3010 -c .storybook -s .",
     "lint": "eslint --ignore-path .gitignore . && stylelint --ignore-path .gitignore \"**/*.scss\"",
-    "build": "node ./process-svgs.js && npm run build:clean && npm run build:js && npm run build:css && npm run build:copy-styles",
+    "build": "node ./process-svgs.js && npm run build:clean && npm run build:js && npm run build:copy-styles",
     "build:clean": "rimraf dist styles",
     "build:js": "cross-env BABEL_ENV=es babel src --out-dir dist --delete-dir-on-start",
-    "build:css": "npm run build:css-components && npm run build:css-styles",
-    "build:css-components": "cross-env POSTCSS_ENV=dist postcss \"src/components/**/*.scss\" --base src --dir dist",
     "build:css-styles": "cross-env POSTCSS_ENV=dist postcss \"src/styles/index.scss\" --output dist/styles/index.scss",
     "build:copy-styles": "cpr src/styles dist/styles -f -o && node ./build-styles-alias.js",
     "prepublish": "npm t && npm run lint && npm run build",
@@ -45,6 +43,7 @@
     "@types/storybook__react": "^4.0.2",
     "babel-eslint": "^10.0.2",
     "babel-loader": "8.0.5",
+    "babel-plugin-css-modules-transform": "^1.6.2",
     "babel-plugin-dynamic-import-webpack": "^1.1.0",
     "babel-plugin-module-resolver": "^3.2.0",
     "commitlint": "^7.6.1",
@@ -67,10 +66,10 @@
     "rimraf": "^2.6.3",
     "sass-loader": "^6.0.7",
     "standard-version": "^6.0.1",
-    "styled-jsx": "^3.2.1",
     "styled-jsx-plugin-sass": "^1.0.0",
     "stylelint": "^10.0.1",
     "stylelint-config-standard": "^18.3.0",
+    "stylelint-order": "^3.0.1",
     "svg-css-modules-loader": "^1.6.1"
   },
   "peerDependencies": {
@@ -166,6 +165,7 @@
     "react-tooltip": "^3.10.0",
     "react-transition-group": "^4.2.0",
     "scrollbar-compensate": "^0.2.2",
+    "styled-jsx": "^3.2.1",
     "storybook-readme": "5.0.2",
     "uuid": "^3.3.2",
     "victory": "^32.3.3"

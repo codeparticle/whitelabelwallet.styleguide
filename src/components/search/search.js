@@ -1,13 +1,14 @@
 /**
  * @fileoverview Search Component with Search Icon
  * @author Gabriel Womble
+ * @editor Kevin Van Beek
  */
 import React, { useState } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
+import { icons } from 'svgs';
 import { useTheme } from '../theme-provider';
 import styles from './search.scss';
-import { icons } from '../../svgs';
 
 const { SvgMagnifyingGlass } = icons;
 

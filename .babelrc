@@ -5,6 +5,16 @@
     ],
     "plugins": [
         "@babel/plugin-proposal-export-namespace-from",
+        ["css-modules-transform", {
+            "extensions": [".css", ".scss"],
+            "extractCss": {
+                "dir": "./dist",
+                "relativeRoot": "./src/",
+                "filename": "[path]/[name].scss"
+            },
+            "keepImport": true,
+            "preprocessCss": "./sass-preprocessor"
+        }],
         ["module-resolver", {
             "root": ["./src"],
             "alias": {

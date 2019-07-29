@@ -1,12 +1,14 @@
 @import "styles/colors.scss";
 @import "styles/fonts.scss";
+@import "styles/layout.scss";
 
 .icon {
-  border: 0;
   background: rgba(0, 0, 0, 0);
+  border: 0;
   color: $dark;
-  padding: 0;
-  width: $font-size-md-1;
+  min-height: $font-size-md-1;
+  min-width: $font-size-md-1;
+  padding: $space-1;
 
   svg {
     display: block;

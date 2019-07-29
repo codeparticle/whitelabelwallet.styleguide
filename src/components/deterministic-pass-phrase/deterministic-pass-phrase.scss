@@ -7,9 +7,9 @@
 }
 
 .pass-phrase__item {
-  text-align: center;
   margin: 1px;
   padding: $space-2 $space-1;
+  text-align: center;
   width: calc((100% / 6) - 2px);
 
   &:nth-child(1) {

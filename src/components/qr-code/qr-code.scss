@@ -3,9 +3,9 @@
 @import "styles/fonts";
 
 .qr-code {
+  align-items: center;
   border-radius: $border-radius-1;
   display: flex;
-  align-items: center;
   flex-direction: column;
 
   &__container {
@@ -22,27 +22,27 @@
     position: relative;
 
     &::before {
-      border-top: 5px solid $blue;
       border-left: 5px solid $blue;
+      border-top: 5px solid $blue;
       content: "";
       display: block;
+      height: 24px;
+      left: 0;
       position: absolute;
       top: 0;
-      left: 0;
       width: 24px;
-      height: 24px;
     }
 
     &::after {
-      border-top: 5px solid $blue;
       border-right: 5px solid $blue;
+      border-top: 5px solid $blue;
       content: "";
       display: block;
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 24px;
       height: 24px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 24px;
     }
   }
 
@@ -50,31 +50,31 @@
     &::before {
       border-bottom: 5px solid $blue;
       border-left: 5px solid $blue;
+      bottom: $border-radius-1;
       content: "";
       display: block;
-      position: absolute;
-      bottom: $border-radius-1;
-      left: 0;
-      width: 24px;
       height: 24px;
+      left: 0;
+      position: absolute;
+      width: 24px;
     }
 
     &::after {
       border-bottom: 5px solid $blue;
       border-right: 5px solid $blue;
+      bottom: $border-radius-1;
       content: "";
       display: block;
+      height: 24px;
       position: absolute;
-      bottom: $border-radius-1;
       right: 0;
       width: 24px;
-      height: 24px;
     }
   }
 
   &__message {
-    border-bottom-right-radius: $border-radius-1;
     border-bottom-left-radius: $border-radius-1;
+    border-bottom-right-radius: $border-radius-1;
     font-size: $font-size-sm-2;
     line-height: $line-height-m;
     padding: $spacing-m $spacing-xxl;

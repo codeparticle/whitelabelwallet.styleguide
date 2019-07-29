@@ -28,17 +28,21 @@ $space-5: 20px;
 $space-6: 24px;
 $space-7: 28px;
 
-$border-radius-1: 6px;
+$border-radius-1: 2px;
+$border-radius-2: 4px;
+$border-radius-3: 6px;
+$border-radius-4: 8px;
+$border-radius-5: 10px;
+$border-radius-round: 50%;
 
 /* stylelint-disable */
 :export {
-  spacing-xxs: '0px-4px';
-  spacing-xs: '4px-8px';
-  spacing-s: '8px-16px';
-  spacing-m: '12px-20px';
-  spacing-l: '16px-32px';
-  spacing-xl: '20px-40px';
-  spacing-xxl: '32px-60px';
+  border-radius-1: $border-radius-1;
+  border-radius-2: $border-radius-2;
+  border-radius-3: $border-radius-3;
+  border-radius-4: $border-radius-4;
+  border-radius-5: $border-radius-5;
+  border-radius-round: $border-radius-round;
   space-1: $space-1;
   space-2: $space-2;
   space-3: $space-3;
@@ -46,6 +50,12 @@ $border-radius-1: 6px;
   space-5: $space-5;
   space-6: $space-6;
   space-7: $space-7;
-  border-radius-1: $border-radius-1;
+  spacing-l: '16px-32px';
+  spacing-m: '12px-20px';
+  spacing-s: '8px-16px';
+  spacing-xl: '20px-40px';
+  spacing-xs: '4px-8px';
+  spacing-xxl: '32px-60px';
+  spacing-xxs: '0px-4px';
 }
 /* stylelint-enable */
