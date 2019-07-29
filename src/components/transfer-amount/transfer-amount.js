@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { TextArea } from '../text-area';
@@ -18,8 +18,10 @@ const {
   getFloatRegex,
 } = utils;
 
+const defaultFontSize = '64px';
+const defaultLength = '150px';
+
 function calculateFontSize(inputLength, inputRef) {
-  const defaultFontSize = '64px';
   const width = inputRef.current && inputRef.current.offsetWidth;
   const scrollWidth = inputRef.current && inputRef.current.scrollWidth;
   let fontSize = defaultFontSize;
@@ -33,10 +35,17 @@ function calculateFontSize(inputLength, inputRef) {
   return fontSize;
 }
 
-function calculateInputWidth(inputLength, fontSize) {
-  return inputLength >= 3
-    ? `calc(${fontSize} * ${inputLength})`
-    : '150px';
+function calculateInputWidth(inputVal, fontSize) {
+  const inputLength = inputVal.length;
+
+  if (inputLength < 4) {
+    return defaultLength;
+  }
+
+  const hasDecimal = inputVal.includes('.');
+  const lengthDiff = hasDecimal ? 1.4 : 1;
+
+  return `calc(${fontSize} * ${inputLength - lengthDiff})`;
 }
 
 
@@ -82,12 +91,21 @@ const CurrencyContainer = ({
   tickerSymbol,
 }) => {
   const [value, setValue] = useState(currencyValue);
+  const [fontSize, setFontSize] = useState(defaultFontSize);
+  const [inputWidth, setInputWidth] = useState(defaultLength);
   const convertedValue = convertCurrency(value, conversionRate, fiatDecimalLimit);
   const floatRegex = getFloatRegex(coinDecimalLimit);
   const fiatSymbol = fiatSymbols[fiatSymbolKey];
   const inputEl = useRef(null);
-  const fontSize = calculateFontSize(value.length, inputEl);
-  const inputWidth = calculateInputWidth(value.length, fontSize);
+
+  useEffect(() => {
+    setFontSize(calculateFontSize(`${value}`.length, inputEl));
+  }, [value]);
+
+  useEffect(() => {
+    setInputWidth(calculateInputWidth(`${value}`, fontSize));
+  }, [fontSize]);
+
 
   function onCurrencyChange(e) {
     if (!floatRegex.test(e.target.value)) {
