@@ -21,7 +21,7 @@
     "lint": "eslint --ignore-path .gitignore . && stylelint --ignore-path .gitignore \"**/*.scss\"",
     "build": "node ./process-svgs.js && npm run build:clean && npm run build:js && npm run build:copy-styles",
     "build:clean": "rimraf dist styles",
-    "build:js": "cross-env BABEL_ENV=es babel src --out-dir dist --delete-dir-on-start",
+    "build:js": "cross-env BABEL_ENV=es babel src --out-dir dist --delete-dir-on-start --copy-files",
     "build:css-styles": "cross-env POSTCSS_ENV=dist postcss \"src/styles/index.scss\" --output dist/styles/index.scss",
     "build:copy-styles": "cpr src/styles dist/styles -f -o && node ./build-styles-alias.js",
     "prepublish": "npm t && npm run lint && npm run build",
@@ -165,8 +165,8 @@
     "react-tooltip": "^3.10.0",
     "react-transition-group": "^4.2.0",
     "scrollbar-compensate": "^0.2.2",
-    "styled-jsx": "^3.2.1",
     "storybook-readme": "5.0.2",
+    "styled-jsx": "^3.2.1",
     "uuid": "^3.3.2",
     "victory": "^32.3.3"
   }
