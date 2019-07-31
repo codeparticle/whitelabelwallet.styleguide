@@ -878,3 +878,29 @@ $base-font-size: 16px !default;
     @return lighten($color, 15%); // Darker background, return light color
   }
 }
+
+/**
+* This takes the current $color of the parent and sets the icon color
+* to be the currentColor
+*/
+@mixin icon-theme {
+  & svg > path {
+    background: rgba(0, 0, 0, 0);
+    fill: currentColor;
+    padding: 0;
+  }
+}
+
+/**
+* Determines the icon size for various different sizes of buttons
+*/
+@mixin icon-size ($icon-size, $icon-margin) {
+  & svg {
+    @include size($icon-size);
+  }
+
+  .text {
+    margin-left: $icon-margin;
+    margin-right: $icon-margin;
+  }
+}
