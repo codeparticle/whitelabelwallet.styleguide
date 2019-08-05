@@ -1,6 +1,11 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { radios, text, withKnobs } from '@storybook/addon-knobs';
+import {
+  number,
+  radios,
+  text,
+  withKnobs,
+} from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 import { withReadme } from 'storybook-readme';
 import { Button, ButtonVariants } from '../src';
@@ -96,8 +101,18 @@ storiesOf('Button', module)
     const buttonSizes = {
       'lg': 'lg',
       'sm': 'sm',
+      'full': 'full',
       'Default': '',
     };
+
+    const widthLabel = 'Parent Width (use full variant)';
+    const widthOptions = {
+      range: true,
+      min: 0,
+      max: 100,
+      step: 0.5,
+    };
+    const width = `${number(widthLabel, 20, widthOptions)}%`;
 
     const defaultClass = 'primary';
     const defaultSize = '';
@@ -106,13 +121,15 @@ storiesOf('Button', module)
     const buttonSize = radios(buttonSizeLabel, buttonSizes, defaultSize);
 
     return (
-      <Button
-        onClick={action('clicked')}
-        size={buttonSize}
-        variant={buttonType}
-      >
-        {children}
-      </Button>
+      <div style={{ width }}>
+        <Button
+          onClick={action('clicked')}
+          size={buttonSize}
+          variant={buttonType}
+        >
+          {children}
+        </Button>
+      </div>
     );
   }, {
     backgrounds: [{ ...lightBackground, default: true }],

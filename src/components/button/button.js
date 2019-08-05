@@ -30,8 +30,23 @@ const Button = ({
 Button.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
-  variant: PropTypes.string,
-  size: PropTypes.string,
+  variant: PropTypes.oneOf([
+    '',
+    'primary',
+    'secondary',
+    'tertiary',
+    'slate-clear',
+    'green',
+    'slate',
+    'alert',
+    'teal',
+  ]),
+  size: PropTypes.oneOf([
+    '',
+    'full',
+    'lg',
+    'sm',
+  ]),
 };
 
 Button.defaultProps = {
