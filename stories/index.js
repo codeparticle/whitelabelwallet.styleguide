@@ -12,6 +12,7 @@ import './flash-alert';
 import './header';
 import './icon';
 import './list/list';
+import './logo';
 import './qr-code';
 import './search';
 import './select';

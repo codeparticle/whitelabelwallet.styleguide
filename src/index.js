@@ -24,6 +24,7 @@ export { Contact } from './components/contact';
 export { cellFormatters, List } from './components/list';
 export { QRCode } from './components/qr-code';
 export { Icon } from './components/icon';
+export { Logo } from './components/logo';
 export { Search } from './components/search';
 export { Select } from './components/select';
 export { TextArea } from './components/text-area';
