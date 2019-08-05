@@ -21,6 +21,7 @@ const FlashAlert = ({
   onClose,
   duration,
   timeout,
+  alertButton,
   ...rest
 }) => {
   const [showMessage, setShowMessage] = useState(false);
@@ -45,6 +46,14 @@ const FlashAlert = ({
     setShowMessage(false);
   };
 
+  const btn = alertButton || (
+    <Icon
+      variant={TERTIARY}
+      onClick={handleCloseClicked}
+      icon={<SvgClose />}
+    />
+  );
+
   return (
     <CSSTransition
       in={showMessage}
@@ -67,17 +76,14 @@ const FlashAlert = ({
         )}
       >
         {message}
-        <Icon
-          variant={TERTIARY}
-          onClick={handleCloseClicked}
-          icon={<SvgClose />}
-        />
+        {btn}
       </div>
     </CSSTransition>
   );
 };
 
 FlashAlert.propTypes = {
+  alertButton: PropTypes.node,
   duration: PropTypes.number,
   message: PropTypes.string,
   show: PropTypes.bool,
@@ -86,6 +92,7 @@ FlashAlert.propTypes = {
 };
 
 FlashAlert.defaultProps = {
+  alertButton: null,
   duration: 3000,
   message: '',
   show: false,

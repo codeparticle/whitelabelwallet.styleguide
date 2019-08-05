@@ -9,6 +9,7 @@ import {
 } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 import { withReadme } from 'storybook-readme';
+import { Button } from 'components/button';
 import { FlashAlert } from '../src';
 import readme from '../src/components/flash-alert/README.md';
 import { lightBackground } from './constants';
@@ -24,10 +25,20 @@ const FlashAlertDemo = ({
   };
 
   const show = boolean('Show', false);
+  const customButton = boolean('Use Custom Button', false);
   const type = radios('Alert Type', options, defaultOption);
   const duration = number('Duration', 3000);
   const message = text('Message', 'Success! Password has been changed!');
   const onClose = action('FlashAlert Closed');
+
+  const alertButton = customButton && (
+    <Button
+      onClick={action('Alert Custom Button')}
+      variant="tertiary"
+    >
+      View on Blockchain
+    </Button>
+  );
 
   return (
     <ThemeWrapper
@@ -39,6 +50,7 @@ const FlashAlertDemo = ({
           show={show}
           duration={duration}
           onClose={onClose}
+          alertButton={alertButton}
         />
       }
     />

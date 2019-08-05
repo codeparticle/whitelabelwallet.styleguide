@@ -20,6 +20,7 @@ import { Button } from '@codeparticle/whitelabelwallet.styleguide';
 
 | name | type | default | description |
 | ---- | ---- | ------- | ----------- |
+| alertButton | node | N/A | Optional custom button to be passed to the alert |
 | className | string | '' | Sets the className for the button element |
 | onClick | func | '' | Handles when the button is clicked |
 | variant | string | '' | Sets the button type to render |
