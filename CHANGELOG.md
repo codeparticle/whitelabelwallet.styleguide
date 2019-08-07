@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.1](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/compare/v0.3.0...v0.3.1) (2019-08-07)
+
+
+### Features
+
+* **wlw-28:** added logo component ([86a5a07](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/86a5a07))
+* **wlw-54:** allow buttons to extend to parent width ([790b7f4](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/790b7f4))
+* **wlw-55:** added flash alert custom button ([81bd9f8](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/81bd9f8))
+* **wlw-78:** added auth themes for button ([ce9f39b](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/ce9f39b))
+
+
+
 ## [0.3.0](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/compare/v0.2.0...v0.3.0) (2019-07-31)
 
 
