@@ -44,5 +44,9 @@ If no size is passed, uses the `default` size.
 - 'slate'
 - 'alert'
 - 'teal'
+- 'auth-primary'
+- 'auth-secondary'
+
+**Note:** When using auth-primary or auth-secondary, use default or full size.
 
 **Note:** Any other properties supplied to this component will be spread to the root element.
