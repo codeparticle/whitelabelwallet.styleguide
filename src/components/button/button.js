@@ -40,6 +40,8 @@ Button.propTypes = {
     'slate',
     'alert',
     'teal',
+    'auth-primary',
+    'auth-secondary',
   ]),
   size: PropTypes.oneOf([
     '',

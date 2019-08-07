@@ -10,7 +10,7 @@ import { action } from '@storybook/addon-actions';
 import { withReadme } from 'storybook-readme';
 import { Button, ButtonVariants } from '../src';
 import readme from '../src/components/button/README.md';
-import { lightBackground } from './constants';
+import { lightBackground, authBackground } from './constants';
 
 const ButtonDemo = () => {
   const btnTypes = ['', ...Object.values(ButtonVariants)];
@@ -95,6 +95,8 @@ storiesOf('Button', module)
       'slate-clear': 'slate-clear',
       'alert': 'alert',
       'teal': 'teal',
+      'auth-primary': 'auth-primary',
+      'auth-secondary': 'auth-secondary',
     };
 
     const buttonSizeLabel = 'Button Sizes';
@@ -132,5 +134,5 @@ storiesOf('Button', module)
       </div>
     );
   }, {
-    backgrounds: [{ ...lightBackground, default: true }],
+    backgrounds: [{ ...lightBackground, default: true }, authBackground],
   });
