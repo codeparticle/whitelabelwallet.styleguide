@@ -51,7 +51,7 @@ const TextArea = ({
           />
         </label>
       </div>
-      <style jsx>
+      <style jsx="true">
         {`
           .text-area__label {
             color: ${theme.label};

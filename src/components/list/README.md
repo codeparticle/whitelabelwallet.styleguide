@@ -37,7 +37,7 @@ function AmountRenderer({ data, column }) {
   return (
     <>
       <p>{column}</p>
-      <style jsx>
+      <style jsx="true">
         {`
           p {
             color: ${color};
@@ -152,7 +152,7 @@ function customAmountRenderer({ data, column }) {
   return (
     <>
       <p>{column}</p>
-      <style jsx>
+      <style jsx="true">
         {`
           p {
             color: ${color};

@@ -1,0 +1,67 @@
+@import 'styles/colors';
+@import 'styles/fonts';
+@import 'styles/layout';
+
+.auth-checkbox {
+  box-sizing: border-box;
+  color: $white;
+  display: flex;
+  flex-direction: row-reverse;
+  font-size: $font-size-xs-3;
+  justify-content: flex-end;
+
+  input {
+    opacity: 0;
+  }
+
+  label {
+    display: inline-block;
+    line-height: $space-6 !important;
+
+    /* width of checkbox (14px) + 12px 'margin' */
+    padding-left: 26px;
+    position: relative;
+
+    &::before,
+    &::after {
+      content: '';
+
+      /* Needed for the line-height to take effect */
+      display: inline-block;
+      position: absolute;
+    }
+
+    &::before {
+      border: 2px solid $grey;
+      border-radius: 2px;
+      height: 14px;
+      left: 0;
+      top: 6px;
+      width: 14px;
+    }
+
+    &::after {
+      /* Creates a fake checkmark */
+      border-bottom: 2px solid $grey;
+      border-left: 2px solid $grey;
+      content: none;
+      height: 5px;
+      left: 3px;
+      top: 9px;
+      transform: rotate(-45deg);
+      width: 8px;
+    }
+
+    span {
+      font-weight: $font-weight-normal;
+    }
+  }
+
+  input:checked + label::after {
+    content: '';
+  }
+
+  input:focus + label::before {
+    outline: $blue auto 2px;
+  }
+}

@@ -35,7 +35,7 @@ function ChildCount({ childCount, style }) {
       <div className="child-count-container">
         <Text value={childCount} />
       </div>
-      <style jsx>
+      <style jsx="true">
         {`
           .child-count-container {
             align-items: center;
@@ -78,7 +78,7 @@ function ChildIcon({ style }) {
         className="list-item__icon"
         fill={style}
       />
-      <style jsx>
+      <style jsx="true">
         {`
           @import 'styles/layout.scss';
 

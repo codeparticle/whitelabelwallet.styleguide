@@ -14,7 +14,7 @@ const DemoComponent = ({ type, theme }) => (
   <div className="demo-container">
     <h2 className="demo-container__header">{`This is a component using the ${type}!`}</h2>
     <p className="demo-container__desc">{`The theme's name is '${theme.name}'`}</p>
-    <style jsx>
+    <style jsx="true">
       {`
         @import 'styles/layout.scss';
         
@@ -24,7 +24,7 @@ const DemoComponent = ({ type, theme }) => (
         }
       `}
     </style>
-    <style jsx>
+    <style jsx="true">
       {`
         .demo-container {
           background: ${theme.demo.background};

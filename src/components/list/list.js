@@ -79,7 +79,7 @@ const List = ({
         showSubItems={showSubItems}
       />
     </div>
-    <style jsx>
+    <style jsx="true">
       {`
         .list {
           display: flex;

@@ -17,7 +17,7 @@ const LogoDemo = () => {
   const hideText = boolean('hideText', false);
 
   return (
-    <div style={{ background }}>
+    <div style={{ background, padding: '10%' }}>
       <Logo
         hideText={hideText}
       />

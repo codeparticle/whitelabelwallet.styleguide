@@ -88,7 +88,7 @@ const Search = ({
           value={searchValue}
         />
       </form>
-      <style jsx>
+      <style jsx="true">
         {`
           .search {
             background: ${isActive ? theme.bgFocus : theme.bgBlur};
