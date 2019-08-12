@@ -5,6 +5,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { icons } from 'svgs';
+import { fontSizeSm3 } from 'styles/fonts.scss';
+import { space2 } from 'styles/layout.scss';
 
 const { SvgChildArrow } = icons;
 
@@ -35,20 +37,17 @@ function ChildCount({ childCount, style }) {
       </div>
       <style jsx>
         {`
-          @import 'styles/layout.scss';
-          @import 'styles/fonts.scss';
-        
           .child-count-container {
             align-items: center;
             background: ${style.background};
             border-radius: 25px;
             color: ${style.color};
             display: flex;
-            height: $font-size-sm-3;
+            height: ${fontSizeSm3};
             justify-content: center;
-            margin: 0 $space-2;
-            min-width: $font-size-sm-3;
-            padding: $space-2;
+            margin: 0 ${space2};
+            min-width: ${fontSizeSm3};
+            padding: ${space2};
           }
         `}
       </style>
@@ -84,7 +83,7 @@ function ChildIcon({ style }) {
           @import 'styles/layout.scss';
 
           :global(.list-item__icon) {
-            margin-right: $space-2;
+            margin-right: ${space2};
           }
         `}
       </style>

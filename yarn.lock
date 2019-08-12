@@ -7309,10 +7309,10 @@ jsx-ast-utils@^2.1.0, jsx-ast-utils@^2.2.1:
     array-includes "^3.0.3"
     object.assign "^4.1.0"
 
-keyboard-only-outlines@^1.0.3:
-  version "1.0.3"
-  resolved "https://codeparticle.jfrog.io/codeparticle/api/npm/npm/keyboard-only-outlines/-/keyboard-only-outlines-1.0.3.tgz#4433e668574918a2f63fc68f7dc8636e773cf1a7"
-  integrity sha1-RDPmaFdJGKL2P8aPfchjbnc88ac=
+keyboard-only-outlines@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/keyboard-only-outlines/-/keyboard-only-outlines-1.0.4.tgz#6375ae693045a2ddc53766577fe3cdf883852f65"
+  integrity sha512-V3QPAA75dUP6BiZIHJ65oDBysNCt35u9SOVPgs9ADgKx/cfJa0esWPrIjuUBGvsRvc4NTgsJwCWEucWwXWU1TQ==
 
 kind-of@^2.0.1:
   version "2.0.1"
@@ -11479,7 +11479,7 @@ style-search@^0.1.0:
 
 styled-jsx-plugin-sass@^1.0.0:
   version "1.0.0"
-  resolved "https://registry.npmjs.org/styled-jsx-plugin-sass/-/styled-jsx-plugin-sass-1.0.0.tgz#a26e2002f57519f97a03a38ea6aabe1ee48478df"
+  resolved "https://registry.yarnpkg.com/styled-jsx-plugin-sass/-/styled-jsx-plugin-sass-1.0.0.tgz#a26e2002f57519f97a03a38ea6aabe1ee48478df"
   integrity sha512-24c+jRreOo5mn7ln7q5QaeyBAAsBaUAJsBc7voLygmrF7fThXbo8Bn1UEbAKIfF2K8xSeiY3XGGt6xRYi4/C4g==
 
 styled-jsx@^3.2.1:

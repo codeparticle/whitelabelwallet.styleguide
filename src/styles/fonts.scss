@@ -40,3 +40,41 @@ $line-height-m: fluid-size(25px, 31px);
 $line-height-s: fluid-size(21px, 25px);
 $line-height-xs: fluid-size(15px, 21px);
 $line-height-xxs: fluid-size(8px, 15px);
+
+/* stylelint-disable */
+
+:export {
+  fontDefault: $font-default;
+  fontSizeLg1: $font-size-lg-1;
+  fontSizeLg2: $font-size-lg-2;
+  fontSizeLg3: $font-size-lg-3;
+  fontSizeLg4: $font-size-lg-4;
+  fontSizeMd1: $font-size-md-1;
+  fontSizeMd2: $font-size-md-2;
+  fontSizeMd3: $font-size-md-3;
+  fontSizeMd4: $font-size-md-4;
+  fontSizeSm1: $font-size-sm-1;
+  fontSizeSm2: $font-size-sm-2;
+  fontSizeSm3: $font-size-sm-3;
+  fontSizeXL1: $font-size-xl-1;
+  fontSizeXL2: $font-size-xl-2;
+  fontSizeXL3: $font-size-xl-3;
+  fontSizeXL4: $font-size-xl-4;
+  fontSizeXS1: $font-size-xs-1;
+  fontSizeXS2: $font-size-xs-2;
+  fontSizeXS3: $font-size-xs-3;
+  fontWeightBold: $font-weight-bold;
+  fontWeightLight: $font-weight-light;
+  fontWeightMedium: $font-weight-medium;
+  fontWeightNormal: $font-weight-normal;
+  fontWeightSemibold: $font-weight-semibold;
+  lineHeightLg: $line-height-l;
+  lineHeightMd: $line-height-m;
+  lineHeightSm: $line-height-s;
+  lineHeightXL: $line-height-xl;
+  lineHeightXS: $line-height-xs;
+  lineHeightXXL: $line-height-xxl;
+  lineHeightXXS: $line-height-xxs;
+  lineHeightXXXL: $line-height-xxxl;
+}
+/* stylelint-enable */

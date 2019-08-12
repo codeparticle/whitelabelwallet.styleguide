@@ -4,13 +4,13 @@ import { withReadme } from 'storybook-readme';
 import { boolean, withKnobs } from '@storybook/addon-knobs';
 import { Logo } from 'components/logo';
 import readme from 'components/logo/README.md';
-import colors from '../styles/colors.scss';
+import colors from 'styles/colors.scss';
 import {
   lightBackground,
 } from './constants';
 
 const {
-  'gradient-teal': background,
+  gradientTeal: background,
 } = colors;
 
 const LogoDemo = () => {

@@ -32,7 +32,7 @@ const parsedColors = Object.entries(colors).reduce((acc, [key, value]) => {
 
     acc[acc.length - 1].values.push({
       name: Case.capital(key),
-      key,
+      key: Case.kebab(key),
       gradient,
       hex,
       rgb,
@@ -55,8 +55,16 @@ You may use these colors in SCSS files like so:
 @import '@codeparticle/whitelabelwallet.styleguide/styles/colors';
 
 .my-div {
-  color: $east-bay;
+  color: $mint-chip;
 }
+\`\`\`
+
+You may also import them in JS using their camelCased names:
+
+\`\`\`js
+import colors from '@codeparticle/whitelabelwallet.styleguide/styles/colors';
+
+const { mintChip } = colors;
 \`\`\`
 `)))
   .add('Colors', () => (
