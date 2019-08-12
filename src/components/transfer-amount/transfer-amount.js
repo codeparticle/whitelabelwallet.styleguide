@@ -56,7 +56,7 @@ function renderIconOrTicker({ fill, tickerSymbol }) {
         <h1 className="transfer-amount__ticker">
           {tickerSymbol}
         </h1>
-        <style jsx>
+        <style jsx="true">
           {`
             @import 'styles/fonts.scss';
 
@@ -148,7 +148,7 @@ const CurrencyContainer = ({
         />
         <h4>{`${fiatSymbol}${convertedValue}`}</h4>
       </div>
-      <style jsx>
+      <style jsx="true">
         {`
           @import 'styles/fonts.scss';
 
@@ -222,7 +222,7 @@ export const TransferAmount = ({
         theme={theme}
         value={memoValue}
       />
-      <style jsx>
+      <style jsx="true">
         {`
           .${styles['transfer-amount']} {
             background: ${theme.bg};

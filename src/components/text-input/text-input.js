@@ -6,17 +6,23 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import uuidv1 from 'uuid/v1';
-import { useTheme } from '../theme-provider';
+import { themes, useTheme } from '../theme-provider';
 import styles from './text-input.scss';
+
+const THEME_KEY = 'input';
 
 const TextInput = ({
   className,
+  hasError,
   label,
   labelClassName,
   inputClassName,
+  useAltTheme,
   ...rest
 }) => {
-  const theme = useTheme('input');
+  const theme = useAltTheme
+    ? themes.alt[THEME_KEY]
+    : useTheme(THEME_KEY);
   const [inputId] = useState(`text-input-${uuidv1()}`);
 
   return (
@@ -41,6 +47,7 @@ const TextInput = ({
             {...rest}
             className={classNames(
               styles['text-input__input'],
+              hasError && styles['text-input__input-error'],
               label && styles['has-label'],
               'text-input__input',
               inputClassName
@@ -49,7 +56,7 @@ const TextInput = ({
           />
         </label>
       </div>
-      <style jsx>
+      <style jsx="true">
         {`
           .text-input__label {
             color: ${theme.label};
@@ -58,6 +65,7 @@ const TextInput = ({
           .text-input__input {
             background: ${theme.bg};
             color: ${theme.textValue};
+            height: ${useAltTheme ? '40px' : 'auto'};
           }
         `}
       </style>

@@ -35,7 +35,7 @@ function CellRenderer({
   return (
     <div className={gridClass}>
       {renderCell()}
-      <style jsx>
+      <style jsx="true">
         {`
           :global(.${gridClass}) {
             align-items: center;
@@ -153,7 +153,7 @@ export function ListItem({
             />
           );
         })}
-        <style jsx>
+        <style jsx="true">
           {`
             .list-item {
               background: ${background};

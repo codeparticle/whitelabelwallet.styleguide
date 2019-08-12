@@ -42,7 +42,7 @@ const Address = ({
       >
         {buttonText}
       </Button>
-      <style jsx>
+      <style jsx="true">
         {`
           .${styles['address']} {
             background-color: ${theme.background};

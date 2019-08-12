@@ -106,7 +106,7 @@ const WordButton = ({
           {word}
         </p>
       </div>
-      <style jsx>
+      <style jsx="true">
         {`
           .${styles['pass-phrase__item']} {
             background: ${backgroundColor};
@@ -132,7 +132,7 @@ const WordButton = ({
           }
         `}
       </style>
-      <style jsx>
+      <style jsx="true">
         {`
           .blur-show {
             filter: blur(5px);

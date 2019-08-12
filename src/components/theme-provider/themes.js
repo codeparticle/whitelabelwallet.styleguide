@@ -289,7 +289,19 @@ const darkTheme = {
   },
 };
 
+// Some components may have one-off themes.
+// They should be placed here, and accessed with
+// a boolean prop useAltTheme
+const alternateTheme = {
+  input: {
+    bg: white,
+    label: white,
+    textValue: dark,
+  },
+};
+
 export const themes = {
-  light: lightTheme,
+  alt: alternateTheme,
   dark: darkTheme,
+  light: lightTheme,
 };

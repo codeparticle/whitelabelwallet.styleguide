@@ -66,7 +66,7 @@ export const MyTitle = () => {
         <h1 className="title">A title</h1>
         <p className="subtitle">A subtitle</p>
       </div>
-      <style jsx>
+      <style jsx="true">
         {`
           .wrapper {
             background: ${theme.background};
@@ -122,7 +122,7 @@ const MyTitleView = (props) => {
         <h1 className="title">A title</h1>
         <p className="subtitle">A subtitle</p>
       </div>
-      <style jsx>
+      <style jsx="true">
         {`
           .wrapper {
             background: ${theme.background};

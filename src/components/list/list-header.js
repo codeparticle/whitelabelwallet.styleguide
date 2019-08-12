@@ -29,14 +29,14 @@ const ListHeader = ({ columnDefs, id, showHeader }) => {
           />
         ))}
       </div>
-      <style jsx>
+      <style jsx="true">
         {`
           :global(.list-header__text) {
             color: ${header};
           }
         `}
       </style>
-      <style jsx>
+      <style jsx="true">
         {`
           .list-header {
             display: grid;

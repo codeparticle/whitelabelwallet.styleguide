@@ -18,6 +18,12 @@
     border-radius: 6px;
     padding: $spacing-xs;
     width: 100%;
+
+    &-error {
+      background: $rose !important;
+      border: 1px solid $red;
+      color: $red !important;
+    }
   }
 
   &__input.has-label {

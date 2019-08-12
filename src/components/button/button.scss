@@ -18,13 +18,6 @@ $btn-lg-width: 174px;
   min-width: $min-width;
 }
 
-@mixin auth-theme() {
-  $radius: $btn-gradient-height / 2;
-
-  border-radius: $radius !important;
-  height: $btn-gradient-height !important;
-}
-
 @mixin btn-theme($btn-color, $active-color) {
   $border: 2px solid $btn-color;
 
@@ -241,14 +234,4 @@ $btn-lg-width: 174px;
 
 .teal {
   @include btn-gradient-theme($gradient-teal, $cloud);
-}
-
-.auth-primary {
-  @include btn-theme($blue, $cloud);
-  @include auth-theme();
-}
-
-.auth-secondary {
-  @include btn-tertiary-theme($white, $blue);
-  @include auth-theme();
 }

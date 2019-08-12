@@ -6,7 +6,7 @@ import { withReadme } from 'storybook-readme';
 import { TextInput } from 'components/text-input';
 import readme from 'components/text-input/README.md';
 import { ThemeWrapper } from './utils';
-import { darkBackground, lightBackground } from './constants';
+import { authBackground, darkBackground, lightBackground } from './constants';
 
 const TextInputWithValue = (props) => {
   const [value, setValue] = useState('');
@@ -63,18 +63,22 @@ storiesOf('TextInput', module)
   })
   .add('Playground', () => {
     const disabled = boolean('disabled', false);
+    const hasError = boolean('hasError', false);
+    const useAltTheme = boolean('useAltTheme', false);
     const label = text('label', 'Label');
     const placeholder = text('placeholder', 'Input Text');
 
     return (
       <TextInputWithValue
         disabled={disabled}
+        hasError={hasError}
         label={label}
         onBlur={action('blur')}
         onFocus={action('focus')}
         placeholder={placeholder}
+        useAltTheme={useAltTheme}
       />
     );
   }, {
-    backgrounds: [{ ...darkBackground, default: false }, { ...lightBackground }],
+    backgrounds: [{ ...darkBackground, default: false }, lightBackground, authBackground],
   });

@@ -5,19 +5,23 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  height: 100%;
-  padding: 20%;
+  justify-content: center;
   width: 100%;
 
   & svg {
-    width: 100%;
+    width: 80%;
   }
 
   &__mark-container {
+    align-items: flex-end;
+    display: flex;
+    justify-content: center;
     width: 80%;
   }
 
   &__type-container {
+    display: flex;
+    justify-content: center;
     margin-top: $spacing-s;
     width: 100%;
   }
@@ -27,6 +31,6 @@
   }
 
   &__type {
-    height: 20%;
+    height: 100%;
   }
 }

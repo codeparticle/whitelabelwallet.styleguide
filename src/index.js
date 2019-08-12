@@ -11,6 +11,7 @@ export { ButtonVariants } from './components/button/constants';
 
 // Components
 export { Address } from './components/address';
+export { AuthCheckbox } from './components/auth-checkbox';
 export { AreaChart } from './components/area-chart';
 export { Button } from './components/button';
 export {

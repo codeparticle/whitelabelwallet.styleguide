@@ -36,7 +36,7 @@ const ToggleSwitch = ({
         />
         <span className={classNames(styles['toggle-switch-slider'])} />
         <span className={classNames(styles['toggle-switch-btn'])} />
-        <style jsx>
+        <style jsx="true">
           {`
             .${styles['toggle-switch-slider']} {
               background-color: ${value ? theme.onBackground : theme.offBackground};

@@ -35,7 +35,7 @@ const TooltipDemo = () => {
         Id="demo-tooltip"
         place={place}
       />
-      <style jsx>
+      <style jsx="true">
         {`
           @import 'styles/layout.scss';
 

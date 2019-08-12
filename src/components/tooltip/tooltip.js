@@ -68,7 +68,7 @@ const Tooltip = ({
           }
         `}
       </style>
-      <style jsx>
+      <style jsx="true">
         {`
           .tooltip-content {
             font-size: ${fontSizeXs3};
