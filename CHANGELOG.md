@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.2](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/compare/v0.3.1...v0.3.2) (2019-08-12)
+
+
+### Features
+
+* **wlw-90:** added components for auth, styled-jsx optimizations ([fdb5ff7](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/fdb5ff7))
+* **wlw-95:** refactored styled jsx to css, improved scss exports ([c685db0](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/c685db0))
+
+
+
 ### [0.3.1](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/compare/v0.3.0...v0.3.1) (2019-08-07)
 
 
