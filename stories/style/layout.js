@@ -6,6 +6,7 @@ import Highlight, { defaultProps } from 'prism-react-renderer';
 import layout from 'styles/layout.scss';
 import styles from './layout.scss';
 import breakpointImage from './breakpoint-image.svg';
+import { toKebab } from '../utils';
 
 const parsedLayout = Object.entries(layout).map(([key, value]) => ({
   key,
@@ -102,7 +103,7 @@ SCSS variables that are available to be used for spacing purposes.
             <tr key={key}>
               <td>{value}</td>
               <td>
-                <CodeHighlight code={key} />
+                <CodeHighlight code={toKebab(key)} />
               </td>
             </tr>
           ))}
