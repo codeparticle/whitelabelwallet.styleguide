@@ -8,6 +8,7 @@
 
 .alert {
   align-items: center;
+  bottom: 0;
   color: $white;
   display: flex;
   font-size: $font-size-sm-2;
@@ -16,7 +17,6 @@
   padding: $spacing-l;
   position: fixed;
   right: 0;
-  top: 0;
   width: 100%;
   z-index: 1000;
 }
@@ -30,7 +30,7 @@
 }
 
 .enter {
-  transform: translateY(-100%);
+  transform: translateY(100%);
   visibility: hidden;
 }
 
@@ -46,6 +46,6 @@
 }
 
 .exit-active {
-  transform: translateY(-100%);
+  transform: translateY(100%);
   transition: transform 300ms;
 }

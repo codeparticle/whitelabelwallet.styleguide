@@ -38,4 +38,4 @@ return (
 | onClose | func | '' | callback used when notification leaves the screen |
 | show | bool | false | Determines whether or not the notification appears on screen  |
 | timeout | number | 300 | The duration of the transition, in milliseconds. Required unless addEndListener is provided. |
-| type | string | 'alert' | Sets the styling for the type of notification |
+| type | oneOf 'fail', 'success' | 'fail' | Sets the styling for the type of notification |

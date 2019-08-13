@@ -8,10 +8,16 @@ import styles from './layout.scss';
 import breakpointImage from './breakpoint-image.svg';
 import { toKebab } from '../utils';
 
-const parsedLayout = Object.entries(layout).map(([key, value]) => ({
-  key,
-  value: value.replace(/'/g, ''),
-}));
+const parsedLayout = Object.entries(layout).map(([key, value]) => {
+  if (value.includes('calc')) {
+    return null;
+  }
+
+  return {
+    key: key.replace(/^_/, ''),
+    value: value.replace(/'/g, ''),
+  };
+});
 
 const CodeHighlight = props => (
   <Highlight
@@ -99,14 +105,20 @@ SCSS variables that are available to be used for spacing purposes.
           </tr>
         </thead>
         <tbody>
-          {parsedLayout.map(({ key, value }) => (
-            <tr key={key}>
-              <td>{value}</td>
-              <td>
-                <CodeHighlight code={toKebab(key)} />
-              </td>
-            </tr>
-          ))}
+          {parsedLayout.map((item) => {
+            if (!item) {
+              return null;
+            }
+            const { key, value } = item;
+            return (
+              <tr key={key}>
+                <td>{value}</td>
+                <td>
+                  <CodeHighlight code={toKebab(key)} />
+                </td>
+              </tr>
+            );
+          })}
         </tbody>
       </table>
 
