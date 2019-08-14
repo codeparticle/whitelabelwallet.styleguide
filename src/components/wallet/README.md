@@ -60,5 +60,5 @@ return (
 | isMobile | bool | false | Tells the wallet its running in mobile mode |
 | messages | object | '' | Requires deposit and withdraw properties of type string |
 | onDeposit | func | '' | callback used on deposit button clicked |
-| onMobileClick | func | '' | callback used click on mobile |
+| onMobileClick | func | '' | callback used for click event on mobile |
 | onWithdraw | func | '' | callback used on withdraw button clicked |
