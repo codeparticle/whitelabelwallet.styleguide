@@ -100,7 +100,7 @@ const ContactDetails = ({
         {address}
       </h4>
     </div>
-    <style jsx="true">
+    <style jsx>
       {`
         .${styles['contact__details']} {
           color: ${theme.details};
@@ -154,7 +154,7 @@ const Contact = ({
           messages={messages}
         />
       </div>
-      <style jsx="true">
+      <style jsx>
         {`
           .contact {
             background: ${theme.bg};

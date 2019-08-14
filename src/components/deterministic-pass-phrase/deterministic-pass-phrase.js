@@ -90,7 +90,7 @@ const WordButton = ({
       <div
         className={classNames(
           styles['pass-phrase__item'],
-          feedBackClass && `feedback-${feedBackClass}`
+          feedBackClass && `pass-phrase-feedback__${feedBackClass}`
         )}
         onClick={handleClick}
         onKeyPress={handleClick}
@@ -100,48 +100,54 @@ const WordButton = ({
         <p className={
           classNames(
             styles['pass-phrase__word'],
-            blurType && `blur-${blurType}`
+            blurType && `pass-phrase-blur__${blurType}`
           )}
         >
           {word}
         </p>
       </div>
-      <style jsx="true">
+      <style jsx>
         {`
+          @import 'styles/colors.scss';
+
           .${styles['pass-phrase__item']} {
             background: ${backgroundColor};
             color: ${theme.textColor};
           }
 
-          .feedback-success {
-            background: ${theme.success};
-          }
+          .pass-phrase-feedback {
+            &__success {
+              background: ${theme.success};
+            }
 
-          .feedback-error {
-            background: ${theme.error};
-          }
+            &__error {
+              background: ${theme.error};
+            }
 
-          .feedback-complete {
-            background: ${theme.success};
-            transition: background .5s ease-in;
-          }
+            &__complete {
+              background: ${theme.success};
+              transition: background .5s ease-in;
+            }
 
-          .feedback-hide {
-            background: ${backgroundColor};
-            transition: background .5s ease-in;
+            &__hide {
+              background: ${backgroundColor};
+              transition: background .5s ease-in;
+            }
           }
         `}
       </style>
-      <style jsx="true">
+      <style jsx>
         {`
-          .blur-show {
-            filter: blur(5px);
-            transition: filter .75s ease-in;
-          }
-
-          .blur-hide {
-            filter: none;
-            transition: filter .75s ease-out;
+          .pass-phrase-blur {
+            &__show {
+              filter: blur(5px);
+              transition: filter .75s ease-in;
+            }
+          
+            &__hide {
+              filter: none;
+              transition: filter .75s ease-out;    
+            }
           }
         `}
       </style>

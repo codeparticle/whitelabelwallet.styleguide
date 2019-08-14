@@ -5,6 +5,15 @@
     ],
     "plugins": [
         "@babel/plugin-proposal-export-namespace-from",
+        ["styled-jsx/babel", {
+            "plugins": [
+                ["styled-jsx-plugin-sass", {
+                    "sassOptions": {
+                        "includePaths": ["./src"]
+                    }
+                }]
+            ]
+        }],
         ["css-modules-transform", {
             "extensions": [".css", ".scss"],
             "extractCss": {

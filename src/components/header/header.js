@@ -58,7 +58,7 @@ const Header = ({
       >{title}
       </div>
       <div className={classNames(styles['header__sub-title'])}>{subTitle}</div>
-      <style jsx="true">
+      <style jsx>
         {`
           .${styles['header']} {
             background: ${theme.bg};

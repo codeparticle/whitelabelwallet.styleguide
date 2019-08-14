@@ -63,7 +63,7 @@ const QRCode = ({
       >
         {messages.scan}
       </div>
-      <style jsx="true">
+      <style jsx>
         {`
           .${styles['qr-code']} {
             background: ${theme.bg};

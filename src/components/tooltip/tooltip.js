@@ -5,7 +5,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ReactTooltip from 'react-tooltip';
-import { fontSizeXs3 } from 'styles/fonts.scss';
 import { useTheme } from '../theme-provider';
 
 const Tooltip = ({
@@ -20,7 +19,7 @@ const Tooltip = ({
   return (
     <>
       <ReactTooltip
-        className="custom-tooltip"
+        className="tooltip"
         clickable={clickable}
         id={Id}
         effect="solid"
@@ -31,47 +30,56 @@ const Tooltip = ({
           {content}
         </span>
       </ReactTooltip>
-      <style jsx="true" global="true">
+      <style jsx global>
         {`
-          .custom-tooltip {
+          @import 'styles/layout.scss';
+
+          .__react_component_tooltip.type-dark {
             background: ${theme.bg} !important;
             border-color: ${theme.bg} !important;
             border-radius: 6px !important;
+            box-shadow: 0px 2px 6px -2px #888;
             color: ${theme.message} !important;
-          }
+            padding: $space-1 $space-4 !important;
 
-          .custom-tooltip.place-top::after,
-          .custom-tooltip.place-bottom::after,
-          .custom-tooltip.place-left::after,
-          .custom-tooltip.place-right::after {
-            border-width: 10px !important;
-          }
+            &.place-top::after,
+            &.place-bottom::after,
+            &.place-left::after,
+            &.place-right::after {
+              border-top-width: 10px;
+              border-bottom-width: 10px;
+              border-left-width: 10px;
+              border-right-width: 10px;
+            }
 
-          .custom-tooltip.place-top::after {
-            border-top-color: ${theme.bg} !important;
-            box-shadow: 0px 2px 2px -5px ${theme.bg};
-          }
+            &.place-top::after {
+              border-top-color: ${theme.bg} !important;
+              box-shadow: 0px 2px 2px -5px ${theme.bg};
+            }
 
-          .custom-tooltip.place-bottom::after {
-            border-bottom-color: ${theme.bg} !important;
-            box-shadow: 0px -5px 2px -5px ${theme.bg};
-          }
+            &.place-bottom::after {
+              border-bottom-color: ${theme.bg} !important;
+              box-shadow: 0px -5px 2px -5px ${theme.bg};
+            }
 
-          .custom-tooltip.place-right::after {
-            border-right-color: ${theme.bg} !important;
-            box-shadow: -2px 1px 2px -5px ${theme.bg};
-          }
+            &.place-right::after {
+              border-right-color: ${theme.bg} !important;
+              box-shadow: -2px 1px 2px -5px ${theme.bg};
+            }
 
-          .custom-tooltip.place-left::after {
-            border-left-color: ${theme.bg} !important; 
-            box-shadow: 2px 1px 2px -5px ${theme.bg};
+            &.place-left::after {
+              border-left-color: ${theme.bg} !important; 
+              box-shadow: 2px 1px 2px -5px ${theme.bg};
+            }
           }
         `}
       </style>
-      <style jsx="true">
+      <style jsx>
         {`
+          @import 'styles/fonts.scss';
+
           .tooltip-content {
-            font-size: ${fontSizeXs3};
+            font-size: $font-size-xs-3;
           }
         `}
       </style>

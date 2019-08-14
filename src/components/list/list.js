@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { fontSizeXs3 } from 'styles/fonts.scss';
-import { borderRadius3, space2, space4 } from 'styles/layout.scss';
 import { useTheme } from '../theme-provider';
 import { ListHeader } from './list-header';
 import { ListItem } from './list-item';
@@ -79,8 +77,11 @@ const List = ({
         showSubItems={showSubItems}
       />
     </div>
-    <style jsx="true">
+    <style jsx>
       {`
+        @import 'styles/fonts';
+        @import 'styles/layout';
+
         .list {
           display: flex;
           flex-direction: column;
@@ -88,12 +89,10 @@ const List = ({
         }
 
         :global(.list-item) {
-          border-radius: ${borderRadius3};
-          display: grid;
-          font-size: ${fontSizeXs3};
-          grid-template-columns: repeat(12, 1fr);
-          margin-top: ${space2};
-          padding: ${space4};
+          border-radius: 6px;
+          font-size: $font-size-xs-3;
+          margin-top: $space-2;
+          padding: $space-4;
         }
       `}
     </style>

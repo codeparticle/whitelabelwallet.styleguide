@@ -52,7 +52,7 @@ function CustomChildComponent({ data }) {
         memoValue={memoValue}
         messages={messages}
       />
-      <style jsx="true">
+      <style jsx>
         {`
           @import 'styles/layout.scss';
 
@@ -120,7 +120,7 @@ storiesOf('List', module)
       return (
         <>
           <p>{column}</p>
-          <style jsx="true">
+          <style jsx>
             {`
               p {
                 color: ${color};

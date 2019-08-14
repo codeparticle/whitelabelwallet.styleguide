@@ -56,7 +56,7 @@ const TextInput = ({
           />
         </label>
       </div>
-      <style jsx="true">
+      <style jsx>
         {`
           .text-input__label {
             color: ${theme.label};

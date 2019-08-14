@@ -19,7 +19,7 @@ const AuthCheckboxDemo = () => {
         checked={value}
         onChange={setValue}
       />
-      <style jsx="true">
+      <style jsx>
         {`
           .container {
             margin: 10% auto;
