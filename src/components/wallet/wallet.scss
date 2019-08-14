@@ -1,5 +1,6 @@
 @import "styles/colors.scss";
 @import "styles/layout.scss";
+@import "styles/fonts.scss";
 
 .wallet {
   border-radius: 9px;
@@ -46,6 +47,11 @@
     flex-direction: column;
     justify-content: center;
 
+    & svg {
+      height: auto;
+      width: $font-size-sm-2;
+    }
+
     & svg > path {
       fill: currentColor;
     }
@@ -63,5 +69,16 @@
       margin-bottom: $spacing-xs;
       margin-top: $spacing-xs;
     }
+  }
+}
+
+@media only screen and (max-width: 561px) {
+  .wallet-funds__actions,
+  .wallet__wallet-title svg {
+    display: none;
+  }
+
+  .wallet {
+    cursor: pointer;
   }
 }

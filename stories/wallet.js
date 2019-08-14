@@ -14,7 +14,7 @@ import { lightBackground, darkBackground } from './constants';
 import { ThemeWrapper } from './utils';
 import { icons } from '../src/svgs';
 
-const { SvgCog } = icons;
+const { SvgCoinSymbol } = icons;
 
 const WalletDemo = ({ defaultToDark = false }) => {
   const messages = {
@@ -27,6 +27,7 @@ const WalletDemo = ({ defaultToDark = false }) => {
   const title = text('title', 'Wallet Title');
   const coinBalance = number('coinBalance', 1023.45);
   const currencyBalance = number('currencyBalance', 10023.45);
+  const isMobile = true;
 
   return (
     <ThemeWrapper
@@ -36,8 +37,10 @@ const WalletDemo = ({ defaultToDark = false }) => {
           coinData={coinData}
           currencyBalance={currencyBalance}
           coinBalance={coinBalance}
-          coinSymbol={<SvgCog />}
+          coinSymbol={<SvgCoinSymbol />}
           currencySymbol="&#36;"
+          isMobile={isMobile}
+          onMobileClick={action('Mobile Click')}
           title={title}
           messages={messages}
           onDeposit={action('CLICKED DEPOSIT')}

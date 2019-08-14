@@ -114,6 +114,8 @@ const Wallet = ({
   currencyBalance,
   onDeposit,
   onWithdraw,
+  isMobile,
+  onMobileClick,
   messages,
   ...rest
 }) => {
@@ -125,10 +127,19 @@ const Wallet = ({
     className
   );
 
+  const mobileClickHandler = () => {
+    if (isMobile) {
+      return onMobileClick();
+    }
+    return null;
+  };
+
   return (
     <div
       {...rest}
       className={walletClass}
+      role="presentation"
+      onClick={mobileClickHandler}
     >
       <div
         className={classNames(
@@ -180,6 +191,8 @@ Wallet.propTypes = {
   currencyBalance: PropTypes.number,
   currencySymbol: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   coinSymbol: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+  isMobile: PropTypes.bool,
+  onMobileClick: PropTypes.func,
   onDeposit: PropTypes.func,
   onWithdraw: PropTypes.func,
   messages: PropTypes.shape({
@@ -196,6 +209,8 @@ Wallet.defaultProps = {
   currencyBalance: 0,
   coinSymbol: null,
   currencySymbol: null,
+  isMobile: false,
+  onMobileClick: null,
   onDeposit: null,
   onWithdraw: null,
   messages: {
