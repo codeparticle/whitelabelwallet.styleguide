@@ -57,6 +57,8 @@ return (
 | currencySymbol | string | 2 | the symbol of fiat currency |
 | coinSymbol | function or string | '' | the symbol (string or icon) of crypto currency |
 | title | string | '' | Sets the title of the wallet |
+| isMobile | bool | false | Tells the wallet its running in mobile mode |
 | messages | object | '' | Requires deposit and withdraw properties of type string |
 | onDeposit | func | '' | callback used on deposit button clicked |
+| onMobileClick | func | '' | callback used for when div is clicked on mobile |
 | onWithdraw | func | '' | callback used on withdraw button clicked |
