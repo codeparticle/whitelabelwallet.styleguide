@@ -88,7 +88,7 @@ FlashAlert.propTypes = {
   message: PropTypes.string,
   show: PropTypes.bool,
   timeout: PropTypes.number,
-  type: PropTypes.string,
+  type: PropTypes.oneOf(['fail', 'success']),
 };
 
 FlashAlert.defaultProps = {
@@ -97,7 +97,7 @@ FlashAlert.defaultProps = {
   message: '',
   show: false,
   timeout: 300,
-  type: 'alert',
+  type: 'fail',
 };
 
 export { FlashAlert };
