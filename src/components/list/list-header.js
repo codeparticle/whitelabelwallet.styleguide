@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { space4 } from 'styles/layout.scss';
 import { useTheme } from '../theme-provider';
 
 const HeaderItem = ({ column, id, index }) => (
@@ -29,19 +28,21 @@ const ListHeader = ({ columnDefs, id, showHeader }) => {
           />
         ))}
       </div>
-      <style jsx="true">
+      <style jsx>
         {`
           :global(.list-header__text) {
             color: ${header};
           }
         `}
       </style>
-      <style jsx="true">
+      <style jsx>
         {`
+          @import 'styles/layout';
+
           .list-header {
             display: grid;
             grid-template-columns: repeat(12, 1fr);
-            padding: 0 ${space4};
+            padding: 0 $space-4;
             width: 100%;
           }
         `}

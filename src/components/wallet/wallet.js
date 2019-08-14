@@ -63,7 +63,7 @@ const WalletFundsContainer = ({
           {messages.withdraw}
         </Button>
       </div>
-      <style jsx="true">
+      <style jsx>
         {`
           .${styles['wallet-funds__coin-balance']} {
             color: ${theme.textTitle};
@@ -93,7 +93,7 @@ const WalletTitle = ({
         {title}
       </h3>
       <SvgCog />
-      <style jsx="true">
+      <style jsx>
         {`
           .${styles['wallet__wallet-title']} {
             color: ${theme.textTitle};
@@ -161,7 +161,7 @@ const Wallet = ({
           onWithdraw={onWithdraw}
         />
       </div>
-      <style jsx="true">
+      <style jsx>
         {`
           .wallet {
             background: ${theme.bg};
