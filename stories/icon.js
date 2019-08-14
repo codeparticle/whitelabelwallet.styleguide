@@ -35,7 +35,7 @@ const IconDemo = () => {
     >
       <Icon
         variant={variant}
-        icon={<SvgClose />}
+        icon={<SvgClose height="24px" width="24px" />}
       />
     </div>
   ));
