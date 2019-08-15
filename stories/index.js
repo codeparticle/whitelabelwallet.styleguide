@@ -14,6 +14,7 @@ import './header';
 import './icon';
 import './list/list';
 import './logo';
+import './overlay';
 import './qr-code';
 import './search';
 import './select';

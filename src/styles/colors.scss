@@ -36,6 +36,7 @@ $gradient-blue: linear-gradient(45deg, #538DC0 0%, #94CCE4 100%);
 $gradient-dark: linear-gradient(31.89deg, #222222 0%, #444444 100%);
 
 /* Transparencies */
+$blue-shade: #2E4C71E6;
 $shade: #60799840;
 $tint: #FFFFFF40;
 
@@ -68,6 +69,7 @@ $tint: #FFFFFF40;
   gradientBlue: $gradient-blue;
   gradientDark: $gradient-dark;
   _transparencies: 0;
+  blueShade: $blue-shade;
   shade: $shade;
   tint: $tint;
 }

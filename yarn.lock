@@ -1004,6 +1004,11 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
+"@codeparticle/react-sidenav@^0.3.2":
+  version "0.3.2"
+  resolved "https://codeparticle.jfrog.io/codeparticle/api/npm/npm/@codeparticle/react-sidenav/-/react-sidenav-0.3.2.tgz#8fcbfc8e6d2851416f66a87ccf039ed71c4abf22"
+  integrity sha1-j8v8jm0oUUFvZqh8zwOe1xxKvyI=
+
 "@commitlint/cli@^7.6.1":
   version "7.6.1"
   resolved "https://registry.npmjs.org/@commitlint/cli/-/cli-7.6.1.tgz#a93cf995082831999937f6d5ec1a582c8fc0393a"

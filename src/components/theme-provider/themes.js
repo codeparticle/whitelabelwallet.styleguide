@@ -20,6 +20,7 @@ const {
   mintChip,
   gradientBlueStart,
   gradientBlueEnd,
+  blueShade,
 } = colors;
 
 const {
@@ -140,6 +141,10 @@ const lightTheme = {
       color: blue,
       icon: blue,
     },
+  },
+  overlay: {
+    sidepanel: tintBlue,
+    overlay: blueShade,
   },
   qrcode: {
     bg: tintBlue,
@@ -271,6 +276,10 @@ const darkTheme = {
     address: grey,
     copyBtnType: ButtonVariants.SLATE,
     sendBtnType: ButtonVariants.GREEN,
+  },
+  overlay: {
+    sidepanel: dark,
+    overlay: blueShade,
   },
   qrcode: {
     bg: dark,
