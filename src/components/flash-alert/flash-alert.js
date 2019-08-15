@@ -22,6 +22,7 @@ const FlashAlert = ({
   duration,
   timeout,
   alertButton,
+  height,
   ...rest
 }) => {
   const [showMessage, setShowMessage] = useState(false);
@@ -55,36 +56,46 @@ const FlashAlert = ({
   );
 
   return (
-    <CSSTransition
-      in={showMessage}
-      timeout={timeout}
-      classNames={{
-        enter: styles['enter'],
-        enterActive: styles['enter-active'],
-        exit: styles['exit'],
-        exitActive: styles['exit-active'],
-      }}
-      onExited={onClose}
-      unmountOnExit
-      {...rest}
-    >
-      <div
-        className={classNames(
-          styles.alert,
-          styles[type],
-          className
-        )}
+    <>
+      <CSSTransition
+        in={showMessage}
+        timeout={timeout}
+        classNames={{
+          enter: styles['enter'],
+          enterActive: styles['enter-active'],
+          exit: styles['exit'],
+          exitActive: styles['exit-active'],
+        }}
+        onExited={onClose}
+        unmountOnExit
+        {...rest}
       >
-        {message}
-        {btn}
-      </div>
-    </CSSTransition>
+        <div
+          className={classNames(
+            styles.alert,
+            styles[type],
+            className
+          )}
+        >
+          {message}
+          {btn}
+        </div>
+      </CSSTransition>
+      <style jsx>
+        {`
+          .${styles.alert} {
+            height: ${height};
+          }
+        `}
+      </style>
+    </>
   );
 };
 
 FlashAlert.propTypes = {
   alertButton: PropTypes.node,
   duration: PropTypes.number,
+  height: PropTypes.string,
   message: PropTypes.string,
   show: PropTypes.bool,
   timeout: PropTypes.number,
@@ -94,6 +105,7 @@ FlashAlert.propTypes = {
 FlashAlert.defaultProps = {
   alertButton: null,
   duration: 3000,
+  height: 'auto',
   message: '',
   show: false,
   timeout: 300,
