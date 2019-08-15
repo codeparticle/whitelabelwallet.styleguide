@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.3](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/compare/v0.3.2...v0.3.3) (2019-08-15)
+
+
+### Features
+
+* **wlw-92:** misc fixes ([25cf057](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/25cf057))
+* **wlw-92:** updated flash-alert to show from bottom ([4509394](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/4509394))
+* **wlw-93:** make wallet component more responsive ([1923fb1](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/1923fb1))
+* **wlw-93:** remove mobile logic ([c656ef8](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/c656ef8))
+* **wlw-93:** update read me ([667064c](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/667064c))
+* **wlw-93:** update read me ([9541b41](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/9541b41))
+* **wlw-93:** update read me ([bf0a054](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/bf0a054))
+* **wlw-98:** fix styled-jsx compilation, use scss again ([1d6ffd1](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/1d6ffd1))
+
+
+
 ### [0.3.2](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/compare/v0.3.1...v0.3.2) (2019-08-12)
 
 
