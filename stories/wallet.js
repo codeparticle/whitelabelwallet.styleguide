@@ -27,7 +27,6 @@ const WalletDemo = ({ defaultToDark = false }) => {
   const title = text('title', 'Wallet Title');
   const coinBalance = number('coinBalance', 1023.45);
   const currencyBalance = number('currencyBalance', 10023.45);
-  const isMobile = true;
 
   return (
     <ThemeWrapper
@@ -39,8 +38,7 @@ const WalletDemo = ({ defaultToDark = false }) => {
           coinBalance={coinBalance}
           coinSymbol={<SvgCoinSymbol />}
           currencySymbol="&#36;"
-          isMobile={isMobile}
-          onMobileClick={action('Mobile Click')}
+          onClick={action('Mobile Click')}
           title={title}
           messages={messages}
           onDeposit={action('CLICKED DEPOSIT')}
