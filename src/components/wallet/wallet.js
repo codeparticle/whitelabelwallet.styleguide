@@ -114,6 +114,7 @@ const Wallet = ({
   currencyBalance,
   onDeposit,
   onWithdraw,
+  onClick,
   messages,
   ...rest
 }) => {
@@ -129,6 +130,10 @@ const Wallet = ({
     <div
       {...rest}
       className={walletClass}
+      role="button"
+      onClick={onClick}
+      onKeyPress={onClick}
+      tabIndex="0"
     >
       <div
         className={classNames(
@@ -180,6 +185,7 @@ Wallet.propTypes = {
   currencyBalance: PropTypes.number,
   currencySymbol: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   coinSymbol: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+  onClick: PropTypes.func,
   onDeposit: PropTypes.func,
   onWithdraw: PropTypes.func,
   messages: PropTypes.shape({
@@ -196,6 +202,7 @@ Wallet.defaultProps = {
   currencyBalance: 0,
   coinSymbol: null,
   currencySymbol: null,
+  onClick: null,
   onDeposit: null,
   onWithdraw: null,
   messages: {

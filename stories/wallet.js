@@ -14,7 +14,7 @@ import { lightBackground, darkBackground } from './constants';
 import { ThemeWrapper } from './utils';
 import { icons } from '../src/svgs';
 
-const { SvgCog } = icons;
+const { SvgCoinSymbol } = icons;
 
 const WalletDemo = ({ defaultToDark = false }) => {
   const messages = {
@@ -36,8 +36,9 @@ const WalletDemo = ({ defaultToDark = false }) => {
           coinData={coinData}
           currencyBalance={currencyBalance}
           coinBalance={coinBalance}
-          coinSymbol={<SvgCog />}
+          coinSymbol={<SvgCoinSymbol />}
           currencySymbol="&#36;"
+          onClick={action('Mobile Click')}
           title={title}
           messages={messages}
           onDeposit={action('CLICKED DEPOSIT')}
