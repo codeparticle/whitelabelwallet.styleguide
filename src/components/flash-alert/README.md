@@ -34,6 +34,7 @@ return (
 | ---- | ---- | ------- | ----------- |
 | className | string | '' | Sets the class name of the flash alert component |
 | duration | number | 3000 | Sets the time in milliseconds the alert will be on screen |
+| height | string | 'auto' | Sets the height of the flash-alert |
 | message | number | '' | The message that will be displayed inside the notification |
 | onClose | func | '' | callback used when notification leaves the screen |
 | show | bool | false | Determines whether or not the notification appears on screen  |
