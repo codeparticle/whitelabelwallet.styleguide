@@ -29,6 +29,7 @@
             "alias": {
                 "src": "./src",
                 "components": "./src/components",
+                "hooks": "./src/hooks",
                 "styles": "./src/styles",
                 "svgs": "./src/svgs"
             }

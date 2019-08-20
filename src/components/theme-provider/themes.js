@@ -142,6 +142,10 @@ const lightTheme = {
       icon: blue,
     },
   },
+  overflow: {
+    bg: tintBlue,
+    color: slate,
+  },
   overlay: {
     sidepanel: tintBlue,
     overlay: blueShade,
@@ -276,6 +280,10 @@ const darkTheme = {
     address: grey,
     copyBtnType: ButtonVariants.SLATE,
     sendBtnType: ButtonVariants.GREEN,
+  },
+  overflow: {
+    bg: dark,
+    color: grey,
   },
   overlay: {
     sidepanel: dark,
