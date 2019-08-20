@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import Sidepanel from '@codeparticle/react-sidenav';
+import { Header } from 'components/header';
 import { useTheme } from '../theme-provider';
 import { TYPES } from './constants';
 
@@ -23,9 +24,13 @@ function handleSidePanelResize(innerWidth, setFn) {
 export function Overlay({
   background,
   children,
+  Icon,
   onClose,
   show,
+  subTitle,
+  title,
   type,
+  useAltTheme,
 }) {
   const theme = useTheme('overlay');
   const [width, setWidth] = useState('0px');
@@ -54,33 +59,63 @@ export function Overlay({
 
 
   return (
-    <Sidepanel
-      fixed
-      right
-      backgroundColor={background || theme[type]}
-      isOpen={show}
-      onStateChange={onClose}
-      width={width}
-    >
-      {children}
-    </Sidepanel>
+    <>
+      <Sidepanel
+        fixed
+        right
+        backgroundColor={background || theme[type]}
+        isOpen={show}
+        onStateChange={onClose}
+        width={width}
+      >
+        <div className={`content ${type}`}>
+          <Header
+            Icon={Icon}
+            minimalStyle={type === OVERLAY}
+            onClose={onClose}
+            subTitle={subTitle}
+            title={title}
+            useAltTheme={useAltTheme}
+          />
+          {children}
+        </div>
+      </Sidepanel>
+      <style jsx>
+        {`
+          .content {
+            display: grid;
+            grid-template-columns: 1fr;
+            height: 100%;
+            overflow: auto;
+            width: 100%;
+          }
+        `}
+      </style>
+    </>
   );
 }
 
 Overlay.propTypes = {
   background: PropTypes.string,
   children: PropTypes.node.isRequired,
+  Icon: PropTypes.node,
   onClose: PropTypes.func,
   show: PropTypes.bool,
+  subTitle: PropTypes.string,
+  title: PropTypes.string.isRequired,
   type: PropTypes.oneOf([
     OVERLAY,
     SIDEPANEL,
   ]),
+  useAltTheme: PropTypes.bool,
 };
 
 Overlay.defaultProps = {
   background: '',
+  Icon: null,
   onClose: null,
   show: false,
+  subTitle: '',
   type: OVERLAY,
+  useAltTheme: false,
 };

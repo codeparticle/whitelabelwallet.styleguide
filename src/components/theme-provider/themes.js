@@ -20,6 +20,7 @@ const {
   mintChip,
   gradientBlueStart,
   gradientBlueEnd,
+  gradientTeal,
   blueShade,
 } = colors;
 
@@ -314,6 +315,11 @@ const alternateTheme = {
     bg: white,
     label: white,
     textValue: dark,
+  },
+  header: {
+    bg: gradientTeal,
+    svgFill: white,
+    closeBtn: white,
   },
 };
 

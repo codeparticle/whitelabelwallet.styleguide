@@ -22,10 +22,19 @@ function MyModal() {
 
   return (
     <Modal
+      customStyles={{
+        bottom: '10%',
+        top: '10%',
+        width: '50%',
+      }}
+      Icon={SvgLogoMark}
       onClose={onClose}
-      show={show}
+      show={showValue}
+      subTitle="Long, but important"
+      title="Terms of Service"
+      useAltTheme
     >
-      <p>I am a modal</p>
+      <ModalContent />
     </Modal>
   );
 }
@@ -77,9 +86,14 @@ const customStyles = {
 and the defaultStyles will be filled in!
 
 ----
+#### Icon
+
+Renders an Icon above the header title
+
+----
 #### onClose
 
-The onClose prop specifies a function that will be called when the modal closes.
+The onClose prop specifies a function that will be called when the modal is closed.
 
 It defaults to `null`.
 
@@ -98,11 +112,30 @@ Show determines whether or not to render the Modal. If true, the Modal will be v
 It defaults to `false`.
 
 ----
+#### subTitle
+
+Renders a subTitle under the header title
+
+----
+#### title
+
+Specifies the title for the Header
+
+----
+#### useAltTheme
+
+If true, uses the header's alternate theme
+
+----
 ### PropTypes
 
 | name | type | default |
 | ---- | ---- | ------- |
 | customStyles | `object` | See above. |
+| Icon | `node` | null |
 | onClose | `func` | `null` |
 | overlayBackground | `string` | shade (`'#60799840'`) |
 | show | `bool` | `false` |
+| subTitle | `string` | '' |
+| title | `string` | *required* |
+| useAltTheme | `bool` | `false` |

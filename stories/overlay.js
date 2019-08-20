@@ -3,16 +3,16 @@ import { storiesOf } from '@storybook/react';
 import { boolean, select, withKnobs } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 import { withReadme } from 'storybook-readme';
-import { Overlay } from '../src';
+import { Overlay, svgs } from '../src';
 import readme from '../src/components/overlay/README.md';
 import { lightBackground, darkBackground } from './constants';
 import { ThemeWrapper } from './utils';
 
+const { SvgLogoMark } = svgs.icons;
+
 function OverlayContent({ color }) {
   return (
     <div className="content-container">
-      <h2>Overlay Header</h2>
-      <hr />
       <p>
         { /* eslint-disable-next-line max-len */ }
         {'Lorem ipsum dolor amet subway tile everyday carry chambray freegan put a bird on it man braid edison bulb vegan sriracha bicycle rights affogato vape. Tote bag palo santo echo park fixie kale chips, offal DIY ugh. Yr gentrify thundercats ugh migas edison bulb seitan vape food truck XOXO. Prism before they sold out pitchfork, squid forage XOXO kitsch irony 90\'s. Tacos deep v humblebrag hexagon adaptogen intelligentsia, venmo PBR&B locavore knausgaard craft beer occupy sriracha microdosing prism. Readymade brooklyn godard vexillologist austin raclette polaroid narwhal retro selvage gochujang VHS cloud bread tumeric. Tote bag cred tacos meh.'}
@@ -67,6 +67,9 @@ const OverlayDemo = ({
             onClose={onClose}
             show={showValue}
             type={type}
+            title="Wallet disclaimer"
+            subTitle="Very important stuff!"
+            Icon={SvgLogoMark}
           >
             <OverlayContent color={textColor} />
           </Overlay>

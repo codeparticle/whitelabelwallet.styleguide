@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs } from '@storybook/addon-knobs';
+import { boolean, withKnobs } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 import { withReadme } from 'storybook-readme';
 import { ThemeWrapper } from './utils';
@@ -8,16 +8,21 @@ import { Header, svgs } from '../src';
 import readme from '../src/components/header/README.md';
 import { lightBackground, darkBackground } from './constants';
 
-const HeaderWithTheme = props => (
-  <ThemeWrapper
-    defaultToDark={props.defaultToDark}
-    content={
-      <Header
-        {...props}
-      />
-        }
-  />
-);
+const HeaderWithTheme = (props) => {
+  const useAltTheme = boolean('useAltTheme', false);
+
+  return (
+    <ThemeWrapper
+      defaultToDark={props.defaultToDark}
+      content={
+        <Header
+          {...props}
+          useAltTheme={useAltTheme}
+        />
+      }
+    />
+  );
+};
 
 const { icons: { SvgReceive, SvgSettings } } = svgs;
 

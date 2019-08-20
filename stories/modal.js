@@ -1,21 +1,21 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { storiesOf } from '@storybook/react';
 import { withReadme } from 'storybook-readme';
 import { boolean, withKnobs } from '@storybook/addon-knobs';
-import { action } from '@storybook/addon-actions';
 import { Modal, setAppElement } from 'components/modal';
 import readme from 'components/modal/README.md';
+import { svgs } from '../src';
 import {
   authBackground,
   lightBackground,
   darkBackground,
 } from './constants';
 
+const { SvgLogoMark } = svgs.icons;
+
 function ModalContent({ color }) {
   return (
     <div className="content-container">
-      <h2>Modal Content</h2>
-      <hr />
       <p>
         { /* eslint-disable-next-line max-len */ }
         {'Lorem ipsum dolor amet subway tile everyday carry chambray freegan put a bird on it man braid edison bulb vegan sriracha bicycle rights affogato vape. Tote bag palo santo echo park fixie kale chips, offal DIY ugh. Yr gentrify thundercats ugh migas edison bulb seitan vape food truck XOXO. Prism before they sold out pitchfork, squid forage XOXO kitsch irony 90\'s. Tacos deep v humblebrag hexagon adaptogen intelligentsia, venmo PBR&B locavore knausgaard craft beer occupy sriracha microdosing prism. Readymade brooklyn godard vexillologist austin raclette polaroid narwhal retro selvage gochujang VHS cloud bread tumeric. Tote bag cred tacos meh.'}
@@ -44,13 +44,31 @@ function ModalContent({ color }) {
 
 const ModalDemo = () => {
   const show = boolean('show', false);
+  const [showValue, setShowValue] = useState(show);
   setAppElement(document.querySelector('div.page'));
+
+  useEffect(() => {
+    setShowValue(show);
+  }, [show]);
+
+  function onClose() {
+    setShowValue(false);
+  }
 
   return (
     <div className="page">
       <Modal
-        onClose={action('closed')}
-        show={show}
+        customStyles={{
+          bottom: '10%',
+          top: '10%',
+          width: '50%',
+        }}
+        Icon={SvgLogoMark}
+        onClose={onClose}
+        show={showValue}
+        subTitle="Long, but important"
+        title="Terms of Service"
+        useAltTheme
       >
         <ModalContent />
       </Modal>

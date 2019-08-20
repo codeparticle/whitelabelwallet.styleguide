@@ -5,6 +5,7 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import ReactModal from 'react-modal';
+import { Header } from 'components/header';
 import { shade, white } from 'styles/colors.scss';
 
 const { setAppElement } = ReactModal;
@@ -21,31 +22,23 @@ const defaultStyles = {
 function Modal({
   children,
   customStyles,
+  Icon,
   onClose,
   overlayBackground,
   show,
+  subTitle,
+  title,
+  useAltTheme,
   ...props
 }) {
   const [isOpen, setIsOpen] = useState(show);
-  const [initialized, setInitialized] = useState(false);
   const modalStyles = {
     ...defaultStyles,
     ...customStyles,
   };
 
   useEffect(() => {
-    // Prevents onClose from being called on first render
-    if (!initialized) {
-      setInitialized(true);
-    }
-  }, [initialized]);
-
-  useEffect(() => {
     setIsOpen(show);
-
-    if (initialized && !show && onClose) {
-      onClose();
-    }
   }, [show]);
 
   return (
@@ -56,10 +49,26 @@ function Modal({
         overlayClassName="overlay"
         {...props}
       >
-        {children}
+        <div className="modal-content">
+          <Header
+            onClose={onClose}
+            subTitle={subTitle}
+            title={title}
+            useAltTheme={useAltTheme}
+          />
+          {children}
+        </div>
       </ReactModal>
       <style jsx>
         {`
+          .modal-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 200px 1fr;
+            height: 100%;
+            width: 100%;
+          }
+
           :global(.overlay) {
             background: ${overlayBackground};
             bottom: 0;
@@ -100,16 +109,23 @@ Modal.propTypes = {
     top: PropTypes.string,
     width: PropTypes.string,
   }),
+  Icon: PropTypes.node,
   onClose: PropTypes.func,
   overlayBackground: PropTypes.string,
   show: PropTypes.bool,
+  subTitle: PropTypes.string,
+  title: PropTypes.string.isRequired,
+  useAltTheme: PropTypes.bool,
 };
 
 Modal.defaultProps = {
   customStyles: defaultStyles,
+  Icon: null,
   onClose: null,
   overlayBackground: shade,
   show: false,
+  subTitle: '',
+  useAltTheme: false,
 };
 
 export {
