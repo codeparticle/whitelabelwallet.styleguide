@@ -27,6 +27,7 @@ export { QRCode } from './components/qr-code';
 export { Icon } from './components/icon';
 export { Logo } from './components/logo';
 export { MediaContext, MediaProvider } from './components/media-provider';
+export { Modal, setAppElement } from './components/modal';
 export { NavBar } from './components/nav-bar';
 export { OverflowContainer } from './components/overflow-container';
 export { Overlay } from './components/overlay';

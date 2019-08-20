@@ -15,6 +15,7 @@ import './icon';
 import './list/list';
 import './logo';
 import './media-provider';
+import './modal';
 import './nav-bar';
 import './overflow-container';
 import './overlay';
