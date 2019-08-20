@@ -77,7 +77,9 @@ export function Overlay({
             title={title}
             useAltTheme={useAltTheme}
           />
-          {children}
+          <div>
+            {children}
+          </div>
         </div>
       </Sidepanel>
       <style jsx>
@@ -88,6 +90,10 @@ export function Overlay({
             height: 100%;
             overflow: auto;
             width: 100%;
+          }
+
+          .sidepanel {
+            grid-template-rows: 336px 1fr;
           }
         `}
       </style>
