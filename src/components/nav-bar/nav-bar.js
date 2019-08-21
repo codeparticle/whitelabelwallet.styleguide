@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import Sidepanel from '@codeparticle/react-sidenav';
 import { white } from 'styles/colors.scss';
-import layout, { zIndexMiddle } from 'styles/layout.scss';
+import layout from 'styles/layout.scss';
 import { Logo } from 'components/logo';
 import { Icon as IconWrapper, IconVariants } from 'components/icon';
 import { icons } from 'svgs';
@@ -122,7 +122,7 @@ export function NavBar({
       fixed={windowWidth <= widthBreakpointXS}
       isOpen={isOpen || windowWidth > widthBreakpointMd}
       width={width.toString()}
-      zIndex={parseInt(zIndexMiddle, 10)}
+      zIndex={parseInt(layout.zIndexMiddle, 10)}
     >
       <nav className={styles.component}>
         <IconWrapper
