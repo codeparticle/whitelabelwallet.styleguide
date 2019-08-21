@@ -175,3 +175,7 @@ module.exports = {
     });
   },
 };
+
+if (process.argv[2] === '--run') {
+  module.exports.processSvgs();
+}
