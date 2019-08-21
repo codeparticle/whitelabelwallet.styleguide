@@ -23,8 +23,8 @@ import { IconComponent } from '@codeparticle/whitelabelwallet.styleguide';
 | ---- | ---- | ------- | ----------- |
 | className | string | '' | Sets the className for the button element |
 | onClose | func | '' | Handles when the close button is clicked |
+| hideBackground | bool | false | If true, sets background transparent |
 | Icon | func |  | A required svg component to display within the header|
-| minimalStyles | bool | false | If true, hides subTitle and sets background transparent |
 | title | string | '' | Large title to diplay in the header|
 | subTitle | string | '' | Display additional title information |
 | useAltTheme | bool | false | If true, displays alternate theme |

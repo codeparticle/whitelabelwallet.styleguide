@@ -11,7 +11,7 @@ const THEME_KEY = 'header';
 
 const Header = ({
   className,
-  minimalStyle,
+  hideBackground,
   Icon,
   title,
   subTitle,
@@ -60,18 +60,18 @@ const Header = ({
       </div>
       <div className={classNames(
         styles['header__title'],
-        subTitle && !minimalStyle && styles['with-subtitle'],
+        subTitle && styles['with-subtitle'],
       )}
       >{title}
       </div>
-      {subTitle && !minimalStyle && (
+      {subTitle && (
         <div className={classNames(styles['header__sub-title'])}>{subTitle}</div>
       )}
       <style jsx>
         {`
           .${styles['header']} {
-            background: ${minimalStyle ? 'transparent' : theme.bg};
-            padding-bottom: ${minimalStyle ? 0 : '10%'};
+            background: ${hideBackground ? 'transparent' : theme.bg};
+            padding-bottom: ${hideBackground ? 0 : '10%'};
           }
         `}
       </style>
@@ -81,8 +81,8 @@ const Header = ({
 
 Header.propTypes = {
   className: PropTypes.string,
-  minimalStyle: PropTypes.bool,
-  Icon: PropTypes.func.isRequired,
+  hideBackground: PropTypes.bool,
+  Icon: PropTypes.func,
   onClose: PropTypes.func,
   subTitle: PropTypes.string,
   title: PropTypes.string,
@@ -91,7 +91,8 @@ Header.propTypes = {
 
 Header.defaultProps = {
   className: '',
-  minimalStyle: false,
+  hideBackground: false,
+  Icon: null,
   onClose: null,
   subTitle: '',
   title: '',

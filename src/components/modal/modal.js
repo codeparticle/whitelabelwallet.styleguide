@@ -2,7 +2,7 @@
  * @fileoverview Modal Component
  * @author Gabriel Womble
  */
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import ReactModal from 'react-modal';
 import { Header } from 'components/header';
@@ -25,21 +25,16 @@ function Modal({
   Icon,
   onClose,
   overlayBackground,
-  show,
+  isOpen,
   subTitle,
   title,
   useAltTheme,
   ...props
 }) {
-  const [isOpen, setIsOpen] = useState(show);
   const modalStyles = {
     ...defaultStyles,
     ...customStyles,
   };
-
-  useEffect(() => {
-    setIsOpen(show);
-  }, [show]);
 
   return (
     <>
@@ -109,10 +104,10 @@ Modal.propTypes = {
     top: PropTypes.string,
     width: PropTypes.string,
   }),
-  Icon: PropTypes.node,
+  Icon: PropTypes.func,
+  isOpen: PropTypes.bool,
   onClose: PropTypes.func,
   overlayBackground: PropTypes.string,
-  show: PropTypes.bool,
   subTitle: PropTypes.string,
   title: PropTypes.string.isRequired,
   useAltTheme: PropTypes.bool,
@@ -121,9 +116,9 @@ Modal.propTypes = {
 Modal.defaultProps = {
   customStyles: defaultStyles,
   Icon: null,
+  isOpen: false,
   onClose: null,
   overlayBackground: shade,
-  show: false,
   subTitle: '',
   useAltTheme: false,
 };

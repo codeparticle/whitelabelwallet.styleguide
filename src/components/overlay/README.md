@@ -43,14 +43,14 @@ Allows specifying a custom background color. If none is specified, it will defau
 Renders an Icon above the header title
 
 ----
+#### isOpen
+
+If true, the sidepanel is visible. If false, the sidepanel is hidden.
+
+----
 #### onClose
 
 A callback for when the sidePanel closes. A common usecase scenario where you may need to use this is if you passed true for clickOffToClose and now need to reset the value of show to false.
-
-----
-#### show
-
-If true, the sidepanel is visible. If false, the sidepanel is hidden.
 
 ----
 #### subTitle
@@ -80,8 +80,8 @@ If true, uses the header's alternate theme
 | ---- | ---- | ------- |
 | background | string | '' |
 | Icon | `node` | null |
+| isOpen | bool | false |
 | onClose | func | null |
-| show | bool | false |
 | subTitle | `string` | '' |
 | title | `string` | *required* |
 | type | oneOf 'overlay' 'sidepanel' | 'overlay' |

@@ -12,9 +12,11 @@ import { Modal } from '@codeparticle/whitelabelwallet.styleguide';
 
 
 function MyModal() {
-  const [show, setShow] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   function onClose() {
+    setIsOpen(false);
+
     console.log('Closed!');
   }
 
@@ -28,8 +30,8 @@ function MyModal() {
         width: '50%',
       }}
       Icon={SvgLogoMark}
+      isOpen={isOpen}
       onClose={onClose}
-      show={showValue}
       subTitle="Long, but important"
       title="Terms of Service"
       useAltTheme
@@ -91,6 +93,13 @@ and the defaultStyles will be filled in!
 Renders an Icon above the header title
 
 ----
+#### isOpen
+
+isOpen determines whether or not to render the Modal. If true, the Modal will be visible, if false, the Modal will be hidden.
+
+It defaults to `false`.
+
+----
 #### onClose
 
 The onClose prop specifies a function that will be called when the modal is closed.
@@ -103,13 +112,6 @@ It defaults to `null`.
 This prop allows you to specify a background for the overlay (the area outside of your modal content).
 
 It defaults to `shade`.
-
-----
-#### show
-
-Show determines whether or not to render the Modal. If true, the Modal will be visible, if false, the Modal will be hidden.
-
-It defaults to `false`.
 
 ----
 #### subTitle
@@ -133,9 +135,9 @@ If true, uses the header's alternate theme
 | ---- | ---- | ------- |
 | customStyles | `object` | See above. |
 | Icon | `node` | null |
+| isOpen | `bool` | `false` |
 | onClose | `func` | `null` |
 | overlayBackground | `string` | shade (`'#60799840'`) |
-| show | `bool` | `false` |
 | subTitle | `string` | '' |
 | title | `string` | *required* |
 | useAltTheme | `bool` | `false` |

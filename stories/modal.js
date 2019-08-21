@@ -43,16 +43,16 @@ function ModalContent({ color }) {
 }
 
 const ModalDemo = () => {
-  const show = boolean('show', false);
-  const [showValue, setShowValue] = useState(show);
+  const isOpen = boolean('isOpen', true);
+  const [isOpenValue, setIsOpenValue] = useState(isOpen);
   setAppElement(document.querySelector('div.page'));
 
   useEffect(() => {
-    setShowValue(show);
-  }, [show]);
+    setIsOpenValue(isOpen);
+  }, [isOpen]);
 
   function onClose() {
-    setShowValue(false);
+    setIsOpenValue(false);
   }
 
   return (
@@ -65,7 +65,7 @@ const ModalDemo = () => {
         }}
         Icon={SvgLogoMark}
         onClose={onClose}
-        show={showValue}
+        isOpen={isOpenValue}
         subTitle="Long, but important"
         title="Terms of Service"
         useAltTheme

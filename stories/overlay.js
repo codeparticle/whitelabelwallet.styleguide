@@ -10,7 +10,7 @@ import { ThemeWrapper } from './utils';
 
 const { SvgLogoMark } = svgs.icons;
 
-function OverlayContent({ color }) {
+function OverlayContent() {
   return (
     <div className="content-container">
       <p>
@@ -26,7 +26,6 @@ function OverlayContent({ color }) {
         {`
           .content-container {
             align-items: center;
-            color: ${color};
             display: flex;
             flex-direction: column;
             height: 100%;
@@ -42,20 +41,19 @@ function OverlayContent({ color }) {
 const OverlayDemo = ({
   defaultToDark,
 }) => {
-  const show = boolean('show', false);
-  const [showValue, setShowValue] = useState(show);
+  const isOpen = boolean('isOpen', true);
+  const [isOpenValue, setIsOpenValue] = useState(isOpen);
   const type = select('type', { sidepanel: 'sidepanel', overlay: 'overlay' }, 'sidepanel');
   const color = defaultToDark ? 'white' : 'black';
-  const textColor = type === 'overlay' ? 'white' : color;
 
   useEffect(() => {
-    setShowValue(show);
-  }, [show]);
+    setIsOpenValue(isOpen);
+  }, [isOpen]);
 
   function onClose() {
     action('closed');
 
-    setShowValue(false);
+    setIsOpenValue(false);
   }
 
   return (
@@ -65,13 +63,13 @@ const OverlayDemo = ({
         <div className="page">
           <Overlay
             onClose={onClose}
-            show={showValue}
+            isOpen={isOpenValue}
             type={type}
             title="Wallet disclaimer"
             subTitle="Very important stuff!"
             Icon={SvgLogoMark}
           >
-            <OverlayContent color={textColor} />
+            <OverlayContent />
           </Overlay>
           <style jsx>
             {`

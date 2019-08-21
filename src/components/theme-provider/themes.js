@@ -148,6 +148,7 @@ const lightTheme = {
     color: slate,
   },
   overlay: {
+    color: slate,
     sidepanel: tintBlue,
     overlay: blueShade,
   },
@@ -287,6 +288,7 @@ const darkTheme = {
     color: grey,
   },
   overlay: {
+    color: grey,
     sidepanel: dark,
     overlay: blueShade,
   },
