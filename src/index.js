@@ -26,6 +26,7 @@ export { cellFormatters, List } from './components/list';
 export { QRCode } from './components/qr-code';
 export { Icon } from './components/icon';
 export { Logo } from './components/logo';
+export { NavBar } from './components/nav-bar';
 export { Overlay } from './components/overlay';
 export { Search } from './components/search';
 export { Select } from './components/select';
