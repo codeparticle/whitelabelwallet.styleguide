@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.7](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/compare/v0.3.6...v0.3.7) (2019-08-21)
+
+
+### Bug Fixes
+
+* **wlw-96:** made nav-bar have fixed position on mobile ([4ec857b](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/4ec857b))
+
+
+### Features
+
+* **wlw-123:** added OverflowContainer, media utils ([bda3091](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/bda3091))
+* **wlw-91:** added modal component ([893989c](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/893989c))
+* **wlw-91:** addressing comments ([a9906a7](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/a9906a7))
+* **wlw-91:** enforce header height on sidepanel ([230deed](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/230deed))
+* **wlw-91:** refactoring overlay and modal implementations ([2a2792c](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/2a2792c))
+
+
+
 ### [0.3.6](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/compare/v0.3.5...v0.3.6) (2019-08-21)
 
 
