@@ -1,6 +1,6 @@
 {
   "name": "@codeparticle/whitelabelwallet.styleguide",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "Styleguide for the CodeParticle White Label Wallet",
   "main": "dist/index.js",
   "files": [

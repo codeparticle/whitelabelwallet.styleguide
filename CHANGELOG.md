@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.4](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/compare/v0.3.3...v0.3.4) (2019-08-21)
+
+
+### Bug Fixes
+
+* **wlw-99:** fixed ios safari input shadow ([8a55ab5](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/8a55ab5))
+
+
+### Features
+
+* **wlw-72:** added transaction-history and terms-of-service icons ([2c19fe7](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/2c19fe7))
+* **wlw-94:** added overlay component ([8ac72e1](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/8ac72e1))
+* **wlw-96:** created nav-bar component ([d5b77f0](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/d5b77f0))
+
+
+
 ### [0.3.3](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/compare/v0.3.2...v0.3.3) (2019-08-15)
 
 
