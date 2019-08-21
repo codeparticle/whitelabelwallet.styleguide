@@ -26,7 +26,9 @@ export { cellFormatters, List } from './components/list';
 export { QRCode } from './components/qr-code';
 export { Icon } from './components/icon';
 export { Logo } from './components/logo';
+export { MediaContext, MediaProvider } from './components/media-provider';
 export { NavBar } from './components/nav-bar';
+export { OverflowContainer } from './components/overflow-container';
 export { Overlay } from './components/overlay';
 export { Search } from './components/search';
 export { Select } from './components/select';
@@ -41,4 +43,7 @@ export {
   withTheme,
 } from './components/theme-provider';
 export { Tooltip } from './components/tooltip';
+
+export { useMedia } from './hooks/use-media';
+
 export * as svgs from './svgs';
