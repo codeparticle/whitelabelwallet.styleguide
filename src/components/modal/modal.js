@@ -7,6 +7,7 @@ import PropTypes from 'prop-types';
 import ReactModal from 'react-modal';
 import { Header } from 'components/header';
 import { shade, white } from 'styles/colors.scss';
+import { zIndexTop } from 'styles/layout.scss';
 
 const { setAppElement } = ReactModal;
 
@@ -84,6 +85,7 @@ function Modal({
             position: absolute;
             right: calc(50vw - ${modalStyles.width} / 2);
             top: ${modalStyles.top};
+            z-index: ${zIndexTop};
           }
         `}
       </style>
