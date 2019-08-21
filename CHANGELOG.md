@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.6](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/compare/v0.3.5...v0.3.6) (2019-08-21)
+
+
+### Bug Fixes
+
+* patch publishing ([633c26b](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/633c26b))
+
+
+
 ### [0.3.5](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/compare/v0.3.4...v0.3.5) (2019-08-21)
 
 
