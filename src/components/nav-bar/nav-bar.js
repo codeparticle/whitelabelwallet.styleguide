@@ -115,6 +115,7 @@ export function NavBar({
 
   return (
     <Sidepanel
+      fixed={windowWidth <= widthBreakpointXS}
       isOpen={isOpen || windowWidth > widthBreakpointMd}
       className={styles.wrapper}
       width={width.toString()}
