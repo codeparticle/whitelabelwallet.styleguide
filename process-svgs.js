@@ -86,9 +86,9 @@ ${getPropDefinition(hasWidth, 'width')}
 ${name}.propTypes = {
   className: PropTypes.string,\
 ${getPropType(hasFill, 'fill', 'PropTypes.string')}\
-${getPropType(hasHeight, 'height', 'PropTypes.string')}\
+${getPropType(hasHeight, 'height', 'PropTypes.oneOfType([PropTypes.string, PropTypes.number])')}\
 ${getPropType(hasStroke, 'stroke', 'PropTypes.string')}\
-${getPropType(hasWidth, 'width', 'PropTypes.string')}
+${getPropType(hasWidth, 'width', 'PropTypes.oneOfType([PropTypes.string, PropTypes.number])')}
 };
 
 ${name}.defaultProps = {
