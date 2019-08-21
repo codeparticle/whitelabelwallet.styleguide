@@ -20,6 +20,7 @@ const {
   mintChip,
   gradientBlueStart,
   gradientBlueEnd,
+  gradientTeal,
   blueShade,
 } = colors;
 
@@ -147,6 +148,7 @@ const lightTheme = {
     color: slate,
   },
   overlay: {
+    color: slate,
     sidepanel: tintBlue,
     overlay: blueShade,
   },
@@ -286,6 +288,7 @@ const darkTheme = {
     color: grey,
   },
   overlay: {
+    color: grey,
     sidepanel: dark,
     overlay: blueShade,
   },
@@ -314,6 +317,11 @@ const alternateTheme = {
     bg: white,
     label: white,
     textValue: dark,
+  },
+  header: {
+    bg: gradientTeal,
+    svgFill: white,
+    closeBtn: white,
   },
 };
 

@@ -3,21 +3,26 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import uuidv1 from 'uuid/v1';
 import { icons } from '../../svgs';
-import { useTheme } from '../theme-provider';
+import { themes, useTheme } from '../theme-provider';
 import styles from './header.scss';
 
 const { SvgClose } = icons;
+const THEME_KEY = 'header';
 
 const Header = ({
   className,
+  hideBackground,
   Icon,
   title,
   subTitle,
   onClose,
+  useAltTheme,
   ...rest
 }) => {
   const inputId = `header-${uuidv1()}`;
-  const theme = useTheme('header');
+  const theme = useAltTheme
+    ? themes.alt[THEME_KEY]
+    : useTheme(THEME_KEY);
 
   const renderCloseButton = () => {
     if (onClose) {
@@ -49,7 +54,9 @@ const Header = ({
         styles['icon-wrapper']
       )}
       >
-        <Icon fill={theme.svgFill} />
+        {Icon && (
+          <Icon fill={theme.svgFill} />
+        )}
       </div>
       <div className={classNames(
         styles['header__title'],
@@ -57,11 +64,14 @@ const Header = ({
       )}
       >{title}
       </div>
-      <div className={classNames(styles['header__sub-title'])}>{subTitle}</div>
+      {subTitle && (
+        <div className={classNames(styles['header__sub-title'])}>{subTitle}</div>
+      )}
       <style jsx>
         {`
           .${styles['header']} {
-            background: ${theme.bg};
+            background: ${hideBackground ? 'transparent' : theme.bg};
+            padding-bottom: ${hideBackground ? 0 : '10%'};
           }
         `}
       </style>
@@ -71,17 +81,22 @@ const Header = ({
 
 Header.propTypes = {
   className: PropTypes.string,
-  Icon: PropTypes.func.isRequired,
+  hideBackground: PropTypes.bool,
+  Icon: PropTypes.func,
   onClose: PropTypes.func,
   subTitle: PropTypes.string,
   title: PropTypes.string,
+  useAltTheme: PropTypes.bool,
 };
 
 Header.defaultProps = {
   className: '',
+  hideBackground: false,
+  Icon: null,
   onClose: null,
   subTitle: '',
   title: '',
+  useAltTheme: false,
 };
 
 export { Header };

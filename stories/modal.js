@@ -1,16 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import { storiesOf } from '@storybook/react';
-import { boolean, select, withKnobs } from '@storybook/addon-knobs';
-import { action } from '@storybook/addon-actions';
 import { withReadme } from 'storybook-readme';
-import { Overlay, svgs } from '../src';
-import readme from '../src/components/overlay/README.md';
-import { lightBackground, darkBackground } from './constants';
-import { ThemeWrapper } from './utils';
+import { boolean, withKnobs } from '@storybook/addon-knobs';
+import { Modal, setAppElement } from 'components/modal';
+import readme from 'components/modal/README.md';
+import { svgs } from '../src';
+import {
+  authBackground,
+  lightBackground,
+  darkBackground,
+} from './constants';
 
 const { SvgLogoMark } = svgs.icons;
 
-function OverlayContent() {
+function ModalContent({ color }) {
   return (
     <div className="content-container">
       <p>
@@ -26,6 +29,7 @@ function OverlayContent() {
         {`
           .content-container {
             align-items: center;
+            color: ${color};
             display: flex;
             flex-direction: column;
             height: 100%;
@@ -38,74 +42,57 @@ function OverlayContent() {
   );
 }
 
-const OverlayDemo = ({
-  defaultToDark,
-}) => {
+const ModalDemo = () => {
   const isOpen = boolean('isOpen', true);
   const [isOpenValue, setIsOpenValue] = useState(isOpen);
-  const type = select('type', { sidepanel: 'sidepanel', overlay: 'overlay' }, 'sidepanel');
-  const color = defaultToDark ? 'white' : 'black';
+  setAppElement(document.querySelector('div.page'));
 
   useEffect(() => {
     setIsOpenValue(isOpen);
   }, [isOpen]);
 
   function onClose() {
-    action('closed');
-
     setIsOpenValue(false);
   }
 
   return (
-    <ThemeWrapper
-      defaultToDark={defaultToDark}
-      content={
-        <div className="page">
-          <Overlay
-            onClose={onClose}
-            isOpen={isOpenValue}
-            type={type}
-            title="Wallet disclaimer"
-            subTitle="Very important stuff!"
-            Icon={SvgLogoMark}
-          >
-            <OverlayContent />
-          </Overlay>
-          <style jsx>
-            {`
-              :global(.sb-show-main) {
-                margin: 0 !important;
-              }
+    <div className="page">
+      <Modal
+        customStyles={{
+          bottom: '10%',
+          top: '10%',
+          width: '50%',
+        }}
+        Icon={SvgLogoMark}
+        onClose={onClose}
+        isOpen={isOpenValue}
+        subTitle="Long, but important"
+        title="Terms of Service"
+        useAltTheme
+      >
+        <ModalContent />
+      </Modal>
+      <style jsx>
+        {`
+          :global(.sb-show-main) {
+            margin: 0 !important;
+          }
 
-              .page {
-                border: 15px solid ${color};
-                height: 100vh;
-                width: 100vw;
-              }
-
-              p {
-                color: ${color};
-              }
-            `}
-          </style>
-        </div>
-      }
-    />
+          .page {
+            height: 100vh;
+            width: 100vw;
+          }
+        `}
+      </style>
+    </div>
   );
 };
 
-storiesOf('Overlay', module)
+storiesOf('Modal', module)
   .addDecorator(withReadme(readme))
   .addDecorator(withKnobs)
-  .add('Light', () => (
-    <OverlayDemo />
+  .add('Modal', () => (
+    <ModalDemo />
   ), {
-    backgrounds: [{ ...lightBackground, default: true }, darkBackground],
-  })
-  .add('Dark', () => (
-    <OverlayDemo
-      defaultToDark
-    />
-  ), {
-    backgrounds: [{ ...darkBackground, default: true }, lightBackground],
+    backgrounds: [{ ...authBackground, default: true }, lightBackground, darkBackground],
   });

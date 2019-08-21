@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import Sidepanel from '@codeparticle/react-sidenav';
+import { Header } from 'components/header';
+import { white } from 'styles/colors.scss';
 import { useTheme } from '../theme-provider';
 import { TYPES } from './constants';
 
@@ -23,13 +25,18 @@ function handleSidePanelResize(innerWidth, setFn) {
 export function Overlay({
   background,
   children,
+  Icon,
   onClose,
-  show,
+  isOpen,
+  subTitle,
+  title,
   type,
+  useAltTheme,
 }) {
   const theme = useTheme('overlay');
   const [width, setWidth] = useState('0px');
   const [windowWidth, setWindowWidth] = useState(window.innerHeight || 0);
+  const color = type === OVERLAY ? white : theme.color;
 
   function handleResize() {
     setWindowWidth(window.innerWidth);
@@ -54,33 +61,70 @@ export function Overlay({
 
 
   return (
-    <Sidepanel
-      fixed
-      right
-      backgroundColor={background || theme[type]}
-      isOpen={show}
-      onStateChange={onClose}
-      width={width}
-    >
-      {children}
-    </Sidepanel>
+    <>
+      <Sidepanel
+        fixed
+        right
+        backgroundColor={background || theme[type]}
+        isOpen={isOpen}
+        onStateChange={onClose}
+        width={width}
+      >
+        <div className={`content ${type}`}>
+          <Header
+            Icon={Icon}
+            hideBackground={type === OVERLAY}
+            onClose={onClose}
+            subTitle={type === OVERLAY ? null : subTitle}
+            title={title}
+            useAltTheme={useAltTheme}
+          />
+          <div>
+            {children}
+          </div>
+        </div>
+      </Sidepanel>
+      <style jsx>
+        {`
+          .content {
+            color: ${color};
+            display: grid;
+            grid-template-columns: 1fr;
+            height: 100%;
+            overflow: auto;
+            width: 100%;
+          }
+
+          .sidepanel {
+            grid-template-rows: 336px 1fr;
+          }
+        `}
+      </style>
+    </>
   );
 }
 
 Overlay.propTypes = {
   background: PropTypes.string,
   children: PropTypes.node.isRequired,
+  Icon: PropTypes.func,
+  isOpen: PropTypes.bool,
   onClose: PropTypes.func,
-  show: PropTypes.bool,
+  subTitle: PropTypes.string,
+  title: PropTypes.string.isRequired,
   type: PropTypes.oneOf([
     OVERLAY,
     SIDEPANEL,
   ]),
+  useAltTheme: PropTypes.bool,
 };
 
 Overlay.defaultProps = {
   background: '',
+  Icon: null,
+  isOpen: false,
   onClose: null,
-  show: false,
+  subTitle: '',
   type: OVERLAY,
+  useAltTheme: false,
 };
