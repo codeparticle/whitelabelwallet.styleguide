@@ -90,6 +90,7 @@ $max-logo-width: 500px;
       text-decoration: none;
 
       .icon {
+        flex-shrink: 0;
         padding-right: $space-4;
       }
 

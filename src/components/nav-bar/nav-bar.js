@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import Sidepanel from '@codeparticle/react-sidenav';
 import { white } from 'styles/colors.scss';
-import layout from 'styles/layout.scss';
+import layout, { zIndexMiddle } from 'styles/layout.scss';
 import { Logo } from 'components/logo';
 import { Icon as IconWrapper, IconVariants } from 'components/icon';
 import { icons } from 'svgs';
@@ -59,15 +59,17 @@ function handleSidePanelResize(innerWidth, setFn) {
   Renders a nav item
   @param {NavItemProps} props - props for NavItem
   @param {number} key - index which becomes the key of the mapped nav item
+  @param {Function} onClick - Callback for onNavItemClick
   @returns {Node} - rendered NavItem
 */
 const NavItem = ({
   label,
   Icon,
   path,
-}, key) => (
+}, key, onClick) => (
   <Link
     key={key}
+    onClick={() => onClick(label, path)}
     to={path}
     className={styles.navItem}
   >
@@ -96,6 +98,7 @@ export function NavBar({
   linkHref,
   navItems,
   onClose,
+  onNavItemClick,
 }) {
   const [width, setWidth] = useState(isOpen ? calculateWidth(window.innerWidth) : '0px');
   const [windowWidth, setWindowWidth] = useState(window.innerWidth || 0);
@@ -115,10 +118,11 @@ export function NavBar({
 
   return (
     <Sidepanel
+      className={styles.wrapper}
       fixed={windowWidth <= widthBreakpointXS}
       isOpen={isOpen || windowWidth > widthBreakpointMd}
-      className={styles.wrapper}
       width={width.toString()}
+      zIndex={parseInt(zIndexMiddle, 10)}
     >
       <nav className={styles.component}>
         <IconWrapper
@@ -128,11 +132,15 @@ export function NavBar({
           variant={IconVariants.TERTIARY}
         />
         <div>
-          <Link to="/" className={styles.logo}>
+          <Link
+            to="/"
+            className={styles.logo}
+            onClick={() => onNavItemClick('', '/')}
+          >
             <Logo />
           </Link>
           <div>
-            {navItems.map(NavItem)}
+            {navItems.map((navItem, index) => NavItem(navItem, index, onNavItemClick))}
           </div>
         </div>
         <div className={styles.footer}>
@@ -162,6 +170,7 @@ NavBar.propTypes = {
     path: PropTypes.string.isRequired,
   })),
   onClose: PropTypes.func,
+  onNavItemClick: PropTypes.func,
 };
 
 NavBar.defaultProps = {
@@ -171,4 +180,5 @@ NavBar.defaultProps = {
   linkHref: 'https://www.cryptoparticle.io/',
   navItems: [],
   onClose: null,
+  onNavItemClick: () => null,
 };

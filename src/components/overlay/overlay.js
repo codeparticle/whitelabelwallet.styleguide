@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Sidepanel from '@codeparticle/react-sidenav';
 import { Header } from 'components/header';
 import { white } from 'styles/colors.scss';
+import { zIndexMiddle, zIndexTop } from 'styles/layout.scss';
 import { useTheme } from '../theme-provider';
 import { TYPES } from './constants';
 
@@ -69,6 +70,7 @@ export function Overlay({
         isOpen={isOpen}
         onStateChange={onClose}
         width={width}
+        zIndex={parseInt(type === OVERLAY ? zIndexTop : zIndexMiddle, 10)}
       >
         <div className={`content ${type}`}>
           <Header
