@@ -18,6 +18,7 @@ import './media-provider';
 import './nav-bar';
 import './overflow-container';
 import './overlay';
+import './page-header';
 import './qr-code';
 import './search';
 import './select';

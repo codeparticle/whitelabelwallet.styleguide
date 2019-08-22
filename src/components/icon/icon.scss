@@ -5,17 +5,10 @@
 .icon {
   background: rgba(0, 0, 0, 0);
   border: 0;
-  color: $dark;
-  max-height: $font-size-md-2;
-  max-width: $font-size-md-2;
-  min-height: $font-size-md-1;
-  min-width: $font-size-md-1;
-  padding: $space-1;
+  color: $grey;
 
   svg {
     display: block;
-    height: 100%;
-    width: 100%;
 
     & > path {
       fill: currentColor;

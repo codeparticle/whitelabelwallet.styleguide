@@ -49,11 +49,16 @@ import {
 /**
  * @returns {media} media
  * @param {boolean} withContext - Tells the hook to consume MediaContext
- * rather than add a new event listener. Defaults to true
+ * rather than add a new event listener. Defaults to true. If there is no Provider,
+ * will add a new listener as a fallback.
  */
 function useMedia(withContext = true) {
   if (withContext) {
-    return useContext(MediaContext);
+    const media = useContext(MediaContext);
+
+    if (media) {
+      return media;
+    }
   }
   const isClient = typeof window === 'object';
 
