@@ -17,6 +17,7 @@ const {
   gradientDark,
   offWhite,
   tintBlue,
+  lightBlue,
   mintChip,
   gradientBlueStart,
   gradientBlueEnd,
@@ -149,8 +150,9 @@ const lightTheme = {
   },
   overlay: {
     color: slate,
-    sidepanel: tintBlue,
+    sidepanel: white,
     overlay: blueShade,
+    footerBackground: lightBlue,
   },
   pageHeader: {
     color: slate,
@@ -294,6 +296,7 @@ const darkTheme = {
     color: grey,
     sidepanel: dark,
     overlay: blueShade,
+    footerBackground: coolGreyDark,
   },
   pageHeader: {
     color: grey,

@@ -2,10 +2,12 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import Sidepanel from '@codeparticle/react-sidenav';
 import { Header } from 'components/header';
+import { Button } from 'components/button';
 import { white } from 'styles/colors.scss';
 import { zIndexMiddle, zIndexTop } from 'styles/layout.scss';
 import { useTheme } from '../theme-provider';
 import { TYPES } from './constants';
+import styles from './overlay.scss';
 
 const {
   OVERLAY,
@@ -25,8 +27,12 @@ function handleSidePanelResize(innerWidth, setFn) {
 
 export function Overlay({
   background,
+  cancelButtonText,
   children,
+  footerButtonText,
   Icon,
+  hasCancelButton,
+  onClick,
   onClose,
   isOpen,
   subTitle,
@@ -60,6 +66,43 @@ export function Overlay({
     return () => window.removeEventListener('resize', handleResize);
   }, []); // Effect only runs twice: mount & unmount
 
+  const cancelButton = (
+    <Button
+      onClick={onClose}
+      className="footer-btn"
+    >
+      {cancelButtonText}
+    </Button>
+  );
+
+  const renderFooter = (overlayType) => {
+    if (overlayType === 'sidepanel') {
+      return (
+        <div className={`footer ${styles.footer}`}>
+          {hasCancelButton ? cancelButton : null}
+          <Button
+            className={styles.footerBtn}
+            onClick={onClick}
+            variant="primary"
+          >
+            {footerButtonText}
+          </Button>
+          <style jsx>
+            {
+              `
+                .footer {
+                  background: ${theme.footerBackground};
+                }
+              `
+            }
+          </style>
+        </div>
+      );
+    }
+
+    return null;
+  };
+
 
   return (
     <>
@@ -73,33 +116,36 @@ export function Overlay({
         zIndex={parseInt(type === OVERLAY ? zIndexTop : zIndexMiddle, 10)}
       >
         <div className={`content ${type}`}>
-          <Header
-            Icon={Icon}
-            hideBackground={type === OVERLAY}
-            onClose={onClose}
-            subTitle={type === OVERLAY ? null : subTitle}
-            title={title}
-            useAltTheme={useAltTheme}
-          />
-          <div>
+          <div className={styles.header}>
+            <Header
+              Icon={Icon}
+              hideBackground={type === OVERLAY}
+              onClose={onClose}
+              subTitle={type === OVERLAY ? null : subTitle}
+              title={title}
+              useAltTheme={useAltTheme}
+            />
+          </div>
+          <div className="sidpanel-content">
             {children}
           </div>
+          {renderFooter(type)}
         </div>
       </Sidepanel>
       <style jsx>
         {`
           .content {
             color: ${color};
-            display: grid;
-            grid-template-columns: 1fr;
+            display: flex;
+            flex-direction: column;
             height: 100%;
             overflow: auto;
             width: 100%;
           }
-
-          .sidepanel {
-            grid-template-rows: 336px 1fr;
+          .sidpanel-content {
+            flex: 1;
           }
+
         `}
       </style>
     </>
@@ -109,8 +155,12 @@ export function Overlay({
 Overlay.propTypes = {
   background: PropTypes.string,
   children: PropTypes.node.isRequired,
+  cancelButtonText: PropTypes.string,
   Icon: PropTypes.func,
   isOpen: PropTypes.bool,
+  footerButtonText: PropTypes.string,
+  hasCancelButton: PropTypes.bool,
+  onClick: PropTypes.func,
   onClose: PropTypes.func,
   subTitle: PropTypes.string,
   title: PropTypes.string.isRequired,
@@ -123,8 +173,12 @@ Overlay.propTypes = {
 
 Overlay.defaultProps = {
   background: '',
+  cancelButtonText: 'Cancel',
   Icon: null,
   isOpen: false,
+  footerButtonText: 'Continue',
+  hasCancelButton: true,
+  onClick: null,
   onClose: null,
   subTitle: '',
   type: OVERLAY,
