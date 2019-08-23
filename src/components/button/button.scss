@@ -51,10 +51,12 @@ $btn-lg-width: 174px;
   $border: 2px solid $btn-color;
 
   background: $btn-color;
+  border: $border;
   color: $active-color;
 
   &:hover {
     background: $active-color;
+    border: 2px solid $active-color;
     color: $btn-color;
   }
 

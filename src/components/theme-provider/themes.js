@@ -152,6 +152,9 @@ const lightTheme = {
     sidepanel: tintBlue,
     overlay: blueShade,
   },
+  pageHeader: {
+    color: slate,
+  },
   qrcode: {
     bg: tintBlue,
     textTitle: slate,
@@ -291,6 +294,9 @@ const darkTheme = {
     color: grey,
     sidepanel: dark,
     overlay: blueShade,
+  },
+  pageHeader: {
+    color: grey,
   },
   qrcode: {
     bg: dark,

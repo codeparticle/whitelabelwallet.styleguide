@@ -6,6 +6,8 @@ You can use the useMedia hook w/ or without the MediaProvider, but you have to b
 
 The advantage of using the provider is that you'll only have on resize listener if multiple components are using the hook. However, the advantage of the hook is that if only one component uses it, you will remove the resize listener when that component unmounts. It's a generally trivial difference, but something to consider.
 
+*Note*: useMedia can now fallback to adding a resize listener if a provider isn't available. This is mostly useful for styleguide components that need useMedia, but don't want to impact performance by adding a listener. When consumed in the main app, they will consume the MediaProvider's context.
+
 ----
 ### Usage
 
