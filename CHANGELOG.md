@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.10](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/compare/v0.3.9...v0.3.10) (2019-08-23)
+
+
+### Features
+
+* **wlw-126:** added pageheader, improved useMedia ([e8f5b36](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/e8f5b36))
+
+
+
 ### [0.3.9](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/compare/v0.3.8...v0.3.9) (2019-08-21)
 
 
