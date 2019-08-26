@@ -50,3 +50,4 @@ return (
 | messages | object | '' | Copy and Send properties of type string |
 | onSend | func | '' | callback used on send button clicked |
 | onCopy | func | '' | callback used on copy button clicked defaults to copying to the clipboard |
+| onEdit | func | '' | callback used on cog icon clicked |
