@@ -37,6 +37,7 @@ export function Overlay({
   onClick,
   onClose,
   isOpen,
+  hasFooter,
   subTitle,
   title,
   type,
@@ -69,9 +70,12 @@ export function Overlay({
   }, []); // Effect only runs twice: mount & unmount
 
   const renderFooter = (overlayType) => {
+    if (!hasFooter) {
+      return null;
+    }
     if (overlayType === SIDEPANEL) {
       return (
-        <div className={`footer ${styles.footer}`}>
+        <div className={`sidepanelFooter ${styles.sidepanelFooter}`}>
           <Visible when={hasCancelButton}>
             <Button
               onClick={onCancelClick}
@@ -91,7 +95,7 @@ export function Overlay({
           <style jsx>
             {
               `
-                .footer {
+                .sidepanelFooter {
                   background: ${theme.footerBackground};
                 }
               `
@@ -100,8 +104,16 @@ export function Overlay({
         </div>
       );
     }
-
-    return null;
+    return (
+      <div className={styles.overlayFooter}>
+        <Button
+          onClick={onClick}
+          variant="primary"
+        >
+          {footerButtonText}
+        </Button>
+      </div>
+    );
   };
 
 
@@ -145,6 +157,12 @@ export function Overlay({
           }
           .sidpanel-content {
             flex: 1;
+            flex-shrink: 0;
+          }
+
+          .overlay {
+            overflow: scroll;
+            padding: 10%;
           }
 
         `}
@@ -161,6 +179,7 @@ Overlay.propTypes = {
   isOpen: PropTypes.bool,
   footerButtonText: PropTypes.string,
   hasCancelButton: PropTypes.bool,
+  hasFooter: PropTypes.bool,
   onCancelClick: PropTypes.func,
   onClick: PropTypes.func,
   onClose: PropTypes.func,
@@ -180,6 +199,7 @@ Overlay.defaultProps = {
   isOpen: false,
   footerButtonText: 'Continue',
   hasCancelButton: true,
+  hasFooter: true,
   onCancelClick: null,
   onClick: null,
   onClose: null,

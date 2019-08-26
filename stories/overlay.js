@@ -80,7 +80,6 @@ const OverlayDemo = ({
               }
 
               .page {
-                border: 15px solid ${color};
                 height: 100vh;
                 width: 100vw;
               }

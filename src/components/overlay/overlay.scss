@@ -1,13 +1,9 @@
-@import "styles/colors.scss";
-@import "styles/layout.scss";
-@import "styles/fonts.scss";
-
 .header {
   flex-basis: 336px;
   flex-shrink: 0;
 }
 
-.footer {
+.sidepanelFooter {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -15,5 +11,15 @@
 
   .footerBtn {
     margin: 0 10px;
+  }
+}
+
+.overlayFooter {
+  display: flex;
+  justify-content: center;
+  margin: 15px auto 30px auto;
+
+  button {
+    border-radius: 29px;
   }
 }
