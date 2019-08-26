@@ -139,7 +139,7 @@ export function Overlay({
               useAltTheme={useAltTheme}
             />
           </div>
-          <div className="sidpanel-content">
+          <div className="sidepanel-content">
             {children}
           </div>
           {renderFooter(type)}
@@ -155,7 +155,7 @@ export function Overlay({
             overflow: auto;
             width: 100%;
           }
-          .sidpanel-content {
+          .sidepanel-content {
             flex: 1;
             flex-shrink: 0;
           }
