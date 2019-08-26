@@ -1009,6 +1009,13 @@
   resolved "https://codeparticle.jfrog.io/codeparticle/api/npm/npm/@codeparticle/react-sidenav/-/react-sidenav-0.3.2.tgz#8fcbfc8e6d2851416f66a87ccf039ed71c4abf22"
   integrity sha1-j8v8jm0oUUFvZqh8zwOe1xxKvyI=
 
+"@codeparticle/react-visible@^1.2.2":
+  version "1.2.2"
+  resolved "https://codeparticle.jfrog.io/codeparticle/api/npm/npm/@codeparticle/react-visible/-/react-visible-1.2.2.tgz#d60967fb808f3f8b52f519be72592dd0d9917446"
+  integrity sha1-1gln+4CPP4tS9Rm+clkt0NmRdEY=
+  dependencies:
+    "@types/react" "^16.8.15"
+
 "@commitlint/cli@^7.6.1":
   version "7.6.1"
   resolved "https://registry.npmjs.org/@commitlint/cli/-/cli-7.6.1.tgz#a93cf995082831999937f6d5ec1a582c8fc0393a"
@@ -1943,6 +1950,14 @@
   version "16.8.23"
   resolved "https://registry.npmjs.org/@types/react/-/react-16.8.23.tgz#ec6be3ceed6353a20948169b6cb4c97b65b97ad2"
   integrity sha512-abkEOIeljniUN9qB5onp++g0EY38h7atnDHxwKUFz1r3VH1+yG1OKi2sNPTyObL40goBmfKFpdii2lEzwLX1cA==
+  dependencies:
+    "@types/prop-types" "*"
+    csstype "^2.2.0"
+
+"@types/react@^16.8.15":
+  version "16.9.2"
+  resolved "https://registry.npmjs.org/@types/react/-/react-16.9.2.tgz#6d1765431a1ad1877979013906731aae373de268"
+  integrity sha512-jYP2LWwlh+FTqGd9v7ynUKZzjj98T8x7Yclz479QdRhHfuW9yQ+0jjnD31eXSXutmBpppj5PYNLYLRfnZJvcfg==
   dependencies:
     "@types/prop-types" "*"
     csstype "^2.2.0"

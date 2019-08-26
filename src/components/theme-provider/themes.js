@@ -17,7 +17,6 @@ const {
   gradientDark,
   offWhite,
   tintBlue,
-  lightBlue,
   mintChip,
   gradientBlueStart,
   gradientBlueEnd,
@@ -152,7 +151,7 @@ const lightTheme = {
     color: slate,
     sidepanel: white,
     overlay: blueShade,
-    footerBackground: lightBlue,
+    footerBackground: tintBlue,
   },
   pageHeader: {
     color: slate,

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import Sidepanel from '@codeparticle/react-sidenav';
+import { Visible } from '@codeparticle/react-visible';
 import { Header } from 'components/header';
 import { Button } from 'components/button';
 import { white } from 'styles/colors.scss';
@@ -32,6 +33,7 @@ export function Overlay({
   footerButtonText,
   Icon,
   hasCancelButton,
+  onCancelClick,
   onClick,
   onClose,
   isOpen,
@@ -66,20 +68,19 @@ export function Overlay({
     return () => window.removeEventListener('resize', handleResize);
   }, []); // Effect only runs twice: mount & unmount
 
-  const cancelButton = (
-    <Button
-      onClick={onClose}
-      className="footer-btn"
-    >
-      {cancelButtonText}
-    </Button>
-  );
-
   const renderFooter = (overlayType) => {
-    if (overlayType === 'sidepanel') {
+    if (overlayType === SIDEPANEL) {
       return (
         <div className={`footer ${styles.footer}`}>
-          {hasCancelButton ? cancelButton : null}
+          <Visible when={hasCancelButton}>
+            <Button
+              onClick={onCancelClick}
+              className="footer-btn"
+            >
+              {cancelButtonText}
+            </Button>
+          </Visible>
+
           <Button
             className={styles.footerBtn}
             onClick={onClick}
@@ -160,6 +161,7 @@ Overlay.propTypes = {
   isOpen: PropTypes.bool,
   footerButtonText: PropTypes.string,
   hasCancelButton: PropTypes.bool,
+  onCancelClick: PropTypes.func,
   onClick: PropTypes.func,
   onClose: PropTypes.func,
   subTitle: PropTypes.string,
@@ -178,6 +180,7 @@ Overlay.defaultProps = {
   isOpen: false,
   footerButtonText: 'Continue',
   hasCancelButton: true,
+  onCancelClick: null,
   onClick: null,
   onClose: null,
   subTitle: '',

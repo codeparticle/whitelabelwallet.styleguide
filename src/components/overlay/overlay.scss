@@ -3,7 +3,8 @@
 @import "styles/fonts.scss";
 
 .header {
-  height: 336px;
+  flex-basis: 336px;
+  flex-shrink: 0;
 }
 
 .footer {
