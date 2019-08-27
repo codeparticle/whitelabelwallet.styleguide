@@ -17,11 +17,16 @@ const {
 
 const sidePanelMinWidth = 540;
 
-function handleSidePanelResize(innerWidth, setFn) {
+function calculateWidth(innerWidth) {
   const optimalWidth = innerWidth / 3;
-  const calculatedWidth = sidePanelMinWidth >= optimalWidth
+
+  return sidePanelMinWidth >= optimalWidth
     ? sidePanelMinWidth
     : optimalWidth;
+}
+
+function handleSidePanelResize(innerWidth, setFn) {
+  const calculatedWidth = calculateWidth(innerWidth);
 
   setFn(`${calculatedWidth}px`);
 }
@@ -44,8 +49,8 @@ export function Overlay({
   useAltTheme,
 }) {
   const theme = useTheme('overlay');
-  const [width, setWidth] = useState('0px');
-  const [windowWidth, setWindowWidth] = useState(window.innerHeight || 0);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth || 0);
+  const [width, setWidth] = useState(type === OVERLAY ? '100%' : `${calculateWidth(windowWidth)}px`);
   const color = type === OVERLAY ? white : theme.color;
 
   function handleResize() {
@@ -104,6 +109,7 @@ export function Overlay({
         </div>
       );
     }
+
     return (
       <div className={styles.overlayFooter}>
         <Button
