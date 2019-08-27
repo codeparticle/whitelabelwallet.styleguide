@@ -11,6 +11,7 @@ export function AuthCheckbox({
   checked,
   label,
   onChange,
+  color,
 }) {
   const id = Case.kebab(label);
 
@@ -20,7 +21,7 @@ export function AuthCheckbox({
 
   return (
     <>
-      <div className={styles['auth-checkbox']}>
+      <div className={`${styles['auth-checkbox']} auth-checkbox`}>
         <input
           type="checkbox"
           id={id}
@@ -31,6 +32,15 @@ export function AuthCheckbox({
         <label id={id} htmlFor={id}>
           <span>{label}</span>
         </label>
+        <style jsx>
+          {
+            `
+              auth-checkbox {
+                color: ${color};
+              }
+            `
+          }
+        </style>
       </div>
     </>
   );
@@ -38,6 +48,11 @@ export function AuthCheckbox({
 
 AuthCheckbox.propTypes = {
   checked: PropTypes.bool.isRequired,
+  color: PropTypes.string,
   label: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
+};
+
+AuthCheckbox.defaultProps = {
+  color: '#ffffff',
 };
