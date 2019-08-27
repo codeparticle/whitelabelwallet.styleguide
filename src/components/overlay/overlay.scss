@@ -1,0 +1,25 @@
+.header {
+  flex-shrink: 0;
+  height: 336px;
+}
+
+.sidepanelFooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 20px 30px;
+
+  .footerBtn {
+    margin: 0 10px;
+  }
+}
+
+.overlayFooter {
+  display: flex;
+  justify-content: center;
+  margin: 15px auto 30px auto;
+
+  button {
+    border-radius: 29px;
+  }
+}

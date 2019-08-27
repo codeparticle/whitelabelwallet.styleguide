@@ -63,7 +63,9 @@ const OverlayDemo = ({
         <div className="page">
           <Overlay
             onClose={onClose}
+            onClick={action('clicked')}
             isOpen={isOpenValue}
+            hasCancelButton={false}
             type={type}
             title="Wallet disclaimer"
             subTitle="Very important stuff!"
@@ -78,7 +80,6 @@ const OverlayDemo = ({
               }
 
               .page {
-                border: 15px solid ${color};
                 height: 100vh;
                 width: 100vw;
               }

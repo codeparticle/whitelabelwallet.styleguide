@@ -79,8 +79,13 @@ If true, uses the header's alternate theme
 | name | type | default |
 | ---- | ---- | ------- |
 | background | string | '' |
+| cancelButtonText | `string` | Cancel |
+| hasCancelButton | `bool` | true |
+| hasFooter | `bool` | true |
 | Icon | `node` | null |
-| isOpen | bool | false |
+| isOpen | `bool` | false |
+| footerButtonText | `string` | Continue |
+| onCancelClick | func | null |
 | onClose | func | null |
 | subTitle | `string` | '' |
 | title | `string` | *required* |

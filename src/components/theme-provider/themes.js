@@ -149,8 +149,9 @@ const lightTheme = {
   },
   overlay: {
     color: slate,
-    sidepanel: tintBlue,
+    sidepanel: white,
     overlay: blueShade,
+    footerBackground: tintBlue,
   },
   pageHeader: {
     color: slate,
@@ -294,6 +295,7 @@ const darkTheme = {
     color: grey,
     sidepanel: dark,
     overlay: blueShade,
+    footerBackground: coolGreyDark,
   },
   pageHeader: {
     color: grey,
