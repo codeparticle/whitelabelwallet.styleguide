@@ -2,6 +2,37 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.11](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/compare/v0.3.3...v0.3.11) (2019-08-27)
+
+
+### Bug Fixes
+
+* **wlw-96:** made nav-bar have fixed position on mobile ([4ec857b](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/4ec857b))
+* **wlw-99:** fixed ios safari input shadow ([8a55ab5](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/8a55ab5))
+* added z-indices and fixed some nav-bar bugs ([4b9bf06](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/4b9bf06))
+* hotfix zIndex compilation issue ([1442418](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/1442418))
+* patch publishing ([633c26b](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/633c26b))
+
+
+### Features
+
+* **wlw-123:** added OverflowContainer, media utils ([bda3091](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/bda3091))
+* **wlw-124:** fix class name ([b3790d9](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/b3790d9))
+* **wlw-126:** added pageheader, improved useMedia ([e8f5b36](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/e8f5b36))
+* **wlw-134:** add footer patter to overlay ([b260c58](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/b260c58))
+* **wlw-134:** add footer pattern to sidepanel ([f45d691](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/f45d691))
+* **wlw-134:** imporve responsiveness for chrome ([0b9bf07](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/0b9bf07))
+* **wlw-134:** update read me and improve initial load ([4c14606](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/4c14606))
+* **wlw-72:** added transaction-history and terms-of-service icons ([2c19fe7](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/2c19fe7))
+* **wlw-91:** added modal component ([893989c](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/893989c))
+* **wlw-91:** addressing comments ([a9906a7](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/a9906a7))
+* **wlw-91:** enforce header height on sidepanel ([230deed](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/230deed))
+* **wlw-91:** refactoring overlay and modal implementations ([2a2792c](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/2a2792c))
+* **wlw-94:** added overlay component ([8ac72e1](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/8ac72e1))
+* **wlw-96:** created nav-bar component ([d5b77f0](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/d5b77f0))
+
+
+
 ### [0.3.10](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/compare/v0.3.9...v0.3.10) (2019-08-23)
 
 
