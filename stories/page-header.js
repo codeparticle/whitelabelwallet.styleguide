@@ -4,7 +4,7 @@ import { withReadme } from 'storybook-readme';
 import { boolean, text, withKnobs } from '@storybook/addon-knobs';
 import {
   Button,
-  Icon,
+  IconButton,
   PageHeader,
   svgs,
 } from 'src';
@@ -26,7 +26,7 @@ const doNothing = () => {};
 
 const IconWrapper = ({ Svg, variant = '', iconProps }) => (
   <>
-    <Icon className="wrapper" variant={variant} onClick={doNothing} icon={<Svg {...iconProps} />} />
+    <IconButton className="wrapper" variant={variant} onClick={doNothing} icon={<Svg {...iconProps} />} />
     <style jsx>
       {`
         :global(.wrapper) {

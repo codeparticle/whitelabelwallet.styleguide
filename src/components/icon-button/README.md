@@ -1,13 +1,13 @@
-# Icon
+# IconButton
 
 A standard clickable Icon.
 
 ## Usage
 
 ```jsx
-import { Icon, SvgClose } from '@codeparticle/whitelabelwallet.styleguide';
+import { IconButton, SvgClose } from '@codeparticle/whitelabelwallet.styleguide';
 
-<Icon
+<IconButton
   onClick={handleClick}
   variant="primary"
   icon={<SvgClose />}
@@ -19,6 +19,7 @@ import { Icon, SvgClose } from '@codeparticle/whitelabelwallet.styleguide';
 | name | type | default | description |
 | ---- | ---- | ------- | ----------- |
 | className | string | '' | Sets the className for the button element |
+| dataSelector | string | '' | Optional e2e data-selector attribute |
 | icon | node | N/A | Sets the content of the icon component |
 | onClick | func | '' | Handles when the button is clicked |
 | variant | string | '' | Sets the icon class type to render |

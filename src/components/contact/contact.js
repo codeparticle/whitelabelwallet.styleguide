@@ -5,7 +5,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import { Button, Icon } from '../..';
+import { Button, IconButton } from '../..';
 import styles from './contact.scss';
 import { useTheme } from '../theme-provider';
 import { icons } from '../../svgs';
@@ -51,7 +51,7 @@ const ContactActions = ({
         styles['contact__actions']
       )}
     >
-      <Icon onClick={onEdit} icon={<SvgCog />} variant="slate" />
+      <IconButton onClick={onEdit} icon={<SvgCog />} variant="slate" />
       <div
         className={classNames(
           styles['contact__buttons']

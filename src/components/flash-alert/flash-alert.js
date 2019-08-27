@@ -6,7 +6,7 @@ import React, { useState, useEffect } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import { CSSTransition } from 'react-transition-group';
-import { Icon, IconVariants } from 'components/icon';
+import { IconButton, IconVariants } from 'components/icon-button';
 import styles from './flash-alert.scss';
 import { icons } from '../../svgs';
 
@@ -48,7 +48,7 @@ const FlashAlert = ({
   };
 
   const btn = alertButton || (
-    <Icon
+    <IconButton
       variant={TERTIARY}
       onClick={handleCloseClicked}
       icon={<SvgClose />}
