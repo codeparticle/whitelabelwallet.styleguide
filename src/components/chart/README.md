@@ -37,5 +37,6 @@ return (
 | name | type | default | description |
 | ---- | ---- | ------- | ----------- |
 | className | string | '' | Sets the class name on the root element |
+| dataSelector | string | '' | Optional e2e data-selector attr |
 
 **Note:** Any other properties supplied to this component will be spread to the root element.

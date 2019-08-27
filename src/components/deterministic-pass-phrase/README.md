@@ -40,6 +40,7 @@ return (
 
 | name | type | default | description |
 | ---- | ---- | ------- | ----------- |
+| dataSelector | string | '' | Optional e2e data-selector attr |
 | isBlurred | bool | true | Allows to blur pass phrase |
 | isShuffled | bool | false | Setting to true shuffles words and allows to be clicked |
 | onCompletion* | func |  | Handles when phrase is completed |

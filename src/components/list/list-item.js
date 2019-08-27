@@ -70,6 +70,7 @@ export function ListItem({
   columns,
   customRowStyles,
   data,
+  dataSelector,
   id,
   index,
   isStriped,
@@ -131,6 +132,7 @@ export function ListItem({
     <>
       <div
         className="list-item"
+        data-selector={`${dataSelector}-item`}
         onClick={handleSelection}
         onKeyPress={handleSelection}
         role="row"
@@ -198,6 +200,7 @@ ListItem.propTypes = {
   ).isRequired,
   customRowStyles: PropTypes.func,
   data: PropTypes.objectOf(PropTypes.any).isRequired,
+  dataSelector: PropTypes.string,
   id: PropTypes.string.isRequired,
   isStriped: PropTypes.bool,
   onRowClicked: PropTypes.func.isRequired,
@@ -215,6 +218,7 @@ ListItem.defaultProps = {
   allowDeselect: true,
   childToRender: null,
   customRowStyles: null,
+  dataSelector: '',
   isStriped: false,
   showSubItems: true,
 };

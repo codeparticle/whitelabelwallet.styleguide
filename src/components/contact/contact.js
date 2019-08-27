@@ -28,12 +28,13 @@ const copyToClipBoard = (copy) => {
 };
 
 const ContactActions = ({
-  theme,
   address,
+  dataSelector,
+  translations,
   onCopy,
   onEdit,
   onSend,
-  messages,
+  theme,
 }) => {
   const handleCopyClicked = () => {
     if (!onCopy) {
@@ -51,23 +52,30 @@ const ContactActions = ({
         styles['contact__actions']
       )}
     >
-      <IconButton onClick={onEdit} icon={<SvgCog />} variant="slate" />
+      <IconButton
+        dataSelector={`${dataSelector}-edit`}
+        onClick={onEdit}
+        icon={<SvgCog />}
+        variant="slate"
+      />
       <div
         className={classNames(
           styles['contact__buttons']
         )}
       >
         <Button
+          dataSelector={`${dataSelector}-copy`}
           variant={theme.copyBtnType}
           onClick={handleCopyClicked}
         >
-          {messages.copy}
+          {translations.copy}
         </Button>
         <Button
+          dataSelector={`${dataSelector}-send`}
           variant={theme.sendBtnType}
           onClick={onSend}
         >
-          {messages.send}
+          {translations.send}
         </Button>
       </div>
     </div>
@@ -75,9 +83,10 @@ const ContactActions = ({
 };
 
 const ContactDetails = ({
-  theme,
-  contactName,
   address,
+  contactName,
+  dataSelector,
+  theme,
 }) => (
   <div
     className={classNames(
@@ -90,10 +99,11 @@ const ContactDetails = ({
         styles['contact__details']
       )}
     >
-      <h2>
+      <h2 data-selector={`${dataSelector}-name`}>
         {contactName}
       </h2>
       <h4
+        data-selector={`${dataSelector}-address`}
         className={classNames(
           styles['contact__address']
         )}
@@ -118,10 +128,11 @@ const ContactDetails = ({
 const Contact = ({
   className,
   contactName,
+  dataSelector,
   address,
   onCopy,
   onSend,
-  messages,
+  translations,
   ...rest
 }) => {
   const theme = useTheme('contact');
@@ -135,6 +146,7 @@ const Contact = ({
   return (
     <div
       {...rest}
+      data-selector={dataSelector}
       className={contactClass}
     >
       <div
@@ -143,16 +155,18 @@ const Contact = ({
         )}
       >
         <ContactDetails
+          dataSelector={dataSelector}
           theme={theme}
           contactName={contactName}
           address={address}
         />
         <ContactActions
+          dataSelector={dataSelector}
           theme={theme}
           address={address}
           onCopy={onCopy}
           onSend={onSend}
-          messages={messages}
+          translations={translations}
         />
       </div>
       <style jsx>
@@ -169,9 +183,10 @@ const Contact = ({
 Contact.propTypes = {
   className: PropTypes.string,
   contactName: PropTypes.string,
+  dataSelector: PropTypes.string,
   onCopy: PropTypes.func,
   onSend: PropTypes.func,
-  messages: PropTypes.shape({
+  translations: PropTypes.shape({
     copy: PropTypes.string,
     send: PropTypes.string,
   }),
@@ -180,9 +195,10 @@ Contact.propTypes = {
 Contact.defaultProps = {
   className: '',
   contactName: '',
+  dataSelector: '',
   onCopy: null,
   onSend: null,
-  messages: {
+  translations: {
     copy: 'Copy Address',
     send: 'Send Funds',
   },

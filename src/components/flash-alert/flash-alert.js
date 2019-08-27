@@ -15,6 +15,7 @@ const { TERTIARY } = IconVariants;
 
 const FlashAlert = ({
   className,
+  dataSelector,
   message,
   type,
   show,
@@ -71,6 +72,7 @@ const FlashAlert = ({
         {...rest}
       >
         <div
+          data-selector={dataSelector}
           className={classNames(
             styles.alert,
             styles[type],
@@ -94,6 +96,7 @@ const FlashAlert = ({
 
 FlashAlert.propTypes = {
   alertButton: PropTypes.node,
+  dataSelector: PropTypes.string,
   duration: PropTypes.number,
   height: PropTypes.string,
   message: PropTypes.string,
@@ -104,6 +107,7 @@ FlashAlert.propTypes = {
 
 FlashAlert.defaultProps = {
   alertButton: null,
+  dataSelector: '',
   duration: 3000,
   height: 'auto',
   message: '',

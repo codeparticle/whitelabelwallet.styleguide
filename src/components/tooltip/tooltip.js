@@ -10,6 +10,7 @@ import { useTheme } from '../theme-provider';
 const Tooltip = ({
   clickable,
   content,
+  dataSelector,
   Id,
   place,
   ...rest
@@ -26,7 +27,7 @@ const Tooltip = ({
         place={place}
         {...rest}
       >
-        <span className="tooltip-content">
+        <span className="tooltip-content" data-selector={dataSelector}>
           {content}
         </span>
       </ReactTooltip>
@@ -90,12 +91,14 @@ const Tooltip = ({
 Tooltip.propTypes = {
   clickable: PropTypes.bool,
   content: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
+  dataSelector: PropTypes.string,
   Id: PropTypes.string.isRequired,
   place: PropTypes.oneOf(['top', 'bottom', 'left', 'right']),
 };
 
 Tooltip.defaultProps = {
   clickable: false,
+  dataSelector: '',
   place: 'top',
 };
 

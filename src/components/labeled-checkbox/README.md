@@ -26,6 +26,7 @@ return (
 
 | name | type | default | description |
 | ---- | ---- | ------- | ----------- |
+| dataSelector | string | '' | Optional e2e data-selector attr |
 | label* | string |  | Sets the label text (as well as corresponding the id and htmlFor values) |
 | checked* | bool | | Sets the state of the checkbox |
 | onChange* | func | | func called onChange event, receives opposite of checked value |

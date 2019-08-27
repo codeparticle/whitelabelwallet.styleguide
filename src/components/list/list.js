@@ -50,6 +50,7 @@ const List = ({
   columnDefs,
   customRowStyles,
   customSort,
+  dataSelector,
   id,
   isStriped,
   onRowClicked,
@@ -70,6 +71,7 @@ const List = ({
         columnDefs={columnDefs}
         customRowStyles={customRowStyles}
         customSort={customSort}
+        dataSelector={dataSelector}
         id={id}
         isStriped={isStriped}
         onRowClicked={onRowClicked}
@@ -118,6 +120,7 @@ List.propTypes = {
   ).isRequired,
   customRowStyles: PropTypes.func,
   customSort: PropTypes.func,
+  dataSelector: PropTypes.string,
   isStriped: PropTypes.bool,
   onRowClicked: PropTypes.func.isRequired,
   rowData: PropTypes.arrayOf(
@@ -132,6 +135,7 @@ List.defaultProps = {
   childToRender: null,
   customRowStyles: null,
   customSort: null,
+  dataSelector: '',
   isStriped: false,
   showHeader: true,
   showSubItems: true,

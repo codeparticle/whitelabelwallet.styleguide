@@ -13,6 +13,7 @@ const THEME_KEY = 'input';
 
 const TextInput = ({
   className,
+  dataSelector,
   hasError,
   label,
   labelClassName,
@@ -45,6 +46,7 @@ const TextInput = ({
           </span>
           <input
             {...rest}
+            data-selector={dataSelector}
             className={classNames(
               styles['text-input__input'],
               hasError && styles['text-input__input-error'],
@@ -75,6 +77,7 @@ const TextInput = ({
 
 TextInput.propTypes = {
   className: PropTypes.string,
+  dataSelector: PropTypes.string,
   disabled: PropTypes.bool,
   label: PropTypes.string,
   labelClassName: PropTypes.string,
@@ -92,6 +95,7 @@ TextInput.propTypes = {
 
 TextInput.defaultProps = {
   className: '',
+  dataSelector: '',
   disabled: false,
   label: '',
   labelClassName: '',

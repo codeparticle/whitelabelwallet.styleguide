@@ -10,6 +10,7 @@ import styles from './labeled-checkbox.scss';
 
 export function LabeledCheckbox({
   checked,
+  dataSelector,
   label,
   onChange,
   color,
@@ -22,7 +23,7 @@ export function LabeledCheckbox({
 
   return (
     <>
-      <div className={styles['labeled-checkbox']}>
+      <div className={styles['labeled-checkbox']} data-selector={dataSelector}>
         <input
           type="checkbox"
           id={id}
@@ -50,10 +51,12 @@ export function LabeledCheckbox({
 LabeledCheckbox.propTypes = {
   checked: PropTypes.bool.isRequired,
   color: PropTypes.string,
+  dataSelector: PropTypes.string,
   label: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
 };
 
 LabeledCheckbox.defaultProps = {
   color: white,
+  dataSelector: '',
 };

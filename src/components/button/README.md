@@ -22,6 +22,7 @@ import { Button } from '@codeparticle/whitelabelwallet.styleguide';
 | ---- | ---- | ------- | ----------- |
 | alertButton | node | N/A | Optional custom button to be passed to the alert |
 | className | string | '' | Sets the className for the button element |
+| dataSelector | string | '' | Optional e2e data-selector attr |
 | onClick | func | '' | Handles when the button is clicked |
 | variant | string | '' | Sets the button type to render |
 | size | string | '' | Sets the button size |

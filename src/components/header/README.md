@@ -22,6 +22,7 @@ import { IconComponent } from '@codeparticle/whitelabelwallet.styleguide';
 | name | type | default | description |
 | ---- | ---- | ------- | ----------- |
 | className | string | '' | Sets the className for the button element |
+| dataSelector | string | '' | Optional e2e data-selector attr |
 | onClose | func | '' | Handles when the close button is clicked |
 | hideBackground | bool | false | If true, sets background transparent |
 | Icon | func |  | A required svg component to display within the header|

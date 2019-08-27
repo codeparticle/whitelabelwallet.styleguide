@@ -17,9 +17,9 @@ import { icons } from '../src/svgs';
 const { SvgCoinSymbol } = icons;
 
 const WalletDemo = ({ defaultToDark = false }) => {
-  const messages = {
-    deposit: text('messages deposit', 'Receive Funds'),
-    withdraw: text('messages withdraw', 'Withdraw Funds'),
+  const translations = {
+    deposit: text('translations deposit', 'Receive Funds'),
+    withdraw: text('translations withdraw', 'Withdraw Funds'),
   };
 
   const defaultData = [];
@@ -40,7 +40,7 @@ const WalletDemo = ({ defaultToDark = false }) => {
           currencySymbol="&#36;"
           onClick={action('Mobile Click')}
           title={title}
-          messages={messages}
+          translations={translations}
           onDeposit={action('CLICKED DEPOSIT')}
           onWithdraw={action('CLICKED WITHDRAW')}
         />

@@ -20,6 +20,7 @@ const getIconFill = (theme, isActive) => {
 };
 
 const Search = ({
+  dataSelector,
   onSubmit,
   placeholder,
 }) => {
@@ -77,6 +78,7 @@ const Search = ({
           />
         </div>
         <input
+          data-selector={dataSelector}
           className={classNames(
             styles['search__input'],
             'search__input'
@@ -110,11 +112,13 @@ const Search = ({
 };
 
 Search.propTypes = {
+  dataSelector: PropTypes.string,
   onSubmit: PropTypes.func.isRequired,
   placeholder: PropTypes.string,
 };
 
 Search.defaultProps = {
+  dataSelector: '',
   placeholder: 'Search...',
 };
 

@@ -8,7 +8,7 @@ import { lightBackground, darkBackground } from './constants';
 import { ThemeWrapper } from './utils';
 
 const QRCodeDemo = ({ defaultToDark = false }) => {
-  const messages = {
+  const translations = {
     amount: text('Request Amount', 'Request G 1.50 to your address:'),
     addressName: text('Address Name', 'Savings - Address 2'),
     scan: text('Scan', 'Have the sender scan this code for easy transaction setup.'),
@@ -24,7 +24,7 @@ const QRCodeDemo = ({ defaultToDark = false }) => {
         content={
           <QRCode
             title={title}
-            messages={messages}
+            translations={translations}
             qrString={qrString}
           />
         }

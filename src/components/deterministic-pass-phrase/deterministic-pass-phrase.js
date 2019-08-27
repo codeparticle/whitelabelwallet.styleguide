@@ -157,6 +157,7 @@ const WordButton = ({
 
 
 export const DeterministicPassPhrase = ({
+  dataSelector,
   isBlurred,
   isShuffled,
   onCompletion,
@@ -194,7 +195,10 @@ export const DeterministicPassPhrase = ({
 
   return (
     <>
-      <div className={classNames(styles['pass-phrase'])}>
+      <div
+        className={classNames(styles['pass-phrase'])}
+        data-selector={dataSelector}
+      >
         {wordArrayToRender.map((word, index) => (
           <WordButton
             blurType={blurType}
@@ -214,6 +218,7 @@ export const DeterministicPassPhrase = ({
 };
 
 DeterministicPassPhrase.propTypes = {
+  dataSelector: PropTypes.string,
   isBlurred: PropTypes.bool,
   isShuffled: PropTypes.bool,
   onCompletion: PropTypes.func.isRequired,
@@ -221,6 +226,7 @@ DeterministicPassPhrase.propTypes = {
 };
 
 DeterministicPassPhrase.defaultProps = {
+  dataSelector: '',
   isBlurred: true,
   isShuffled: false,
 };

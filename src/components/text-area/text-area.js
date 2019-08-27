@@ -12,6 +12,7 @@ import styles from './text-area.scss';
 const TextArea = ({
   className,
   customColor,
+  dataSelector,
   label,
   labelClassName,
   textAreaClassName,
@@ -40,6 +41,7 @@ const TextArea = ({
             {label}
           </span>
           <textarea
+            data-selector={dataSelector}
             className={classNames(
               styles['text-area__input'],
               label && styles['has-label'],
@@ -69,6 +71,7 @@ const TextArea = ({
 
 TextArea.propTypes = {
   className: PropTypes.string,
+  dataSelector: PropTypes.string,
   disabled: PropTypes.bool,
   label: PropTypes.string,
   labelClassName: PropTypes.string,
@@ -86,6 +89,7 @@ TextArea.propTypes = {
 
 TextArea.defaultProps = {
   className: '',
+  dataSelector: '',
   disabled: false,
   maxLength: null,
   label: '',

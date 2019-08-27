@@ -129,11 +129,17 @@ Specifies the title for the Header
 If true, uses the header's alternate theme
 
 ----
+#### dataSelector
+
+An optional e2e data-selector attr
+
+----
 ### PropTypes
 
 | name | type | default |
 | ---- | ---- | ------- |
 | customStyles | `object` | See above. |
+| dataSelector | `string` | '' |
 | Icon | `node` | null |
 | isOpen | `bool` | `false` |
 | onClose | `func` | `null` |

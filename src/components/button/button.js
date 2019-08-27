@@ -6,6 +6,7 @@ import styles from './button.scss';
 const Button = ({
   className,
   children,
+  dataSelector,
   variant,
   size,
   ...rest
@@ -20,6 +21,7 @@ const Button = ({
   return (
     <button
       {...rest}
+      data-selector={dataSelector}
       className={buttonClass}
     >
       <span>{children}</span>
@@ -30,6 +32,7 @@ const Button = ({
 Button.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
+  dataSelector: PropTypes.string,
   variant: PropTypes.oneOf([
     '',
     'primary',
@@ -52,6 +55,7 @@ Button.propTypes = {
 Button.defaultProps = {
   children: null,
   className: '',
+  dataSelector: '',
   variant: '',
   size: '',
 };

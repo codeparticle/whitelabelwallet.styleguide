@@ -26,13 +26,14 @@ function PageItem({
   className,
   Component,
   collapsed,
+  dataSelector,
 }) {
   if (!Component) {
     return null;
   }
 
   return (
-    <div className={classNames(styles.pageItem, styles[className])}>
+    <div className={classNames(styles.pageItem, styles[className])} data-selector={`${dataSelector}-item`}>
       <Component collapsed={collapsed} iconProps={iconProps} />
     </div>
   );
@@ -42,12 +43,14 @@ PageItem.propTypes = {
   className: PropTypes.string,
   collapsed: PropTypes.bool,
   Component: PropTypes.func,
+  dataSelector: PropTypes.string,
 };
 
 PageItem.defaultProps = {
   className: '',
   collapsed: false,
   Component: null,
+  dataSelector: '',
 };
 
 /**
@@ -55,7 +58,7 @@ PageItem.defaultProps = {
  * @returns {Node} - returns the icons rendered by PageItems
  * @param {Array} Icons - an array of icons to be rendered
  */
-function PageIcons({ Icons }) {
+function PageIcons({ Icons, dataSelector }) {
   if (!Icons) {
     return null;
   }
@@ -63,17 +66,19 @@ function PageIcons({ Icons }) {
   return (
     <>
       {Icons.map((Icon, index) => (
-        <PageItem key={`icon-${index}`} Component={Icon} />
+        <PageItem key={`icon-${index}`} Component={Icon} dataSelector={dataSelector} />
       ))}
     </>
   );
 }
 
 PageIcons.propTypes = {
+  dataSelector: PropTypes.string,
   Icons: PropTypes.arrayOf(PropTypes.func),
 };
 
 PageIcons.defaultProps = {
+  dataSelector: '',
   Icons: null,
 };
 
@@ -86,6 +91,7 @@ PageIcons.defaultProps = {
  * @param {string} title - title text
  */
 function PageHeader({
+  dataSelector,
   IconButtons,
   NavigationButton,
   PrimaryAction,
@@ -100,20 +106,26 @@ function PageHeader({
 
   return (
     <>
-      <div className={styles.pageHeader}>
+      <div className={styles.pageHeader} data-selector={dataSelector}>
         <div className={styles.pageHeader__title}>
-          <PageItem className="nav" Component={NavigationButton} collapsed={collapsed} />
+          <PageItem
+            className="nav"
+            Component={NavigationButton}
+            collapsed={collapsed}
+            dataSelector={dataSelector}
+          />
           <PageItem className="title" Component={Title} collapsed={collapsed} />
           <PageItem
             className="primary"
             Component={PrimaryAction}
             collapsed={collapsed}
+            dataSelector={dataSelector}
           />
         </div>
         {!collapsed && (
           <div className={styles.pageHeader__buttons}>
-            <PageItem Component={SecondaryAction} />
-            <PageIcons Icons={IconButtons} />
+            <PageItem Component={SecondaryAction} dataSelector={dataSelector} />
+            <PageIcons Icons={IconButtons} dataSelector={dataSelector} />
           </div>
         )}
       </div>
@@ -129,6 +141,7 @@ function PageHeader({
 }
 
 PageHeader.propTypes = {
+  dataSelector: PropTypes.string,
   IconButtons: PropTypes.oneOfType([
     PropTypes.node,
     PropTypes.array,
@@ -140,6 +153,7 @@ PageHeader.propTypes = {
 };
 
 PageHeader.defaultProps = {
+  dataSelector: '',
   IconButtons: null,
   NavigationButton: null,
   PrimaryAction: null,
