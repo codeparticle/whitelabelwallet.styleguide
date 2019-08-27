@@ -5,9 +5,9 @@
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
+import { Button, Icon } from '../..';
 import styles from './contact.scss';
 import { useTheme } from '../theme-provider';
-import { Button } from '../..';
 import { icons } from '../../svgs';
 
 const { SvgContact, SvgCog } = icons;
@@ -31,6 +31,7 @@ const ContactActions = ({
   theme,
   address,
   onCopy,
+  onEdit,
   onSend,
   messages,
 }) => {
@@ -50,7 +51,7 @@ const ContactActions = ({
         styles['contact__actions']
       )}
     >
-      <SvgCog />
+      <Icon onClick={onEdit} icon={<SvgCog />} variant="slate" />
       <div
         className={classNames(
           styles['contact__buttons']
