@@ -83,6 +83,7 @@ If true, uses the header's alternate theme
 | checkBoxLabel | `string` | '' |
 | hasCancelButton | `bool` | true |
 | hasFooter | `bool` | true |
+| hasCheckbox | `bool` | false |
 | Icon | `node` | null |
 | isOpen | `bool` | false |
 | disableFooterButton | `bool` | false |
