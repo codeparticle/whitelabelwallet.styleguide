@@ -5,6 +5,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Case from 'case';
+import { white } from 'styles/colors.scss';
 import styles from './auth-checkbox.scss';
 
 export function AuthCheckbox({
@@ -54,5 +55,5 @@ AuthCheckbox.propTypes = {
 };
 
 AuthCheckbox.defaultProps = {
-  color: '#FFFFFF',
+  color: white,
 };

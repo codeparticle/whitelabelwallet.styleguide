@@ -80,6 +80,10 @@ export function Overlay({
     return () => window.removeEventListener('resize', handleResize);
   }, []); // Effect only runs twice: mount & unmount
 
+  useEffect(() => {
+    setIsDisabled(disableFooterButton);
+  }, [disableFooterButton]);
+
   const renderFooter = (overlayType) => {
     if (!hasFooter) {
       return null;
@@ -92,7 +96,7 @@ export function Overlay({
       };
 
       return (
-        <div className={`sidepanelFooter ${styles.sidepanelFooter} ${hasCheckbox ? 'hasCheckbox' : ''}`}>
+        <div className={styles.sidepanelFooter}>
           <Visible when={hasCancelButton}>
             <Button
               onClick={onCancelClick}
@@ -121,7 +125,7 @@ export function Overlay({
           <style jsx>
             {
               `
-                .sidepanelFooter {
+                .${styles.sidepanelFooter} {
                   background: ${theme.footerBackground};
                   justify-content: ${hasCheckbox ? 'space-between' : 'flex-end'};
                 }

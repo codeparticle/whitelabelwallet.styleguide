@@ -38,6 +38,21 @@ return (
 Allows specifying a custom background color. If none is specified, it will default to the color provided by the theme.
 
 ----
+#### checkboxLabel
+
+Text to displayed for the checkbox in the sidepanel footer.
+
+----
+#### disableFooterButton
+
+Controls weather or not the footer button is disabled.
+
+----
+#### hasCheckbox
+
+Renders a LabeledCheckbox component in the footer.
+
+----
 #### Icon
 
 Renders an Icon above the header title
