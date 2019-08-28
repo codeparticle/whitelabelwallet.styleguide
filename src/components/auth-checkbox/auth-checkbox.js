@@ -54,5 +54,5 @@ AuthCheckbox.propTypes = {
 };
 
 AuthCheckbox.defaultProps = {
-  color: '#ffffff',
+  color: '#FFFFFF',
 };
