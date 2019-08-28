@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.12](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/compare/v0.3.11...v0.3.12) (2019-08-28)
+
+
+### Features
+
+* **wlw-136:** added onEdit to contact component ([fadaf6a](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/fadaf6a))
+* **wlw-138:** implement checkbox and disable logic ([3ad2635](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/3ad2635))
+* **wlw-138:** refactor auth css ([06cf442](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/06cf442))
+* **wlw-138:** refactor sidepanel ([0f51ebb](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/0f51ebb))
+* **wlw-138:** rename authCheckbox to labeledCheckbox ([2c0518a](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/2c0518a))
+* **wlw-138:** setting up footer disabled ([78fd0e4](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/78fd0e4))
+* **wlw-138:** update css class names ([d10afd4](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/d10afd4))
+* **wlw-138:** update read-mes ([702c99e](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/702c99e))
+
+
+
 ### [0.3.11](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/compare/v0.3.3...v0.3.11) (2019-08-27)
 
 
