@@ -80,10 +80,12 @@ If true, uses the header's alternate theme
 | ---- | ---- | ------- |
 | background | string | '' |
 | cancelButtonText | `string` | Cancel |
+| checkBoxLabel | `string` | '' |
 | hasCancelButton | `bool` | true |
 | hasFooter | `bool` | true |
 | Icon | `node` | null |
 | isOpen | `bool` | false |
+| disableFooterButton | `bool` | false |
 | footerButtonText | `string` | Continue |
 | onCancelClick | func | null |
 | onClose | func | null |

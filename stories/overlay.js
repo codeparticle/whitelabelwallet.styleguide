@@ -65,7 +65,7 @@ const OverlayDemo = ({
             onClose={onClose}
             onClick={action('clicked')}
             isOpen={isOpenValue}
-            isDisabled
+            disableFooterButton
             hasCheckbox
             checkBoxLabel="I have read and agree to the Terms of Service"
             hasCancelButton={false}

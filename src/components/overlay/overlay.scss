@@ -1,3 +1,5 @@
+@import 'styles/colors';
+
 .header {
   flex-shrink: 0;
   height: 336px;
@@ -11,6 +13,12 @@
 
   .footerBtn {
     margin: 0 10px;
+
+    &:disabled {
+      background: $grey;
+      border-color: $grey;
+      color: $white;
+    }
   }
 }
 

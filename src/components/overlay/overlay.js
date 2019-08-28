@@ -45,7 +45,7 @@ export function Overlay({
   onClick,
   onClose,
   isOpen,
-  isDisabled,
+  disableFooterButton,
   hasFooter,
   subTitle,
   title,
@@ -56,6 +56,7 @@ export function Overlay({
   const [windowWidth, setWindowWidth] = useState(window.innerWidth || 0);
   const [width, setWidth] = useState(type === OVERLAY ? '100%' : `${calculateWidth(windowWidth)}px`);
   const [isChecked, setIsChecked] = useState(false);
+  const [isDisabled, setIsDisabled] = useState(disableFooterButton);
   const color = type === OVERLAY ? white : theme.color;
 
   function handleResize() {
@@ -79,39 +80,17 @@ export function Overlay({
     return () => window.removeEventListener('resize', handleResize);
   }, []); // Effect only runs twice: mount & unmount
 
-
-  // const CheckBox = ({ checked, label, onChange }) => {
-  //   const id = Case.kebab(label);
-  //   const handleCheck = () => {
-  //     onChange(!checked);
-  //   };
-
-  //   return (
-  //     <>
-  //       <div className={styles.footerCheckBox}>
-  //         { /* eslint-disable-next-line jsx-a11y/label-has-for */ }
-  //         <label id={id} htmlFor={id}>
-  //           <span>{label}</span>
-  //         </label>
-  //         <input
-  //           type="checkbox"
-  //           id={id}
-  //           checked={checked}
-  //           onChange={handleCheck}
-  //         />
-  //       </div>
-  //     </>
-  //   );
-  // }
-
   const renderFooter = (overlayType) => {
     if (!hasFooter) {
       return null;
     }
+
     if (overlayType === SIDEPANEL) {
       const handleCheck = (checkValue) => {
         setIsChecked(checkValue);
+        setIsDisabled(!checkValue);
       };
+
       return (
         <div className={`sidepanelFooter ${styles.sidepanelFooter} ${hasCheckbox ? 'hasCheckbox' : ''}`}>
           <Visible when={hasCancelButton}>
@@ -227,7 +206,7 @@ Overlay.propTypes = {
   checkBoxLabel: PropTypes.string,
   Icon: PropTypes.func,
   isOpen: PropTypes.bool,
-  isDisabled: PropTypes.bool,
+  disableFooterButton: PropTypes.bool,
   footerButtonText: PropTypes.string,
   hasCancelButton: PropTypes.bool,
   hasCheckbox: PropTypes.bool,
@@ -250,7 +229,7 @@ Overlay.defaultProps = {
   checkBoxLabel: '',
   Icon: null,
   isOpen: false,
-  isDisabled: false,
+  disableFooterButton: false,
   footerButtonText: 'Continue',
   hasCancelButton: true,
   hasCheckbox: false,
