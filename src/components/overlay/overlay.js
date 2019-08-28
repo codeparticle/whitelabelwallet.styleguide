@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import Sidepanel from '@codeparticle/react-sidenav';
 import { Visible } from '@codeparticle/react-visible';
-import { AuthCheckbox } from 'components/auth-checkbox';
+import { LabeledCheckbox } from 'components/labeled-checkbox';
 import { Header } from 'components/header';
 import { Button } from 'components/button';
 import { white } from 'styles/colors.scss';
@@ -106,7 +106,7 @@ export function Overlay({
             </Button>
           </Visible>
           <Visible when={!hasCancelButton && hasCheckbox}>
-            <AuthCheckbox
+            <LabeledCheckbox
               label={checkBoxLabel}
               checked={isChecked}
               onChange={handleCheck}

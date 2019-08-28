@@ -6,9 +6,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Case from 'case';
 import { white } from 'styles/colors.scss';
-import styles from './auth-checkbox.scss';
+import styles from './labeled-checkbox.scss';
 
-export function AuthCheckbox({
+export function LabeledCheckbox({
   checked,
   label,
   onChange,
@@ -47,13 +47,13 @@ export function AuthCheckbox({
   );
 }
 
-AuthCheckbox.propTypes = {
+LabeledCheckbox.propTypes = {
   checked: PropTypes.bool.isRequired,
   color: PropTypes.string,
   label: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
 };
 
-AuthCheckbox.defaultProps = {
+LabeledCheckbox.defaultProps = {
   color: white,
 };
