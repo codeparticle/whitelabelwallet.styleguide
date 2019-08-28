@@ -22,7 +22,7 @@ export function LabeledCheckbox({
 
   return (
     <>
-      <div className={`${styles['auth-checkbox']} auth-checkbox`}>
+      <div className={styles['labeled-checkbox']}>
         <input
           type="checkbox"
           id={id}
@@ -36,7 +36,7 @@ export function LabeledCheckbox({
         <style jsx>
           {
             `
-              auth-checkbox {
+              .${styles['labeled-checkbox']} {
                 color: ${color};
               }
             `
