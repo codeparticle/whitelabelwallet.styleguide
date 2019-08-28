@@ -5,12 +5,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Case from 'case';
-import styles from './auth-checkbox.scss';
+import { white } from 'styles/colors.scss';
+import styles from './labeled-checkbox.scss';
 
-export function AuthCheckbox({
+export function LabeledCheckbox({
   checked,
   label,
   onChange,
+  color,
 }) {
   const id = Case.kebab(label);
 
@@ -20,7 +22,7 @@ export function AuthCheckbox({
 
   return (
     <>
-      <div className={styles['auth-checkbox']}>
+      <div className={styles['labeled-checkbox']}>
         <input
           type="checkbox"
           id={id}
@@ -31,13 +33,27 @@ export function AuthCheckbox({
         <label id={id} htmlFor={id}>
           <span>{label}</span>
         </label>
+        <style jsx>
+          {
+            `
+              .${styles['labeled-checkbox']} {
+                color: ${color};
+              }
+            `
+          }
+        </style>
       </div>
     </>
   );
 }
 
-AuthCheckbox.propTypes = {
+LabeledCheckbox.propTypes = {
   checked: PropTypes.bool.isRequired,
+  color: PropTypes.string,
   label: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
+};
+
+LabeledCheckbox.defaultProps = {
+  color: white,
 };

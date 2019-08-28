@@ -65,6 +65,9 @@ const OverlayDemo = ({
             onClose={onClose}
             onClick={action('clicked')}
             isOpen={isOpenValue}
+            disableFooterButton
+            hasCheckbox
+            checkBoxLabel="I have read and agree to the Terms of Service"
             hasCancelButton={false}
             type={type}
             title="Wallet disclaimer"

@@ -2,9 +2,8 @@
 @import 'styles/fonts';
 @import 'styles/layout';
 
-.auth-checkbox {
+.labeled-checkbox {
   box-sizing: border-box;
-  color: $white;
   display: flex;
   flex-direction: row-reverse;
   font-size: $font-size-xs-3;

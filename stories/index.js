@@ -4,7 +4,7 @@ import './style/svgs';
 import './style/typography';
 import './address';
 import './area-chart';
-import './auth-checkbox';
+import './labeled-checkbox';
 import './button';
 import './chart';
 import './contact';

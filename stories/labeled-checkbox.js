@@ -2,19 +2,19 @@ import React, { useState } from 'react';
 import { storiesOf } from '@storybook/react';
 import { withReadme } from 'storybook-readme';
 import { text, withKnobs } from '@storybook/addon-knobs';
-import { AuthCheckbox } from '../src';
-import readme from '../src/components/auth-checkbox/README.md';
+import { LabeledCheckbox } from '../src';
+import readme from '../src/components/labeled-checkbox/README.md';
 import {
   authBackground,
 } from './constants';
 
-const AuthCheckboxDemo = () => {
+const LabeledCheckboxDemo = () => {
   const [value, setValue] = useState(false);
   const label = text('label', 'I agree to the Terms and Conditions');
 
   return (
     <form className="container">
-      <AuthCheckbox
+      <LabeledCheckbox
         label={label}
         checked={value}
         onChange={setValue}
@@ -31,11 +31,11 @@ const AuthCheckboxDemo = () => {
   );
 };
 
-storiesOf('Auth Checkbox', module)
+storiesOf('Labeled Checkbox', module)
   .addDecorator(withReadme(readme))
   .addDecorator(withKnobs)
   .add('Default', () => (
-    <AuthCheckboxDemo />
+    <LabeledCheckboxDemo />
   ), {
     backgrounds: [{ ...authBackground, default: true }],
   });
