@@ -10,8 +10,9 @@ import { ThemeWrapper } from './utils';
 
 const ContactDemo = ({ defaultToDark = false }) => {
   const translations = {
-    copy: text('translations copy', 'Copy Address'),
-    send: text('translations send', 'Send Funds'),
+    copy: text('messages copy', 'Copy Address'),
+    edit: text('messages edit', 'Edit Contact'),
+    send: text('messages send', 'Send Funds'),
   };
 
   const contactName = text('contactName', 'Contact Name');
@@ -25,6 +26,8 @@ const ContactDemo = ({ defaultToDark = false }) => {
           contactName={contactName}
           translations={translations}
           onSend={action('CLICKED SEND')}
+          onCopy={action('CLICKED COPY')}
+          onEdit={action('CLICKED EDIT')}
         />
       }
     />

@@ -1,56 +1,99 @@
 @import "styles/colors.scss";
+@import "styles/fonts.scss";
 @import "styles/layout.scss";
+@import "styles/mixins.scss";
+
+$mobile-grid-gap: between($space-2, $space-3, $width-breakpoint-xxs, $width-breakpoint-xl);
+$mobile-grid-height: 60px;
+
+// These are 1/2 original vals
+$mobile-icon-height: 54px;
+$mobile-icon-width: 42px;
+
+$ellipsis-width: 8px;
 
 .contact {
-  border-radius: 9px;
-  display: flex;
-  height: 240px;
+  border-radius: $border-radius-4;
+  display: grid;
+  grid-template-areas:
+    "icon actions"
+    "details actions";
+  grid-template-columns: 1fr auto;
+  grid-template-rows: repeat(2, 1fr);
   padding: $spacing-l;
   width: 100%;
 
-  &__content {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+  @include mquery($width-breakpoint-xs) {
+    align-items: center;
+    grid-gap: $mobile-grid-gap;
+    grid-template-areas: "icon details actions";
+    grid-template-columns: $mobile-icon-width 1fr $ellipsis-width;
+    grid-template-rows: $mobile-grid-height;
+    padding: $spacing-m;
   }
+}
 
-  &__info {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    justify-content: space-between;
-    max-width: 60%;
+.icon {
+  grid-area: icon;
+
+  @include mquery($width-breakpoint-xs) {
+    height: $mobile-icon-height;
+    width: $mobile-icon-width;
   }
+}
 
-  &__actions {
-    align-items: flex-end;
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    justify-content: space-between;
-  }
+.details {
+  align-self: end;
+  grid-area: details;
+  overflow: hidden;
+  white-space: nowrap;
 
-  &__details {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  &__buttons {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    justify-content: flex-end;
-
-    & > button {
-      margin-top: $spacing-s;
-    }
-  }
-
-  &__address {
+  h2,
+  h4 {
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap;
+  }
+
+  @include mquery($width-breakpoint-xs) {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    h2,
+    h4 {
+      margin: 0;
+    }
+
+    h4 {
+      font-size: $font-size-sm-1 !important;
+    }
+  }
+}
+
+.actions {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  grid-area: actions;
+  justify-content: space-between;
+}
+
+.editIcon {
+  align-items: flex-start;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+
+  & > button {
+    margin-top: $spacing-s;
+
+    @include mquery($width-breakpoint-xs) {
+      margin: $spacing-xs 0;
+    }
   }
 }

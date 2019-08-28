@@ -99,6 +99,7 @@ const lightTheme = {
     details: slate,
     address: grey,
     copyBtnType: ButtonVariants.PRIMARY,
+    editBtnType: ButtonVariants.SLATE,
     sendBtnType: ButtonVariants.GREEN,
   },
   list: {
@@ -284,7 +285,8 @@ const darkTheme = {
     icon: coolGreyDark,
     details: white,
     address: grey,
-    copyBtnType: ButtonVariants.SLATE,
+    copyBtnType: ButtonVariants.PRIMARY,
+    editBtnType: ButtonVariants.SLATE,
     sendBtnType: ButtonVariants.GREEN,
   },
   overflow: {

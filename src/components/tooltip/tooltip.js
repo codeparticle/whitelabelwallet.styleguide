@@ -8,9 +8,11 @@ import ReactTooltip from 'react-tooltip';
 import { useTheme } from '../theme-provider';
 
 const Tooltip = ({
+  className,
   clickable,
   content,
   dataSelector,
+  effect,
   Id,
   place,
   ...rest
@@ -20,10 +22,10 @@ const Tooltip = ({
   return (
     <>
       <ReactTooltip
-        className="tooltip"
+        className={className || 'tooltip'}
         clickable={clickable}
         id={Id}
-        effect="solid"
+        effect={effect}
         place={place}
         {...rest}
       >
@@ -89,16 +91,20 @@ const Tooltip = ({
 };
 
 Tooltip.propTypes = {
+  className: PropTypes.string,
   clickable: PropTypes.bool,
   content: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
   dataSelector: PropTypes.string,
+  effect: PropTypes.oneOf(['float', 'solid']),
   Id: PropTypes.string.isRequired,
   place: PropTypes.oneOf(['top', 'bottom', 'left', 'right']),
 };
 
 Tooltip.defaultProps = {
+  className: '',
   clickable: false,
   dataSelector: '',
+  effect: 'solid',
   place: 'top',
 };
 
