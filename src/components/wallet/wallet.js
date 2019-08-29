@@ -19,9 +19,10 @@ const WalletFundsContainer = ({
   coinSymbol,
   currencySymbol,
   currencyBalance,
+  dataSelector,
   onDeposit,
   onWithdraw,
-  messages,
+  translations,
 }) => {
   const theme = useTheme('wallet');
 
@@ -36,11 +37,12 @@ const WalletFundsContainer = ({
           styles['wallet-funds__coin-balance']
         )}
       >
-        <h1>
+        <h1 data-selector={`${dataSelector}-coin-balance`}>
           {coinSymbol} {coinBalance}
         </h1>
         <h4
           className="currency-balance"
+          data-selector={`${dataSelector}-currency-balance`}
         >
           {currencySymbol} {currencyBalance}
         </h4>
@@ -51,16 +53,18 @@ const WalletFundsContainer = ({
         )}
       >
         <Button
+          dataSelector={`${dataSelector}-receive`}
           variant={theme.receiveBtnType}
           onClick={onDeposit}
         >
-          {messages.deposit}
+          {translations.deposit}
         </Button>
         <Button
+          dataSelector={`${dataSelector}-withdraw`}
           variant={theme.withdrawBtnType}
           onClick={onWithdraw}
         >
-          {messages.withdraw}
+          {translations.withdraw}
         </Button>
       </div>
       <style jsx>
@@ -112,10 +116,11 @@ const Wallet = ({
   coinSymbol,
   currencySymbol,
   currencyBalance,
+  dataSelector,
   onDeposit,
   onWithdraw,
   onClick,
-  messages,
+  translations,
   ...rest
 }) => {
   const theme = useTheme('wallet');
@@ -129,6 +134,7 @@ const Wallet = ({
   return (
     <div
       {...rest}
+      data-selector={dataSelector}
       className={walletClass}
       role="button"
       onClick={onClick}
@@ -157,7 +163,8 @@ const Wallet = ({
           title={title}
         />
         <WalletFundsContainer
-          messages={messages}
+          dataSelector={dataSelector}
+          translations={translations}
           coinBalance={coinBalance}
           coinSymbol={coinSymbol}
           currencySymbol={currencySymbol}
@@ -184,11 +191,12 @@ Wallet.propTypes = {
   coinData: PropTypes.arrayOf(PropTypes.object),
   currencyBalance: PropTypes.number,
   currencySymbol: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+  dataSelector: PropTypes.string,
   coinSymbol: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   onClick: PropTypes.func,
   onDeposit: PropTypes.func,
   onWithdraw: PropTypes.func,
-  messages: PropTypes.shape({
+  translations: PropTypes.shape({
     deposit: PropTypes.string,
     withdraw: PropTypes.string,
   }),
@@ -202,10 +210,11 @@ Wallet.defaultProps = {
   currencyBalance: 0,
   coinSymbol: null,
   currencySymbol: null,
+  dataSelector: '',
   onClick: null,
   onDeposit: null,
   onWithdraw: null,
-  messages: {
+  translations: {
     deposit: 'Receive Funds',
     withdraw: 'Withdraw Funds',
   },

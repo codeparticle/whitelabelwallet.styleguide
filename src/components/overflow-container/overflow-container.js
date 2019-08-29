@@ -8,6 +8,7 @@ import { useTheme } from 'components/theme-provider';
 
 function OverflowContainer({
   children,
+  dataSelector,
   height,
   width,
 }) {
@@ -16,7 +17,7 @@ function OverflowContainer({
   return (
     <>
       <div className="overflow-container">
-        <div className="overflow-container__content">
+        <div className="overflow-container__content" data-selector={dataSelector}>
           {children}
         </div>
       </div>
@@ -49,12 +50,14 @@ OverflowContainer.propTypes = {
     PropTypes.array,
     PropTypes.node,
   ]),
+  dataSelector: PropTypes.string,
   height: PropTypes.string,
   width: PropTypes.string,
 };
 
 OverflowContainer.defaultProps = {
   children: null,
+  dataSelector: '',
   height: '100%',
   width: '100%',
 };

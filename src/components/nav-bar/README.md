@@ -70,10 +70,16 @@ If true, the navbar is visible. If false, the navbar is hidden.
 Links to be rendered.
 
 ----
+#### dataSelector
+
+An optional e2e data-selector attr
+
+----
 ### PropTypes
 
 | name | type | default |
 | ---- | ---- | ------- |
+| dataSelector | string | '' |
 | isOpen | bool | false |
 | labelLink | string | 'Crypto Particle' |
 | labelPoweredBy | string | 'Powered by' |

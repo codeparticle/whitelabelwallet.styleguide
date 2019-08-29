@@ -21,6 +21,7 @@ import { Address } from '@codeparticle/whitelabelwallet.styleguide';
 | ---- | ---- | ------- | ----------- |
 | buttonText | '' | 'Add Address' | Default propmt for add button |
 | className | string | '' | Sets the class name on the root element |
+| dataSelector | string | '' | Optional e2e data-selector attr |
 | disabled | boolean | '' | Sets the state of the text input to disabled |
 | inputClassName | string | '' | Sets the class name of the input element|
 | maxLength | number | '' | Sets the maximum length of the text input |

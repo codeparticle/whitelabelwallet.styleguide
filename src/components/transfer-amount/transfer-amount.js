@@ -83,10 +83,11 @@ const CurrencyContainer = ({
   coinDecimalLimit,
   conversionRate,
   currencyValue,
+  dataSelector,
   fiatDecimalLimit,
   fiatSymbolKey,
   handleCurrencyChange,
-  messages,
+  translations,
   theme,
   tickerSymbol,
 }) => {
@@ -118,8 +119,8 @@ const CurrencyContainer = ({
 
   return (
     <div className={classNames(styles['transfer-amount__currency'])}>
-      <h2 className="currency__title">
-        {messages.header}
+      <h2 className="currency__title" data-selector={`${dataSelector}-header`}>
+        {translations.header}
       </h2>
       <div className={classNames(styles['currency__input'])}>
         {renderIconOrTicker({
@@ -128,6 +129,7 @@ const CurrencyContainer = ({
         })}
         <input
           className={classNames(styles['currency__input-input'])}
+          data-selector={`${dataSelector}-currency-input`}
           onChange={onCurrencyChange}
           placeholder="0.00"
           ref={inputEl}
@@ -146,7 +148,9 @@ const CurrencyContainer = ({
           height="14px"
           width="14px"
         />
-        <h4>{`${fiatSymbol}${convertedValue}`}</h4>
+        <h4 data-selector={`${dataSelector}-currency-value`}>
+          {`${fiatSymbol}${convertedValue}`}
+        </h4>
       </div>
       <style jsx>
         {`
@@ -172,15 +176,17 @@ const CurrencyContainer = ({
 };
 
 const MemoContainer = ({
-  messages,
+  dataSelector,
+  translations,
   onChange,
   theme,
   value,
 }) => (
   <div className={classNames(styles['transfer-amount__memo'])}>
     <TextArea
+      dataSelector={`${dataSelector}-memo`}
       customColor={theme.textAreaBg}
-      label={messages.memo}
+      label={translations.memo}
       onChange={onChange}
       rows={8}
       textAreaClassName={styles['transfer-amount__text-area']}
@@ -193,12 +199,13 @@ export const TransferAmount = ({
   coinDecimalLimit,
   conversionRate,
   currencyValue,
+  dataSelector,
   fiatDecimalLimit,
   fiatSymbolKey,
   handleCurrencyChange,
   handleMemoChange,
   memoValue,
-  messages,
+  translations,
   tickerSymbol,
 }) => {
   const theme = useTheme('transferAmount');
@@ -209,15 +216,17 @@ export const TransferAmount = ({
         coinDecimalLimit={coinDecimalLimit}
         conversionRate={conversionRate}
         currencyValue={currencyValue}
+        dataSelector={dataSelector}
         fiatDecimalLimit={fiatDecimalLimit}
         fiatSymbolKey={fiatSymbolKey}
         handleCurrencyChange={handleCurrencyChange}
-        messages={messages}
+        translations={translations}
         theme={theme}
         tickerSymbol={tickerSymbol}
       />
       <MemoContainer
-        messages={messages}
+        dataSelector={dataSelector}
+        translations={translations}
         onChange={handleMemoChange}
         theme={theme}
         value={memoValue}
@@ -237,12 +246,13 @@ TransferAmount.propTypes = {
   coinDecimalLimit: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   conversionRate: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
   currencyValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  dataSelector: PropTypes.string,
   fiatDecimalLimit: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   fiatSymbolKey: PropTypes.string,
   handleCurrencyChange: PropTypes.func.isRequired,
   handleMemoChange: PropTypes.func.isRequired,
   memoValue: PropTypes.string.isRequired,
-  messages: PropTypes.shape({
+  translations: PropTypes.shape({
     header: PropTypes.string.isRequired,
     memo: PropTypes.string.isRequired,
   }),
@@ -252,9 +262,10 @@ TransferAmount.propTypes = {
 TransferAmount.defaultProps = {
   coinDecimalLimit: null,
   currencyValue: '',
+  dataSelector: '',
   fiatDecimalLimit: 2,
   fiatSymbolKey: 'dollarSign',
-  messages: {
+  translations: {
     header: 'Transfer Amount',
     memo: 'Memo:',
   },

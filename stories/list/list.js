@@ -20,7 +20,7 @@ import {
 const { Text, ChildCount } = cellFormatters;
 
 function CustomChildComponent({ data }) {
-  const messages = {
+  const translations = {
     header: 'Edit Payment',
     memo: 'Edited Memo:',
   };
@@ -50,7 +50,7 @@ function CustomChildComponent({ data }) {
         handleCurrencyChange={onCurrencyChange}
         handleMemoChange={onMemoChange}
         memoValue={memoValue}
-        messages={messages}
+        translations={translations}
       />
       <style jsx>
         {`

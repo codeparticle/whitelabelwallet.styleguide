@@ -23,9 +23,10 @@ const QRCodeImage = ({ qrcode }) => {
 
 const QRCode = ({
   className,
+  dataSelector,
   title,
   qrString,
-  messages,
+  translations,
   ...rest
 }) => {
   const [qrcode, setCode] = useState('');
@@ -46,6 +47,7 @@ const QRCode = ({
   return (
     <div
       {...rest}
+      data-selector={dataSelector}
       className={qrCodeClass}
     >
       <div
@@ -54,14 +56,14 @@ const QRCode = ({
         <h2>{title}</h2>
         <QRCodeImage qrcode={qrcode} />
         <div className={styles['qr-code__request']}>
-          <div className={styles['qr-code__amount']}>{messages.amount}</div>
-          <div>{messages.addressName}</div>
+          <div className={styles['qr-code__amount']}>{translations.amount}</div>
+          <div>{translations.addressName}</div>
         </div>
       </div>
       <div
         className={styles['qr-code__message']}
       >
-        {messages.scan}
+        {translations.scan}
       </div>
       <style jsx>
         {`
@@ -86,7 +88,8 @@ const QRCode = ({
 QRCode.propTypes = {
   qrString: PropTypes.string,
   className: PropTypes.string,
-  messages: PropTypes.shape({
+  dataSelector: PropTypes.string,
+  translations: PropTypes.shape({
     amount: PropTypes.string,
     addressName: PropTypes.string,
     scan: PropTypes.string,
@@ -97,7 +100,8 @@ QRCode.propTypes = {
 QRCode.defaultProps = {
   qrString: '',
   className: '',
-  messages: {
+  dataSelector: '',
+  translations: {
     amount: '',
     addressName: '',
     scan: '',

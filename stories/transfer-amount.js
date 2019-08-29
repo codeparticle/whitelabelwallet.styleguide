@@ -11,7 +11,7 @@ import {
 } from './constants';
 
 const TransferAmountDemo = ({ defaultToDark = false }) => {
-  const messages = {
+  const translations = {
     header: 'Transfer Amount',
     memo: 'Memo:',
   };
@@ -40,7 +40,7 @@ const TransferAmountDemo = ({ defaultToDark = false }) => {
             handleCurrencyChange={onCurrencyChange}
             handleMemoChange={onMemoChange}
             memoValue={memoValue}
-            messages={messages}
+            translations={translations}
           />
         }
       />

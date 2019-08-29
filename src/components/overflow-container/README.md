@@ -36,9 +36,15 @@ You can customize the OverflowContainer's width by passing a string with any val
 It defaults to '100%';
 
 ----
+#### dataSelector
+
+An optional e2e data-selector attr
+
+----
 ### PropTypes
 
 | name | type | default |
 | ---- | ---- | ------- |
+| dataSelector | `string` | '' |
 | height | `string` | '100%' |
 | width | `string` | '100%' |

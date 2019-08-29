@@ -60,13 +60,14 @@ function handleSidePanelResize(innerWidth, setFn) {
   @param {NavItemProps} props - props for NavItem
   @param {number} key - index which becomes the key of the mapped nav item
   @param {Function} onClick - Callback for onNavItemClick
+  @param {string} dataSelector - Optional e2e data-selector attr
   @returns {Node} - rendered NavItem
 */
 const NavItem = ({
   label,
   Icon,
   path,
-}, key, onClick) => (
+}, key, onClick, dataSelector) => (
   <Link
     key={key}
     onClick={() => onClick(label, path)}
@@ -79,7 +80,7 @@ const NavItem = ({
       height={LOGO_ICON_SIZE}
       className={styles.icon}
     />
-    <div className={styles.label}>
+    <div className={styles.label} data-selector={`${dataSelector}-${label}`}>
       {label}
     </div>
   </Link>
@@ -92,6 +93,7 @@ NavItem.propTypes = {
 };
 
 export function NavBar({
+  dataSelector,
   isOpen,
   labelLink,
   labelPoweredBy,
@@ -124,7 +126,7 @@ export function NavBar({
       width={width.toString()}
       zIndex={parseInt(layout.zIndexMiddle, 10)}
     >
-      <nav className={styles.component}>
+      <nav className={styles.component} data-selector={dataSelector}>
         <IconWrapper
           className={styles.closeButton}
           icon={<SvgClose />}
@@ -140,7 +142,7 @@ export function NavBar({
             <Logo />
           </Link>
           <div>
-            {navItems.map((navItem, index) => NavItem(navItem, index, onNavItemClick))}
+            {navItems.map((navItem, index) => NavItem(navItem, index, onNavItemClick, dataSelector))}
           </div>
         </div>
         <div className={styles.footer}>
@@ -160,6 +162,7 @@ export function NavBar({
 }
 
 NavBar.propTypes = {
+  dataSelector: PropTypes.string,
   isOpen: PropTypes.bool,
   labelLink: PropTypes.string,
   labelPoweredBy: PropTypes.string,
@@ -174,6 +177,7 @@ NavBar.propTypes = {
 };
 
 NavBar.defaultProps = {
+  dataSelector: '',
   isOpen: false,
   labelLink: 'Crypto Particle',
   labelPoweredBy: 'Powered by',

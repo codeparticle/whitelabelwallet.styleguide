@@ -13,6 +13,7 @@ import styles from './address.scss';
 
 const Address = ({
   className,
+  dataSelector,
   inputClassName,
   buttonText,
   value,
@@ -25,7 +26,7 @@ const Address = ({
   const inputId = `address-${uuidv1()}`;
 
   return (
-    <div className={classNames(styles['address'])}>
+    <div className={classNames(styles['address'])} data-selector={dataSelector}>
       <TextInput
         {...rest}
         id={inputId}
@@ -56,6 +57,7 @@ const Address = ({
 Address.propTypes = {
   buttonText: PropTypes.string,
   className: PropTypes.string,
+  dataSelector: PropTypes.string,
   disabled: PropTypes.bool,
   inputClassName: PropTypes.string,
   maxLength: PropTypes.number,
@@ -73,6 +75,7 @@ Address.defaultProps = {
   buttonText: 'Add Address',
   className: '',
   disabled: false,
+  dataSelector: '',
   inputClassName: '',
   maxLength: null,
   onBlur: null,

@@ -139,11 +139,17 @@ The SecondaryAction component represents a secondary action for a page. A common
 
 The IconButtons represent actions that are generally unrelated to a specific page. They are most commonly used in WLW to open the User's settings and account pages. This prop accepts an array of Components, see the example above.
 
+----
+#### dataSelector
+
+An optional e2e data-selector attr
+
 ### PropTypes
 
 
 | name | type | default |
 | ---- | ---- | ------- |
+| dataSelector | string | '' |
 | IconButtons | array | null |
 | NavigationButton | node | null |
 | PrimaryAction | node | null |

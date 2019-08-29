@@ -21,6 +21,7 @@ const handleChange = (e) => setValue(e.target.value);
 | name | type | default | description |
 | ---- | ---- | ------- | ----------- |
 | className | string | '' | Sets the class name on the root element |
+| dataSelector | string | '' | An optional e2e data-selector attr |
 | disabled | boolean | '' | Sets the state of the text input to disabled |
 | label | string | '' | Sets the label text next to the text input |
 | labelClassName | string | '' | Sets the class name of the label element |

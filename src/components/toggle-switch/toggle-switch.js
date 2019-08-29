@@ -11,6 +11,7 @@ import styles from './toggle-switch.scss';
 
 const ToggleSwitch = ({
   className,
+  dataSelector,
   onClick,
   value,
   ...rest
@@ -28,6 +29,7 @@ const ToggleSwitch = ({
       >
         <input
           {...rest}
+          data-selector={dataSelector}
           onClick={onClick}
           type="checkbox"
           className={classNames(styles['toggle-switch-checkbox'])}
@@ -54,12 +56,14 @@ const ToggleSwitch = ({
 
 ToggleSwitch.propTypes = {
   className: PropTypes.string,
+  dataSelector: PropTypes.string,
   onClick: PropTypes.func,
   value: PropTypes.bool,
 };
 
 ToggleSwitch.defaultProps = {
   className: '',
+  dataSelector: '',
   onClick: null,
   value: false,
 };

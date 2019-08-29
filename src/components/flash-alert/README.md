@@ -33,6 +33,7 @@ return (
 | name | type | default | description |
 | ---- | ---- | ------- | ----------- |
 | className | string | '' | Sets the class name of the flash alert component |
+| dataSelector | string | '' | Optional e2e data-selector attr |
 | duration | number | 3000 | Sets the time in milliseconds the alert will be on screen |
 | height | string | 'auto' | Sets the height of the flash-alert |
 | message | number | '' | The message that will be displayed inside the notification |

@@ -8,7 +8,7 @@ A component that creates a QR Code based on the passed in address. Uses the [qrc
 import React from 'react';
 import { QRCode } from '@codeparticle/whitelabelwallet.styleguide';
 
-const messages = {
+const translations = {
   amount: 'Request G 1.50 to your address:',
   addressName: 'Savings - Address 2',
   scan: 'Have the sender scan this code for easy transaction setup.',
@@ -19,7 +19,7 @@ const title = text('Title', 'QR Code Generator');
 return (
   <QRCode
     title={title}
-    messages={messages}
+    translations={translations}
     qrString={qrString}
   />
   />
@@ -32,5 +32,6 @@ return (
 | ---- | ---- | ------- | ----------- |
 | qrString | string | '' | The string used to create the QR code |
 | className | string | '' | Sets the class name of the wallet component |
-| messages | object | '' | amount, addressName, and scan messages to be displayed in component |
+| dataSelector | string | '' | An optional e2e data-selector attr |
+| translations | object | '' | amount, addressName, and scan translations to be displayed in component |
 | title | string | '' | Sets the title of the QR Code Component |

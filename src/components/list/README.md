@@ -355,3 +355,8 @@ function customRowStyles({
 ### showSubItems (bool) default: true
 
 > When true, shows subitems. Can be used to control when the subitems of a selected row will be displayed.
+
+----
+### dataSelector (string) default: ''
+
+> An optional e2e data-selector attr

@@ -18,8 +18,8 @@ const IconButton = ({
 
   return (
     <button
-      data-selector={dataSelector}
       {...rest}
+      data-selector={dataSelector}
       className={iconClass}
     >
       {icon}

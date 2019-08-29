@@ -19,4 +19,5 @@ const onClick = () => {
 
 | name | type | default | description |
 | ---- | ---- | ------- | ----------- |
+| dataSelector | string | '' | An optional e2e data-selector attr |
 | onClick | func | null | Callback for toggling the ToggleSwitch |

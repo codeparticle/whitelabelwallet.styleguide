@@ -9,9 +9,9 @@ import { lightBackground, darkBackground } from './constants';
 import { ThemeWrapper } from './utils';
 
 const ContactDemo = ({ defaultToDark = false }) => {
-  const messages = {
-    copy: text('messages copy', 'Copy Address'),
-    send: text('messages send', 'Send Funds'),
+  const translations = {
+    copy: text('translations copy', 'Copy Address'),
+    send: text('translations send', 'Send Funds'),
   };
 
   const contactName = text('contactName', 'Contact Name');
@@ -23,7 +23,7 @@ const ContactDemo = ({ defaultToDark = false }) => {
         <Contact
           address={text('address', 'gc07160a870d809ef8097ac8za5539ayzw9fs0d809e')}
           contactName={contactName}
-          messages={messages}
+          translations={translations}
           onSend={action('CLICKED SEND')}
         />
       }

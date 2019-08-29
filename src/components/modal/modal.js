@@ -23,6 +23,7 @@ const defaultStyles = {
 function Modal({
   children,
   customStyles,
+  dataSelector,
   Icon,
   onClose,
   overlayBackground,
@@ -45,8 +46,9 @@ function Modal({
         overlayClassName="overlay"
         {...props}
       >
-        <div className="modal-content">
+        <div className="modal-content" data-selector={dataSelector}>
           <Header
+            dataSelector={`${dataSelector}-header`}
             onClose={onClose}
             subTitle={subTitle}
             title={title}
@@ -106,6 +108,7 @@ Modal.propTypes = {
     top: PropTypes.string,
     width: PropTypes.string,
   }),
+  dataSelector: PropTypes.string,
   Icon: PropTypes.func,
   isOpen: PropTypes.bool,
   onClose: PropTypes.func,
@@ -117,6 +120,7 @@ Modal.propTypes = {
 
 Modal.defaultProps = {
   customStyles: defaultStyles,
+  dataSelector: '',
   Icon: null,
   isOpen: false,
   onClose: null,

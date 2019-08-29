@@ -89,6 +89,11 @@ Specifies the title for the Header
 If true, uses the header's alternate theme
 
 ----
+#### dataSelector
+
+An optional e2e data-selector attr
+
+----
 ### PropTypes
 
 | name | type | default |
@@ -96,6 +101,7 @@ If true, uses the header's alternate theme
 | background | string | '' |
 | cancelButtonText | `string` | Cancel |
 | checkBoxLabel | `string` | '' |
+| dataSelector | `string` | '' |
 | hasCancelButton | `bool` | true |
 | hasFooter | `bool` | true |
 | hasCheckbox | `bool` | false |

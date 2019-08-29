@@ -11,6 +11,7 @@ const THEME_KEY = 'header';
 
 const Header = ({
   className,
+  dataSelector,
   hideBackground,
   Icon,
   title,
@@ -42,8 +43,9 @@ const Header = ({
 
   return (
     <div
-      id={inputId}
       {...rest}
+      id={inputId}
+      data-selector={dataSelector}
       className={classNames(
         styles['header'],
         className
@@ -58,14 +60,22 @@ const Header = ({
           <Icon fill={theme.svgFill} />
         )}
       </div>
-      <div className={classNames(
-        styles['header__title'],
-        subTitle && styles['with-subtitle'],
-      )}
-      >{title}
+      <div
+        className={classNames(
+          styles['header__title'],
+          subTitle && styles['with-subtitle'],
+        )}
+        data-selector={`${dataSelector}-title`}
+      >
+        {title}
       </div>
       {subTitle && (
-        <div className={classNames(styles['header__sub-title'])}>{subTitle}</div>
+        <div
+          className={classNames(styles['header__sub-title'])}
+          data-selector={`${dataSelector}-sub-title`}
+        >
+          {subTitle}
+        </div>
       )}
       <style jsx>
         {`
@@ -81,6 +91,7 @@ const Header = ({
 
 Header.propTypes = {
   className: PropTypes.string,
+  dataSelector: PropTypes.string,
   hideBackground: PropTypes.bool,
   Icon: PropTypes.func,
   onClose: PropTypes.func,
@@ -91,6 +102,7 @@ Header.propTypes = {
 
 Header.defaultProps = {
   className: '',
+  dataSelector: '',
   hideBackground: false,
   Icon: null,
   onClose: null,

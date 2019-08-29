@@ -37,6 +37,7 @@ export function Overlay({
   cancelButtonText,
   checkBoxLabel,
   children,
+  dataSelector,
   footerButtonText,
   Icon,
   hasCancelButton,
@@ -99,6 +100,7 @@ export function Overlay({
         <div className={styles.sidepanelFooter}>
           <Visible when={hasCancelButton}>
             <Button
+              dataSelector={`${dataSelector}-footer-cancel`}
               onClick={onCancelClick}
               className="footer-btn"
             >
@@ -117,6 +119,7 @@ export function Overlay({
           <Button
             className={styles.footerBtn}
             disabled={isDisabled}
+            dataSelector={`${dataSelector}-footer-btn`}
             onClick={onClick}
             variant="primary"
           >
@@ -139,6 +142,7 @@ export function Overlay({
     return (
       <div className={styles.overlayFooter}>
         <Button
+          dataSelector={`${dataSelector}-footer-btn`}
           onClick={onClick}
           variant="primary"
         >
@@ -160,9 +164,10 @@ export function Overlay({
         width={width}
         zIndex={parseInt(type === OVERLAY ? zIndexTop : zIndexMiddle, 10)}
       >
-        <div className={`content ${type}`}>
+        <div className={`content ${type}`} data-selector={`${dataSelector}`}>
           <div className={styles.header}>
             <Header
+              dataSelector={`${dataSelector}-header`}
               Icon={Icon}
               hideBackground={type === OVERLAY}
               onClose={onClose}
@@ -208,6 +213,7 @@ Overlay.propTypes = {
   children: PropTypes.node.isRequired,
   cancelButtonText: PropTypes.string,
   checkBoxLabel: PropTypes.string,
+  dataSelector: PropTypes.string,
   Icon: PropTypes.func,
   isOpen: PropTypes.bool,
   disableFooterButton: PropTypes.bool,
@@ -231,6 +237,7 @@ Overlay.defaultProps = {
   background: '',
   cancelButtonText: 'Cancel',
   checkBoxLabel: '',
+  dataSelector: '',
   Icon: null,
   isOpen: false,
   disableFooterButton: false,

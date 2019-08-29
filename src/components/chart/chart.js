@@ -8,6 +8,7 @@ import { useComponentSize } from './use-component-size';
 const Chart = ({
   className,
   children,
+  dataSelector,
   ...rest
 }) => {
   const containerRef = useRef(null);
@@ -15,6 +16,7 @@ const Chart = ({
 
   return (
     <div
+      data-selector={dataSelector}
       ref={containerRef}
       className={classNames(
         styles['chart-container'],
@@ -35,11 +37,13 @@ const Chart = ({
 Chart.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node,
+  dataSelector: PropTypes.string,
 };
 
 Chart.defaultProps = {
   className: '',
   children: null,
+  dataSelector: '',
 };
 
 export { Chart };

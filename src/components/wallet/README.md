@@ -8,7 +8,7 @@ A component that displays wallet funds and actions
 import React from 'react';
 import { Wallet } from '@codeparticle/whitelabelwallet.styleguide';
 
-const messages = {
+const translations = {
   deposit: 'Receive Funds',
   withdraw: 'Withdraw Funds',
 };
@@ -19,7 +19,7 @@ const currencyBalance = 10023.45;
 const coinBalance = 1023.45;
 const currencySymbol = "&#36;";
 const title = "Wallet Title";
-const messages = {
+const translations = {
   deposit: 'Receive Funds',
   withdraw: 'Withdraw Funds',
 };
@@ -39,7 +39,7 @@ return (
     currencySymbol={currencySymbol}
     coinSymbol={CoinIcon}
     title={title}
-    messages={messages}
+    translations={translations}
     onDeposit={onDepositClicked}
     onWithdraw={onWithdrawClicked}
   />
@@ -56,8 +56,9 @@ return (
 | coinBalance | number | 0 | the balance of crypto currency |
 | currencySymbol | string | 2 | the symbol of fiat currency |
 | coinSymbol | function or string | '' | the symbol (string or icon) of crypto currency |
+| dataSelector | string | '' | An optional e2e data-selector attr |
 | title | string | '' | Sets the title of the wallet |
-| messages | object | '' | Requires deposit and withdraw properties of type string |
+| translations | object | '' | Requires deposit and withdraw properties of type string |
 | onDeposit | func | '' | callback used on deposit button clicked |
 | onClick | func | '' | callback used to handle click event |
 | onWithdraw | func | '' | callback used on withdraw button clicked |
