@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.13](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/compare/v0.3.12...v0.3.13) (2019-08-29)
+
+
+### Features
+
+* **wlw-105:** moving HeaderButton and renaming Icon to IconButton ([607101b](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/607101b))
+
+
+
 ### [0.3.12](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/compare/v0.3.11...v0.3.12) (2019-08-28)
 
 
