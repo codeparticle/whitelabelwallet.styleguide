@@ -2,8 +2,8 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { radios, withKnobs } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
-import { Icon, IconVariants } from 'components/icon';
-import readme from 'components/icon/README.md';
+import { IconButton, IconVariants } from 'components/icon-button';
+import readme from 'components/icon-button/README.md';
 import { withReadme } from 'storybook-readme';
 import { svgs } from '../src';
 import { lightBackground } from './constants';
@@ -33,7 +33,7 @@ const IconDemo = () => {
         background: variant !== 'tertiary' ? null : 'linear-gradient(45deg, #4392D7 0%, #00E3C6 100%)',
       }}
     >
-      <Icon
+      <IconButton
         variant={variant}
         icon={<SvgClose height="24px" width="24px" />}
       />
@@ -48,10 +48,10 @@ const IconDemo = () => {
   );
 };
 
-storiesOf('Icon', module)
+storiesOf('IconButton', module)
   .addDecorator(withReadme(readme))
   .addDecorator(withKnobs)
-  .add('Icon', () => (
+  .add('IconButton', () => (
     <IconDemo />
   ), {
     backgrounds: [{ ...lightBackground, default: true }],
@@ -71,7 +71,7 @@ storiesOf('Icon', module)
     const variant = radios(iconLabel, iconTypes, defaultClass);
 
     return (
-      <Icon
+      <IconButton
         onClick={action('clicked')}
         variant={variant}
         icon={<SvgClose />}

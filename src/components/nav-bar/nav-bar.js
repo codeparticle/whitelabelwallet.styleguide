@@ -5,7 +5,7 @@ import Sidepanel from '@codeparticle/react-sidenav';
 import { white } from 'styles/colors.scss';
 import layout from 'styles/layout.scss';
 import { Logo } from 'components/logo';
-import { Icon as IconWrapper, IconVariants } from 'components/icon';
+import { IconButton as IconWrapper, IconVariants } from 'components/icon-button';
 import { icons } from 'svgs';
 import styles from './nav-bar.scss';
 

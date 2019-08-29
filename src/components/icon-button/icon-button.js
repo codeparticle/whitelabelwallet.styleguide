@@ -1,22 +1,24 @@
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import styles from './icon.scss';
+import styles from './icon-button.scss';
 
-const Icon = ({
+const IconButton = ({
   className,
+  dataSelector,
   variant,
   icon,
   ...rest
 }) => {
   const iconClass = classNames(
-    styles.icon,
+    styles.iconButton,
     styles[variant],
     className
   );
 
   return (
     <button
+      data-selector={dataSelector}
       {...rest}
       className={iconClass}
     >
@@ -25,16 +27,18 @@ const Icon = ({
   );
 };
 
-Icon.propTypes = {
+IconButton.propTypes = {
   className: PropTypes.string,
+  dataSelector: PropTypes.string,
   variant: PropTypes.string,
   icon: PropTypes.node,
 };
 
-Icon.defaultProps = {
+IconButton.defaultProps = {
   className: '',
+  dataSelector: '',
   variant: '',
   icon: null,
 };
 
-export { Icon };
+export { IconButton };
