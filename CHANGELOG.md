@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.15](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/compare/v0.3.14...v0.3.15) (2019-08-30)
+
+
+### Bug Fixes
+
+* **contact:** fixed prop warnings on contact component ([4779f5b](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/4779f5b))
+
+
+### Features
+
+* **wlw-141:** added autoSearch for search component ([582042d](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/582042d))
+
+
+
 ### [0.3.14](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/compare/v0.3.13...v0.3.14) (2019-08-30)
 
 
