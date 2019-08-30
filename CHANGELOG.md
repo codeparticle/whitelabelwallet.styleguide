@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.14](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/compare/v0.3.13...v0.3.14) (2019-08-30)
+
+
+### Features
+
+* **wlw-137:** added dataSelectors, renamed messages to translations ([51d3857](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/51d3857))
+* **wlw-139:** refactored contact to support mobile ([487fe28](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/487fe28))
+
+
+
 ### [0.3.13](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/compare/v0.3.12...v0.3.13) (2019-08-29)
 
 
