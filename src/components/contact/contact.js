@@ -173,11 +173,15 @@ const ContactActions = ({
 ContactActions.propTypes = {
   address: PropTypes.string.isRequired,
   dataSelector: PropTypes.string.isRequired,
-  onCopy: PropTypes.func.isRequired,
+  onCopy: PropTypes.func,
   onEdit: PropTypes.func.isRequired,
   onSend: PropTypes.func.isRequired,
   translations: PropTypes.objectOf(PropTypes.string).isRequired,
   theme: PropTypes.objectOf(PropTypes.string).isRequired,
+};
+
+ContactActions.defaultProps = {
+  onCopy: null,
 };
 
 const ContactHeader = ({
@@ -231,10 +235,12 @@ const Contact = ({
       <ContactHeader
         address={address}
         contactName={contactName}
+        dataSelector={dataSelector}
       />
       <ContactActions
         theme={theme}
         address={address}
+        dataSelector={dataSelector}
         onCopy={onCopy}
         onEdit={onEdit}
         onSend={onSend}
