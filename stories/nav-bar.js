@@ -5,7 +5,7 @@ import { boolean, withKnobs } from '@storybook/addon-knobs';
 import { Router } from 'react-router';
 import { createMemoryHistory } from 'history'; /* eslint-disable-line */
 import { NavBar, svgs } from '../src';
-import readme from '../src/components/overlay/README.md';
+import readme from '../src/components/nav-bar/README.md';
 import { lightBackground, darkBackground } from './constants';
 
 const history = createMemoryHistory();
