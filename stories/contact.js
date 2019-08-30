@@ -26,7 +26,6 @@ const ContactDemo = ({ defaultToDark = false }) => {
           contactName={contactName}
           translations={translations}
           onSend={action('CLICKED SEND')}
-          onCopy={action('CLICKED COPY')}
           onEdit={action('CLICKED EDIT')}
         />
       }
