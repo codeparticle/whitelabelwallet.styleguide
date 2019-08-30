@@ -14,6 +14,7 @@ import { Search } from '@codeparticle/whitelabelwallet.styleguide';
 
 | name | type | default | description |
 | ---- | ---- | ------- | ----------- |
+| autoSearch | bool | true | Enables/disables automatically triggering onSubmit after 4 characters have been typed |
 | onSubmit* | func |  | Callback for submitting a search |
 | dataSelector | string | '' | An optional e2e data-selector attr |
 | placeholder | string | 'Search...' | Placeholder text. |

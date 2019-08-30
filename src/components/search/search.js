@@ -3,7 +3,7 @@
  * @author Gabriel Womble
  * @editor Kevin Van Beek
  */
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import { icons } from 'svgs';
@@ -20,6 +20,7 @@ const getIconFill = (theme, isActive) => {
 };
 
 const Search = ({
+  autoSearch,
   dataSelector,
   onSubmit,
   placeholder,
@@ -28,6 +29,12 @@ const Search = ({
   const [isActive, setIsActive] = useState(false);
   const theme = useTheme('search');
   const iconFill = getIconFill(theme, isActive);
+
+  useEffect(() => {
+    if (autoSearch && searchValue.length > 3) {
+      onSubmit(searchValue);
+    }
+  }, [autoSearch, searchValue]);
 
   function handleChange(e) {
     if (e) {
@@ -112,12 +119,14 @@ const Search = ({
 };
 
 Search.propTypes = {
+  autoSearch: PropTypes.bool,
   dataSelector: PropTypes.string,
   onSubmit: PropTypes.func.isRequired,
   placeholder: PropTypes.string,
 };
 
 Search.defaultProps = {
+  autoSearch: true,
   dataSelector: '',
   placeholder: 'Search...',
 };
