@@ -80,7 +80,7 @@ const NavItem = ({
       height={LOGO_ICON_SIZE}
       className={styles.icon}
     />
-    <div className={styles.label} data-selector={`${dataSelector}-${label}`}>
+    <div className={styles.label} data-selector={`${dataSelector}-${path.replace('/', '')}`}>
       {label}
     </div>
   </Link>
