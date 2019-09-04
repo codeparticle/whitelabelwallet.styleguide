@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.4.0](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/compare/v0.3.15...v0.4.0) (2019-09-04)
+
+
+### Features
+
+* **wlw-143:** update data-selector to use path instead of label ([6651e7f](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/6651e7f))
+
+
+
 ### [0.3.15](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/compare/v0.3.14...v0.3.15) (2019-08-30)
 
 
