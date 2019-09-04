@@ -144,6 +144,11 @@ The IconButtons represent actions that are generally unrelated to a specific pag
 
 An optional e2e data-selector attr
 
+----
+#### useAltTheme
+
+An optional bool to use the alternate theme (gradient background, white text & fill)
+
 ### PropTypes
 
 
@@ -155,3 +160,4 @@ An optional e2e data-selector attr
 | PrimaryAction | node | null |
 | SecondaryAction | node | null |
 | title | string | required |
+| useAltTheme | bool | false |

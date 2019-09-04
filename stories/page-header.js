@@ -71,6 +71,7 @@ const SecondaryAction = () => (
 );
 
 const PageHeaderDemo = ({ defaultToDark = false }) => {
+  const useAltTheme = boolean('useAltTheme', false);
   const title = text('title', 'Page Header');
   const showNavButton = boolean('showNavButton', true);
   const showPrimaryAction = boolean('showPrimaryAction', true);
@@ -84,6 +85,7 @@ const PageHeaderDemo = ({ defaultToDark = false }) => {
           defaultToDark={defaultToDark}
           content={
             <PageHeader
+              useAltTheme={useAltTheme}
               title={title}
               NavigationButton={showNavButton && NavButton}
               PrimaryAction={showPrimaryAction && PrimaryAction}
@@ -92,7 +94,7 @@ const PageHeaderDemo = ({ defaultToDark = false }) => {
             />
           }
         />
-        <hr />
+        <hr className="no-margin" />
       </div>
       <style jsx>
         {`
@@ -101,6 +103,10 @@ const PageHeaderDemo = ({ defaultToDark = false }) => {
             color: ${defaultToDark ? 'white' : 'black'};
             height: 100vw;
             width: 100%;
+          }
+
+          .no-margin {
+            margin: 0;
           }
         `}
       </style>

@@ -1,44 +1,18 @@
+@import 'styles/colors';
 @import 'styles/layout';
 @import 'styles/mixins';
 
-$headerPaddingLeft: calc(#{$spacing-m} - #{$spacing-s});
-$headerPaddingRight: calc(#{$spacing-m} - #{$spacing-xs});
+$mobilePaddingTop: calc(2 * #{$spacing-l});
+$mobileHeight: 120px;
+$headerPaddingLeft: calc(#{$spacing-l} - #{$spacing-s});
+$headerPaddingRight: calc(#{$spacing-l} - #{$spacing-xs});
 
-.pageHeader {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  padding: $spacing-l $headerPaddingLeft 0 $headerPaddingRight;
-  width: 100%;
+.altTheme {
+  background: $gradient-teal;
 
-  &__title,
-  &__buttons {
-    align-items: flex-end;
-    display: flex;
-    height: 100%;
-  }
-
-  &__title {
-    justify-content: flex-start;
-
-    &:first-child {
-      margin-left: 0;
-    }
-  }
-
-  &__buttons {
-    justify-content: flex-end;
-
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-
-  @include mquery($width-breakpoint-sm) {
-    &__title {
-      display: grid;
-      grid-template-columns: 1fr 4fr 1fr;
-      width: 100%;
+  svg {
+    & > path {
+      fill: $white;
     }
   }
 }
@@ -80,6 +54,51 @@ $headerPaddingRight: calc(#{$spacing-m} - #{$spacing-xs});
 
     &.primary {
       justify-content: flex-end;
+    }
+  }
+}
+
+.pageHeader {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: $spacing-xl $headerPaddingLeft $spacing-m $headerPaddingRight;
+  width: 100%;
+
+  &__title,
+  &__buttons {
+    align-items: flex-end;
+    display: flex;
+    height: 100%;
+  }
+
+  &__title {
+    justify-content: flex-start;
+
+    .pageItem:first-child {
+      margin-left: 0;
+      text-align: left;
+    }
+  }
+
+  &__buttons {
+    justify-content: flex-end;
+
+    .pageItem:last-child {
+      margin-right: 0;
+    }
+  }
+
+  @include mquery($width-breakpoint-sm) {
+    align-items: flex-end;
+    height: $mobileHeight;
+    padding-bottom: 0;
+    padding-top: $mobilePaddingTop;
+
+    &__title {
+      display: grid;
+      grid-template-columns: 1fr 4fr 1fr;
+      width: 100%;
     }
   }
 }
