@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.1](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/compare/v0.3.13...v0.4.1) (2019-09-05)
+
+
+### Bug Fixes
+
+* **contact:** fixed prop warnings on contact component ([4779f5b](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/4779f5b))
+
+
+### Features
+
+* **wlw-137:** added dataSelectors, renamed messages to translations ([51d3857](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/51d3857))
+* **wlw-139:** refactored contact to support mobile ([487fe28](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/487fe28))
+* **wlw-141:** added autoSearch for search component ([582042d](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/582042d))
+* **wlw-143:** update data-selector to use path instead of label ([6651e7f](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/6651e7f))
+* **wlw-144:** toggle now changes with value ([7b271c0](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/7b271c0))
+
+
+
 ## [0.4.0](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/compare/v0.3.15...v0.4.0) (2019-09-04)
 
 
