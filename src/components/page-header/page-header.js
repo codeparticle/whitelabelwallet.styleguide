@@ -5,10 +5,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { useTheme } from 'components/theme-provider';
+import { themes, useTheme } from 'components/theme-provider';
 import { useMedia } from 'hooks/use-media';
 import styles from './page-header.scss';
 
+const THEME_KEY = 'pageHeader';
 const ICON_SIZE = 24;
 const iconProps = {
   height: ICON_SIZE,
@@ -97,8 +98,11 @@ function PageHeader({
   PrimaryAction,
   SecondaryAction,
   title,
+  useAltTheme,
 }) {
-  const { color } = useTheme('pageHeader');
+  const { color } = useAltTheme
+    ? themes.alt[THEME_KEY]
+    : useTheme(THEME_KEY);
   const media = useMedia();
   const { isMobile, isLandScape } = media;
   const collapsed = (isMobile || isLandScape);
@@ -106,7 +110,13 @@ function PageHeader({
 
   return (
     <>
-      <div className={styles.pageHeader} data-selector={dataSelector}>
+      <div
+        className={classNames(
+          styles.pageHeader,
+          useAltTheme && styles.altTheme
+        )}
+        data-selector={dataSelector}
+      >
         <div className={styles.pageHeader__title}>
           <PageItem
             className="nav"
@@ -150,6 +160,7 @@ PageHeader.propTypes = {
   PrimaryAction: PropTypes.func,
   SecondaryAction: PropTypes.func,
   title: PropTypes.string.isRequired,
+  useAltTheme: PropTypes.bool,
 };
 
 PageHeader.defaultProps = {
@@ -158,6 +169,7 @@ PageHeader.defaultProps = {
   NavigationButton: null,
   PrimaryAction: null,
   SecondaryAction: null,
+  useAltTheme: false,
 };
 
 export { PageHeader };

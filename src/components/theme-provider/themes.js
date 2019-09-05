@@ -333,6 +333,9 @@ const alternateTheme = {
     svgFill: white,
     closeBtn: white,
   },
+  pageHeader: {
+    color: white,
+  },
 };
 
 export const themes = {
