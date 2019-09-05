@@ -42,6 +42,8 @@ export { TransferAmount } from './components/transfer-amount';
 export { Wallet } from './components/wallet';
 export {
   ThemeContext,
+  ThemeProvider,
+  THEME_KEYS,
   themes,
   useTheme,
   withTheme,

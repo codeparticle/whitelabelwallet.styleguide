@@ -295,9 +295,9 @@ const darkTheme = {
   },
   overlay: {
     color: grey,
-    sidepanel: dark,
+    sidepanel: darkBg,
     overlay: blueShade,
-    footerBackground: coolGreyDark,
+    footerBackground: dark,
   },
   pageHeader: {
     color: grey,

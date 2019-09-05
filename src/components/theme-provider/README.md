@@ -4,6 +4,36 @@ This module includes:
 - ThemeContext
 - useTheme
 - withTheme
+- themes (light and dark)
+- THEME_KEYS (LIGHT and DARK)
+- ThemeProvider
+
+## ThemeProvider
+
+### Usage
+
+Leverages the ThemeContext to provide a more out-of-the-box WLW theming experience.
+
+```jsx
+import { ThemeProvider, THEME_KEYS } from '@codeparticle/whitelabelwallet.styleguide';
+
+const { DARK } = THEME_KEYS;
+
+export const App = () => {
+  return (
+    <ThemeProvider themeKey={DARK}>
+      <Children />
+    </ThemeProvider>
+  );
+};
+
+```
+### Props
+
+
+| name | type | default | description |
+| ---- | ---- | ------- | ----------- |
+| themeKey | string | required | Theme key of LIGHT or DARK (provided by THEME_KEYS object) |
 
 ## ThemeContext
 
@@ -11,12 +41,12 @@ This module includes:
 
 ```jsx
 
-import { ThemeContext } from  '@codeparticle/whitelabelwallet.styleguide';
+import { ThemeContext } from '@codeparticle/whitelabelwallet.styleguide';
 
 // Use at top of component tree
 export const App = () => {
   return (
-    <ThemeContext.Provider>
+    <ThemeContext.Provider value={myTheme}>
       <Children />
     </ThemeContext.Provider>
   );
