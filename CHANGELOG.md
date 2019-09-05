@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.2](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/compare/v0.4.1...v0.4.2) (2019-09-05)
+
+
+### Features
+
+* **wlw-106:** added alt theme to pageheader, corrected alignment ([3c4d8f7](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/3c4d8f7))
+* **wlw-108:** fixed overlay header for overlay variant ([873e070](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/873e070))
+* **wlw-83:** added theme-provider, adjusted sidepanel theme ([04156f9](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/04156f9))
+
+
+
 ### [0.4.1](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/compare/v0.3.13...v0.4.1) (2019-09-05)
 
 
