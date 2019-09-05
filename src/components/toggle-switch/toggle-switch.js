@@ -32,7 +32,7 @@ const ToggleSwitch = ({
           data-selector={dataSelector}
           onClick={onClick}
           type="checkbox"
-          className={classNames(styles['toggle-switch-checkbox'])}
+          className={classNames(styles['toggle-switch-checkbox'], { [styles.slide]: value })}
           id={inputId}
           value={value}
         />

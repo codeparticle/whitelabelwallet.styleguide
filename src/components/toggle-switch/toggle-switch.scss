@@ -61,11 +61,11 @@
     width: 28px;
   }
 
-  .toggle-switch-label .toggle-switch-checkbox:checked + .toggle-switch-slider {
+  .toggle-switch-label .toggle-switch-checkbox.slide + .toggle-switch-slider {
     margin-left: 0;
   }
 
-  .toggle-switch-label .toggle-switch-checkbox:checked ~ .toggle-switch-btn {
+  .toggle-switch-label .toggle-switch-checkbox.slide ~ .toggle-switch-btn {
     right: 5px;
   }
 }
