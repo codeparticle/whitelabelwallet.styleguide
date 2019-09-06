@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.3](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/compare/v0.4.2...v0.4.3) (2019-09-06)
+
+
+### Bug Fixes
+
+* **wlw-145:** fix toggle switch dataSelector ([8b923ae](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/8b923ae))
+
+
+
 ### [0.4.2](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/compare/v0.4.1...v0.4.2) (2019-09-05)
 
 
