@@ -29,15 +29,14 @@ const ToggleSwitch = ({
       >
         <input
           {...rest}
-          data-selector={dataSelector}
           onClick={onClick}
           type="checkbox"
           className={classNames(styles['toggle-switch-checkbox'], { [styles.slide]: value })}
           id={inputId}
           value={value}
         />
-        <span className={classNames(styles['toggle-switch-slider'])} />
-        <span className={classNames(styles['toggle-switch-btn'])} />
+        <span className={classNames(styles['toggle-switch-slider'])} data-selector={`${dataSelector}-${value}`} />
+        <span className={classNames(styles['toggle-switch-btn'])} data-selector={dataSelector} />
         <style jsx>
           {`
             .${styles['toggle-switch-slider']} {
