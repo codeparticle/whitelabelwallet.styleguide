@@ -22,6 +22,7 @@ import './overflow-container';
 import './overlay';
 import './page-header';
 import './qr-code';
+import './receipt-container';
 import './search';
 import './select';
 import './text-area';

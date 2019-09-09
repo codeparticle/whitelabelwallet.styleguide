@@ -1,0 +1,22 @@
+@import 'styles/colors';
+@import 'styles/layout';
+
+@function borderGradient($angle) {
+  @return linear-gradient($angle, transparent 0%, transparent 50%, $white 50%, $white 100%);
+}
+
+// Implementation is a cleaned-up version of this: https://medium.com/coding-design/saw-tooth-banners-with-css-95c31e91c196
+
+.receiptContainer {
+  background-color: transparent;
+  background-image: bordergradient(135deg), bordergradient(-135deg), bordergradient(45deg), bordergradient(-45deg);
+  background-position: top center, top center, bottom center, bottom center;
+  background-repeat: repeat-x;
+  background-size: 1rem 1rem, 1rem 1rem, 1rem 1rem, 1rem 1rem;
+  padding: 1rem 0;
+}
+
+.receiptContent {
+  background: $white;
+  padding: $spacing-xl;
+}
