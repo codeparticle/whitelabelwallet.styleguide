@@ -33,6 +33,7 @@ export { NavBar } from './components/nav-bar';
 export { OverflowContainer } from './components/overflow-container';
 export { Overlay } from './components/overlay';
 export { PageHeader } from './components/page-header';
+export { ReceiptContainer } from './components/receipt-container';
 export { Search } from './components/search';
 export { Select } from './components/select';
 export { TextArea } from './components/text-area';
