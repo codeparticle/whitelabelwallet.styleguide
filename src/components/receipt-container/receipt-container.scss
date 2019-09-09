@@ -1,7 +1,7 @@
 @import 'styles/colors';
 @import 'styles/layout';
 
-@function borderGradient($angle) {
+@function border-gradient($angle) {
   @return linear-gradient($angle, transparent 0%, transparent 50%, $white 50%, $white 100%);
 }
 
@@ -9,7 +9,7 @@
 
 .receiptContainer {
   background-color: transparent;
-  background-image: bordergradient(135deg), bordergradient(-135deg), bordergradient(45deg), bordergradient(-45deg);
+  background-image: border-gradient(135deg), border-gradient(-135deg), border-gradient(45deg), border-gradient(-45deg);
   background-position: top center, top center, bottom center, bottom center;
   background-repeat: repeat-x;
   background-size: 1rem 1rem, 1rem 1rem, 1rem 1rem, 1rem 1rem;
