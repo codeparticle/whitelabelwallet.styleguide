@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.4](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/compare/v0.4.3...v0.4.4) (2019-09-09)
+
+
+### Bug Fixes
+
+* **wlw-83:** fix overlay footer padding ([165469a](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/165469a))
+
+
+### Features
+
+* **wlw-132:** added ReceiptContainer ([14ee830](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/14ee830))
+* **wlw-132:** fixed style broken by lint autofix ([0f88a22](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/0f88a22))
+
+
+
 ### [0.4.3](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/compare/v0.4.2...v0.4.3) (2019-09-06)
 
 
