@@ -13,6 +13,8 @@
   padding: $spacing-l $spacing-xl;
 
   .footerBtn {
+    margin-left: $spacing-s;
+
     &:disabled {
       background: $grey;
       border-color: $grey;

@@ -1,6 +1,7 @@
-@import "styles/colors.scss";
-@import "styles/layout.scss";
-@import "styles/fonts.scss";
+@import 'styles/colors';
+@import 'styles/fonts';
+@import 'styles/layout';
+@import 'styles/mixins';
 
 .wallet {
   border-radius: 9px;
@@ -36,6 +37,17 @@
     justify-content: space-between;
     z-index: $z-index-bottom;
   }
+
+  @include mquery($width-breakpoint-xs) {
+    &-funds__actions,
+    &__wallet-title {
+      display: none;
+    }
+
+    .wallet {
+      cursor: pointer;
+    }
+  }
 }
 
 .wallet-funds {
@@ -69,16 +81,5 @@
       margin-bottom: $spacing-xs;
       margin-top: $spacing-xs;
     }
-  }
-}
-
-@media only screen and (max-width: 561px) {
-  .wallet-funds__actions,
-  .wallet__wallet-title svg {
-    display: none;
-  }
-
-  .wallet {
-    cursor: pointer;
   }
 }
