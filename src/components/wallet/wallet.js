@@ -6,8 +6,12 @@ import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import { VictoryAxis } from 'victory';
-import { AreaChart } from 'components/area-chart';
-import { Button } from 'components/button';
+import {
+  AreaChart,
+  Button,
+  IconButton,
+  useMedia,
+} from 'src';
 import styles from './wallet.scss';
 import { useTheme } from '../theme-provider';
 import { icons } from '../../svgs';
@@ -83,6 +87,7 @@ const WalletFundsContainer = ({
 };
 
 const WalletTitle = ({
+  onEdit,
   title,
 }) => {
   const theme = useTheme('wallet');
@@ -96,7 +101,7 @@ const WalletTitle = ({
       <h3>
         {title}
       </h3>
-      <SvgCog />
+      <IconButton icon={<SvgCog />} onClick={onEdit} />
       <style jsx>
         {`
           .${styles['wallet__wallet-title']} {
@@ -119,17 +124,26 @@ const Wallet = ({
   dataSelector,
   onDeposit,
   onWithdraw,
-  onClick,
+  onEdit,
   translations,
   ...rest
 }) => {
   const theme = useTheme('wallet');
+  const { isMobile } = useMedia();
 
   const walletClass = classNames(
     styles.wallet,
     'wallet',
     className
   );
+
+  const onClick = () => {
+    if (!isMobile) {
+      return;
+    }
+
+    onEdit();
+  };
 
   return (
     <div
@@ -139,7 +153,7 @@ const Wallet = ({
       role="button"
       onClick={onClick}
       onKeyPress={onClick}
-      tabIndex="0"
+      tabIndex={0}
     >
       <div
         className={classNames(
@@ -160,6 +174,7 @@ const Wallet = ({
         )}
       >
         <WalletTitle
+          onEdit={onEdit}
           title={title}
         />
         <WalletFundsContainer
@@ -193,7 +208,7 @@ Wallet.propTypes = {
   currencySymbol: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   dataSelector: PropTypes.string,
   coinSymbol: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
-  onClick: PropTypes.func,
+  onEdit: PropTypes.func,
   onDeposit: PropTypes.func,
   onWithdraw: PropTypes.func,
   translations: PropTypes.shape({
@@ -211,7 +226,7 @@ Wallet.defaultProps = {
   coinSymbol: null,
   currencySymbol: null,
   dataSelector: '',
-  onClick: null,
+  onEdit: null,
   onDeposit: null,
   onWithdraw: null,
   translations: {

@@ -60,5 +60,5 @@ return (
 | title | string | '' | Sets the title of the wallet |
 | translations | object | '' | Requires deposit and withdraw properties of type string |
 | onDeposit | func | '' | callback used on deposit button clicked |
-| onClick | func | '' | callback used to handle click event |
+| onEdit | func | '' | callback used to handle edit event |
 | onWithdraw | func | '' | callback used on withdraw button clicked |
