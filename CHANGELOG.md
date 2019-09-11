@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.6](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/compare/v0.4.5...v0.4.6) (2019-09-11)
+
+
+### Features
+
+* **wlw-120:** added pencil svg ([bc22f6c](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/bc22f6c))
+
+
+
 ### [0.4.5](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/compare/v0.4.4...v0.4.5) (2019-09-10)
 
 
