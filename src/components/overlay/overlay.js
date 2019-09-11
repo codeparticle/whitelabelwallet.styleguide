@@ -5,7 +5,6 @@ import { Visible } from '@codeparticle/react-visible';
 import { LabeledCheckbox } from 'components/labeled-checkbox';
 import { Header } from 'components/header';
 import { Button } from 'components/button';
-import { white } from 'styles/colors.scss';
 import { zIndexMiddle, zIndexTop } from 'styles/layout.scss';
 import { useTheme } from '../theme-provider';
 import { TYPES } from './constants';
@@ -53,12 +52,12 @@ export function Overlay({
   type,
   useAltTheme,
 }) {
-  const theme = useTheme('overlay');
+  const theme = useTheme(OVERLAY);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth || 0);
   const [width, setWidth] = useState(type === OVERLAY ? '100%' : `${calculateWidth(windowWidth)}px`);
   const [isChecked, setIsChecked] = useState(false);
   const [isDisabled, setIsDisabled] = useState(disableFooterButton);
-  const color = type === OVERLAY ? white : theme.color;
+  const { color } = theme;
 
   function handleResize() {
     setWindowWidth(window.innerWidth);
