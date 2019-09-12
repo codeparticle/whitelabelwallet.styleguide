@@ -30,5 +30,11 @@
 
   button {
     border-radius: 29px;
+
+    &:disabled {
+      background: $grey;
+      border-color: $grey;
+      color: $white;
+    }
   }
 }
