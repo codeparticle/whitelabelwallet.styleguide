@@ -144,6 +144,7 @@ export function Overlay({
         <Button
           dataSelector={`${dataSelector}-footer-btn`}
           onClick={onClick}
+          disabled={isDisabled}
           variant="primary"
         >
           {footerButtonText}
