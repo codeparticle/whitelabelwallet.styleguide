@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.7](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/compare/v0.4.1...v0.4.7) (2019-09-12)
+
+
+### Bug Fixes
+
+* **wlw-119:** fixing wallet click events ([3f311b6](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/3f311b6))
+* **wlw-145:** fix toggle switch dataSelector ([8b923ae](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/8b923ae))
+* **wlw-83:** fix overlay footer padding ([165469a](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/165469a))
+
+
+### Features
+
+* **wlw-106:** added alt theme to pageheader, corrected alignment ([3c4d8f7](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/3c4d8f7))
+* **wlw-108:** fixed overlay header for overlay variant ([873e070](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/873e070))
+* **wlw-120:** added pencil svg ([bc22f6c](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/bc22f6c))
+* **wlw-132:** added ReceiptContainer ([14ee830](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/14ee830))
+* **wlw-132:** fixed style broken by lint autofix ([0f88a22](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/0f88a22))
+* **wlw-148:** fix mobile footer button disabling ([c23ca1c](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/c23ca1c))
+* **wlw-83:** added theme-provider, adjusted sidepanel theme ([04156f9](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/04156f9))
+
+
+
 ### [0.4.6](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/compare/v0.4.5...v0.4.6) (2019-09-11)
 
 
