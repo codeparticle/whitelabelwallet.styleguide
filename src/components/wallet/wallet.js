@@ -125,6 +125,7 @@ const Wallet = ({
   onDeposit,
   onWithdraw,
   onEdit,
+  onClick,
   translations,
   ...rest
 }) => {
@@ -137,8 +138,18 @@ const Wallet = ({
     className
   );
 
-  const onClick = () => {
+  const handleClick = () => {
     if (!isMobile) {
+      return;
+    }
+
+    onClick();
+  };
+
+  const handleEditClick = (event) => {
+    if (isMobile) {
+      event.stopPropagation();
+      onEdit();
       return;
     }
 
@@ -151,8 +162,8 @@ const Wallet = ({
       data-selector={dataSelector}
       className={walletClass}
       role="button"
-      onClick={onClick}
-      onKeyPress={onClick}
+      onClick={handleClick}
+      onKeyPress={handleClick}
       tabIndex={0}
     >
       <div
@@ -174,7 +185,7 @@ const Wallet = ({
         )}
       >
         <WalletTitle
-          onEdit={onEdit}
+          onEdit={handleEditClick}
           title={title}
         />
         <WalletFundsContainer
