@@ -221,6 +221,7 @@ Wallet.propTypes = {
   coinSymbol: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   onEdit: PropTypes.func,
   onDeposit: PropTypes.func,
+  onClick: PropTypes.func,
   onWithdraw: PropTypes.func,
   translations: PropTypes.shape({
     deposit: PropTypes.string,
@@ -239,6 +240,7 @@ Wallet.defaultProps = {
   dataSelector: '',
   onEdit: null,
   onDeposit: null,
+  onClick: null,
   onWithdraw: null,
   translations: {
     deposit: 'Receive Funds',
