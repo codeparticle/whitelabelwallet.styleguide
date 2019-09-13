@@ -2,23 +2,16 @@
 @import "styles/layout.scss";
 
 $border-radius-circle: 50%;
-$button-diameter: 55px;
 
 .blueCircle {
   border-radius: $border-radius-circle;
   bottom: $space-6;
-  display: inline-block;
   position: fixed;
   right: $space-6;
 
   button {
-    align-items: center;
-    border-radius: $border-radius-circle;
-    display: inline-flex;
-    height: $button-diameter;
-    justify-content: center;
-    -webkit-tap-highlight-color: transparent;
-    width: $button-diameter;
+    line-height: 0;
+    padding: $space-6;
 
     svg {
       & > path {
