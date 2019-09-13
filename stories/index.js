@@ -7,6 +7,7 @@ import './area-chart';
 import './labeled-checkbox';
 import './button';
 import './chart';
+import './circular-add-button';
 import './contact';
 import './deterministic-pass-phrase';
 import './flash-alert';

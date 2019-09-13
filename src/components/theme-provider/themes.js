@@ -4,6 +4,7 @@ import { ButtonVariants } from '../button';
 const {
   blue,
   cloud,
+  coolBlue,
   dark,
   green,
   grey,
@@ -31,6 +32,9 @@ const {
 
 const lightTheme = {
   name: 'light',
+  circularAddButton: {
+    background: coolBlue,
+  },
   demo: {
     background: tintBlue,
     border: blue,
@@ -176,6 +180,9 @@ const lightTheme = {
 
 const darkTheme = {
   name: 'dark',
+  circularAddButton: {
+    background: coolBlue,
+  },
   demo: {
     background: darkBg,
     border: slate,
