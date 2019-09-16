@@ -10,7 +10,6 @@ import {
   AreaChart,
   Button,
   IconButton,
-  useMedia,
 } from 'src';
 import styles from './wallet.scss';
 import { useTheme } from '../theme-provider';
@@ -125,11 +124,11 @@ const Wallet = ({
   onDeposit,
   onWithdraw,
   onEdit,
+  onClick,
   translations,
   ...rest
 }) => {
   const theme = useTheme('wallet');
-  const { isMobile } = useMedia();
 
   const walletClass = classNames(
     styles.wallet,
@@ -137,11 +136,8 @@ const Wallet = ({
     className
   );
 
-  const onClick = () => {
-    if (!isMobile) {
-      return;
-    }
-
+  const handleEditClick = (event) => {
+    event.stopPropagation();
     onEdit();
   };
 
@@ -174,7 +170,7 @@ const Wallet = ({
         )}
       >
         <WalletTitle
-          onEdit={onEdit}
+          onEdit={handleEditClick}
           title={title}
         />
         <WalletFundsContainer
@@ -210,6 +206,7 @@ Wallet.propTypes = {
   coinSymbol: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   onEdit: PropTypes.func,
   onDeposit: PropTypes.func,
+  onClick: PropTypes.func,
   onWithdraw: PropTypes.func,
   translations: PropTypes.shape({
     deposit: PropTypes.string,
@@ -228,6 +225,7 @@ Wallet.defaultProps = {
   dataSelector: '',
   onEdit: null,
   onDeposit: null,
+  onClick: null,
   onWithdraw: null,
   translations: {
     deposit: 'Receive Funds',

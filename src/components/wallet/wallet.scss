@@ -39,11 +39,6 @@
   }
 
   @include mquery($width-breakpoint-xs) {
-    &-funds__actions,
-    &__wallet-title {
-      display: none;
-    }
-
     .wallet {
       cursor: pointer;
     }
@@ -80,6 +75,12 @@
     & > button {
       margin-bottom: $spacing-xs;
       margin-top: $spacing-xs;
+    }
+  }
+
+  @include mquery($width-breakpoint-xs) {
+    &__actions {
+      display: none;
     }
   }
 }
