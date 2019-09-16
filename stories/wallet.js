@@ -39,7 +39,6 @@ const WalletDemo = ({ defaultToDark = false }) => {
           coinSymbol={<SvgCoinSymbol />}
           currencySymbol="&#36;"
           onEdit={action('Edit action')}
-          onClick={action('Mobile Click')}
           title={title}
           translations={translations}
           onDeposit={action('CLICKED DEPOSIT')}

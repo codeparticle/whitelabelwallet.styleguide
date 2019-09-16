@@ -10,7 +10,6 @@ import {
   AreaChart,
   Button,
   IconButton,
-  useMedia,
 } from 'src';
 import styles from './wallet.scss';
 import { useTheme } from '../theme-provider';
@@ -130,7 +129,6 @@ const Wallet = ({
   ...rest
 }) => {
   const theme = useTheme('wallet');
-  const { isMobile } = useMedia();
 
   const walletClass = classNames(
     styles.wallet,
@@ -138,21 +136,8 @@ const Wallet = ({
     className
   );
 
-  const handleClick = () => {
-    if (!isMobile) {
-      return;
-    }
-
-    onClick();
-  };
-
   const handleEditClick = (event) => {
-    if (isMobile) {
-      event.stopPropagation();
-      onEdit();
-      return;
-    }
-
+    event.stopPropagation();
     onEdit();
   };
 
@@ -162,8 +147,8 @@ const Wallet = ({
       data-selector={dataSelector}
       className={walletClass}
       role="button"
-      onClick={handleClick}
-      onKeyPress={handleClick}
+      onClick={onClick}
+      onKeyPress={onClick}
       tabIndex={0}
     >
       <div
