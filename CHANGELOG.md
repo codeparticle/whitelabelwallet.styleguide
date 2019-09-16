@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.5.0](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/compare/v0.4.7...v0.5.0) (2019-09-16)
+
+
+### Bug Fixes
+
+* **wlw-153:** refactor click handlers ([d9dc4d9](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/d9dc4d9))
+
+
+### Features
+
+* **wlw-121:** remove default color from overlay ([66fd251](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/66fd251))
+* **wlw-151:** adjust padding ([cafc161](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/cafc161))
+* **wlw-151:** refactor css ([2648c0c](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/2648c0c))
+* **wlw-151:** wired up circular mobile add button ([23fd2f0](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/23fd2f0))
+* **wlw-153:** add mobile click to propTypes ([90d8b2c](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/90d8b2c))
+* **wlw-153:** fix mobile button issues, add mobile wallet settings ([f474701](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/f474701))
+
+
+
 ### [0.4.7](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/compare/v0.4.1...v0.4.7) (2019-09-12)
 
 
