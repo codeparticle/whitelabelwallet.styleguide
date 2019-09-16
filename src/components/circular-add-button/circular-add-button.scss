@@ -1,0 +1,22 @@
+@import "styles/colors.scss";
+@import "styles/layout.scss";
+
+$border-radius-circle: 50%;
+
+.blueCircle {
+  border-radius: $border-radius-circle;
+  bottom: $space-6;
+  position: fixed;
+  right: $space-6;
+
+  button {
+    line-height: 0;
+    padding: $space-4;
+
+    svg {
+      & > path {
+        fill: $white;
+      }
+    }
+  }
+}
