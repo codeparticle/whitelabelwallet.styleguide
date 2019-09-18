@@ -11,6 +11,7 @@ import {
   Button,
   IconButton,
 } from 'src';
+import { noPropagation } from 'src/utils';
 import styles from './wallet.scss';
 import { useTheme } from '../theme-provider';
 import { icons } from '../../svgs';
@@ -58,14 +59,14 @@ const WalletFundsContainer = ({
         <Button
           dataSelector={`${dataSelector}-receive`}
           variant={theme.receiveBtnType}
-          onClick={onDeposit}
+          onClick={noPropagation(onDeposit)}
         >
           {translations.deposit}
         </Button>
         <Button
           dataSelector={`${dataSelector}-withdraw`}
           variant={theme.withdrawBtnType}
-          onClick={onWithdraw}
+          onClick={noPropagation(onWithdraw)}
         >
           {translations.withdraw}
         </Button>
@@ -136,11 +137,6 @@ const Wallet = ({
     className
   );
 
-  const handleEditClick = (event) => {
-    event.stopPropagation();
-    onEdit();
-  };
-
   return (
     <div
       {...rest}
@@ -170,7 +166,7 @@ const Wallet = ({
         )}
       >
         <WalletTitle
-          onEdit={handleEditClick}
+          onEdit={noPropagation(onEdit)}
           title={title}
         />
         <WalletFundsContainer

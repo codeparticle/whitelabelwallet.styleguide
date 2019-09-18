@@ -5,6 +5,7 @@
 
 .wallet {
   border-radius: 9px;
+  cursor: pointer;
   display: flex;
   max-width: 510px;
   min-height: 280px;
@@ -36,12 +37,6 @@
     flex-direction: column;
     justify-content: space-between;
     z-index: $z-index-bottom;
-  }
-
-  @include mquery($width-breakpoint-xs) {
-    .wallet {
-      cursor: pointer;
-    }
   }
 }
 
