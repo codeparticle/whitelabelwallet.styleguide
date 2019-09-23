@@ -5,7 +5,6 @@ import { Visible } from '@codeparticle/react-visible';
 import { LabeledCheckbox } from 'components/labeled-checkbox';
 import { Header } from 'components/header';
 import { Button } from 'components/button';
-import { zIndexMiddle, zIndexTop } from 'styles/layout.scss';
 import { useTheme } from '../theme-provider';
 import { TYPES } from './constants';
 import styles from './overlay.scss';
@@ -162,7 +161,6 @@ export function Overlay({
         isOpen={isOpen}
         onStateChange={onClose}
         width={width}
-        zIndex={parseInt(type === OVERLAY ? zIndexTop : zIndexMiddle, 10)}
       >
         <div className={`content ${type}`} data-selector={`${dataSelector}`}>
           <div className={styles.header}>
