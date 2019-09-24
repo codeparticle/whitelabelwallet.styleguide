@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.1](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/compare/v0.5.0...v0.5.1) (2019-09-24)
+
+
+### Features
+
+* **wlw-156:** adjust wallet card to be clickable on web ([58395d9](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/58395d9))
+* **wlw-157:** added mobile page pattern ([e4838d6](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/e4838d6))
+
+
+
 ## [0.5.0](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/compare/v0.4.7...v0.5.0) (2019-09-16)
 
 
