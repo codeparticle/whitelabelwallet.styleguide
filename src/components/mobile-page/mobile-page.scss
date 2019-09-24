@@ -1,0 +1,120 @@
+@import 'styles/colors.scss';
+@import 'styles/fonts.scss';
+@import 'styles/layout.scss';
+
+$scroll-container-height: 110px;
+$scroll-container-padding-bottom: $space-5;
+
+$gradient-container-height: 300px;
+$gradient-container-padding-top: $scroll-container-height - $scroll-container-padding-bottom;
+
+$header-container-height: $gradient-container-height - 60px;
+
+$transition-duration: 0.5s;
+
+@mixin fixedHeader($z-index) {
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: $z-index;
+}
+
+/* Base Styles */
+
+.page {
+  height: 100%;
+  overflow-y: scroll;
+  width: 100%;
+}
+
+.pageContent {
+  height: 100%;
+  padding: 0 $space-3;
+  position: relative;
+  width: 100%;
+  z-index: $z-index-bottom;
+}
+
+.headerContainer {
+  height: $header-container-height;
+  z-index: $z-index-bottom;
+}
+
+.headerGradientContainer {
+  @include fixedHeader($z-index-default);
+
+  align-items: center;
+  background-image: $gradient-teal;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  height: $gradient-container-height;
+  padding-top: $gradient-container-padding-top;
+
+  & > h1 {
+    margin-top: $space-3;
+  }
+}
+
+.headerScrollContainer {
+  @include fixedHeader($z-index-middle);
+
+  align-items: flex-end;
+  background-image: linear-gradient(to bottom, $slate 50%, transparent 50%);
+  background-position: bottom;
+  background-size: 100% 200%;
+  color: transparent;
+  display: flex;
+  height: $scroll-container-height;
+  justify-content: space-between;
+  padding: 0 $space-6 $scroll-container-padding-bottom;
+  width: 100%;
+
+  & > h1 {
+    line-height: $font-size-lg-1;
+    -webkit-user-select: none;
+  }
+
+  svg > path {
+    fill: $white;
+  }
+}
+
+/* Animation Styles */
+
+.start-transition {
+  &.headerContainer {
+    height: $scroll-container-height;
+    transition: height $transition-duration;
+  }
+
+  .headerScrollContainer {
+    background-position: top;
+    color: $white;
+    transition: background-position $transition-duration, color $transition-duration;
+
+    & > h1 {
+      -webkit-user-select: text;
+    }
+  }
+
+  .headerGradientContainer {
+    opacity: 0;
+    transition: opacity $transition-duration;
+  }
+}
+
+.reset-transition {
+  &.headerContainer {
+    transition: height $transition-duration;
+  }
+
+  .headerScrollContainer {
+    transition: background-position $transition-duration, color $transition-duration;
+  }
+
+  .headerGradientContainer {
+    transition: opacity $transition-duration ease-in;
+  }
+}

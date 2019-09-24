@@ -28,6 +28,7 @@ export { HeaderButton } from './components/header-button';
 export { IconButton, IconVariants } from './components/icon-button';
 export { Logo } from './components/logo';
 export { MediaContext, MediaProvider } from './components/media-provider';
+export { MobilePage } from './components/mobile-page';
 export { Modal, setAppElement } from './components/modal';
 export { NavBar } from './components/nav-bar';
 export { OverflowContainer } from './components/overflow-container';

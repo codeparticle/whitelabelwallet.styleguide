@@ -124,7 +124,6 @@ export function NavBar({
       fixed={windowWidth <= widthBreakpointXS}
       isOpen={isOpen || windowWidth > widthBreakpointMd}
       width={width.toString()}
-      zIndex={parseInt(layout.zIndexMiddle, 10)}
     >
       <nav className={styles.component} data-selector={dataSelector}>
         <IconWrapper

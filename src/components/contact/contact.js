@@ -92,12 +92,12 @@ ActionButtons.propTypes = {
   theme: PropTypes.objectOf(PropTypes.string).isRequired,
 };
 
-const TooltipWrapper = ({ children }) => (
+const TooltipWrapper = ({ children, address }) => (
   <>
     <div
       className={styles.actions}
       data-event="click focus"
-      data-for="contact-tooltip"
+      data-for={`contact-${address}`}
       data-tip="custom show"
     >
       <SvgEllipsis />
@@ -106,7 +106,7 @@ const TooltipWrapper = ({ children }) => (
       className={styles.tooltip}
       clickable
       globalEventOff="click"
-      Id="contact-tooltip"
+      Id={`contact-${address}`}
       content={children}
       offset={{ top: 40, left: 70 }}
       place="bottom"
@@ -150,6 +150,7 @@ const ContactActions = ({
   };
 
   const actionProps = {
+    address,
     dataSelector,
     handleCopyClicked,
     isMobile,
@@ -160,11 +161,11 @@ const ContactActions = ({
   };
 
   const ActionParent = isMobile
-    ? TooltipWrapper
+    ? props => <TooltipWrapper {...props} />
     : ({ children }) => <>{children}</>;
 
   return (
-    <ActionParent>
+    <ActionParent address={address}>
       <ActionButtons {...actionProps} />
     </ActionParent>
   );
