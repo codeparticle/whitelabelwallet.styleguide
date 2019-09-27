@@ -41,6 +41,7 @@ function CellRenderer({
             align-items: center;
             display: flex;
             grid-column: ${gridColumns};
+            overflow: hidden;
           }
         `}
       </style>

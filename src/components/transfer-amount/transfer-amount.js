@@ -63,6 +63,7 @@ function renderIconOrTicker({ fill, tickerSymbol }) {
             .transfer-amount__ticker {
               color: ${fill};
               font-size: $font-size-lg-3;
+              margin: 0;
             }
           `}
         </style>

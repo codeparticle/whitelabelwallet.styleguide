@@ -40,6 +40,13 @@ const ListItems = ({
           />
         );
       })}
+      <style jsx>
+        {`
+          .list-items {
+            overflow-y: scroll;
+          }
+        `}
+      </style>
     </div>
   );
 };
@@ -87,6 +94,8 @@ const List = ({
         .list {
           display: flex;
           flex-direction: column;
+          max-height: 100%;
+          overflow: hidden;
           width: 100%;
         }
 
