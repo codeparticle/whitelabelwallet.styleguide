@@ -1,0 +1,12 @@
+@import 'styles/layout.scss';
+
+$footer-height: 84px;
+
+.footer {
+  align-items: center;
+  display: flex;
+  height: $footer-height;
+  justify-content: space-between;
+  padding: 0 $spacing-l;
+  width: 100%;
+}
