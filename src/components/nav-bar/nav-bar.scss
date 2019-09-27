@@ -5,6 +5,7 @@
 
 $logo-tablet-width: 145px;
 $max-logo-width: 500px;
+$footer-height: 84px;
 
 .wrapper {
   color: $cloud;
@@ -62,6 +63,7 @@ $max-logo-width: 500px;
       background-blend-mode: multiply;
       font-size: $font-size-xs-3;
       font-weight: $font-weight-bold;
+      height: $footer-height;
       margin-top: $spacing-xxl;
       padding: $space-6;
       width: calc(100% + #{$spacing-xxl} * 2);
