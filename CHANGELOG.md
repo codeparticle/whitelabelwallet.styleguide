@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.2](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/compare/v0.5.1...v0.5.2) (2019-09-30)
+
+
+### Features
+
+* **wlw-77:** added page footer ([e7f03cb](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/e7f03cb))
+* **wlw-77:** styling adjustments for send-funds and consistent ui ([8108e87](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/8108e87))
+
+
+
 ### [0.5.1](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/compare/v0.5.0...v0.5.1) (2019-09-24)
 
 
