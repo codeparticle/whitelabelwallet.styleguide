@@ -33,6 +33,7 @@ export { Modal, setAppElement } from './components/modal';
 export { NavBar } from './components/nav-bar';
 export { OverflowContainer } from './components/overflow-container';
 export { Overlay } from './components/overlay';
+export { PageFooter } from './components/page-footer';
 export { PageHeader } from './components/page-header';
 export { ReceiptContainer } from './components/receipt-container';
 export { Search } from './components/search';

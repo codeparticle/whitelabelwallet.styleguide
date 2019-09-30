@@ -158,6 +158,10 @@ const lightTheme = {
     overlay: blueShade,
     footerBackground: tintBlue,
   },
+  pageFooter: {
+    background: tintBlue,
+    color: slate,
+  },
   pageHeader: {
     color: slate,
   },
@@ -305,6 +309,10 @@ const darkTheme = {
     sidepanel: darkBg,
     overlay: blueShade,
     footerBackground: dark,
+  },
+  pageFooter: {
+    background: dark,
+    color: grey,
   },
   pageHeader: {
     color: grey,
