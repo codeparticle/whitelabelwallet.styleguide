@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.3](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/compare/v0.5.2...v0.5.3) (2019-10-01)
+
+
+### Features
+
+* **wlw-159:** add circular add button to to exports ([5bc40b0](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/5bc40b0))
+
+
+
 ### [0.5.2](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/compare/v0.5.1...v0.5.2) (2019-09-30)
 
 
