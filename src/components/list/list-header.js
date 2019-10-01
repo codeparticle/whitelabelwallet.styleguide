@@ -2,13 +2,25 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useTheme } from '../theme-provider';
 
-const HeaderItem = ({ column, id, index }) => (
-  <div className={`list-column-${id}-${index}`}>
-    <p className="list-header__text">
-      {column.title}
-    </p>
-  </div>
-);
+const HeaderItem = ({ column, id, index }) => {
+  const className = `list-column-${id}-${index}`;
+  const { gridColumns, title } = column;
+
+  return (
+    <div className={className}>
+      <p className="list-header__text">
+        {title}
+      </p>
+      <style jsx>
+        {`
+          .${className} {
+            grid-column: ${gridColumns};
+          }
+        `}
+      </style>
+    </div>
+  );
+};
 
 const ListHeader = ({ columnDefs, id, showHeader }) => {
   const { header } = useTheme('list');

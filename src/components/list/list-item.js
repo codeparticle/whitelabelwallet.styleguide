@@ -75,6 +75,8 @@ export function ListItem({
   id,
   index,
   isStriped,
+  matchProperty,
+  onDeselect,
   onRowClicked,
   selected,
   setSelected,
@@ -82,11 +84,12 @@ export function ListItem({
   theme,
 }) {
   const [isSelected, setIsSelected] = useState(false);
-  const selectedCondition = index === selected.index;
+  const compareProperty = matchProperty ? data[matchProperty] : index;
+  const selectedCondition = compareProperty === selected[compareProperty];
 
   useEffect(() => {
     setIsSelected(selectedCondition);
-  }, [selected]);
+  }, [data, selected]);
 
   const styleParams = {
     data,
@@ -117,12 +120,16 @@ export function ListItem({
     if (allowDeselect && isSelected) {
       setSelected({});
 
+      if (onDeselect) {
+        onDeselect(data);
+      }
+
       return;
     }
 
     const selectedValue = {
+      [compareProperty]: compareProperty,
       data,
-      index,
     };
 
     setSelected(selectedValue);
@@ -204,6 +211,7 @@ ListItem.propTypes = {
   dataSelector: PropTypes.string,
   id: PropTypes.string.isRequired,
   isStriped: PropTypes.bool,
+  onDeselect: PropTypes.func,
   onRowClicked: PropTypes.func.isRequired,
   selected: PropTypes.shape({
     index: PropTypes.number,
@@ -221,5 +229,6 @@ ListItem.defaultProps = {
   customRowStyles: null,
   dataSelector: '',
   isStriped: false,
+  onDeselect: null,
   showSubItems: true,
 };
