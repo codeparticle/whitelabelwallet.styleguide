@@ -62,7 +62,6 @@ function MobilePageDemo() {
         Icon={IconWrapper(SvgIconContact)}
         NavigationButton={IconWrapper(MenuButton)}
         PrimaryAction={IconWrapper(SearchButton)}
-        showPrimaryAction={false}
         title={title}
         onAddClicked={action('clicked')}
       >

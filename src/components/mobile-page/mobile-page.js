@@ -31,8 +31,6 @@ function MobilePage({
   title,
   Icon,
   PrimaryAction,
-  showAddButton,
-  showPrimaryAction,
   onAddClicked,
 }) {
   const [initialized, setInitialized] = useState(false);
@@ -62,9 +60,7 @@ function MobilePage({
         <div className={styles.headerScrollContainer}>
           <NavigationButton iconProps={iconProps} dataSelector={`${dataSelector}-nav`} />
           <h1>{title}</h1>
-          <div className={showPrimaryAction ? '' : styles.hide}>
-            <PrimaryAction collapsed iconProps={iconProps} dataSelector={`${dataSelector}-primary`} />
-          </div>
+          <PrimaryAction collapsed iconProps={iconProps} dataSelector={`${dataSelector}-primary`} />
         </div>
         <div className={styles.headerGradientContainer}>
           <Icon height={84} width={84} />
@@ -72,7 +68,7 @@ function MobilePage({
         </div>
       </header>
       <section className={classNames(styles.pageContent)} data-selector={`${dataSelector}-content`}>
-        <Visible when={showAddButton}>
+        <Visible when={Boolean(onAddClicked)}>
           <CircularAddButton onClick={onAddClicked} />
         </Visible>
         {children}
@@ -88,15 +84,11 @@ MobilePage.propTypes = {
   title: PropTypes.string.isRequired,
   Icon: PropTypes.func.isRequired,
   PrimaryAction: PropTypes.func.isRequired,
-  showAddButton: PropTypes.bool,
-  showPrimaryAction: PropTypes.bool,
   onAddClicked: PropTypes.func,
 };
 
 MobilePage.defaultProps = {
   dataSelector: 'mobile-page',
-  showAddButton: true,
-  showPrimaryAction: true,
   onAddClicked: null,
 };
 

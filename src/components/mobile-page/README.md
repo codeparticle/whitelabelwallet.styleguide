@@ -57,16 +57,6 @@ The onAddClicked will be called when the circular add button is clicked.
 The PrimaryAction prop handles rendering of of a page's primary action, such as adding a resource
 
 ----
-#### showAddButton {func}*
-
-The showAddButton prop handles rendering of the circularAddButton.
-
-----
-#### showAddButton {func}*
-
-The showPrimaryAction if set to false will hide the primary action icon
-
-----
 #### dataSelector {string} default: 'mobile-page'
 
 The dataSelector is an optional (but recommended) prop used for E2E testing.
@@ -81,6 +71,4 @@ The dataSelector is an optional (but recommended) prop used for E2E testing.
 | NavigationButton | func | required |
 | onAddClicked | func | null |
 | PrimaryAction | func | required |
-| showAddButton | bool | true |
-| showPrimaryAction | bool | true |
 | title | string | required |
