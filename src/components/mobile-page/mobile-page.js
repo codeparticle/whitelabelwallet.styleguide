@@ -5,6 +5,8 @@
 import React, { useState, useEffect } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
+import { Visible } from '@codeparticle/react-visible';
+import { CircularAddButton } from 'components/circular-add-button';
 import { useOffsetTrigger } from './use-offset-trigger';
 import styles from './mobile-page.scss';
 
@@ -29,6 +31,9 @@ function MobilePage({
   title,
   Icon,
   PrimaryAction,
+  showAddButton,
+  showPrimaryAction,
+  onAddClicked,
 }) {
   const [initialized, setInitialized] = useState(false);
   const [transition, setTransition] = useState(false);
@@ -57,7 +62,9 @@ function MobilePage({
         <div className={styles.headerScrollContainer}>
           <NavigationButton iconProps={iconProps} dataSelector={`${dataSelector}-nav`} />
           <h1>{title}</h1>
-          <PrimaryAction collapsed iconProps={iconProps} dataSelector={`${dataSelector}-primary`} />
+          <div className={showPrimaryAction ? '' : styles.hide}>
+            <PrimaryAction collapsed iconProps={iconProps} dataSelector={`${dataSelector}-primary`} />
+          </div>
         </div>
         <div className={styles.headerGradientContainer}>
           <Icon height={84} width={84} />
@@ -65,6 +72,9 @@ function MobilePage({
         </div>
       </header>
       <section className={classNames(styles.pageContent)} data-selector={`${dataSelector}-content`}>
+        <Visible when={showAddButton}>
+          <CircularAddButton onClick={onAddClicked} />
+        </Visible>
         {children}
       </section>
     </div>
@@ -78,10 +88,16 @@ MobilePage.propTypes = {
   title: PropTypes.string.isRequired,
   Icon: PropTypes.func.isRequired,
   PrimaryAction: PropTypes.func.isRequired,
+  showAddButton: PropTypes.bool,
+  showPrimaryAction: PropTypes.bool,
+  onAddClicked: PropTypes.func,
 };
 
 MobilePage.defaultProps = {
   dataSelector: 'mobile-page',
+  showAddButton: true,
+  showPrimaryAction: true,
+  onAddClicked: null,
 };
 
 export { MobilePage };

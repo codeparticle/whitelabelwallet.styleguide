@@ -57,6 +57,10 @@ $transition-duration: 0.5s;
   }
 }
 
+.hide {
+  visibility: hidden;
+}
+
 .headerScrollContainer {
   @include fixedHeader($z-index-middle);
 

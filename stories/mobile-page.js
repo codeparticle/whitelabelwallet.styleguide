@@ -12,14 +12,13 @@ import {
 import readme from 'components/mobile-page/README.md';
 
 const {
-  SvgAdd,
   SvgIconContact,
+  SvgMagnifyingGlass,
   SvgMenu,
 } = svgs.icons;
 
 const IconWrapper = Icon => ({ iconProps }) => <Icon {...iconProps} />;
-
-const AddButton = props => <IconButton onClick={action('clicked')} icon={<SvgAdd {...props} />} />;
+const SearchButton = props => <IconButton onClick={action('clicked')} icon={<SvgMagnifyingGlass {...props} />} />;
 const MenuButton = props => <IconButton onClick={action('clicked')} icon={<SvgMenu {...props} />} />;
 
 function ContactMap() {
@@ -62,8 +61,10 @@ function MobilePageDemo() {
       <MobilePage
         Icon={IconWrapper(SvgIconContact)}
         NavigationButton={IconWrapper(MenuButton)}
-        PrimaryAction={IconWrapper(AddButton)}
+        PrimaryAction={IconWrapper(SearchButton)}
+        showPrimaryAction={false}
         title={title}
+        onAddClicked={action('clicked')}
       >
         <ContactMap />
       </MobilePage>
