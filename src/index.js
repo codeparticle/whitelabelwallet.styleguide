@@ -18,6 +18,7 @@ export {
   Chart,
   useComponentSize,
 } from './components/chart';
+export { CircularAddButton } from './components/circular-add-button';
 export { DeterministicPassPhrase } from './components/deterministic-pass-phrase';
 export { FlashAlert } from './components/flash-alert';
 export { Header } from './components/header';
