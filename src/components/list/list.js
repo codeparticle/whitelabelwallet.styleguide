@@ -60,6 +60,8 @@ const List = ({
   dataSelector,
   id,
   isStriped,
+  matchProperty,
+  onDeselect,
   onRowClicked,
   rowData,
   showHeader,
@@ -81,6 +83,8 @@ const List = ({
         dataSelector={dataSelector}
         id={id}
         isStriped={isStriped}
+        matchProperty={matchProperty}
+        onDeselect={onDeselect}
         onRowClicked={onRowClicked}
         rowData={rowData}
         showSubItems={showSubItems}
@@ -114,7 +118,7 @@ List.propTypes = {
   allowDeselect: PropTypes.bool,
   childToRender: PropTypes.oneOfType([
     PropTypes.func,
-    PropTypes.element,
+    PropTypes.node,
   ]),
   columnDefs: PropTypes.arrayOf(
     PropTypes.shape({
@@ -130,7 +134,10 @@ List.propTypes = {
   customRowStyles: PropTypes.func,
   customSort: PropTypes.func,
   dataSelector: PropTypes.string,
+  id: PropTypes.string.isRequired,
   isStriped: PropTypes.bool,
+  matchProperty: PropTypes.string,
+  onDeselect: PropTypes.func,
   onRowClicked: PropTypes.func.isRequired,
   rowData: PropTypes.arrayOf(
     PropTypes.object.isRequired,
@@ -146,6 +153,8 @@ List.defaultProps = {
   customSort: null,
   dataSelector: '',
   isStriped: false,
+  matchProperty: null,
+  onDeselect: null,
   showHeader: true,
   showSubItems: true,
 };

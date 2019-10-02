@@ -190,6 +190,32 @@ Using the previously shown columnDefs with this rowData would provide a list tha
 ]
 ```
 
+### matchProperty (string)
+
+matchProperty is an optional but recommended property to provide more accurate item selection. When using matchProperty, make sure the property you are matching (against the dataSet) is unique to its row (like an id). By default, selection is index based, however if you specify a property key to match, selections will remain accurate when the rowData is modified.
+
+Example:
+```js
+const rowData = [
+  {
+    id: 1,
+    name: 'Gabe',
+    company: 'Code Particle',
+  },
+  {
+    id: 2,
+    name: 'Gabe',
+    company: 'Acme Inc',
+  }
+]
+
+// Good (matches unique id)
+<List matchProperty="id" {...props} />
+
+// Bad (matches non-unique field)
+<List matchProperty="name" {...props} />
+```
+
 ----
 ### onRowClicked* (func)
 
@@ -202,6 +228,12 @@ function onRowClicked(data) {
   doSomethingTo(someProperty);
 }
 ```
+
+----
+### onDeselect (func)
+
+onDeselect is an optional callback that is triggered when a row is deselected. It will not be called if deselection is disabled via
+setting the allowDeselect to false
 
 ----
 ### childToRender (element) default: null
