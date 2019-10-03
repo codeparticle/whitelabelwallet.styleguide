@@ -47,11 +47,6 @@ The Icon prop is rendered above the title, it should always be passed as well
 The NavigationButton prop should handle rendering of a navbar trigger or backbutton
 
 ----
-#### onAddClicked {func}*
-
-The onAddClicked will be called when the circular add button is clicked.
-
-----
 #### PrimaryAction {func}*
 
 The PrimaryAction prop handles rendering of of a page's primary action, such as adding a resource
@@ -69,6 +64,5 @@ The dataSelector is an optional (but recommended) prop used for E2E testing.
 | dataSelector | string | '' |
 | Icon | func | required |
 | NavigationButton | func | required |
-| onAddClicked | func | null |
 | PrimaryAction | func | required |
 | title | string | required |

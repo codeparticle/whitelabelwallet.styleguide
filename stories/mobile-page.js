@@ -63,7 +63,6 @@ function MobilePageDemo() {
         NavigationButton={IconWrapper(MenuButton)}
         PrimaryAction={IconWrapper(SearchButton)}
         title={title}
-        onAddClicked={action('clicked')}
       >
         <ContactMap />
       </MobilePage>
