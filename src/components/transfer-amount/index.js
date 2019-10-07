@@ -1,1 +1,1 @@
-export { TransferAmount } from './transfer-amount';
+export { CurrencyAmount, TransferAmount } from './transfer-amount';
