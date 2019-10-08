@@ -18,6 +18,7 @@ import './list/list';
 import './logo';
 import './media-provider';
 import './mobile-page';
+import './mobile-wallet-list/mobile-wallet-list';
 import './modal';
 import './nav-bar';
 import './overflow-container';

@@ -13,6 +13,7 @@ function CellRenderer({
   gridColumns,
   id,
   index,
+  isSelected,
 }) {
   const gridClass = `list-column-${id}-${colIndex}`;
 
@@ -25,6 +26,7 @@ function CellRenderer({
           column={column}
           data={data}
           index={index}
+          isSelected={isSelected}
         />
       );
     }
@@ -159,6 +161,7 @@ export function ListItem({
               gridColumns={gridColumns}
               id={id}
               index={index}
+              isSelected={isSelected}
               key={`${index}-${colIndex}`}
             />
           );

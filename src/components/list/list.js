@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import cx from 'classnames';
 import { useTheme } from '../theme-provider';
 import { ListHeader } from './list-header';
 import { ListItem } from './list-item';
@@ -68,7 +69,7 @@ const List = ({
   showSubItems,
 }) => (
   <>
-    <div className="list">
+    <div className={cx('list', id)}>
       <ListHeader
         columnDefs={columnDefs}
         id={id}
