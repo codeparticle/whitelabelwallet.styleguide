@@ -1,6 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import { Visible } from '@codeparticle/react-visible';
 import { TextArea } from '../text-area';
 import { useTheme } from '../theme-provider';
 import { utils } from '../..';
@@ -35,7 +36,7 @@ function calculateFontSize(inputLength, inputRef) {
   return fontSize;
 }
 
-function calculateInputWidth(inputVal, fontSize) {
+function calculateInputWidth(inputVal, fontSize, isFullWidth) {
   const inputLength = inputVal.length;
 
   if (inputLength < 4) {
@@ -44,8 +45,9 @@ function calculateInputWidth(inputVal, fontSize) {
 
   const hasDecimal = inputVal.includes('.');
   const lengthDiff = hasDecimal ? 1.4 : 1;
+  const subtractor = isFullWidth ? 0 : lengthDiff;
 
-  return `calc(${fontSize} * ${inputLength - lengthDiff})`;
+  return `calc(${fontSize} * ${inputLength - subtractor})`;
 }
 
 
@@ -91,6 +93,7 @@ const CurrencyContainer = ({
   translations,
   theme,
   tickerSymbol,
+  width = '50%',
 }) => {
   const [value, setValue] = useState(currencyValue);
   const [fontSize, setFontSize] = useState(defaultFontSize);
@@ -99,14 +102,15 @@ const CurrencyContainer = ({
   const floatRegex = getFloatRegex(coinDecimalLimit);
   const fiatSymbol = fiatSymbols[fiatSymbolKey];
   const inputEl = useRef(null);
+  const isFullWidth = width === '100%';
 
   useEffect(() => {
     setFontSize(calculateFontSize(`${value}`.length, inputEl));
   }, [value]);
 
   useEffect(() => {
-    setInputWidth(calculateInputWidth(`${value}`, fontSize));
-  }, [fontSize]);
+    setInputWidth(calculateInputWidth(`${value}`, fontSize, isFullWidth));
+  }, [fontSize, value]);
 
 
   function onCurrencyChange(e) {
@@ -120,9 +124,11 @@ const CurrencyContainer = ({
 
   return (
     <div className={classNames(styles['transfer-amount__currency'])}>
-      <h2 className="currency__title" data-selector={`${dataSelector}-header`}>
-        {translations.header}
-      </h2>
+      <Visible when={!isFullWidth}>
+        <h2 className="currency__title" data-selector={`${dataSelector}-header`}>
+          {(translations && translations.header) || ''}
+        </h2>
+      </Visible>
       <div className={classNames(styles['currency__input'])}>
         {renderIconOrTicker({
           fill: theme.icons,
@@ -159,6 +165,10 @@ const CurrencyContainer = ({
 
           .currency__title {
             color: ${theme.textTitle};
+          }
+
+          .${styles['transfer-amount__currency']} {
+            width: ${width};
           }
 
           .${styles['currency__input-input']} {
@@ -269,6 +279,74 @@ TransferAmount.defaultProps = {
   translations: {
     header: 'Transfer Amount',
     memo: 'Memo:',
+  },
+  tickerSymbol: null,
+};
+
+export const CurrencyAmount = ({
+  coinDecimalLimit,
+  conversionRate,
+  currencyValue,
+  dataSelector,
+  fiatDecimalLimit,
+  fiatSymbolKey,
+  handleCurrencyChange,
+  tickerSymbol,
+}) => {
+  const theme = useTheme('transferAmount');
+  const width = '100%';
+
+  return (
+    <div className="currency-container-wrapper">
+      <CurrencyContainer
+        coinDecimalLimit={coinDecimalLimit}
+        conversionRate={conversionRate}
+        currencyValue={currencyValue}
+        dataSelector={dataSelector}
+        fiatDecimalLimit={fiatDecimalLimit}
+        fiatSymbolKey={fiatSymbolKey}
+        handleCurrencyChange={handleCurrencyChange}
+        theme={theme}
+        tickerSymbol={tickerSymbol}
+        width={width}
+      />
+      <style jsx>
+        {`
+          @import 'styles/layout';
+
+          .currency-container-wrapper {
+            padding-bottom: $spacing-xxl;
+            width: ${width};
+          }
+        `}
+      </style>
+    </div>
+  );
+};
+
+
+CurrencyAmount.propTypes = {
+  coinDecimalLimit: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  conversionRate: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+  currencyValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  dataSelector: PropTypes.string,
+  fiatDecimalLimit: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  fiatSymbolKey: PropTypes.string,
+  handleCurrencyChange: PropTypes.func.isRequired,
+  translations: PropTypes.shape({
+    header: PropTypes.string.isRequired,
+  }),
+  tickerSymbol: PropTypes.string,
+};
+
+CurrencyAmount.defaultProps = {
+  coinDecimalLimit: null,
+  currencyValue: '',
+  dataSelector: '',
+  fiatDecimalLimit: 2,
+  fiatSymbolKey: 'dollarSign',
+  translations: {
+    header: 'Transfer Amount',
   },
   tickerSymbol: null,
 };

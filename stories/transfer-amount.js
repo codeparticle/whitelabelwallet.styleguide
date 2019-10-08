@@ -3,14 +3,17 @@ import { storiesOf } from '@storybook/react';
 import { withReadme } from 'storybook-readme';
 import { number, withKnobs } from '@storybook/addon-knobs';
 import { ThemeWrapper } from './utils';
-import { TransferAmount } from '../src';
+import { CurrencyAmount, TransferAmount } from '../src';
 import readme from '../src/components/transfer-amount/README.md';
 import {
   darkBackground,
   lightBackground,
 } from './constants';
 
-const TransferAmountDemo = ({ defaultToDark = false }) => {
+const ComponentDemo = ({
+  Component,
+  defaultToDark = false,
+}) => {
   const translations = {
     header: 'Transfer Amount',
     memo: 'Memo:',
@@ -33,7 +36,7 @@ const TransferAmountDemo = ({ defaultToDark = false }) => {
       <ThemeWrapper
         defaultToDark={defaultToDark}
         content={
-          <TransferAmount
+          <Component
             coinDecimalLimit={coinDecimalLimit}
             conversionRate={conversionRate}
             fiatDecimalLimit={fiatDecimalLimit}
@@ -52,12 +55,17 @@ storiesOf('TransferAmount', module)
   .addDecorator(withReadme(readme))
   .addDecorator(withKnobs)
   .add('Light Theme', () => (
-    <TransferAmountDemo />
+    <ComponentDemo Component={TransferAmount} />
   ), {
     backgrounds: [{ ...lightBackground, default: true }],
   })
   .add('Dark Theme', () => (
-    <TransferAmountDemo defaultToDark />
+    <ComponentDemo Component={TransferAmount} defaultToDark />
   ), {
     backgrounds: [{ ...darkBackground, default: true }],
+  })
+  .add('CurrencyAmount', () => (
+    <ComponentDemo Component={CurrencyAmount} />
+  ), {
+    backgrounds: [{ ...lightBackground, default: true }, darkBackground],
   });

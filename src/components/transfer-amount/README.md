@@ -2,6 +2,9 @@
 
 A component with an amount input, and a memo textarea
 
+**New:**
+`CurrencyAmount` is now exposed as a separate component. It takes the same props as TransferAmount with the exceptions being translations, memoValue, and handleMemoChange. The CurrencyAmount is intended to be used on Mobile, where the layout for sending funds detatches the memo section from the Currency section.
+
 ## Usage
 
 ```jsx

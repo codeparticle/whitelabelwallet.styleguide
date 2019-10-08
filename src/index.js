@@ -42,7 +42,7 @@ export { Select } from './components/select';
 export { TextArea } from './components/text-area';
 export { TextInput } from './components/text-input';
 export { ToggleSwitch } from './components/toggle-switch';
-export { TransferAmount } from './components/transfer-amount';
+export { CurrencyAmount, TransferAmount } from './components/transfer-amount';
 export { Wallet } from './components/wallet';
 export {
   ThemeContext,
