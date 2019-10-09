@@ -18,6 +18,7 @@ import './icon-button';
 import './list/list';
 import './logo';
 import './media-provider';
+import './mobile-contact-list/mobile-contact-list';
 import './mobile-page';
 import './mobile-wallet-list/mobile-wallet-list';
 import './modal';

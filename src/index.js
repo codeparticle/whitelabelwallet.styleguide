@@ -14,6 +14,7 @@ export { Address } from './components/address';
 export { LabeledCheckbox } from './components/labeled-checkbox';
 export { AreaChart } from './components/area-chart';
 export { Button } from './components/button';
+export { cellFormatters } from './components/cell-formatters';
 export {
   Chart,
   useComponentSize,
@@ -24,12 +25,13 @@ export { FlashAlert } from './components/flash-alert';
 export { Header } from './components/header';
 export { Contact } from './components/contact';
 export { Carousel } from './components/carousel';
-export { cellFormatters, List } from './components/list';
+export { List } from './components/list';
 export { QRCode } from './components/qr-code';
 export { HeaderButton } from './components/header-button';
 export { IconButton, IconVariants } from './components/icon-button';
 export { Logo } from './components/logo';
 export { MediaContext, MediaProvider } from './components/media-provider';
+export { MobileContactList } from './components/mobile-contact-list';
 export { MobilePage } from './components/mobile-page';
 export { MobileWalletList } from './components/mobile-wallet-list';
 export { Modal, setAppElement } from './components/modal';
@@ -57,5 +59,3 @@ export {
 export { Tooltip } from './components/tooltip';
 
 export { useMedia } from './hooks/use-media';
-
-// export { svgs };
