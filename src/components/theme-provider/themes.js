@@ -148,6 +148,20 @@ const lightTheme = {
       icon: blue,
     },
   },
+  mobileList: {
+    primary: {
+      background: white,
+      border: white,
+      color: slate,
+      subtitle: grey,
+    },
+    secondary: {
+      background: offWhite,
+      border: offWhite,
+      color: slate,
+      subtitle: grey,
+    },
+  },
   overflow: {
     bg: tintBlue,
     color: slate,
@@ -281,6 +295,20 @@ const darkTheme = {
       border: white,
       color: white,
       icon: white,
+    },
+  },
+  mobileList: {
+    primary: {
+      background: dark,
+      border: dark,
+      color: grey,
+      subtitle: coolGreyDark,
+    },
+    secondary: {
+      background: darkBg,
+      border: coolGreyDark,
+      color: grey,
+      subtitle: coolGreyDark,
     },
   },
   transferAmount: {

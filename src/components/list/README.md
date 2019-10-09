@@ -96,7 +96,7 @@ columnDefs defines the columns of each row. It is an array of objects that each 
 `Title` (string): Readable column title (applied to header at the top of the list)    
 `gridColumns` (string): Uses css [grid-column](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column). The list provides 12 columns for content to be rendered inside of. The most common way to specify grid-column would either be declaring start and end like so: `'1 / 3'`, or the exact column: `'4'`.    
 `property` (string): The property of the data to be displayed in your column.    
-`customRenderer` (React Component): A custom component that will render the cell. Defaults to renderering as text. The customRenderer also receives five props:    
+`customRenderer` (React Component): A custom component that will render the cell. Defaults to renderering as text. The customRenderer also receives six props:    
 
 ```jsx
 // props
@@ -106,6 +106,7 @@ columnDefs defines the columns of each row. It is an array of objects that each 
     colIndex, // the column's index
     column, // the column's value to render
     index, // the row's index
+    isSelected, // true if row is selected
   }
 ```
 

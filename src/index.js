@@ -1,10 +1,10 @@
 import keyboardOnlyOutlines from 'keyboard-only-outlines';
 import * as utils from 'utils';
+import * as svgs from './svgs';
 
 keyboardOnlyOutlines();
 
-// Utils
-export { utils };
+export { svgs, utils };
 
 // Constants
 export { ButtonVariants } from './components/button/constants';
@@ -30,6 +30,7 @@ export { IconButton, IconVariants } from './components/icon-button';
 export { Logo } from './components/logo';
 export { MediaContext, MediaProvider } from './components/media-provider';
 export { MobilePage } from './components/mobile-page';
+export { MobileWalletList } from './components/mobile-wallet-list';
 export { Modal, setAppElement } from './components/modal';
 export { NavBar } from './components/nav-bar';
 export { OverflowContainer } from './components/overflow-container';
@@ -56,4 +57,4 @@ export { Tooltip } from './components/tooltip';
 
 export { useMedia } from './hooks/use-media';
 
-export * as svgs from './svgs';
+// export { svgs };
