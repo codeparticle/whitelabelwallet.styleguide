@@ -23,6 +23,7 @@ export { DeterministicPassPhrase } from './components/deterministic-pass-phrase'
 export { FlashAlert } from './components/flash-alert';
 export { Header } from './components/header';
 export { Contact } from './components/contact';
+export { Carousel } from './components/carousel';
 export { cellFormatters, List } from './components/list';
 export { QRCode } from './components/qr-code';
 export { HeaderButton } from './components/header-button';

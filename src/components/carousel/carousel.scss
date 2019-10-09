@@ -1,0 +1,19 @@
+$border-radius-circle: 50%;
+$dot-margin: 2px;
+
+.carousel {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  .carouselList {
+    display: flex;
+    list-style: none;
+    padding: 0;
+
+    div {
+      border-radius: $border-radius-circle;
+      margin: 0 $dot-margin;
+    }
+  }
+}
