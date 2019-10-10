@@ -1,27 +1,10 @@
 /**
- * @fileoverview Cell Formatters for the WLW List
+ * @fileoverview ChildCount cellFormatter
  * @author Gabriel Womble
  */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { icons } from 'svgs';
-
-const { SvgChildArrow } = icons;
-
-function Text({ value }) {
-  return (
-    <p className="list-item__text">
-      {value}
-    </p>
-  );
-}
-
-Text.propTypes = {
-  value: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.number,
-  ]).isRequired,
-};
+import { Text } from './text';
 
 function ChildCount({ childCount, style }) {
   if (!childCount || !style) {
@@ -68,36 +51,4 @@ ChildCount.defaultProps = {
   childCount: 0,
 };
 
-function ChildIcon({ style }) {
-  if (!style) {
-    return null;
-  }
-
-  return (
-    <>
-      <SvgChildArrow
-        className="list-item__icon"
-        fill={style}
-      />
-      <style jsx>
-        {`
-          @import 'styles/layout.scss';
-
-          :global(.list-item__icon) {
-            margin-right: $space-2;
-          }
-        `}
-      </style>
-    </>
-  );
-}
-
-ChildIcon.propTypes = {
-  style: PropTypes.string.isRequired,
-};
-
-export const cellFormatters = {
-  ChildCount,
-  ChildIcon,
-  Text,
-};
+export { ChildCount };

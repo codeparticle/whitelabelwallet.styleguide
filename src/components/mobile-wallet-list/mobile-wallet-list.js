@@ -5,34 +5,45 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { Visible } from '@codeparticle/react-visible';
-import { List, useTheme } from 'src';
-import { childListChevron, getRowStyles, titleWithSubtitle } from './utils';
+import { cellFormatters, List, useTheme } from 'src';
+import { getRowStyles } from './utils';
 
+const { ChildListChevron, TitleWithSubtitle } = cellFormatters;
+
+const LIST_ID = 'mobileWalletList';
 const THEME_KEY = 'mobileList';
 const MOBILE_LIST_HEIGHT = '88px';
 const MOBILE_LIST_MARGIN = '1px';
 
-const getParentColumnDefs = subtitleFormatter => [
-  {
-    title: '',
-    gridColumns: '1 / 11',
-    property: 'name',
-    customRenderer: titleWithSubtitle('name', 'addresses', subtitleFormatter),
-  },
-  {
-    title: '',
-    gridColumns: '12',
-    property: 'name',
-    customRenderer: childListChevron('addresses'),
-  },
-];
+const getParentColumnDefs = (subtitleFormatter) => {
+  function formatter(addresses) {
+    return addresses.length === 1
+      ? addresses[0].address
+      : subtitleFormatter(addresses);
+  }
+
+  return [
+    {
+      title: '',
+      gridColumns: '1 / 11',
+      property: 'name',
+      customRenderer: TitleWithSubtitle('name', 'addresses', formatter),
+    },
+    {
+      title: '',
+      gridColumns: '12',
+      property: 'name',
+      customRenderer: ChildListChevron('addresses'),
+    },
+  ];
+};
 
 const childColumnDefs = [
   {
     title: '',
     gridColumns: '1 / 12',
     property: 'name',
-    customRenderer: titleWithSubtitle('name', 'address'),
+    customRenderer: TitleWithSubtitle('name', 'address'),
   },
 ];
 
@@ -62,7 +73,7 @@ function MobileWalletList({
   const [rowData, setRowData] = useState(Array.isArray(data) ? data : []);
   const theme = useTheme(THEME_KEY);
   const columnDefs = isChildList ? childColumnDefs : getParentColumnDefs(subtitleFormatter);
-  const listId = isChildList ? `${THEME_KEY}-child` : THEME_KEY;
+  const listId = isChildList ? `${LIST_ID}-child` : LIST_ID;
   const appliedTheme = isChildList ? theme.secondary : theme.primary;
 
   const ChildList = props => (
@@ -123,7 +134,7 @@ MobileWalletList.propTypes = {
 };
 
 MobileWalletList.defaultProps = {
-  dataSelector: 'mobileWalletList',
+  dataSelector: LIST_ID,
 };
 
 export { MobileWalletList };

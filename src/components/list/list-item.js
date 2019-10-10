@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { cellFormatters, getRowStyles } from './utils';
+import { cellFormatters } from 'src';
+import { getRowStyles } from './utils';
 
 const { Text } = cellFormatters;
 
