@@ -95,8 +95,7 @@ storiesOf('Button', module)
       'slate-clear': 'slate-clear',
       'alert': 'alert',
       'teal': 'teal',
-      'auth-primary': 'auth-primary',
-      'auth-secondary': 'auth-secondary',
+      'tertiary': 'tertiary',
     };
 
     const buttonSizeLabel = 'Button Sizes';

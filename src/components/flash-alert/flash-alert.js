@@ -79,7 +79,7 @@ const FlashAlert = ({
             className
           )}
         >
-          {message}
+          <p className={styles.message}>{message}</p>
           {btn}
         </div>
       </CSSTransition>

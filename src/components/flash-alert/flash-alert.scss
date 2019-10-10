@@ -14,11 +14,19 @@
   font-size: $font-size-sm-2;
   justify-content: space-between;
   left: 0;
+  overflow: hidden;
   padding: $spacing-l;
   position: absolute;
   right: 0;
+  white-space: nowrap;
   width: 100%;
   z-index: $z-index-top;
+}
+
+.message {
+  margin-right: $spacing-l;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .success {
