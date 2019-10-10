@@ -6,6 +6,7 @@ import './address';
 import './area-chart';
 import './labeled-checkbox';
 import './button';
+import './carousel';
 import './chart';
 import './circular-add-button';
 import './contact';

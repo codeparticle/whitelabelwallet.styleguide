@@ -1,0 +1,107 @@
+import React, { useState, useRef, useLayoutEffect } from 'react';
+import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import Hammer from 'hammerjs';
+import { useTheme } from '../theme-provider';
+import styles from './carousel.scss';
+
+function shiftIndex(arr, index, amt) {
+  return (arr.length + index + amt) % arr.length;
+}
+
+const Carousel = ({
+  className,
+  dataSet,
+  defaultIndex,
+  onChange,
+  size,
+  ...rest
+}) => {
+  const [activeIndex, setActiveIndex] = useState(defaultIndex);
+  const elm = useRef(null);
+  const [mounted, setMounted] = useState(false);
+  const theme = useTheme('carousel');
+
+  useLayoutEffect(() => {
+    if (!mounted && elm.current) {
+      const hammerListener = new Hammer(elm.current);
+
+      hammerListener.on('swipeleft', () => {
+        setActiveIndex((previousIndex) => {
+          const index = shiftIndex(dataSet, previousIndex, 1);
+          onChange(dataSet[index]);
+
+          return index;
+        });
+      });
+
+      hammerListener.on('swiperight', () => {
+        setActiveIndex((previousIndex) => {
+          const index = shiftIndex(dataSet, previousIndex, -1);
+          onChange(dataSet[index]);
+
+          return index;
+        });
+      });
+      setMounted(true);
+    }
+  });
+
+  const onClickHandler = (index) => {
+    setActiveIndex(index);
+    onChange(dataSet[index]);
+  };
+
+  return (
+    <>
+      <div ref={elm} className={classNames(styles.carousel, className)} {...rest}>
+        <ul className={styles.carouselList}>
+          {dataSet.map((item, index) => (
+            <li>
+              <div
+                onClick={() => onClickHandler(index)}
+                onKeyPress={() => onClickHandler(index)}
+                className={index === activeIndex ? 'dot active' : 'dot'}
+                key={index}
+                role="button"
+                tabIndex={index}
+              />
+            </li>
+          ))}
+        </ul>
+      </div>
+      <style jsx>
+        {`
+          $border-width: 2px;
+
+          .dot {
+            height: ${size}px;
+            width: ${size}px;
+            border: $border-width solid ${theme.borderColor};
+          }
+
+          .active {
+            background: ${theme.bgActive};
+          }
+        `}
+      </style>
+    </>
+
+  );
+};
+
+Carousel.propTypes = {
+  className: PropTypes.string,
+  dataSet: PropTypes.arrayOf(PropTypes.object).isRequired,
+  defaultIndex: PropTypes.number,
+  onChange: PropTypes.func.isRequired,
+  size: PropTypes.number,
+};
+
+Carousel.defaultProps = {
+  className: '',
+  defaultIndex: 0,
+  size: 10,
+};
+
+export { Carousel };

@@ -32,6 +32,10 @@ const {
 
 const lightTheme = {
   name: 'light',
+  carousel: {
+    borderColor: slate,
+    bgActive: slate,
+  },
   circularAddButton: {
     background: coolBlue,
   },
@@ -198,6 +202,10 @@ const lightTheme = {
 
 const darkTheme = {
   name: 'dark',
+  carousel: {
+    borderColor: white,
+    bgActive: white,
+  },
   circularAddButton: {
     background: coolBlue,
   },
