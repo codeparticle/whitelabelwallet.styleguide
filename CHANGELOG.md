@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.6](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/compare/v0.5.4...v0.5.6) (2019-10-14)
+
+
+### Features
+
+* **wlw-113:** fixed page footer position and flash alert styles ([f795d99](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/f795d99))
+* **wlw-127:** added mobile-wallet-list ([0cdf171](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/0cdf171))
+* **wlw-127:** added mobile-wallet-list ([c748164](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/c748164))
+* **wlw-128:** added mobile contact list ([0193995](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/0193995))
+* **wlw-162:** remove add button from mobile page ([f6cfaa0](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/f6cfaa0))
+* **wlw-164:** set up carousel dot indacator component ([49ce394](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/49ce394))
+* **wlw-85:** exposed currencyAmount ([1479ad8](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/1479ad8))
+
+
+
 ### [0.5.5](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/compare/v0.5.3...v0.5.5) (2019-10-10)
 
 
