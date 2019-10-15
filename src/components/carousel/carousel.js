@@ -5,6 +5,7 @@ import Hammer from 'hammerjs';
 import { useTheme } from '../theme-provider';
 import styles from './carousel.scss';
 
+
 function shiftIndex(arr, index, amt) {
   return (arr.length + index + amt) % arr.length;
 }
@@ -19,33 +20,44 @@ const Carousel = ({
 }) => {
   const [activeIndex, setActiveIndex] = useState(defaultIndex);
   const elm = useRef(null);
-  const [mounted, setMounted] = useState(false);
+  const [hammerListener, setHammerListener] = useState(null);
   const theme = useTheme('carousel');
 
   useLayoutEffect(() => {
-    if (!mounted && elm.current) {
-      const hammerListener = new Hammer(elm.current);
+    if (elm.current) {
+      if (!hammerListener) {
+        setHammerListener(new Hammer(elm.current));
+      } else {
+        const onSwipeLeft = () => {
+          setActiveIndex((previousIndex) => {
+            const index = shiftIndex(dataSet, previousIndex, 1);
+            onChange(dataSet[index]);
 
-      hammerListener.on('swipeleft', () => {
-        setActiveIndex((previousIndex) => {
-          const index = shiftIndex(dataSet, previousIndex, 1);
-          onChange(dataSet[index]);
+            return index;
+          });
+        };
 
-          return index;
-        });
-      });
+        const onSwipeRight = () => {
+          setActiveIndex((previousIndex) => {
+            const index = shiftIndex(dataSet, previousIndex, -1);
+            onChange(dataSet[index]);
 
-      hammerListener.on('swiperight', () => {
-        setActiveIndex((previousIndex) => {
-          const index = shiftIndex(dataSet, previousIndex, -1);
-          onChange(dataSet[index]);
+            return index;
+          });
+        };
 
-          return index;
-        });
-      });
-      setMounted(true);
+        hammerListener.on('swiperight', onSwipeRight);
+        hammerListener.on('swipeleft', onSwipeLeft);
+
+        return () => {
+          hammerListener.off('swiperight', onSwipeRight);
+          hammerListener.off('swipeleft', onSwipeLeft);
+        };
+      }
     }
-  });
+
+    return () => {};
+  }, [hammerListener, dataSet]);
 
   const onClickHandler = (index) => {
     setActiveIndex(index);
