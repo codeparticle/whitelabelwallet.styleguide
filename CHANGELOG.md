@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.7](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/compare/v0.5.5...v0.5.7) (2019-10-15)
+
+
+### Features
+
+* **wlw:** remove empty line ([f19f39b](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/f19f39b))
+* **wlw-113:** fixed page footer position and flash alert styles ([f795d99](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/f795d99))
+* **wlw-167:** refactor useLayoutEffect ([6dcda05](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/6dcda05))
+
+
+
 ### [0.5.6](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/compare/v0.5.4...v0.5.6) (2019-10-14)
 
 
