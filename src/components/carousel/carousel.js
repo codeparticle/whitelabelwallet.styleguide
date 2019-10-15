@@ -5,7 +5,6 @@ import Hammer from 'hammerjs';
 import { useTheme } from '../theme-provider';
 import styles from './carousel.scss';
 
-
 function shiftIndex(arr, index, amt) {
   return (arr.length + index + amt) % arr.length;
 }
