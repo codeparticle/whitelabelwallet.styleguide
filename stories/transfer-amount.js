@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { storiesOf } from '@storybook/react';
 import { withReadme } from 'storybook-readme';
 import { number, withKnobs } from '@storybook/addon-knobs';
@@ -18,11 +18,16 @@ const ComponentDemo = ({
     header: 'Transfer Amount',
     memo: 'Memo:',
   };
+  const currencyValueKnob = number('currencyValue', 0);
   const [memoValue, setMemoValue] = useState('');
   const [currencyValue, setCurrencyValue] = useState('');
   const coinDecimalLimit = number('coinDecimalLimit', -1);
   const conversionRate = 3.14;
   const fiatDecimalLimit = number('fiatDecimalLimit', 2);
+
+  useEffect(() => {
+    setCurrencyValue(currencyValueKnob);
+  }, [currencyValueKnob]);
 
   const onMemoChange = e => setMemoValue(e.target.value);
   const onCurrencyChange = (e) => {
@@ -39,6 +44,7 @@ const ComponentDemo = ({
           <Component
             coinDecimalLimit={coinDecimalLimit}
             conversionRate={conversionRate}
+            currencyValue={currencyValue}
             fiatDecimalLimit={fiatDecimalLimit}
             handleCurrencyChange={onCurrencyChange}
             handleMemoChange={onMemoChange}
