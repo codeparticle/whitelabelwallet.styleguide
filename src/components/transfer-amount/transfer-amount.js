@@ -112,6 +112,12 @@ const CurrencyContainer = ({
     setInputWidth(calculateInputWidth(`${value}`, fontSize, isFullWidth));
   }, [fontSize, value]);
 
+  useEffect(() => {
+    if (currencyValue !== value) {
+      setValue(currencyValue);
+    }
+  }, [currencyValue, value]);
+
 
   function onCurrencyChange(e) {
     if (!floatRegex.test(e.target.value)) {
