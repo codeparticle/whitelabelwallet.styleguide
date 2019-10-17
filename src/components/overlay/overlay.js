@@ -196,7 +196,7 @@ export function Overlay({
           }
 
           .overlay {
-            overflow: scroll;
+            overflow: auto;
             padding: 10%;
           }
 
