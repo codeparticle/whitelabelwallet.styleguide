@@ -119,12 +119,12 @@ export function ListItem({
     childIcon: icon,
   };
 
-  function handleSelection() {
+  function handleSelection(event) {
     if (allowDeselect && isSelected) {
       setSelected({});
 
       if (onDeselect) {
-        onDeselect(data);
+        onDeselect({ ...data, event });
       }
 
       return;
@@ -135,6 +135,7 @@ export function ListItem({
       data,
     };
 
+    selectedValue.data = { ...selectedValue.data, event };
     setSelected(selectedValue);
     onRowClicked(selectedValue.data);
   }
