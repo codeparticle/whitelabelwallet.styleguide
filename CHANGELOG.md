@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.9](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/compare/v0.5.7...v0.5.9) (2019-10-18)
+
+
+### Bug Fixes
+
+* fixing useEffect preventing value from updating correctly ([ca7ad65](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/ca7ad65))
+
+
+### Features
+
+* **wlw-117:** adjusting page footer for custom message formatting ([b02284d](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/b02284d))
+* **wlw-165:** fixed receiving props for currency container ([3190c7c](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/3190c7c))
+* **wlw-168:** add event data onRowClick callback ([7a44f6f](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/7a44f6f))
+* **wlw-168:** add event data ton onDeselect ([e32d0de](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/e32d0de))
+* **wlw-169:** fix key prop in carousel ([2d27a4a](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/2d27a4a))
+
+
+
 ### [0.5.8](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/compare/v0.5.7...v0.5.8) (2019-10-18)
 
 
