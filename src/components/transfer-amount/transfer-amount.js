@@ -116,7 +116,7 @@ const CurrencyContainer = ({
     if (currencyValue !== value) {
       setValue(currencyValue);
     }
-  }, [currencyValue, value]);
+  }, [currencyValue]);
 
 
   function onCurrencyChange(e) {
