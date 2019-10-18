@@ -44,7 +44,7 @@ const ListItems = ({
       <style jsx>
         {`
           .list-items {
-            overflow-y: scroll;
+            overflow-y: auto;
           }
         `}
       </style>

@@ -20,11 +20,28 @@ function PageFooter({
   button,
 }) {
   const { background, color } = useTheme(THEME_KEY);
+  function renderMessage(Message) {
+    const messageDataSelector = `${dataSelector}-message`;
+
+    if (typeof Message === 'string') {
+      return (
+        <h4 className={styles.footer.text} dataSelector={messageDataSelector}>
+          {Message}
+        </h4>
+      );
+    }
+
+    return (
+      <>
+        {renderProp(Message)}
+      </>
+    );
+  }
 
   return (
     <>
       <div className={styles.footer} data-selector={dataSelector}>
-        <h4 className={styles.footer.text} data-selector={`${dataSelector}-message`}>{message}</h4>
+        {renderMessage(message)}
         <Visible when={alert}>
           <div className={styles.alert} data-selector={`${dataSelector}-alert`}>
             {renderProp(alert)}
@@ -48,7 +65,11 @@ function PageFooter({
 
 PageFooter.propTypes = {
   dataSelector: PropTypes.string,
-  message: PropTypes.string,
+  message: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.func,
+    PropTypes.node,
+  ]),
   alert: PropTypes.oneOfType([
     PropTypes.func,
     PropTypes.node,
