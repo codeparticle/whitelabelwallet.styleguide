@@ -124,7 +124,7 @@ export function ListItem({
       setSelected({});
 
       if (onDeselect) {
-        onDeselect(data);
+        onDeselect({ ...data, event });
       }
 
       return;
