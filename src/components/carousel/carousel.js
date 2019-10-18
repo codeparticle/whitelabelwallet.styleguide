@@ -68,12 +68,11 @@ const Carousel = ({
       <div ref={elm} className={classNames(styles.carousel, className)} {...rest}>
         <ul className={styles.carouselList}>
           {dataSet.map((item, index) => (
-            <li>
+            <li key={index}>
               <div
                 onClick={() => onClickHandler(index)}
                 onKeyPress={() => onClickHandler(index)}
                 className={index === activeIndex ? 'dot active' : 'dot'}
-                key={index}
                 role="button"
                 tabIndex={index}
               />
