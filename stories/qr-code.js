@@ -12,6 +12,7 @@ const QRCodeDemo = ({ defaultToDark = false }) => {
     amount: text('Request Amount', 'Request G 1.50 to your address:'),
     addressName: text('Address Name', 'Savings - Address 2'),
     scan: text('Scan', 'Have the sender scan this code for easy transaction setup.'),
+    walletName: text('Wallet Name', 'Primary Funds'),
   };
 
   const qrString = text('QR String', 'gc07160a870d809ef8097ac8za5539ayzw9fs0d809e');

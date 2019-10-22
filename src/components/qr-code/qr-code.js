@@ -6,8 +6,8 @@ import React, { useEffect, useState } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import QRCodeGenerator from 'qrcode';
+import { useMedia, useTheme } from 'src';
 import styles from './qr-code.scss';
-import { useTheme } from '../theme-provider';
 
 const QRCodeImage = ({ qrcode }) => {
   if (!qrcode) {
@@ -30,6 +30,7 @@ const QRCode = ({
   ...rest
 }) => {
   const [qrcode, setCode] = useState('');
+  const { isMobile } = useMedia();
 
   useEffect(() => {
     QRCodeGenerator.toString(qrString, (err, svgString) => {
@@ -43,6 +44,31 @@ const QRCode = ({
     styles['qr-code'],
     className
   );
+
+  if (isMobile) {
+    return (
+      <div data-selector={dataSelector} className={qrCodeClass}>
+        <div className={styles['qr-code__message']}>
+          <p>{translations.scan}</p>
+        </div>
+        <div className={styles['qr-code__container']}>
+          <QRCodeImage qrcode={qrcode} />
+        </div>
+        <div className={styles['qr-code__wallet']}>
+          <h2>{translations.walletName}</h2>
+          <p>{translations.addressName}</p>
+        </div>
+        <style jsx>
+          {`
+            .${styles['qr-code']} {
+              background: ${theme.bgMobile};
+              color: ${theme.textTitle};
+            }
+          `}
+        </style>
+      </div>
+    );
+  }
 
   return (
     <div
@@ -93,6 +119,7 @@ QRCode.propTypes = {
     amount: PropTypes.string,
     addressName: PropTypes.string,
     scan: PropTypes.string,
+    walletName: PropTypes.string,
   }),
   title: PropTypes.string,
 };
@@ -105,6 +132,7 @@ QRCode.defaultProps = {
     amount: '',
     addressName: '',
     scan: '',
+    walletName: '',
   },
   title: '',
 };

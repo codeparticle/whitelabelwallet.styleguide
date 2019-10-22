@@ -25,7 +25,7 @@ function PageFooter({
 
     if (typeof Message === 'string') {
       return (
-        <h4 className={styles.footer.text} dataSelector={messageDataSelector}>
+        <h4 className={styles.footer.text} data-selector={messageDataSelector}>
           {Message}
         </h4>
       );
