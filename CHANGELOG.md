@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.10](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/compare/v0.5.9...v0.5.10) (2019-10-23)
+
+
+### Features
+
+* **wlw-117:** prevent infinite scaling of qr image ([81a3b5f](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/81a3b5f))
+* **wlw-118:** adjusted QR component for mobile ([f0f50da](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/f0f50da))
+
+
+
 ### [0.5.9](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/compare/v0.5.7...v0.5.9) (2019-10-18)
 
 
