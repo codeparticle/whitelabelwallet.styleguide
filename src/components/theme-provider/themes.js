@@ -185,6 +185,7 @@ const lightTheme = {
   },
   qrcode: {
     bg: tintBlue,
+    bgMobile: cloud,
     textTitle: slate,
     messageBg: cloud,
     request: dark,
@@ -355,6 +356,7 @@ const darkTheme = {
   },
   qrcode: {
     bg: dark,
+    bgMobile: darkBg,
     textTitle: white,
     messageBg: slate,
     request: white,

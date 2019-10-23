@@ -1,6 +1,10 @@
-@import "styles/colors.scss";
-@import "styles/layout.scss";
+@import "styles/colors";
 @import "styles/fonts";
+@import "styles/layout";
+@import "styles/mixins";
+
+$corner-size: 24px;
+$qr-padding: 15%;
 
 $qr-max-width: 350px;
 
@@ -15,7 +19,7 @@ $qr-max-width: 350px;
     display: flex;
     flex: 1;
     flex-direction: column;
-    padding: $spacing-m 15%;
+    padding: $spacing-m $qr-padding;
     text-align: center;
     width: 100%;
   }
@@ -32,11 +36,11 @@ $qr-max-width: 350px;
       border-top: 5px solid $blue;
       content: "";
       display: block;
-      height: 24px;
+      height: $corner-size;
       left: 0;
       position: absolute;
       top: 0;
-      width: 24px;
+      width: $corner-size;
     }
 
     &::after {
@@ -44,11 +48,11 @@ $qr-max-width: 350px;
       border-top: 5px solid $blue;
       content: "";
       display: block;
-      height: 24px;
+      height: $corner-size;
       position: absolute;
       right: 0;
       top: 0;
-      width: 24px;
+      width: $corner-size;
     }
   }
 
@@ -63,10 +67,10 @@ $qr-max-width: 350px;
       bottom: $border-radius-1;
       content: "";
       display: block;
-      height: 24px;
+      height: $corner-size;
       left: 0;
       position: absolute;
-      width: 24px;
+      width: $corner-size;
     }
 
     &::after {
@@ -75,10 +79,10 @@ $qr-max-width: 350px;
       bottom: $border-radius-1;
       content: "";
       display: block;
-      height: 24px;
+      height: $corner-size;
       position: absolute;
       right: 0;
-      width: 24px;
+      width: $corner-size;
     }
   }
 
@@ -100,5 +104,33 @@ $qr-max-width: 350px;
 
   &__amount {
     font-size: $font-size-xs-3;
+  }
+
+  &__wallet {
+    overflow: hidden;
+    padding: $spacing-m $spacing-xxl;
+    text-align: center;
+    white-space: nowrap;
+    width: 100%;
+
+    p {
+      font-size: $font-size-sm-1;
+    }
+
+    h2,
+    p {
+      font-weight: inherit;
+      margin: 0 !important;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  @include mquery($width-breakpoint-xs) {
+    font-weight: $font-weight-bold !important;
+
+    &__container {
+      padding: 0 $qr-padding;
+    }
   }
 }
