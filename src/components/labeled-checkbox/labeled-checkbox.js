@@ -8,14 +8,23 @@ import Case from 'case';
 import { white } from 'styles/colors.scss';
 import styles from './labeled-checkbox.scss';
 
+const renderProp = Prop => (typeof Prop === 'function' ? <Prop /> : Prop);
+
+function renderLabel(label) {
+  return typeof label === 'string'
+    ? <span>{label}</span>
+    : renderProp(label);
+}
+
 export function LabeledCheckbox({
   checked,
   dataSelector,
   label,
   onChange,
   color,
+  ...props
 }) {
-  const id = Case.kebab(label);
+  const id = typeof label === 'string' ? Case.kebab(label) : props.id;
 
   function handleCheck() {
     onChange(!checked);
@@ -23,8 +32,9 @@ export function LabeledCheckbox({
 
   return (
     <>
-      <div className={styles['labeled-checkbox']} data-selector={dataSelector}>
+      <div className={styles['labeled-checkbox']}>
         <input
+          data-selector={dataSelector}
           type="checkbox"
           id={id}
           checked={checked}
@@ -32,7 +42,7 @@ export function LabeledCheckbox({
         />
         { /* eslint-disable-next-line jsx-a11y/label-has-for */ }
         <label id={id} htmlFor={id}>
-          <span>{label}</span>
+          {renderLabel(label)}
         </label>
         <style jsx>
           {
@@ -52,7 +62,23 @@ LabeledCheckbox.propTypes = {
   checked: PropTypes.bool.isRequired,
   color: PropTypes.string,
   dataSelector: PropTypes.string,
-  label: PropTypes.string.isRequired,
+  /* eslint-disable-next-line */
+  id: function (props, propName) {
+    const thisProp = props[propName];
+
+    // If label isn't string and id is null or undefined, throw prop error
+    if (typeof props.label !== 'string' && (thisProp === null || thisProp === undefined)) {
+      return new Error(`The prop \`${propName}\` is required when the prop \`label\` is not a string.`);
+    }
+
+    // PropCheck is OK; Return null
+    return null;
+  },
+  label: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.func,
+    PropTypes.node,
+  ]).isRequired,
   onChange: PropTypes.func.isRequired,
 };
 

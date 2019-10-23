@@ -37,8 +37,10 @@ $gradient-blue: linear-gradient(45deg, #538DC0 0%, #94CCE4 100%);
 $gradient-dark: linear-gradient(31.89deg, #222222 0%, #444444 100%);
 
 /* Transparencies */
+$box-shadow-light: 0 0 24px rgba(0, 0, 0, 0.15);
+$box-shadow-dark: 0 0 24px rgba(0, 0, 0, 0.25);
 $blue-shade: #2E4C71E6;
-$shade: #60799840;
+$shade: #44444459;
 $tint: #FFFFFF40;
 
 /* stylelint-disable */
@@ -71,6 +73,8 @@ $tint: #FFFFFF40;
   gradientBlue: $gradient-blue;
   gradientDark: $gradient-dark;
   _transparencies: 0;
+  boxShadowLight: $box-shadow-light;
+  boxShadowDark: $box-shadow-dark;
   blueShade: $blue-shade;
   shade: $shade;
   tint: $tint;

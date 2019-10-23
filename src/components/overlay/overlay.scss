@@ -1,6 +1,8 @@
 @import 'styles/colors';
 @import 'styles/layout';
 
+$footer-height: 84px;
+
 .content.sidepanel .header {
   flex-shrink: 0;
   height: 336px;
@@ -10,6 +12,7 @@
   align-items: center;
   display: flex;
   flex-direction: row;
+  height: $footer-height;
   padding: $spacing-l $spacing-xl;
 
   .footerBtn {

@@ -56,7 +56,7 @@ export function Overlay({
   const [width, setWidth] = useState(type === OVERLAY ? '100%' : `${calculateWidth(windowWidth)}px`);
   const [isChecked, setIsChecked] = useState(false);
   const [isDisabled, setIsDisabled] = useState(disableFooterButton);
-  const { color } = theme;
+  const { color, shadow } = theme;
 
   function handleResize() {
     setWindowWidth(window.innerWidth);
@@ -182,6 +182,10 @@ export function Overlay({
       </Sidepanel>
       <style jsx>
         {`
+          :global(.react-sidenav-container) {
+            box-shadow: ${shadow};
+          }
+
           .content {
             color: ${color};
             display: flex;
