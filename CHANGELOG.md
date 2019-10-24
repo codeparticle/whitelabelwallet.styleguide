@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.11](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/compare/v0.5.10...v0.5.11) (2019-10-24)
+
+
+### Features
+
+* **wlw-166:** update label rendering for checkbox ([0a26483](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/0a26483))
+
+
+
 ### [0.5.10](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/compare/v0.5.9...v0.5.10) (2019-10-23)
 
 
