@@ -15,6 +15,7 @@ const {
 } = TYPES;
 
 const sidePanelMinWidth = 540;
+const sidepanelOpenClass = '.react-sidenav-container.open-true.sidepanel';
 
 function calculateWidth(innerWidth) {
   const optimalWidth = innerWidth / 3;
@@ -158,6 +159,7 @@ export function Overlay({
         fixed
         right
         backgroundColor={background || theme[type]}
+        className={type}
         isOpen={isOpen}
         onStateChange={onClose}
         width={width}
@@ -182,7 +184,7 @@ export function Overlay({
       </Sidepanel>
       <style jsx>
         {`
-          :global(.react-sidenav-container) {
+          :global(${sidepanelOpenClass}) {
             box-shadow: ${shadow};
           }
 
