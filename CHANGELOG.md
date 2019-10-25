@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.12](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/compare/v0.5.11...v0.5.12) (2019-10-25)
+
+
+### Bug Fixes
+
+* **wlw-176:** apply box shadow only to open sidepanel ([91f1145](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/91f1145))
+
+
+
 ### [0.5.11](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/compare/v0.5.10...v0.5.11) (2019-10-24)
 
 
