@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.13](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/compare/v0.5.9...v0.5.13) (2019-10-30)
+
+
+### Bug Fixes
+
+* **wlw-176:** apply box shadow only to open sidepanel ([91f1145](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/91f1145))
+
+
+### Features
+
+* **wlw-117:** prevent infinite scaling of qr image ([81a3b5f](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/81a3b5f))
+* **wlw-118:** adjusted QR component for mobile ([f0f50da](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/f0f50da))
+* **wlw-166:** update label rendering for checkbox ([0a26483](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/0a26483))
+* **wlw-178:** add  inline buttons in input component ([e41e065](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/e41e065))
+* **wlw-178:** update readme and add constants ([113b34d](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/113b34d))
+
+
+
 ### [0.5.12](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/compare/v0.5.11...v0.5.12) (2019-10-25)
 
 
