@@ -10,8 +10,24 @@ import { TextInput } from '@codeparticle/whitelabelwallet.styleguide';
 
 const [value, setValue] = useState('');
 const handleChange = (e) => setValue(e.target.value);
+const buttons = [
+ {
+    dataSelector: 'refresh-currency-btn' // a string used as a e2e data selector for the svg button
+    icon: SvgRemove, // SvgIcon Component to be used in the inline button
+    onClick: action('Clicked Remove'), // buttons onClick function
+    type: 'icon' // type is the only required property of the button object (either 'icon' or 'text')
+    tooltipText: 'Delete Address', // Text to display on Icon button tool tip
+  },
+ {
+    dataSelector: 'add-address-btn' // a string used as a e2e data selector for the svg button
+    onClick: action('Clicked Remove'), // buttons onClick function
+    type: 'text' // type is the only required property of the button object (either 'icon' or 'text')
+    variant: 'primary' // variant of text button to use. 
+  },
+]
 
 <TextInput
+  buttons={buttons}
   onChange={handleChange}
   value={value} />
 ```
@@ -20,6 +36,7 @@ const handleChange = (e) => setValue(e.target.value);
 
 | name | type | default | description |
 | ---- | ---- | ------- | ----------- |
+| buttons | array | [] | An array of objects containing data to create inline buttons. |
 | className | string | '' | Sets the class name on the root element |
 | dataSelector | string | '' | An optional e2e data-selector attr |
 | disabled | boolean | '' | Sets the state of the text input to disabled |

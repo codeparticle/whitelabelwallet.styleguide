@@ -6,12 +6,19 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import uuidv1 from 'uuid/v1';
+import { IconButton } from 'components/icon-button';
+import { Button, ButtonVariants } from 'components/button';
+import { Tooltip } from 'components/tooltip';
 import { themes, useTheme } from '../theme-provider';
 import styles from './text-input.scss';
 
 const THEME_KEY = 'input';
+const ICON_SIZE = '14px';
+const ICON_TYPE = 'icon';
+
 
 const TextInput = ({
+  buttons,
   className,
   dataSelector,
   hasError,
@@ -25,6 +32,49 @@ const TextInput = ({
     ? themes.alt[THEME_KEY]
     : useTheme(THEME_KEY);
   const [inputId] = useState(`text-input-${uuidv1()}`);
+  const hasMultipleButtons = buttons.length > 1;
+
+
+  function getButtons() {
+    if (buttons.length > 0) {
+      return buttons.map((button, index) => {
+        if (button.type.toLowerCase() === ICON_TYPE) {
+          return (
+            <div key={index}>
+              <IconButton
+                data-for={`tooltip-${index}`}
+                data-tip
+                data-selector={button.dataSelector || ''}
+                className={classNames(styles['inline-button-icon'])}
+                onClick={button.onClick}
+                variant={theme.svgButtonVariant}
+                icon={<button.icon height={ICON_SIZE} width={ICON_SIZE} />}
+              />
+              <Tooltip
+                content={button.tooltipText}
+                Id={`tooltip-${index}`}
+                place="top"
+              />
+            </div>
+          );
+        }
+
+        return (
+          <Button
+            key={index}
+            data-selector={button.dataSelector || ''}
+            className="inline-button-text"
+            onClick={button.onClick}
+            variant={button.variant || ButtonVariants.PRIMARY}
+          >
+            {button.text}
+          </Button>
+        );
+      });
+    }
+
+    return null;
+  }
 
   return (
     <>
@@ -44,18 +94,31 @@ const TextInput = ({
           <span>
             {label}
           </span>
-          <input
-            {...rest}
-            data-selector={dataSelector}
-            className={classNames(
-              styles['text-input__input'],
-              hasError && styles['text-input__input-error'],
-              label && styles['has-label'],
-              'text-input__input',
-              inputClassName
+          <div className={classNames(
+            styles['input-wrapper'],
+          )}
+          >
+            <input
+              {...rest}
+              data-selector={dataSelector}
+              className={classNames(
+                styles['text-input__input'],
+                hasError && styles['text-input__input-error'],
+                label && styles['has-label'],
+                'text-input__input',
+                inputClassName
+              )}
+              id={inputId}
+            />
+            <div className={classNames(
+              styles['button-group'],
+              'button-group',
+              hasMultipleButtons && styles['multiple-buttons']
             )}
-            id={inputId}
-          />
+            >
+              {getButtons()}
+            </div>
+          </div>
         </label>
       </div>
       <style jsx>
@@ -67,7 +130,6 @@ const TextInput = ({
           .text-input__input {
             background: ${theme.bg};
             color: ${theme.textValue};
-            height: ${useAltTheme ? '40px' : 'auto'};
           }
         `}
       </style>
@@ -76,6 +138,14 @@ const TextInput = ({
 };
 
 TextInput.propTypes = {
+  buttons: PropTypes.arrayOf(PropTypes.shape({
+    icon: PropTypes.func,
+    dataSelector: PropTypes.string,
+    onClick: PropTypes.func,
+    type: PropTypes.string.isRequired,
+    tooltipText: PropTypes.string,
+    variant: PropTypes.string,
+  })),
   className: PropTypes.string,
   dataSelector: PropTypes.string,
   disabled: PropTypes.bool,
@@ -84,7 +154,6 @@ TextInput.propTypes = {
   inputClassName: PropTypes.string,
   maxLength: PropTypes.number,
   onBlur: PropTypes.func,
-  onChange: PropTypes.func,
   onFocus: PropTypes.func,
   onKeyDown: PropTypes.func,
   onKeyUp: PropTypes.func,
@@ -94,6 +163,7 @@ TextInput.propTypes = {
 };
 
 TextInput.defaultProps = {
+  buttons: [],
   className: '',
   dataSelector: '',
   disabled: false,
@@ -102,7 +172,6 @@ TextInput.defaultProps = {
   inputClassName: '',
   maxLength: null,
   onBlur: null,
-  onChange: null,
   onFocus: null,
   onKeyDown: null,
   onKeyUp: null,
