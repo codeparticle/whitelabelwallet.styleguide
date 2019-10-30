@@ -3,4 +3,5 @@ export const IconVariants = {
   GREEN: 'green',
   SLATE: 'slate',
   TERTIARY: 'tertiary',
+  DEFAULT: '',
 };

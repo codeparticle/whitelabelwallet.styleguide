@@ -7,12 +7,15 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import uuidv1 from 'uuid/v1';
 import { IconButton } from 'components/icon-button';
-import { Button } from 'components/button';
+import { Button, ButtonVariants } from 'components/button';
 import { Tooltip } from 'components/tooltip';
 import { themes, useTheme } from '../theme-provider';
 import styles from './text-input.scss';
 
 const THEME_KEY = 'input';
+const ICON_SIZE = '14px';
+const ICON_TYPE = 'icon';
+
 
 const TextInput = ({
   buttons,
@@ -35,16 +38,17 @@ const TextInput = ({
   function getButtons() {
     if (buttons.length > 0) {
       return buttons.map((button, index) => {
-        if (button.type.toLowerCase() === 'icon') {
+        if (button.type.toLowerCase() === ICON_TYPE) {
           return (
             <div key={index}>
               <IconButton
                 data-for={`tooltip-${index}`}
                 data-tip
+                data-selector={button.dataSelector || ''}
                 className={classNames(styles['inline-button-icon'])}
                 onClick={button.onClick}
-                variant={theme.svgButtons}
-                icon={<button.icon height="14px" width="14px" />}
+                variant={theme.svgButtonVariant}
+                icon={<button.icon height={ICON_SIZE} width={ICON_SIZE} />}
               />
               <Tooltip
                 content={button.tooltipText}
@@ -58,9 +62,10 @@ const TextInput = ({
         return (
           <Button
             key={index}
+            data-selector={button.dataSelector || ''}
             className="inline-button-text"
             onClick={button.onClick}
-            variant={button.variant || 'primary'}
+            variant={button.variant || ButtonVariants.PRIMARY}
           >
             {button.text}
           </Button>
@@ -135,9 +140,11 @@ const TextInput = ({
 TextInput.propTypes = {
   buttons: PropTypes.arrayOf(PropTypes.shape({
     icon: PropTypes.func,
+    dataSelector: PropTypes.string,
     onClick: PropTypes.func,
     type: PropTypes.string.isRequired,
     tooltipText: PropTypes.string,
+    variant: PropTypes.string,
   })),
   className: PropTypes.string,
   dataSelector: PropTypes.string,

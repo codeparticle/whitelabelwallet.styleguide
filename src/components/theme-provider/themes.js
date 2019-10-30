@@ -1,5 +1,6 @@
 import colors from '../../styles/colors.scss';
 import { ButtonVariants } from '../button';
+import { IconVariants } from '../icon-button';
 
 const {
   blue,
@@ -31,6 +32,10 @@ const {
   PRIMARY,
   SLATE,
 } = ButtonVariants;
+
+const {
+  DEFAULT,
+} = IconVariants;
 
 const lightTheme = {
   name: 'light',
@@ -65,7 +70,7 @@ const lightTheme = {
   input: {
     label: slate,
     bg: tintBlue,
-    svgButtons: 'slate',
+    svgButtonVariant: SLATE,
     textValue: dark,
   },
   header: {
@@ -238,7 +243,7 @@ const darkTheme = {
   input: {
     bg: dark,
     label: grey,
-    svgButtons: '',
+    svgButtonVariant: DEFAULT,
     textValue: white,
   },
   header: {
