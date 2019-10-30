@@ -65,6 +65,7 @@ const lightTheme = {
   input: {
     label: slate,
     bg: tintBlue,
+    svgButtons: 'slate',
     textValue: dark,
   },
   header: {
@@ -237,6 +238,7 @@ const darkTheme = {
   input: {
     bg: dark,
     label: grey,
+    svgButtons: '',
     textValue: white,
   },
   header: {

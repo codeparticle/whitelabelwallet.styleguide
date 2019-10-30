@@ -5,8 +5,34 @@ import { action } from '@storybook/addon-actions';
 import { withReadme } from 'storybook-readme';
 import { TextInput } from 'components/text-input';
 import readme from 'components/text-input/README.md';
+import { svgs } from '../src';
 import { ThemeWrapper } from './utils';
 import { authBackground, darkBackground, lightBackground } from './constants';
+
+const { SvgCurrencyConversionSymbol, SvgRemove } = svgs.icons;
+
+const iconButtons = [
+  {
+    icon: SvgCurrencyConversionSymbol,
+    onClick: action('Clicked Currency'),
+    type: 'icon',
+    tooltipText: 'Refresh Address',
+  },
+  {
+    icon: SvgRemove,
+    onClick: action('Clicked Remove'),
+    type: 'icon',
+    tooltipText: 'Delete Address',
+  },
+];
+
+const textButtons = [
+  {
+    onClick: action('Clicked Testing'),
+    text: 'Testing',
+    type: 'text',
+  },
+];
 
 const TextInputWithValue = (props) => {
   const [value, setValue] = useState('');
@@ -42,6 +68,7 @@ storiesOf('TextInput', module)
   })
   .add('With Label', () => (
     <TextInputWithValue
+      buttons={iconButtons}
       label="Input Label"
       onBlur={action('blur')}
       onFocus={action('focus')}
@@ -52,6 +79,7 @@ storiesOf('TextInput', module)
   })
   .add('Dark Theme', () => (
     <TextInputWithValue
+      buttons={textButtons}
       label="Input Label"
       onBlur={action('blur')}
       onFocus={action('focus')}

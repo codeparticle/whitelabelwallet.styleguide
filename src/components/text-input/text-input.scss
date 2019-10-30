@@ -2,6 +2,12 @@
 @import "styles/layout.scss";
 @import "styles/fonts.scss";
 
+$input-height: 40px;
+$inline-icon-button-margin: 7px;
+$button-position: 10px;
+$button-padding: 5px;
+$error-border: 1px;
+
 .text-input {
   display: flex;
   flex-direction: column;
@@ -14,19 +20,44 @@
 
   &__input {
     border: 0;
-    border-radius: 6px;
+    border-radius: $border-radius-3;
     padding: $spacing-xs;
     width: 100%;
 
     &-error {
       -webkit-appearance: none;
       background: $rose !important;
-      border: 1px solid $red;
+      border: $error-border solid $red;
       color: $red !important;
     }
   }
 
-  &__input.has-label {
-    margin-top: $space-1;
+  span {
+    margin-bottom: $space-1;
+  }
+
+  .input-wrapper {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    .button-group {
+      display: flex;
+      position: absolute;
+      right: $button-position;
+
+      &.multiple-buttons {
+        padding-top: $button-padding;
+        right: $space-6;
+      }
+
+      .inline-button-icon {
+        margin: 0 $inline-icon-button-margin;
+      }
+    }
+
+    input {
+      height: $input-height;
+    }
   }
 }
