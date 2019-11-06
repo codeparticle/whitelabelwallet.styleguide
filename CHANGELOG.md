@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.14](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/compare/v0.5.13...v0.5.14) (2019-11-06)
+
+
+### Features
+
+* **wlw-170:** fixed mobile page prop error ([f69e59c](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/f69e59c))
+
+
+
 ### [0.5.13](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/compare/v0.5.9...v0.5.13) (2019-10-30)
 
 
