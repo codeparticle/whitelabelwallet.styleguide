@@ -42,7 +42,7 @@ function PageFooter({
     <>
       <div className={styles.footer} data-selector={dataSelector}>
         {renderMessage(message)}
-        <Visible when={alert}>
+        <Visible when={Boolean(alert)}>
           <div className={styles.alert} data-selector={`${dataSelector}-alert`}>
             {renderProp(alert)}
           </div>

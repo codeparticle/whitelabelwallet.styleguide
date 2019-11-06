@@ -74,7 +74,10 @@ function MobilePage({
 MobilePage.propTypes = {
   children: PropTypes.node.isRequired,
   dataSelector: PropTypes.string,
-  NavigationButton: PropTypes.func.isRequired,
+  NavigationButton: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.object,
+  ]).isRequired,
   title: PropTypes.string.isRequired,
   Icon: PropTypes.func.isRequired,
   PrimaryAction: PropTypes.func.isRequired,
