@@ -1,4 +1,4 @@
-
+import _ from 'lodash';
 /**
 * Single level list sort fn
 * @returns {array} listItems - an array of objects to be rendered in each row
@@ -17,7 +17,11 @@ function sortPropertiesToRender({
     const listColumns = [];
 
     columnDefs.forEach(({ property }) => {
-      listColumns.push(row[property] || ' ');
+      const value = _.isNil(row[property])
+        ? ''
+        : row[property];
+
+      listColumns.push(value);
     });
 
     const propertiesToRender = {
