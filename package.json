@@ -129,7 +129,8 @@
           "feature",
           "bugfix",
           "test",
-          "misc"
+          "misc",
+          "hotfix"
         ]
       ]
     }
