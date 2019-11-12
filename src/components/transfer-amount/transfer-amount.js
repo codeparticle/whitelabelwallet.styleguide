@@ -2,6 +2,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Visible } from '@codeparticle/react-visible';
+import { TextInput } from '../text-input';
 import { TextArea } from '../text-area';
 import { useTheme } from '../theme-provider';
 import { utils } from '../..';
@@ -17,6 +18,7 @@ const {
   convertCurrency,
   fiatSymbols,
   getFloatRegex,
+  getNumberRegex,
 } = utils;
 
 const defaultFontSize = '64px';
@@ -192,23 +194,75 @@ const CurrencyContainer = ({
   );
 };
 
-const MemoContainer = ({
+const FeeContainer = ({
   dataSelector,
-  translations,
+  value,
   onChange,
   theme,
-  value,
+  translations,
+}) => {
+  function handleChange(e) {
+    if (!getNumberRegex().test(e.target.value)) {
+      return;
+    }
+
+    onChange(e);
+  }
+
+  return (
+    <div className={styles['transfer-amount__fee']}>
+      <TextInput
+        dataSelector={`${dataSelector}-fee`}
+        inputClassName="transfer-amount__input"
+        label={translations.fee}
+        onChange={handleChange}
+        value={value}
+      />
+      <p className={styles['transfer-amount__fee-message']}>
+        {translations.feeMessage}
+      </p>
+      <style jsx>
+        {`
+          .${styles['transfer-amount__fee-message']} {
+            color: ${theme.textTitle};
+          }
+
+          :global(.transfer-amount__input) {
+            background: ${theme.textAreaBg} !important;
+          }
+        `}
+      </style>
+    </div>
+  );
+};
+
+const MemoContainer = ({
+  dataSelector,
+  feeValue,
+  memoValue,
+  onFeeChange,
+  onMemoChange,
+  theme,
+  translations,
 }) => (
   <div className={classNames(styles['transfer-amount__memo'])}>
-    <TextArea
-      dataSelector={`${dataSelector}-memo`}
-      customColor={theme.textAreaBg}
-      label={translations.memo}
-      onChange={onChange}
-      rows={8}
-      textAreaClassName={styles['transfer-amount__text-area']}
-      value={value}
+    <FeeContainer
+      dataSelector={dataSelector}
+      onChange={onFeeChange}
+      theme={theme}
+      translations={translations}
+      value={feeValue}
     />
+    <div className="transfer-amount__text-area-wrapper">
+      <TextArea
+        dataSelector={`${dataSelector}-memo`}
+        customColor={theme.textAreaBg}
+        label={translations.memo}
+        onChange={onMemoChange}
+        textAreaClassName={styles['transfer-amount__text-area']}
+        value={memoValue}
+      />
+    </div>
   </div>
 );
 
@@ -217,9 +271,11 @@ export const TransferAmount = ({
   conversionRate,
   currencyValue,
   dataSelector,
+  feeValue,
   fiatDecimalLimit,
   fiatSymbolKey,
   handleCurrencyChange,
+  handleFeeChange,
   handleMemoChange,
   memoValue,
   translations,
@@ -243,10 +299,12 @@ export const TransferAmount = ({
       />
       <MemoContainer
         dataSelector={dataSelector}
+        feeValue={feeValue}
+        onMemoChange={handleMemoChange}
+        onFeeChange={handleFeeChange}
         translations={translations}
-        onChange={handleMemoChange}
         theme={theme}
-        value={memoValue}
+        memoValue={memoValue}
       />
       <style jsx>
         {`
@@ -264,9 +322,11 @@ TransferAmount.propTypes = {
   conversionRate: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
   currencyValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   dataSelector: PropTypes.string,
+  feeValue: PropTypes.string.isRequired,
   fiatDecimalLimit: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   fiatSymbolKey: PropTypes.string,
   handleCurrencyChange: PropTypes.func.isRequired,
+  handleFeeChange: PropTypes.func.isRequired,
   handleMemoChange: PropTypes.func.isRequired,
   memoValue: PropTypes.string.isRequired,
   translations: PropTypes.shape({
@@ -283,6 +343,12 @@ TransferAmount.defaultProps = {
   fiatDecimalLimit: 2,
   fiatSymbolKey: 'dollarSign',
   translations: {
+    fee: 'Transaction Fee*',
+    feeMessage: `
+      *A higher fee will give a higher priority so that it is confirmed (spendable sooner). 
+      The lower it is, the longer it takes. 
+      If the fee is too low, the transaction will fail due to no confirmations.
+    `,
     header: 'Transfer Amount',
     memo: 'Memo:',
   },

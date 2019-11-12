@@ -32,19 +32,16 @@ const preSelectRow = {
 };
 
 function CustomChildComponent({ data }) {
-  const translations = {
-    header: 'Edit Payment',
-    memo: 'Edited Memo:',
-  };
-
   const {
     amount,
     details,
   } = data;
 
+  const [feeValue, setFeeValue] = useState(7500);
   const [memoValue, setMemoValue] = useState(details);
   const [currencyValue, setCurrencyValue] = useState(parseFloat(amount.replace('G', '')));
 
+  const onFeeChange = e => setFeeValue(e.target.value);
   const onMemoChange = e => setMemoValue(e.target.value);
   const onCurrencyChange = (e) => {
     setCurrencyValue(e.target.value);
@@ -58,11 +55,12 @@ function CustomChildComponent({ data }) {
         coinDecimalLimit={-1}
         conversionRate={3.14}
         currencyValue={currencyValue}
+        feeValue={feeValue}
         fiatDecimalLimit={2}
         handleCurrencyChange={onCurrencyChange}
         handleMemoChange={onMemoChange}
+        handleFeeChange={onFeeChange}
         memoValue={memoValue}
-        translations={translations}
       />
       <style jsx>
         {`

@@ -1,6 +1,8 @@
 @import "../../styles/layout.scss";
 @import "../../styles/fonts.scss";
 
+$text-area-height: 160px;
+
 .transfer-amount {
   align-items: stretch;
   display: flex;
@@ -14,15 +16,39 @@
     justify-content: center;
   }
 
+  &__fee {
+    align-items: center;
+    display: flex;
+
+    & > :first-child {
+      width: 35%;
+    }
+
+    & > :last-child {
+      height: auto;
+    }
+
+    &-message {
+      font-size: $font-size-xs-2;
+      line-height: calc(1.5 * #{$font-size-xs-2});
+      margin-left: $spacing-m;
+      width: 60%;
+    }
+  }
+
   &__memo {
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     padding: $spacing-xl $spacing-xl $spacing-xl 0;
     width: 50%;
   }
 
   &__text-area {
     font-size: $font-size-sm-2;
+    height: $text-area-height;
     line-height: calc(2 * #{$font-size-sm-2});
-    width: 100%;
   }
 }
 

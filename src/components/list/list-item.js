@@ -88,7 +88,8 @@ export function ListItem({
 }) {
   const [isSelected, setIsSelected] = useState(false);
   const compareProperty = matchProperty ? data[matchProperty] : index;
-  const selectedCondition = compareProperty === selected[matchProperty];
+  const selectedKey = matchProperty || 'index';
+  const selectedCondition = compareProperty === selected[selectedKey];
 
   useEffect(() => {
     setIsSelected((prevState) => {
@@ -140,7 +141,7 @@ export function ListItem({
     }
 
     const selectedValue = {
-      [matchProperty || index]: compareProperty,
+      [selectedKey]: compareProperty,
       data,
     };
 

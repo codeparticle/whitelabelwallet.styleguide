@@ -20,7 +20,12 @@ const columnDefs = [
   },
 ];
 
-function MobileContactList({ data, dataSelector, onContactClicked }) {
+function MobileContactList({
+  data,
+  dataSelector,
+  onContactClicked,
+  preSelect,
+}) {
   const [rowData, setRowData] = useState(Array.isArray(data) ? data : []);
   const { primary } = useTheme('mobileList');
   const getStyles = () => primary;
@@ -43,6 +48,7 @@ function MobileContactList({ data, dataSelector, onContactClicked }) {
         dataSelector={dataSelector}
         id={LIST_ID}
         onRowClicked={onRowClicked}
+        preSelect={preSelect}
         rowData={rowData}
         showHeader={false}
       />
@@ -67,11 +73,14 @@ function MobileContactList({ data, dataSelector, onContactClicked }) {
 MobileContactList.propTypes = {
   data: PropTypes.arrayOf(PropTypes.object).isRequired,
   dataSelector: PropTypes.string,
+  // eslint-disable-next-line
+  preSelect: PropTypes.object,
   onContactClicked: PropTypes.func.isRequired,
 };
 
 MobileContactList.defaultProps = {
   dataSelector: LIST_ID,
+  preSelect: null,
 };
 
 export { MobileContactList };
