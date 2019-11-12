@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { useTheme } from '../theme-provider';
@@ -7,9 +7,11 @@ import { ListItem } from './list-item';
 import { sortPropertiesToRender } from './utils';
 
 const ListItems = ({
+  clearSelected,
   columnDefs,
   customSort,
   id,
+  preSelect,
   rowData,
   ...rest
 }) => {
@@ -20,6 +22,18 @@ const ListItems = ({
     columnDefs,
     rowData,
   });
+
+  useEffect(() => {
+    if (preSelect && typeof preSelect === 'object') {
+      setSelected(preSelect);
+    }
+  }, [preSelect]);
+
+  useEffect(() => {
+    if (clearSelected) {
+      setSelected({});
+    }
+  }, [clearSelected]);
 
   return (
     <div className="list-items">
@@ -55,6 +69,7 @@ const ListItems = ({
 const List = ({
   allowDeselect,
   childToRender,
+  clearSelected,
   columnDefs,
   customRowStyles,
   customSort,
@@ -64,6 +79,7 @@ const List = ({
   matchProperty,
   onDeselect,
   onRowClicked,
+  preSelect,
   rowData,
   showHeader,
   showSubItems,
@@ -78,6 +94,7 @@ const List = ({
       <ListItems
         allowDeselect={allowDeselect}
         childToRender={childToRender}
+        clearSelected={clearSelected}
         columnDefs={columnDefs}
         customRowStyles={customRowStyles}
         customSort={customSort}
@@ -87,6 +104,7 @@ const List = ({
         matchProperty={matchProperty}
         onDeselect={onDeselect}
         onRowClicked={onRowClicked}
+        preSelect={preSelect}
         rowData={rowData}
         showSubItems={showSubItems}
       />
@@ -121,6 +139,7 @@ List.propTypes = {
     PropTypes.func,
     PropTypes.node,
   ]),
+  clearSelected: PropTypes.bool,
   columnDefs: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string.isRequired,
@@ -140,6 +159,8 @@ List.propTypes = {
   matchProperty: PropTypes.string,
   onDeselect: PropTypes.func,
   onRowClicked: PropTypes.func.isRequired,
+  // eslint-disable-next-line react/forbid-prop-types
+  preSelect: PropTypes.object,
   rowData: PropTypes.arrayOf(
     PropTypes.object.isRequired,
   ).isRequired,
@@ -150,12 +171,14 @@ List.propTypes = {
 List.defaultProps = {
   allowDeselect: true,
   childToRender: null,
+  clearSelected: false,
   customRowStyles: null,
   customSort: null,
   dataSelector: '',
   isStriped: false,
   matchProperty: null,
   onDeselect: null,
+  preSelect: null,
   showHeader: true,
   showSubItems: true,
 };

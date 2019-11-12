@@ -19,6 +19,18 @@ import {
 
 const { Text, ChildCount } = cellFormatters;
 
+const preSelectRow = {
+  id: 1,
+  data: {
+    id: 1,
+    date: '2015-02-24 08:23:54',
+    address: 'Address 3',
+    details: 'Deposit from Rosales',
+    type: 'deposit',
+    amount: 'G 0.96',
+  },
+};
+
 function CustomChildComponent({ data }) {
   const translations = {
     header: 'Edit Payment',
@@ -83,10 +95,12 @@ storiesOf('List', module)
   .addDecorator(withKnobs)
   .add('Default', () => {
     const allowDeselectValue = boolean('allowDeselect', true);
+    const clearSelected = boolean('clearSelected', false);
     const isStripedValue = boolean('isStriped', false);
     const showHeaderValue = boolean('showHeader', true);
     const showSubItemsValue = boolean('showSubItems', true);
     const isSubList = boolean('customRowStyles (subList)', false);
+    const usePreselectedValue = boolean('use pre-selected value (preSelect prop)', false);
 
     function customRowStyles({ isSelected, theme }) {
       if (isSelected) {
@@ -97,6 +111,7 @@ storiesOf('List', module)
     }
 
     const onRowClicked = action(selected => selected);
+    const onDeselect = action(deselected => deselected);
 
     function withCountRenderer({ cellStyles, data, column }) {
       const childCount = data.related && data.related.length;
@@ -160,11 +175,15 @@ storiesOf('List', module)
       <ListDemo
         allowDeselect={allowDeselectValue}
         childToRender={CustomChildComponent}
+        clearSelected={clearSelected}
         columnDefs={columnDefs}
         customRowStyles={isSubList ? customRowStyles : null}
         id="list-demo"
         isStriped={isStripedValue}
+        matchProperty="id"
+        onDeselect={onDeselect}
         onRowClicked={onRowClicked}
+        preSelect={usePreselectedValue ? preSelectRow : null}
         rowData={alternatingRowMockData}
         showHeader={showHeaderValue}
         showSubItems={showSubItemsValue}

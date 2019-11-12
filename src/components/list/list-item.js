@@ -88,11 +88,25 @@ export function ListItem({
 }) {
   const [isSelected, setIsSelected] = useState(false);
   const compareProperty = matchProperty ? data[matchProperty] : index;
-  const selectedCondition = compareProperty === selected[compareProperty];
+  const selectedCondition = compareProperty === selected[matchProperty];
 
   useEffect(() => {
-    setIsSelected(selectedCondition);
+    setIsSelected((prevState) => {
+      if (prevState && !selectedCondition) {
+        if (allowDeselect && onDeselect) {
+          onDeselect(data);
+        }
+      }
+
+      return selectedCondition;
+    });
   }, [data, selected]);
+
+  useEffect(() => {
+    if (isSelected && Object.keys(selected).length > 0) {
+      onRowClicked(selected.data);
+    }
+  }, [isSelected, selected]);
 
   const styleParams = {
     data,
@@ -119,25 +133,18 @@ export function ListItem({
     childIcon: icon,
   };
 
-  function handleSelection(event) {
+  function handleSelection() {
     if (allowDeselect && isSelected) {
       setSelected({});
-
-      if (onDeselect) {
-        onDeselect({ ...data, event });
-      }
-
       return;
     }
 
     const selectedValue = {
-      [compareProperty]: compareProperty,
+      [matchProperty || index]: compareProperty,
       data,
     };
 
-    selectedValue.data = { ...selectedValue.data, event };
     setSelected(selectedValue);
-    onRowClicked(selectedValue.data);
   }
 
   return (
