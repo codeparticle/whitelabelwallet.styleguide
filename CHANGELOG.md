@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.16](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/compare/v0.5.15...v0.5.16) (2019-11-14)
+
+
+### Features
+
+* **wlw-193:** added fee input to transfer amount ([7290e91](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/7290e91))
+* **wlw-193:** added preSelect and clearSelected to List ([c696326](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/commits/c696326))
+
+
+
 ### [0.5.15](https://bitbucket.org/CodeParticle/whitelabelwallet.styleguide/compare/v0.5.14...v0.5.15) (2019-11-07)
 
 
