@@ -67,6 +67,7 @@ function MobileWalletList({
   data,
   dataSelector,
   isChildList,
+  preSelect = null,
   onAddressClicked,
   subtitleFormatter,
 }) {
@@ -105,6 +106,7 @@ function MobileWalletList({
         dataSelector={dataSelector}
         id={listId}
         rowData={rowData}
+        preSelect={preSelect}
         matchProperty="id"
         onRowClicked={onRowClicked}
         showHeader={false}
@@ -130,11 +132,14 @@ function MobileWalletList({
 MobileWalletList.propTypes = {
   data: PropTypes.arrayOf(PropTypes.object).isRequired,
   dataSelector: PropTypes.string,
+  // eslint-disable-next-line
+  preSelect: PropTypes.object,
   onAddressClicked: PropTypes.func.isRequired,
 };
 
 MobileWalletList.defaultProps = {
   dataSelector: LIST_ID,
+  preSelect: null,
 };
 
 export { MobileWalletList };

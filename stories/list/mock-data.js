@@ -2,6 +2,7 @@
 
 const alternatingRowMockData = [
   {
+    'id': 1,
     'date': '2016-01-12 01:26:39',
     'address': 'Address 4',
     'details': 'Payment to Deanna',
@@ -32,6 +33,7 @@ const alternatingRowMockData = [
     ],
   },
   {
+    'id': 2,
     'date': '2015-02-24 08:23:54',
     'address': 'Address 3',
     'details': 'Deposit from Rosales',
@@ -39,6 +41,7 @@ const alternatingRowMockData = [
     'amount': 'G 0.96',
   },
   {
+    'id': 3,
     'date': '2016-08-20 03:05:56',
     'address': 'Address 8',
     'details': 'Payment to Nieves',
@@ -46,6 +49,7 @@ const alternatingRowMockData = [
     'amount': 'G 10.36',
   },
   {
+    'id': 4,
     'date': '2017-09-17 09:12:27',
     'address': 'Address 3',
     'details': 'Payment to Valentine',
@@ -53,6 +57,7 @@ const alternatingRowMockData = [
     'amount': 'G 0.67',
   },
   {
+    'id': 5,
     'date': '2018-11-16 11:53:37',
     'address': 'Address 0',
     'details': 'Deposit from Maddox',

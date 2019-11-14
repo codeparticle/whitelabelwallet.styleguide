@@ -370,6 +370,35 @@ function customRowStyles({
 }
 ```
 ----
+### preSelect (object) default: null
+
+The preSelect prop allows you do pass a row's dataset to be initially selected. It should pass the entire row's dataSet and must be used with `matchProperty`
+
+Example:
+```jsx
+const preSelect = {
+  id: 1,
+  data: {
+    id: 1,
+    ...row
+  },
+};
+
+return (
+  <List
+    matchProperty="id"
+    preSelect={preSelect}
+    {...props}
+  />
+);
+```
+
+----
+### clearSelected (bool) default: false
+
+When clearSelected is set to true, it'll set the selected row to null. This is useful for 
+
+----
 ### allowDeselect (bool) default: true
 
 > When true, allows a row to be clicked a second time to deselect it.

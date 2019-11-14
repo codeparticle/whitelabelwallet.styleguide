@@ -27,6 +27,10 @@ function getFloatRegex(limit) {
   return new RegExp(`^\\d*\\.?\\d${decimalMatchLimit}$`, 'g');
 }
 
+function getNumberRegex() {
+  return new RegExp('^[0-9]*$');
+}
+
 /**
  * This list references the symbols on this page:
  * https://www.toptal.com/designers/htmlarrows/currency/
@@ -93,4 +97,5 @@ export {
   convertCurrency,
   fiatSymbols,
   getFloatRegex,
+  getNumberRegex,
 };
