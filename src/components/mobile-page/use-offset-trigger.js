@@ -1,3 +1,13 @@
+/* 
+ *  This is the default license template.
+ *  
+ *  File: use-offset-trigger.js
+ *  Author: franck
+ *  Copyright (c) 2020 franck
+ *  
+ *  To edit this license information: Press Ctrl+Shift+P and press 'Create new License Template...'.
+ */
+
 /**
  * @fileoverview Hook to determine when an effect should trigger
  * based off element offset and given triggerpoint

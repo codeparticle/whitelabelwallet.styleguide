@@ -1,0 +1,30 @@
+{
+  "license-header-manager.additionalCommentStyles": [
+    {
+      "extension": ".js",
+      "commentStart": " /*",
+      "commentMiddle": " * ",
+      "commentEnd": " */",
+    },{
+      "extension": ".jsx",
+      "commentStart": " /*",
+      "commentMiddle": " * ",
+      "commentEnd": " */",
+    },{
+      "extension": ".css",
+      "commentStart": " /*",
+      "commentMiddle": " * ",
+      "commentEnd": " */",
+    },{
+      "extension": ".scss",
+      "commentStart": " /*",
+      "commentMiddle": " * ",
+      "commentEnd": " */",
+    },{
+    "extension": ".html",
+    "commentStart": " <!--",
+    "commentMiddle": "     ",
+    "commentEnd": "  -->"
+    }
+  ]
+}

@@ -1,3 +1,13 @@
+/* 
+ *  This is the default license template.
+ *  
+ *  File: text-area.js
+ *  Author: franck
+ *  Copyright (c) 2020 franck
+ *  
+ *  To edit this license information: Press Ctrl+Shift+P and press 'Create new License Template...'.
+ */
+
 /**
 + * @fileoverview Text Area Component
 + * @author Marc Mathieu

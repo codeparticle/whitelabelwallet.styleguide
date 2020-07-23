@@ -1,4 +1,13 @@
-/* eslint-disable max-len */
+/* 
+ *  This is the default license template.
+ *  
+ *  File: mock-data.js
+ *  Author: franck
+ *  Copyright (c) 2020 franck
+ *  
+ *  To edit this license information: Press Ctrl+Shift+P and press 'Create new License Template...'.
+ */
+
 export const contactListData = [
   {
     'id': 1,

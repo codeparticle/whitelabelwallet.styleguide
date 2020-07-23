@@ -1,3 +1,13 @@
+/* 
+ *  This is the default license template.
+ *  
+ *  File: overlay.js
+ *  Author: franck
+ *  Copyright (c) 2020 franck
+ *  
+ *  To edit this license information: Press Ctrl+Shift+P and press 'Create new License Template...'.
+ */
+
 import React, { useEffect, useState } from 'react';
 import { storiesOf } from '@storybook/react';
 import { boolean, select, withKnobs } from '@storybook/addon-knobs';

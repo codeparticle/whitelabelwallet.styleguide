@@ -1,4 +1,13 @@
-/* eslint-disable import/no-extraneous-dependencies */
+/* 
+ *  This is the default license template.
+ *  
+ *  File: postcss.config.js
+ *  Author: franck
+ *  Copyright (c) 2020 franck
+ *  
+ *  To edit this license information: Press Ctrl+Shift+P and press 'Create new License Template...'.
+ */
+
 const path = require('path');
 const ResolverFactory = require('enhanced-resolve/lib/ResolverFactory');
 const NodeJsInputFileSystem = require('enhanced-resolve/lib/NodeJsInputFileSystem');
