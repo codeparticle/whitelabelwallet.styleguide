@@ -1,13 +1,3 @@
-/* 
- *  This is the default license template.
- *  
- *  File: with-theme.js
- *  Author: franck
- *  Copyright (c) 2020 franck
- *  
- *  To edit this license information: Press Ctrl+Shift+P and press 'Create new License Template...'.
- */
-
 /**
  * @fileoverview HOC Pattern for applying a theme to components
  * If no Provider is in the component tree, will use

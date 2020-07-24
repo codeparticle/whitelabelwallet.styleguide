@@ -1,13 +1,3 @@
-/* 
- *  This is the default license template.
- *  
- *  File: list.js
- *  Author: franck
- *  Copyright (c) 2020 franck
- *  
- *  To edit this license information: Press Ctrl+Shift+P and press 'Create new License Template...'.
- */
-
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';

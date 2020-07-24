@@ -1,13 +1,3 @@
-/* 
- *  This is the default license template.
- *  
- *  File: styles.js
- *  Author: franck
- *  Copyright (c) 2020 franck
- *  
- *  To edit this license information: Press Ctrl+Shift+P and press 'Create new License Template...'.
- */
-
 /**
  * @fileoverview Mobile Wallet List styles object and function to determine styles to use
  * @author Gabriel Womble

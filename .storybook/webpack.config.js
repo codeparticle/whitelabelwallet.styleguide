@@ -1,13 +1,3 @@
-/* 
- *  This is the default license template.
- *  
- *  File: webpack.config.js
- *  Author: franck
- *  Copyright (c) 2020 franck
- *  
- *  To edit this license information: Press Ctrl+Shift+P and press 'Create new License Template...'.
- */
-
 const path = require('path');
 const ExtraWatchWebpackPlugin = require('extra-watch-webpack-plugin');
 const ProcessSvgsPlugin = require('../process-svgs-plugin.js');

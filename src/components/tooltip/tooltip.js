@@ -1,13 +1,3 @@
-/* 
- *  This is the default license template.
- *  
- *  File: tooltip.js
- *  Author: franck
- *  Copyright (c) 2020 franck
- *  
- *  To edit this license information: Press Ctrl+Shift+P and press 'Create new License Template...'.
- */
-
 /**
  * @file The basic tooltip component built using https://github.com/wwayne/react-tooltip
  * @author Gabriel Womble, Ashley Chen
