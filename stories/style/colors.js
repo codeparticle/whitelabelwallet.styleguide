@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { storiesOf } from '@storybook/react';
 import { withReadme } from 'storybook-readme';
-import marked from 'marked';
+import { marked } from 'marked';
 import Case from 'case';
 import colorcolor from 'colorcolor';
 import colors from 'styles/colors.scss';

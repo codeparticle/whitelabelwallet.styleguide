@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { withReadme } from 'storybook-readme';
 import { text, withKnobs } from '@storybook/addon-knobs';
 import Case from 'case';
-import marked from 'marked';
+import { marked } from 'marked';
 import { icons } from 'svgs';
 import style from './svgs.scss';
 

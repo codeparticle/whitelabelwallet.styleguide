@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { storiesOf } from '@storybook/react';
 import { withReadme } from 'storybook-readme';
-import marked from 'marked';
+import { marked } from 'marked';
 import styles from './typography.scss';
 
 const ListItem = ({
