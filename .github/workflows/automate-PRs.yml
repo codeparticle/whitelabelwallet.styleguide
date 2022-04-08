@@ -1,4 +1,6 @@
-name: Automate PRs
+name: automate-PRs
+# The script auto merges PRs
+
 on:
   pull_request:
     branches:
@@ -8,31 +10,28 @@ on:
       - synchronize
 
 jobs:
-  test:
-    name: test
+  automate-PRs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [14.x]
+        os: [ubuntu-latest, windows-latest, macos-latest]
     steps:
       - uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v2
+      - uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
-      - name: setup
-        run: yarn install
-      - run: yarn run lint
-      - run: yarn run build
 
-  automerge:
-    needs: test
+      # Specific for the project
+      - run: chmod 755 ./ci/ci-test-commands.sh
+      - run: ./ci/ci-test-commands.sh
+
+  automate-PRs-merge:
+    needs: automate-PRs
     runs-on: ubuntu-latest
-
     permissions:
       pull-requests: write
       contents: write
-
     steps:
       - uses: fastify/github-action-merge-dependabot@v3.0.0
         with:
