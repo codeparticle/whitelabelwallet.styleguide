@@ -1009,12 +1009,12 @@
   resolved "https://codeparticle.jfrog.io/codeparticle/api/npm/npm/@codeparticle/react-sidenav/-/react-sidenav-0.3.2.tgz#8fcbfc8e6d2851416f66a87ccf039ed71c4abf22"
   integrity sha1-j8v8jm0oUUFvZqh8zwOe1xxKvyI=
 
-"@codeparticle/react-visible@^1.4.0":
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/@codeparticle/react-visible/-/react-visible-1.4.0.tgz#90df9d9b8f3dc5b78fdc496eb4fda5e1c0e86914"
-  integrity sha512-177hD0AMX6ocAisGSIOOPOtAB8H6nnRPJAqHpSuxGaZbZviNhw7cprea78VyCPprLYUOkHSLZGZOfkswBRiR0Q==
+"@codeparticle/react-visible@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@codeparticle/react-visible/-/react-visible-2.0.0.tgz#36364ee203d8c5b1a808009307780c3a4bf0299b"
+  integrity sha512-Jw7jXarj7b2u/ifY2tPj0ff/BRczED0xxhNMl1bclSptxd8EqIH9SArWNEyFvZ+7brfoCdDaYe7dSyHEmHOzmw==
   dependencies:
-    "@types/react" "^17.0.11"
+    "@types/react" "^17.0.38"
 
 "@commitlint/cli@^7.6.1":
   version "7.6.1"
@@ -1956,18 +1956,10 @@
   resolved "https://registry.npmjs.org/@types/q/-/q-1.5.2.tgz#690a1475b84f2a884fd07cd797c00f5f31356ea8"
   integrity sha512-ce5d3q03Ex0sy4R14722Rmt6MT07Ua+k4FwDfdcToYJcMKNtRVQvJ6JCAPdAmAnbRb6CsX6aYb9m96NGod9uTw==
 
-"@types/react@*":
-  version "16.8.23"
-  resolved "https://registry.npmjs.org/@types/react/-/react-16.8.23.tgz#ec6be3ceed6353a20948169b6cb4c97b65b97ad2"
-  integrity sha512-abkEOIeljniUN9qB5onp++g0EY38h7atnDHxwKUFz1r3VH1+yG1OKi2sNPTyObL40goBmfKFpdii2lEzwLX1cA==
-  dependencies:
-    "@types/prop-types" "*"
-    csstype "^2.2.0"
-
-"@types/react@^17.0.11":
-  version "17.0.11"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.11.tgz#67fcd0ddbf5a0b083a0f94e926c7d63f3b836451"
-  integrity sha512-yFRQbD+whVonItSk7ZzP/L+gPTJVBkL/7shLEF+i9GC/1cV3JmUxEQz6+9ylhUpWSDuqo1N9qEvqS6vTj4USUA==
+"@types/react@*", "@types/react@^17.0.38":
+  version "17.0.44"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.44.tgz#c3714bd34dd551ab20b8015d9d0dbec812a51ec7"
+  integrity sha512-Ye0nlw09GeMp2Suh8qoOv0odfgCoowfM/9MG6WeRD60Gq9wS90bdkdRtYbRkNhXOpG4H+YXGvj4wOWhAC0LJ1g==
   dependencies:
     "@types/prop-types" "*"
     "@types/scheduler" "*"
@@ -4505,7 +4497,7 @@ cssom@0.3.x, "cssom@>= 0.3.0 < 0.4.0":
   dependencies:
     cssom "0.3.x"
 
-csstype@^2.2.0, csstype@^2.5.2, csstype@^2.5.7:
+csstype@^2.5.2, csstype@^2.5.7:
   version "2.6.6"
   resolved "https://registry.npmjs.org/csstype/-/csstype-2.6.6.tgz#c34f8226a94bbb10c32cc0d714afdf942291fc41"
   integrity sha512-RpFbQGUE74iyPgvr46U9t1xoQBM8T4BL8SxrN66Le2xYAPSaDJJKeztV3awugusb3g3G9iL8StmkBBXhcbbXhg==
