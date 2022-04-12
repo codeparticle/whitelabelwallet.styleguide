@@ -9653,6 +9653,11 @@ postcss-scss@^2.0.0:
   dependencies:
     postcss "^7.0.0"
 
+postcss-scss@^4.0.3:
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/postcss-scss/-/postcss-scss-4.0.3.tgz#36c23c19a804274e722e83a54d20b838ab4767ac"
+  integrity sha512-j4KxzWovfdHsyxwl1BxkUal/O4uirvHgdzMKS1aWJBAV0qh2qj5qAZqpeBfVUYGWv+4iK9Az7SPyZ4fyNju1uA==
+
 postcss-selector-parser@^3.1.0:
   version "3.1.1"
   resolved "https://registry.npmjs.org/postcss-selector-parser/-/postcss-selector-parser-3.1.1.tgz#4f875f4afb0c96573d5cf4d74011aee250a7e865"
