@@ -3468,10 +3468,10 @@ can-use-dom@^0.1.0:
   resolved "https://registry.npmjs.org/can-use-dom/-/can-use-dom-0.1.0.tgz#22cc4a34a0abc43950f42c6411024a3f6366b45a"
   integrity sha1-IsxKNKCrxDlQ9CxkEQJKP2NmtFo=
 
-cancel.it@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.npmjs.org/cancel.it/-/cancel.it-0.1.1.tgz#ea53097190f06f62af110b2a95e6380101ed05b9"
-  integrity sha512-rUfmMGwMDVOKA67R1YIZVeTDUKDzNDRMaiCXeKaOw+ILj+zLdO/RUMyAHYXa9QHBseMTMwZF9NpKANueDuH3xQ==
+cancel.it@^0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/cancel.it/-/cancel.it-0.2.2.tgz#50c9a541dd59eabd9fdb5776fdfa5121c884fb10"
+  integrity sha512-ZitLEadfwlb0g0ba44Sn/Y+PTKhd+9UAQf+WAlNuHqfn/ORs+9I7DwJop4qbO5QZMsVwv6tP7tNDdfRKJMbLow==
 
 caniuse-lite@^1.0.30000955, caniuse-lite@^1.0.30000980, caniuse-lite@^1.0.30000984:
   version "1.0.30000984"
