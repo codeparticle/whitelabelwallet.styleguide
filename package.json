@@ -69,7 +69,7 @@
     "styled-jsx-plugin-sass": "^1.0.0",
     "stylelint": "^10.0.1",
     "stylelint-config-standard": "^18.3.0",
-    "stylelint-order": "^3.0.1",
+    "stylelint-order": "^5.0.0",
     "svg-css-modules-loader": "^1.6.1"
   },
   "peerDependencies": {
