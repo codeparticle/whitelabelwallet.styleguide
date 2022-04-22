@@ -1,10 +1,12 @@
-name: "Close stale issues and PRs"
+name: close-stale-issues-and-PRs
+# The script closes stale issues and PRs
+
 on:
   schedule:
-    - cron: "* 1 * * *"
+    - cron: "0 1 * * *" # Every day at 1:00
 
 jobs:
-  stale:
+  close-stale-issues-and-PRs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/stale@v4
