@@ -40,7 +40,7 @@
     "@types/marked": "^0.6.5",
     "@types/storybook__addon-actions": "^3.4.3",
     "@types/storybook__addon-knobs": "5.0.1",
-    "@types/storybook__react": "^4.0.2",
+    "@types/storybook__react": "^5.2.1",
     "babel-eslint": "^10.0.2",
     "babel-loader": "8.0.5",
     "babel-plugin-css-modules-transform": "^1.6.2",
