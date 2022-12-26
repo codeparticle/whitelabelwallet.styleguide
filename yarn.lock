@@ -1909,10 +1909,10 @@
   resolved "https://registry.npmjs.org/@types/is-windows/-/is-windows-0.2.0.tgz#6f24ee48731d31168ea510610d6dd15e5fc9c6ff"
   integrity sha1-byTuSHMdMRaOpRBhDW3RXl/Jxv8=
 
-"@types/marked@^0.6.5":
-  version "0.6.5"
-  resolved "https://registry.npmjs.org/@types/marked/-/marked-0.6.5.tgz#3cf2a56ef615dad24aaf99784ef90a9eba4e29d8"
-  integrity sha512-6kBKf64aVfx93UJrcyEZ+OBM5nGv4RLsI6sR1Ar34bpgvGVRoyTgpxn4ZmtxOM5aDTAaaznYuYUH8bUX3Nk3YA==
+"@types/marked@^4.0.8":
+  version "4.0.8"
+  resolved "https://registry.yarnpkg.com/@types/marked/-/marked-4.0.8.tgz#b316887ab3499d0a8f4c70b7bd8508f92d477955"
+  integrity sha512-HVNzMT5QlWCOdeuBsgXP8EZzKUf0+AXzN+sLmjvaB3ZlLqO+e4u0uXrdw9ub69wBKFs+c6/pA4r9sy6cCDvImw==
 
 "@types/minimatch@*":
   version "3.0.3"
@@ -8059,10 +8059,10 @@ marked@^0.6.0, marked@^0.6.1:
   resolved "https://registry.npmjs.org/marked/-/marked-0.6.3.tgz#79babad78af638ba4d522a9e715cdfdd2429e946"
   integrity sha512-Fqa7eq+UaxfMriqzYLayfqAE40WN03jf+zHjT18/uXNuzjq3TY0XTbrAoPeqSJrAmPz11VuUA+kBPYOhHt9oOQ==
 
-marked@^4.0.10:
-  version "4.0.10"
-  resolved "https://registry.yarnpkg.com/marked/-/marked-4.0.10.tgz#423e295385cc0c3a70fa495e0df68b007b879423"
-  integrity sha512-+QvuFj0nGgO970fySghXGmuw+Fd0gD2x3+MqCWLIPf5oxdv1Ka6b2q+z9RP01P/IaKPMEramy+7cNy/Lw8c3hw==
+marked@^4.2.5:
+  version "4.2.5"
+  resolved "https://registry.yarnpkg.com/marked/-/marked-4.2.5.tgz#979813dfc1252cc123a79b71b095759a32f42a5d"
+  integrity sha512-jPueVhumq7idETHkb203WDD4fMA3yV9emQ5vLwop58lu8bTclMghBWcYAavlDqIEMaisADinV1TooIFCfqOsYQ==
 
 matcher@^1.0.0:
   version "1.1.1"
