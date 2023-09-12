@@ -173,7 +173,7 @@
     "scrollbar-compensate": "^0.2.2",
     "storybook-readme": "5.0.2",
     "styled-jsx": "^3.2.1",
-    "uuid": "^3.3.2",
+    "uuid": "^9.0.1",
     "victory": "^32.3.3"
   }
 }
