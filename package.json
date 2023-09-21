@@ -167,7 +167,7 @@
     "react-popper": "^1.0.0",
     "react-router": "^5.0.1",
     "react-router-dom": "^5.0.1",
-    "react-select": "^2.4.4",
+    "react-select": "^5.7.5",
     "react-tooltip": "^3.10.0",
     "react-transition-group": "^4.2.0",
     "scrollbar-compensate": "^0.2.2",
