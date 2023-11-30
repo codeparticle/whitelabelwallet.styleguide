@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
-    "@babel/core": "7.3.4",
+    "@babel/core": "7.23.5",
     "@babel/plugin-proposal-export-namespace-from": "^7.2.0",
     "@babel/preset-react": "^7.0.0",
     "@commitlint/config-conventional": "^7.6.0",
