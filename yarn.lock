@@ -1384,21 +1384,10 @@
     react-inspector "^3.0.2"
     uuid "^3.3.2"
 
-"@storybook/addon-backgrounds@5.1.3":
-  version "5.1.3"
-  resolved "https://registry.npmjs.org/@storybook/addon-backgrounds/-/addon-backgrounds-5.1.3.tgz#caa0536ce6efb8b122e9551463c18862adf1b3e4"
-  integrity sha512-vgjTxokeQfD5GIk+Ao3q66zcIFnWNYvCIWFA5vgyZvwi7+zoa7arl8CpVXEIEEarqlfvcg2e8QRkNF7WlZGKCw==
-  dependencies:
-    "@storybook/addons" "5.1.3"
-    "@storybook/api" "5.1.3"
-    "@storybook/client-logger" "5.1.3"
-    "@storybook/components" "5.1.3"
-    "@storybook/core-events" "5.1.3"
-    "@storybook/theming" "5.1.3"
-    core-js "^3.0.1"
-    memoizerific "^1.11.3"
-    react "^16.8.4"
-    util-deprecate "^1.0.2"
+"@storybook/addon-backgrounds@9.0.5":
+  version "9.0.5"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-backgrounds/-/addon-backgrounds-9.0.5.tgz#5ac4cc99da505075e1750e6f20720e7922b26c85"
+  integrity sha512-KIoWvd7+JWnS+/PDat4dP/Z1TRk1P0eU3WHfzeUzu8WsDYnUAdjuzDG9aZ4c2sC3d4kw57wb6IgKDlvb7UO99g==
 
 "@storybook/addon-knobs@5.1.3":
   version "5.1.3"
