@@ -41,7 +41,7 @@
     "@types/storybook__addon-actions": "^3.4.3",
     "@types/storybook__addon-knobs": "5.0.1",
     "@types/storybook__react": "^4.0.2",
-    "babel-eslint": "^10.0.2",
+    "babel-eslint": "^10.1.0",
     "babel-loader": "8.0.5",
     "babel-plugin-css-modules-transform": "^1.6.2",
     "babel-plugin-dynamic-import-webpack": "^1.1.0",
