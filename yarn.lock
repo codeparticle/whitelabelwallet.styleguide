@@ -3483,10 +3483,10 @@ case-sensitive-paths-webpack-plugin@^2.2.0:
   resolved "https://registry.npmjs.org/case-sensitive-paths-webpack-plugin/-/case-sensitive-paths-webpack-plugin-2.2.0.tgz#3371ef6365ef9c25fa4b81c16ace0e9c7dc58c3e"
   integrity sha512-u5ElzokS8A1pm9vM3/iDgTcI3xqHxuCao94Oz8etI3cf0Tio0p8izkDYbTIn09uP3yUUr6+veaE6IkjnTYS46g==
 
-case@^1.6.1:
-  version "1.6.1"
-  resolved "https://registry.npmjs.org/case/-/case-1.6.1.tgz#fa9ce79bb6f68f21650c419ae9c47b079308714f"
-  integrity sha512-N0rDB5ftMDKANGsIBRWPWcG0VIKtirgqcXb2vKFi66ySAjXVEwbfCN7ass1mkdXO8fbol3RfbWlQ9KyBX2F/Gg==
+case@^1.6.3:
+  version "1.6.3"
+  resolved "https://registry.yarnpkg.com/case/-/case-1.6.3.tgz#0a4386e3e9825351ca2e6216c60467ff5f1ea1c9"
+  integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
 caseless@~0.12.0:
   version "0.12.0"

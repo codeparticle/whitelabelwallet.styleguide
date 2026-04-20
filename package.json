@@ -145,7 +145,7 @@
     "@storybook/addon-options": "5.1.3",
     "@storybook/react": "5.1.3",
     "cancel.it": "^0.1.1",
-    "case": "^1.6.1",
+    "case": "^1.6.3",
     "classnames": "^2.2.6",
     "colorcolor": "^1.1.1",
     "hammerjs": "^2.0.8",
